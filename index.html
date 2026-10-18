@@ -1,15 +1,8 @@
-<!doctype html>
-<html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow">
-<meta name="description" content="Sổ tay học viên khóa C.L.E.A.R.: chọn ngách bằng bằng chứng, lên bán và thử bán trên Etsy, Amazon, Shopify.">
-<title>C.L.E.A.R. Field Manual</title>
-<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
-</head>
-<body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 
+<meta name="robots" content="noindex,nofollow">
+<title>C.L.E.A.R. Field Manual</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&family=JetBrains+Mono:wght@500&display=swap">
@@ -266,6 +259,78 @@ table.traps td:first-child{font-weight:700;min-width:150px}
 @media (max-width:640px){.principles{grid-template-columns:minmax(0,1fr)}}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Hành trình từng buổi */
+.ht-how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.ht-how .box p{font-size:14px}
+.ht-how .box .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-start{background:var(--accent-soft);border-radius:14px;padding:20px 22px;display:grid;gap:14px}
+.ht-start ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:s}
+.ht-start ol>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start}
+.ht-start ol>li::before{content:counter(s);font-weight:800;color:var(--accent);font-size:18px;text-align:center;line-height:1.5}
+.ht-start .ready{font-size:14px;border-top:1px dashed var(--accent);padding-top:10px}
+table.links{min-width:0}
+table.links td:first-child{white-space:nowrap;font-weight:600}
+.ht-map td:nth-child(1){font-family:var(--f-data);white-space:nowrap}
+.ht-map td:nth-child(2){white-space:nowrap}
+.ht-map tr.gate td{background:var(--accent-soft)}
+.ht-map tr.off td{background:var(--quote);color:var(--muted)}
+.ht-cards{display:grid;gap:10px}
+.ht-card{border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.ht-card[open]{border-color:var(--accent)}
+.ht-card.gate{background:linear-gradient(var(--accent-soft),var(--accent-soft)) top/100% 0 no-repeat,var(--paper)}
+.ht-card>summary{cursor:pointer;list-style:none;padding:14px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:center}
+.ht-card>summary::-webkit-details-marker{display:none}
+.ht-card .wk{font-family:var(--f-data);font-size:12px;color:var(--accent);grid-column:1}
+.ht-card .ttl{font-weight:700;font-size:17px;grid-column:1}
+.ht-card .q{font-size:14px;color:var(--muted);grid-column:1}
+.ht-card .q b{color:var(--ink);font-weight:600}
+.ht-card .prog{grid-column:2;grid-row:1/span 3;font-family:var(--f-data);font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.ht-card .prog.done{color:var(--pass);border-color:var(--pass);background:var(--pass-soft)}
+.ht-card.gate>summary{background:var(--accent-soft);border-radius:11px}
+.ht-body{padding:4px 18px 18px;display:grid;gap:16px}
+.ht-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ht-col{display:grid;gap:8px;align-content:start}
+.ht-col h4,.ht-self h4,.ht-flag h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ht-col ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px}
+ul.ck{list-style:none;padding:0}
+.ck li label,.ht-self li label{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;align-items:start;cursor:pointer}
+.ck input,.ht-self input{width:17px;height:17px;margin:3px 0 0;accent-color:var(--accent)}
+.ck input:checked+span,.ht-self input:checked+span{color:var(--muted)}
+.due{border:1px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px;display:grid;gap:4px;background:var(--paper)}
+.due .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-self{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;display:grid;gap:10px}
+.ht-self ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
+.ht-self em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
+.ht-self em b{color:var(--pass);font-weight:600}
+.ht-flag{border:1px dashed var(--kill);border-radius:10px;padding:10px 14px;display:grid;gap:6px;background:var(--kill-soft)}
+.ht-flag ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14.5px}
+.ht-note{font-size:14px;border-left:3px solid var(--warn);padding:2px 0 2px 12px}
+.ht-note b{color:var(--warn)}
+.ht-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+.ht-tools button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.ht-tools button:hover{border-color:var(--accent)}
+.rhythm{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.rhythm .box{padding:10px 12px}
+.rhythm .box .d{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.rhythm .box p{font-size:14px}
+@media (max-width:900px){.ht-how,.ht-grid,.rhythm{grid-template-columns:minmax(0,1fr)}.ht-card>summary{grid-template-columns:minmax(0,1fr)}.ht-card .prog{grid-column:1;grid-row:auto;justify-self:start}}
+@media (max-width:600px){
+  table.links thead,.ht-map thead{display:none}
+  table.links tr,.ht-map tr{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;padding:10px 4px;border-bottom:1px solid var(--line)}
+  table.links td,.ht-map td{display:block;border:0!important;padding:0!important;white-space:normal!important;background:none!important}
+  table.links td:nth-child(2)::before{content:"Ô: ";color:var(--muted)}
+  table.links td:nth-child(3)::before{content:"Dán link: ";color:var(--muted)}
+  table.links td:nth-child(4)::before{content:"Khi nào: ";color:var(--muted)}
+  .ht-map tr{grid-template-columns:auto minmax(0,1fr);column-gap:10px}
+  .ht-map tr.gate{background:var(--accent-soft)} .ht-map tr.off{background:var(--quote)}
+  .ht-map td:nth-child(1)::before{content:"Tuần ";}
+  .ht-map td:nth-child(3){grid-column:1/-1;font-weight:600}
+  .ht-map td:nth-child(4){grid-column:1/-1}
+  .ht-map td:nth-child(5){grid-column:1/-1;color:var(--muted)}
+  .ht-map td:nth-child(5)::before{content:"Hạn: "}
+}
+@media print{.ht-card{break-inside:avoid}.ht-tools{display:none}}
 </style>
 
 <div class="wrap">
@@ -284,6 +349,7 @@ html{scroll-behavior:smooth}
 <div class="layout">
 <nav class="rail" aria-label="Các phần">
   <a href="#lo-trinh"><span class="l">→</span><span>Lộ trình</span></a>
+  <a href="#hanh-trinh"><span class="l">☑</span><span>Từng buổi</span></a>
   <a href="#tru-cot"><span class="l">◇</span><span>4 câu hỏi</span></a>
   <a href="#tu-duy"><span class="l">✦</span><span>Tư duy</span></a>
   <a href="#nguoi-ban-gioi"><span class="l">★</span><span>Người bán giỏi</span></a>
@@ -313,7 +379,7 @@ html{scroll-behavior:smooth}
     <div class="eyebrow">Bắt đầu ở đây</div>
     <h2>Lộ trình của bạn: từ bài đầu vào đến đơn có lãi</h2>
   </div>
-  <p class="prose">Sổ tay này là chặng 2 trong 6 chặng. Mỗi chặng có một đầu ra cụ thể, và bạn chỉ sang chặng sau khi đã có đầu ra của chặng trước. Ô màu xanh là các cổng quyết định: đi tiếp, sửa, hay dừng. Các cổng 30, 60, 90 đếm từ <b>ngày T0</b>, là ngày listing đầu tiên của bạn lên, không đếm từ ngày khai giảng: cổng 30 ở tuần 8, cổng 60 ở tuần 12, cổng 90 ở tuần 16. Lịch chi tiết từng tuần nằm ở tab Lịch khóa học của file Checklist thực chiến.</p>
+  <p class="prose">Sổ tay này là chặng 2 trong 6 chặng. Mỗi chặng có một đầu ra cụ thể, và bạn chỉ sang chặng sau khi đã có đầu ra của chặng trước. Ô màu xanh là các cổng quyết định: đi tiếp, sửa, hay dừng. Các cổng 30, 60, 90 đếm từ <b>ngày T0</b>, là ngày listing đầu tiên của bạn lên, không đếm từ ngày khai giảng: cổng 30 ở tuần 8, cổng 60 ở tuần 12, cổng 90 ở tuần 16. Việc cần làm, bài nộp và câu hỏi tự kiểm của từng buổi nằm ở <a href="#hanh-trinh">Hành trình từng buổi</a>; lịch tự tính ngày nằm ở tab Lịch khóa học của file Checklist thực chiến.</p>
   <ol class="road">
     <li>
       <span class="wk">Tuần 0</span>
@@ -399,6 +465,286 @@ html{scroll-behavior:smooth}
     <p class="verdict">Quy tắc gọn: <b>chứng minh trên sàn, mở rộng bằng web riêng.</b> Shopify là bước thứ hai khi bạn đã biết sản phẩm bán được và biết CAC tối đa của mình, trừ khi bạn đã có sẵn một cộng đồng đúng nhóm khách.</p>
   </div>
 </section>
+<section id="hanh-trinh">
+  <div class="sec-head">
+    <div class="eyebrow">Dùng ngay từ hôm nay · khóa K1 khai giảng thứ 2 19/10/2026</div>
+    <h2>Hành trình từng buổi: làm gì, nộp gì, tự hỏi gì</h2>
+  </div>
+  <p class="prose">Mỗi buổi học trả lời một câu hỏi về khách. Thẻ của từng buổi dưới đây ghi rõ bạn làm gì trước buổi, trong buổi học gì, nộp gì và hạn nào, cùng bộ câu hỏi mà một người bán có kinh nghiệm sẽ tự hỏi trước khi đi tiếp. Ô tích chỉ lưu trên trình duyệt của bạn để tự theo dõi. Tiến độ chính thức vẫn đánh dấu ở file Checklist, nơi Mentor xem.</p>
+  <div class="ht-how">
+    <div class="box"><span class="k">1 · Trước buổi</span><p>Việc chuẩn bị, làm trong tuần. Không làm thì buổi học thành buổi nghe giảng.</p></div>
+    <div class="box"><span class="k">2 · Trong buổi</span><p>Buổi live 20:00 thứ 5 trên Google Meet, link trong Classroom và lịch.</p></div>
+    <div class="box"><span class="k">3 · Nộp sau buổi</span><p>Nộp trên Classroom: dán link bản sao của bạn, ghi ô nào cần Mentor xem.</p></div>
+    <div class="box"><span class="k">4 · Tự kiểm</span><p>Trả lời từng câu trước khi nộp. Câu nào chưa đạt thì sửa trước, hoặc ghi rõ để Mentor biết.</p></div>
+  </div>
+
+  <div class="ht-start" id="khoi-dong">
+    <div class="sec-head"><div class="eyebrow">Làm trong ngày đầu tiên · khoảng 60 phút</div><h3>Khởi động: sẵn sàng trước Buổi 0</h3></div>
+    <ol>
+      <li><div><b>Vào Google Classroom, mở bài "Khởi động".</b> Classroom đã tạo sẵn bản sao riêng của bạn cho 5 file: Checklist thực chiến, Opportunity Engine, Kế hoạch 90 ngày, Bộ vận hành (Etsy POD hoặc Hàng vật lý &amp; Shopify), Đánh giá đầu vào. Luôn làm trên bản sao có tên bạn, không làm trên bản mẫu.</div></li>
+      <li><div><b>Nối các file với nhau</b> bằng cách dán link bản sao của bạn vào đúng ô. Lần đầu dán, Sheets hỏi quyền: bấm vào ô báo lỗi và chọn <i>Cho phép truy cập</i>.
+        <div class="tbl"><table class="links"><thead><tr><th>Mở file</th><th>Ô</th><th>Dán link bản sao của</th><th>Khi nào</th></tr></thead><tbody>
+          <tr><td>Kế hoạch 90 ngày</td><td>tab 1, ô B4</td><td>Đánh giá đầu vào</td><td>Hôm nay</td></tr>
+          <tr><td>Opportunity Engine</td><td>tab 1, ô B4</td><td>Đánh giá đầu vào</td><td>Hôm nay</td></tr>
+          <tr><td>Checklist</td><td>tab 0, ô B31</td><td>Kế hoạch 90 ngày (rồi mở tab 3, bấm ô C6)</td><td>Hôm nay</td></tr>
+          <tr><td>Kế hoạch 90 ngày</td><td>tab 1, ô B53</td><td>Opportunity Engine</td><td>Hôm nay, hoặc cuối tuần 3</td></tr>
+        </tbody></table></div></div></li>
+      <li><div><b>Kiểm ngày, đã điền sẵn cho K1:</b> Checklist tab 0 ô B7 là 26/10/2026 và ô B8 (T0) là 22/11/2026, sửa B8 nếu bạn lên bán ngày khác; tuần nghỉ Tết bắt đầu 01/02/2027 (Checklist tab 5 ô B3, Kế hoạch 90 ngày tab 3 ô B3). Lịch trong file tự lùi một tuần sau Tết.</div></li>
+      <li><div><b>Làm file Đánh giá đầu vào</b> (20 phút). Giờ mỗi tuần là giờ thật của tuần vừa qua, không phải giờ bạn mong có.</div></li>
+      <li><div><b>Mở hoặc kiểm tài khoản Etsy ngay hôm nay:</b> xác minh danh tính, tài khoản nhận tiền, bảo mật hai lớp. Xác minh có thể mất vài ngày và là việc dễ làm chậm cả lộ trình nhất. Đi đường Shopify thì kiểm thêm cổng thanh toán.</div></li>
+      <li><div><b>Chặn lịch:</b> thứ 5 20:00 học live; thứ 2 trước 20:00 nộp số (từ 23/11); chủ nhật 30 phút họp với chính mình; 6–8 giờ làm mỗi tuần. Bật thông báo của Classroom và Google Calendar.</div></li>
+      <li><div><b>Chuẩn bị cho Buổi 0:</b> một ý tưởng viết theo dạng <i>người nhận × dịp × món</i>, và một câu trả lời cho câu hỏi "ai sẽ trả tiền cho món này?".</div></li>
+    </ol>
+    <p class="ready"><b>Bạn sẵn sàng khi:</b> mở được 5 bản sao có tên mình; Kế hoạch 90 ngày tab 1 hiện tên và cấp của bạn (không còn "Chưa kết nối"); Checklist tab 5 hiện đủ ngày từ 19/10; tài khoản Etsy đang xác minh hoặc đã xong.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Bản đồ 17 tuần · khóa K1</div>
+    <h3>Mỗi tuần một mốc, mỗi mốc một bài nộp</h3>
+    <div class="tbl"><table class="ht-map"><thead><tr><th>Tuần</th><th>Bắt đầu</th><th>Buổi live (thứ 5, 20:00, trừ khi ghi khác)</th><th>Bạn nộp</th><th>Hạn</th></tr></thead><tbody><tr class=""><td>0</td><td>19/10</td><td>Buổi 0 · thứ 2 19/10</td><td>M1: SOP-K bước 0–2, 20 ý tưởng, nhật ký đầu tiên</td><td>T3 27/10</td></tr><tr class=""><td>1</td><td>26/10</td><td>Buổi 1 · Cổng C</td><td>Thẻ người mua, 100 review, Cổng C Đạt</td><td>T4 04/11</td></tr><tr class=""><td>2</td><td>02/11</td><td>Buổi 2 · Cổng L và E</td><td>Trang 1, 3 shop chứng minh, ma trận SOP-B</td><td>T4 11/11</td></tr><tr class=""><td>3</td><td>09/11</td><td>Buổi 3 · Cổng A và R</td><td>Góc thắng, bảng lãi, tiền mặt, thẻ giả thuyết</td><td>CN 15/11</td></tr><tr class="gate"><td>4</td><td>16/11</td><td>Buổi 4 · Listing</td><td>3–5 listing lên bán: ngày T0</td><td>CN 22/11</td></tr><tr class=""><td>5</td><td>23/11</td><td>Clinic 1</td><td>Số tuần mỗi thứ 2 từ đây</td><td>T2 hằng tuần</td></tr><tr class=""><td>6</td><td>30/11</td><td>Clinic 2</td><td>1 thay đổi ảnh đầu</td><td>T2 07/12</td></tr><tr class=""><td>7</td><td>07/12</td><td>Clinic 3</td><td>Listing Valentine (nếu đi mùa này)</td><td>trước 20/12</td></tr><tr class="gate"><td>8</td><td>14/12</td><td>Cổng 30 · 17/12</td><td>Kết luận cổng, kế hoạch Tết</td><td>sau buổi</td></tr><tr class=""><td>9</td><td>21/12</td><td>Clinic 4 · thứ 3 22/12</td><td>Lãi thật, chia tiền Profit First</td><td>T2 28/12</td></tr><tr class=""><td>10</td><td>28/12</td><td>Clinic 5 · thứ 3 29/12</td><td>1–2 biến thể cùng khách</td><td>T2 04/01</td></tr><tr class=""><td>11</td><td>04/01</td><td>Clinic 6</td><td>CAC tối đa, lịch 3 mùa</td><td>T2 11/01</td></tr><tr class="gate"><td>12</td><td>11/01</td><td>Cổng 60 · 14/01</td><td>Kết luận cổng, rủi ro một điểm hỏng</td><td>sau buổi</td></tr><tr class=""><td>13</td><td>18/01</td><td>Clinic 7</td><td>SOP, thời gian xử lý tuần Tết</td><td>T2 25/01</td></tr><tr class=""><td>14</td><td>25/01</td><td>Office hour · 28/01</td><td>Mang câu hỏi và số</td><td>—</td></tr><tr class="off"><td>—</td><td>01/02</td><td>Nghỉ Tết</td><td>Shop vẫn chạy, không nộp số 08/02</td><td>—</td></tr><tr class=""><td>15</td><td>08/02</td><td>Clinic 8 · 11/02</td><td>Bản nháp Demo day, công suất</td><td>T2 15/02</td></tr><tr class="gate"><td>16</td><td>15/02</td><td>Cổng 90 và Demo day · 18/02</td><td>Một trang, kế hoạch 90 ngày tiếp theo</td><td>T5 25/02</td></tr></tbody></table></div>
+    <p class="src">Ô xanh là cổng quyết định. Cổng đếm từ T0 (ngày listing đầu tiên lên), không đếm từ ngày khai giảng. Clinic 4 và 5 dời sang thứ 3 để tránh đêm Giáng sinh và đêm giao thừa.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Nhịp mỗi tuần · từ T0 đến cổng 90</div>
+    <div class="rhythm">
+      <div class="box"><span class="d">Thứ 2 · trước 20:00</span><p>Chép số tuần vào Kế hoạch 90 ngày tab 5; viết chỗ tắc ở Checklist tab 3 (15 phút).</p></div>
+      <div class="box"><span class="d">Thứ 3 – thứ 4</span><p>Mentor đọc số và nhận xét trong 48 giờ, chọn người lên hot seat.</p></div>
+      <div class="box"><span class="d">Thứ 5 · 20:00</span><p>Buổi live hoặc clinic. Mang số và một câu hỏi.</p></div>
+      <div class="box"><span class="d">Thứ 6 – chủ nhật</span><p>Làm việc của tuần; đổi đúng một thứ ở chỗ tắc.</p></div>
+      <div class="box"><span class="d">Chủ nhật · 30 phút</span><p>Họp với chính mình theo Kế hoạch 90 ngày tab 10; ghi nhật ký quyết định.</p></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Thẻ từng buổi · bấm để mở</div>
+    <div class="ht-tools"><button type="button" data-ht="open">Mở tất cả</button><button type="button" data-ht="close">Thu gọn</button><button type="button" data-ht="reset">Xóa các ô đã tích</button><span id="ht-total"></span></div>
+    <div class="ht-cards">
+<details class="ht-card" id="ht-b0">
+  <summary><span class="wk">Tuần 0 · Thứ 2 19/10 · 120 phút</span><span class="ttl">Buổi 0 · Khai giảng: chọn ngách bắt đầu từ khách</span><span class="q"><b>Câu hỏi của buổi:</b> Ai đang cần gì, vào dịp nào, và hôm nay họ đang mua gì để giải quyết?</span><span class="prog" data-card="b0">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="b0-t0"><span>Xong phần <a href="#khoi-dong">Khởi động 60 phút</a> ở trên</span></label></li><li><label><input type="checkbox" data-k="b0-t1"><span>Làm xong file Đánh giá đầu vào (20 phút, trả lời theo việc đã làm, không theo điều mong muốn)</span></label></li><li><label><input type="checkbox" data-k="b0-t2"><span>Viết 1 ý tưởng theo dạng <b>người nhận × dịp × món</b>, ví dụ "mẹ × lên chức bà × dây chuyền có tên cháu"</span></label></li><li><label><input type="checkbox" data-k="b0-t3"><span>Đọc <a href="#luat">Luật chơi</a> và <a href="#tu-duy">Tư duy</a> (20 phút)</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Chọn đường bán theo cấp của bạn (Checklist tab 0, ô B5)</li><li>Hai cách bắt đầu: từ sản phẩm và từ khách. Bốn khoảnh khắc khởi đầu và case tranh vẽ ngôi nhà</li><li>Làm SOP-K bước 0–2 ngay trên ý tưởng của bạn, rồi cho qua bộ lọc 6 câu</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Bài M1 · hạn Thứ 3 27/10, trước 20:00</span><span>Opportunity Engine tab 1b: SOP-K bước 0–2 cho 3 ý tưởng · danh sách 20 ý tưởng có nguồn (Checklist S1.2) · dòng nhật ký quyết định đầu tiên (Kế hoạch 90 ngày tab 6)</span></div></div>
+    </div>
+    <p class="ht-note"><b>Riêng khóa K1:</b> listing của bạn lên quanh 22/11, quá muộn để một listing mới bắt kịp Giáng sinh. Ưu tiên khoảnh khắc quanh năm (nghỉ hưu, nhà mới, chia buồn, kỷ niệm năm cưới) hoặc Valentine 14/2. Valentine trùng Tết (nghỉ 4–10/2/2027) nên phải tính cách vận hành shop trong Tết.</p>
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="b0-q0"><span><b>Mỗi ý tưởng đã tách rõ người trả tiền và người dùng chưa?</b><em><b>Đạt khi:</b> ghi được cả hai, ví dụ con gái (trả tiền) mua cho mẹ (dùng). Người mua quà và người nhận quà đọc listing khác nhau.</em></span></label></li><li><label><input type="checkbox" data-k="b0-q1"><span><b>Bạn có ít nhất 1 câu nguyên văn của người mua, có link, không phải do bạn viết lại?</b><em><b>Đạt khi:</b> câu đó nằm trên Reddit, review, nhóm cộng đồng hay tin nhắn thật, và bạn dán được link.</em></span></label></li><li><label><input type="checkbox" data-k="b0-q2"><span><b>Khoảnh khắc của bạn có một ngày hoặc một sự kiện cụ thể không?</b><em><b>Đạt khi:</b> trả lời được "chuyện gì vừa xảy ra khiến họ mua": nghỉ hưu, chuyển nhà, kỷ niệm 10 năm. "Người yêu mèo" là sở thích, chưa phải khoảnh khắc.</em></span></label></li><li><label><input type="checkbox" data-k="b0-q3"><span><b>Nếu khách tìm món này hôm nay, họ gõ chữ gì? Bạn đã gõ thử chữ đó trên Etsy, kèm ship to US, chưa?</b><em><b>Đạt khi:</b> bạn chép được ít nhất 5 gợi ý tìm kiếm thật.</em></span></label></li><li><label><input type="checkbox" data-k="b0-q4"><span><b>Ý tưởng nào dính tên nhân vật, đội thể thao, thương hiệu hay câu nói có nhãn hiệu?</b><em><b>Đạt khi:</b> các ý tưởng đó đã bị loại, kể cả khi trông rất bán được.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Bắt đầu bằng "em định in áo…", rồi mới đi tìm khách cho cái áo đó</li><li>Cả 20 ý tưởng đến từ một nguồn, ví dụ đều từ TikTok</li><li>Chọn ngách vì "đang hot" mà không nói được ai trả tiền và vì dịp gì</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-b1">
+  <summary><span class="wk">Tuần 1 · Thứ 5 29/10 · 120 phút</span><span class="ttl">Buổi 1 · Cổng C: nghe khách gõ gì và nói gì</span><span class="q"><b>Câu hỏi của buổi:</b> Người trả tiền là ai, và khoảnh khắc nào khiến họ mở ví?</span><span class="prog" data-card="b1">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="b1-t0"><span>Làm SOP-K bản nhanh (bước 0, 1, 2, 4, 5) cho 3 ý tưởng tốt nhất, rồi chấm song song để chọn ngách chính và ngách dự phòng</span></label></li><li><label><input type="checkbox" data-k="b1-t1"><span>Bắt đầu chép gợi ý tìm kiếm từ 3 từ hạt giống (khoảng 7 giờ cho cả tuần)</span></label></li><li><label><input type="checkbox" data-k="b1-t2"><span>Hàng vật lý: gửi yêu cầu báo giá cho 5 xưởng ngay tuần này, vì xưởng trả lời chậm</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Chữa bài M1 trên 2 bài mẫu của lớp: câu trả lời còn nông thì hỏi tiếp thế nào</li><li>C1 gợi ý tìm kiếm, C2 gắn nhãn review, C3 hồ sơ 10 yếu tố, C4 thẻ chân dung</li><li>SOP-K đủ 23 câu cho ngách chính</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Cổng C · hạn Thứ 4 04/11, trước 20:00</span><span>Opportunity Engine tab 1b đủ 23 câu · tab 3 có 100 review đã gắn nhãn · tab 2 báo Cổng C Đạt (dòng 96)</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="b1-q0"><span><b>Trong 30–50 gợi ý tìm kiếm, cụm nào có chữ của người mua quà (for mom, personalized, gift for…) chứ không chỉ có tên sản phẩm?</b><em><b>Đạt khi:</b> bạn khoanh được 3–5 cụm có tín hiệu mua.</em></span></label></li><li><label><input type="checkbox" data-k="b1-q1"><span><b>Trong 100 review, lời khen lặp lại nhiều nhất là gì? Nó khen món hàng hay khen cảm xúc của người nhận?</b><em><b>Đạt khi:</b> bạn có số đếm cho từng nhãn. Câu "she cried" lặp 12 lần là một góc bán.</em></span></label></li><li><label><input type="checkbox" data-k="b1-q2"><span><b>Hồ sơ 10 yếu tố có bao nhiêu ô "Có bằng chứng" kèm link? Ô nào thật ra là bạn đoán rồi tìm review cho khớp?</b><em><b>Đạt khi:</b> có từ 6 ô trở lên và ô đoán được ghi rõ là Giả định.</em></span></label></li><li><label><input type="checkbox" data-k="b1-q3"><span><b>Vì sao bạn phục vụ nhóm khách này tốt hơn một người bán bất kỳ?</b><em><b>Đạt khi:</b> câu founder-fit nói về kỹ năng, nguồn hàng hay hiểu biết thật. "Em thích" không tính.</em></span></label></li><li><label><input type="checkbox" data-k="b1-q4"><span><b>Bạn đã ghi ít nhất 1 bằng chứng chống lại ngách này chưa?</b><em><b>Đạt khi:</b> có một dòng kèm link. Không tìm ra bằng chứng chống lại thường nghĩa là bạn chưa tìm.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Chỉ đọc review 5 sao: lời chê ở review 1–3 sao mới là chỗ bạn thắng</li><li>Chép gợi ý tìm kiếm khi chưa đặt ship to US, nên đang thấy Etsy bản Việt Nam</li><li>Hồ sơ khách toàn tính từ ("trẻ trung, năng động") mà không có câu nào khách tự nói</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-b2">
+  <summary><span class="wk">Tuần 2 · Thứ 5 05/11 · 120 phút</span><span class="ttl">Buổi 2 · Cổng L và E: trang 1 và shop chứng minh</span><span class="q"><b>Câu hỏi của buổi:</b> Trang 1 còn chỗ cho người mới không, và bằng chứng nào cho thấy người thật đang trả tiền?</span><span class="prog" data-card="b2">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="b2-t0"><span>Chép 24 listing tự nhiên đầu tiên (bỏ quảng cáo) cho cụm chính, đặt ship to US</span></label></li><li><label><input type="checkbox" data-k="b2-t1"><span>Đếm tỷ lệ quảng cáo, số shop khác nhau, số lần một shop lặp lại</span></label></li><li><label><input type="checkbox" data-k="b2-t2"><span>Hàng vật lý: đặt mẫu từ 2 xưởng. Shopify: xem Google Shopping và Meta Ad Library</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Đọc thành phần trang 1, không đọc con số tổng</li><li>Tìm 3 shop chứng minh: dưới 24 tháng tuổi, 100–10.000 sales, có review trong 90 ngày</li><li><a href="#sop-b">SOP-B</a>: thang bằng chứng 6 bậc, luật 3–2–2, trò chơi "tín hiệu này ở bậc mấy?"</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Cổng L và E · hạn Thứ 4 11/11, trước 20:00</span><span>Opportunity Engine tab 4 báo L Đạt (dòng 67) và E Đạt (dòng 69) · tab 4b dòng 34 báo Xác nhận · ít nhất 1 tín hiệu chống lại có link</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="b2-q0"><span><b>Trong 24 listing có bao nhiêu shop khác nhau? Nếu 1–2 shop chiếm nửa trang, bạn đang đấu với ai?</b><em><b>Đạt khi:</b> bạn gọi được tên đối thủ quy mô xưởng của ngách và cụm giá của họ.</em></span></label></li><li><label><input type="checkbox" data-k="b2-q1"><span><b>Cụm giá bạn chọn nằm ở đâu, và listing của bạn cho khách lý do gì để trả mức đó?</b><em><b>Đạt khi:</b> bạn không đứng ở cụm rẻ nhất chỉ vì sợ không bán được.</em></span></label></li><li><label><input type="checkbox" data-k="b2-q2"><span><b>Ba shop chứng minh có dưới 24 tháng tuổi không, tức là người mới vẫn vào được?</b><em><b>Đạt khi:</b> cả 3 có link, tuổi shop, số sales và ngày review gần nhất.</em></span></label></li><li><label><input type="checkbox" data-k="b2-q3"><span><b>Tín hiệu mạnh nhất của bạn ở bậc mấy? Đã có ít nhất 1 tín hiệu bậc 4 (đơn hay review thật, có ngày) chưa?</b><em><b>Đạt khi:</b> ma trận qua luật 3–2–2: 3 tín hiệu, 2 nền tảng, 2 loại bằng chứng.</em></span></label></li><li><label><input type="checkbox" data-k="b2-q4"><span><b>Bạn có đang tin một con số của công cụ ước tính mà chưa đối chiếu với thứ sàn hiển thị công khai?</b><em><b>Đạt khi:</b> mỗi con số có link, ngày, và ghi rõ là số đếm hay số ước tính.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Dùng "lượt tìm kiếm cao" làm bằng chứng duy nhất</li><li>Chọn shop chứng minh 5 năm tuổi, 50.000 sales: họ chứng minh ngách có tiền, không chứng minh người mới vào được</li><li>Lướt qua tín hiệu chống lại vì nó làm bạn mất hứng</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-b3">
+  <summary><span class="wk">Tuần 3 · Thứ 5 12/11 · 120 phút</span><span class="ttl">Buổi 3 · Cổng A và R: góc thắng, lãi thật, thẻ giả thuyết</span><span class="q"><b>Câu hỏi của buổi:</b> Vì sao khách chọn bạn thay vì listing bán chạy nhất, và mỗi đơn còn lại bao nhiêu tiền?</span><span class="prog" data-card="b3">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="b3-t0"><span>Đọc 20–30 review thấp nhất của 3 shop chứng minh, gom 3–5 nhóm lời chê có số đếm</span></label></li><li><label><input type="checkbox" data-k="b3-t1"><span>Lấy 2–3 báo giá thật từ nhà in hoặc xưởng, có ngày</span></label></li><li><label><input type="checkbox" data-k="b3-t2"><span>Làm bài tập tháo rời một listing bán chạy (8 câu, 20 phút) ở mục <a href="#nguoi-ban-gioi">Người bán giỏi</a></span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Từ lời chê đến góc thắng: thang kết quả 4 tầng, bảng 4 hành động, câu định vị</li><li>Bảng lãi ở 2 mức giá và kịch bản xấu; dự phòng làm lại 5% cho hàng cá nhân hóa</li><li>Thẻ giả thuyết có điều kiện dừng bằng số, tiền nghiệm thất bại, dự đoán 30 ngày</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Tab 5–8 · hạn Chủ nhật 15/11, trước 20:00</span><span>Opportunity Engine: Cổng A Đạt (tab 5, dòng 51) · Cổng R Đạt (tab 6, dòng 70) · Sức khỏe tiền mặt Đạt (tab 7, dòng 75) · Thẻ giả thuyết (tab 8). Mentor duyệt trước thứ 3 17/11. Chưa duyệt thì chưa đặt lô, chưa chạy quảng cáo.</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="b3-q0"><span><b>Che hết chữ đi, ảnh đầu của bạn có nói được góc thắng không?</b><em><b>Đạt khi:</b> góc chụp được thành một ảnh. Cần một đoạn văn để giải thích thì khách không hiểu kịp.</em></span></label></li><li><label><input type="checkbox" data-k="b3-q1"><span><b>Lãi mỗi đơn còn dương ở kịch bản xấu của tab 6 không?</b><em><b>Đạt khi:</b> còn dương lúc Offsite Ads tính trên mọi đơn và giá vốn tăng 20%.</em></span></label></li><li><label><input type="checkbox" data-k="b3-q2"><span><b>Cần bao nhiêu đơn để hoàn vốn thử? Con số đó có thực tế trong 60 ngày không?</b><em><b>Đạt khi:</b> số đơn hoàn vốn nằm trong nhịp bán thận trọng, không phải nhịp bạn mong.</em></span></label></li><li><label><input type="checkbox" data-k="b3-q3"><span><b>Điều kiện dừng đã viết bằng số chưa?</b><em><b>Đạt khi:</b> đọc lên là biết ngày nào phải quyết, ví dụ: "300 lượt xem, đã sửa 2 lần, vẫn 0 đơn thì đổi góc".</em></span></label></li><li><label><input type="checkbox" data-k="b3-q4"><span><b>Khách này mua lần hai vì dịp gì?</b><em><b>Đạt khi:</b> có ít nhất một đường mua lại cụ thể: dịp kế tiếp, món bổ sung, quà cho người khác trong nhà.</em></span></label></li><li><label><input type="checkbox" data-k="b3-q5"><span><b>Nếu mất hết vốn thử, cuộc sống của bạn có bị ảnh hưởng không?</b><em><b>Đạt khi:</b> câu trả lời là không. Có thì giảm vốn thử trước khi đi tiếp.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Hạ giá cho "dễ bán" trước khi có một lượt xem nào</li><li>Tính lãi trước phí sàn, phí thanh toán, Offsite Ads và phí ship</li><li>Góc thắng là "chất lượng tốt hơn" hay "đẹp hơn": khách không kiểm được điều đó trên ảnh</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-b4">
+  <summary><span class="wk">Tuần 4 · Thứ 5 19/11 · 120 phút</span><span class="ttl">Buổi 4 · Listing bán được, lên bán trước Chủ nhật 22/11 (T0)</span><span class="q"><b>Câu hỏi của buổi:</b> Khi khách lướt qua trong 2 giây, họ có nhận ra món này dành cho mình không?</span><span class="prog" data-card="b4">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="b4-t0"><span>Mẫu thật đã về (POD đặt mẫu ngay khi cổng R đạt). Chụp ảnh từ mẫu thật</span></label></li><li><label><input type="checkbox" data-k="b4-t1"><span>Kiểm tuân thủ từng SKU: tra USPTO, không chép thiết kế shop khác</span></label></li><li><label><input type="checkbox" data-k="b4-t2"><span>Nháp tiêu đề, 13 thẻ và 160 ký tự đầu mô tả, dùng cụm từ ở cổng C</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Tiêu đề và thẻ từ cụm C1, ảnh đầu nói góc A, mô tả trả lời 3 lời chê</li><li>Giá, hồ sơ giao hàng, thời gian xử lý mùa cao điểm; khai báo đối tác sản xuất</li><li>Chấm từng listing bằng phiếu 12 điểm. Viết trước ngưỡng cổng 30</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Lên bán (T0) · hạn Chủ nhật 22/11</span><span>3–5 listing cùng một khách (Cấp 1: 3 listing) · dán link vào Classroom · ghi ngày T0 thật ở Checklist tab 0, ô B8 · nhập SKU vào Bộ vận hành · ngưỡng cổng 30 ở Kế hoạch 90 ngày tab 6</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="b4-q0"><span><b>Mỗi listing đạt từ 10/12 điểm trên phiếu chấm và đủ 3 mục bắt buộc chưa?</b><em><b>Đạt khi:</b> bạn chấm bằng phiếu, không chấm bằng cảm giác.</em></span></label></li><li><label><input type="checkbox" data-k="b4-q1"><span><b>40 ký tự đầu của tiêu đề có cụm từ khách gõ không?</b><em><b>Đạt khi:</b> đọc 40 ký tự đó, khách biết ngay món gì, cho ai.</em></span></label></li><li><label><input type="checkbox" data-k="b4-q2"><span><b>Ảnh 2 đến 5 có trả lời đủ kích thước thật, chất liệu, cách cá nhân hóa và hạn giao không?</b><em><b>Đạt khi:</b> mỗi ảnh trả lời một nỗi lo mà review của đối thủ hay nhắc.</em></span></label></li><li><label><input type="checkbox" data-k="b4-q3"><span><b>Thời gian xử lý cộng thời gian giao có khớp với dịp của khách không? Nhà in nghỉ Tết từ ngày nào?</b><em><b>Đạt khi:</b> bạn đã hỏi nhà in bằng tin nhắn có ngày, và cài đặt giao hàng ghi đúng thực tế.</em></span></label></li><li><label><input type="checkbox" data-k="b4-q4"><span><b>Có chữ nào thuộc nhãn hiệu trong tiêu đề, thẻ hay ảnh không?</b><em><b>Đạt khi:</b> đã tra từng chữ đáng ngờ trên USPTO.</em></span></label></li><li><label><input type="checkbox" data-k="b4-q5"><span><b>Ngưỡng cổng 30 đã viết ra trước khi bán chưa?</b><em><b>Đạt khi:</b> ngưỡng nằm ở Kế hoạch 90 ngày tab 6 và bạn cam kết không sửa sau T0.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Dùng ảnh mockup đẹp hơn món khách thật sự nhận được</li><li>Đăng 1 listing rồi ngồi chờ: người bán giỏi đăng nhiều listing cho cùng một khách</li><li>Ghi thời gian xử lý ngắn hơn thực tế để trông hấp dẫn, rồi trễ đơn mùa lễ</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-c1">
+  <summary><span class="wk">Tuần 5 · Thứ 5 26/11 · 60 phút</span><span class="ttl">Clinic 1 · Đọc số tuần đầu: khách đã thấy bạn chưa</span><span class="q"><b>Câu hỏi của buổi:</b> Khách đã thấy listing chưa, và họ dừng lại ở đâu?</span><span class="prog" data-card="c1">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="c1-t0"><span>Thứ 2 23/11 trước 20:00: chép số tuần vào Kế hoạch 90 ngày tab 5 (15 phút)</span></label></li><li><label><input type="checkbox" data-k="c1-t1"><span>Viết ở Checklist tab 3: chỗ tắc, thứ đã đổi, học được gì về khách, dự đoán tuần sau</span></label></li><li><label><input type="checkbox" data-k="c1-t2"><span>Trả lời mọi tin nhắn của khách trong 24 giờ</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Đọc Etsy Stats: lượt xem đến từ đâu</li><li>Sửa chỗ tắc lượt xem: tiêu đề, thẻ, danh mục, thuộc tính</li><li>Hot seat: 2 học viên, mỗi người 5 phút</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Số tuần · hạn Mỗi thứ 2 trước 20:00, từ 23/11</span><span>Kế hoạch 90 ngày tab 5 · Checklist tab 3 cột J–M · bình luận riêng trong bài tập tuần trên Classroom</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="c1-q0"><span><b>Lượt xem đến từ Etsy search, Etsy Ads hay bên ngoài?</b><em><b>Đạt khi:</b> bạn biết nguồn. Lượt xem từ search gần bằng 0 là lỗi tiêu đề và thẻ, chưa phải lỗi sản phẩm.</em></span></label></li><li><label><input type="checkbox" data-k="c1-q1"><span><b>Tuần này bạn đổi đúng một thứ, và đã ghi ngày đổi chưa?</b><em><b>Đạt khi:</b> nhật ký thử nghiệm có đúng 1 dòng cho tuần này.</em></span></label></li><li><label><input type="checkbox" data-k="c1-q2"><span><b>Bạn có đang kết luận về sản phẩm khi lượt xem cộng dồn chưa tới 300 không?</b><em><b>Đạt khi:</b> bạn chưa kết luận gì về sản phẩm.</em></span></label></li><li><label><input type="checkbox" data-k="c1-q3"><span><b>Tin nhắn nào của khách đã chờ quá 24 giờ?</b><em><b>Đạt khi:</b> không có tin nào.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Sửa 5 thứ cùng lúc, nên không biết thứ nào có tác dụng</li><li>Bật quảng cáo ngay tuần đầu để "mồi" lượt xem</li><li>Xóa listing rồi đăng lại vì sốt ruột</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-c2">
+  <summary><span class="wk">Tuần 6 · Thứ 5 03/12 · 60 phút</span><span class="ttl">Clinic 2 · Ảnh đầu và tỷ lệ bấm</span><span class="q"><b>Câu hỏi của buổi:</b> Nhìn ảnh đầu, khách có nhận ra đây là món dành cho mình không?</span><span class="prog" data-card="c2">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="c2-t0"><span>Nộp số tuần thứ 2 30/11</span></label></li><li><label><input type="checkbox" data-k="c2-t1"><span>Chụp màn hình trang tìm kiếm có listing của bạn nằm giữa các đối thủ</span></label></li><li><label><input type="checkbox" data-k="c2-t2"><span>Hỏi nhà in năng lực tháng 12: thời gian xử lý còn đúng không</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Chữa ảnh đầu từng người</li><li>Đổi một biến của ảnh đầu và đo trong 14 ngày</li><li>Nhắc lại mùa: Valentine cần listing lên trước 20/12</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Số tuần + 1 thay đổi · hạn Thứ 2 07/12</span><span>Một phiên bản ảnh đầu mới, hoặc lý do giữ nguyên, ghi ở nhật ký thử nghiệm</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="c2-q0"><span><b>Thu nhỏ ảnh đầu cỡ con tem như trên điện thoại: còn đọc được món gì, cho ai, cá nhân hóa ra sao không?</b><em><b>Đạt khi:</b> người không biết gì về shop đoán đúng trong 2 giây.</em></span></label></li><li><label><input type="checkbox" data-k="c2-q1"><span><b>Đặt ảnh của bạn cạnh 8 ảnh đầu trang 1: ảnh bạn có khác không?</b><em><b>Đạt khi:</b> ảnh bạn nổi lên vì nói đúng góc, không phải vì màu chói.</em></span></label></li><li><label><input type="checkbox" data-k="c2-q2"><span><b>Ảnh có đúng món khách sẽ nhận không?</b><em><b>Đạt khi:</b> ảnh chụp từ mẫu thật, đúng kích thước, đúng màu.</em></span></label></li><li><label><input type="checkbox" data-k="c2-q3"><span><b>Thời gian xử lý tháng 12 còn khớp với năng lực nhà in không?</b><em><b>Đạt khi:</b> nhà in đã xác nhận bằng tin nhắn có ngày.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Đổi ảnh mỗi 2 ngày nên không đo được gì</li><li>Thêm chữ lên ảnh đầu đến mức không nhìn ra sản phẩm</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-c3">
+  <summary><span class="wk">Tuần 7 · Thứ 5 10/12 · 60 phút</span><span class="ttl">Clinic 3 · Chuyển đổi, đơn đầu tiên và review · hạn chót listing Valentine</span><span class="q"><b>Câu hỏi của buổi:</b> Khách ghé rồi đi, họ còn lo điều gì?</span><span class="prog" data-card="c3">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="c3-t0"><span>Nộp số tuần thứ 2 07/12</span></label></li><li><label><input type="checkbox" data-k="c3-t1"><span>Liệt kê 3 câu khách hỏi nhiều nhất qua tin nhắn hoặc trong review của đối thủ</span></label></li><li><label><input type="checkbox" data-k="c3-t2"><span>Đi mùa Valentine thì chuẩn bị listing để lên trước 20/12</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Giá, phí ship, thời gian giao, lòng tin: chỗ nào làm khách dừng</li><li>Xử lý đơn đầu tiên theo SOP đơn hàng, cách xin review đúng chính sách</li><li>Nguyên tắc 3 và 4: sửa chuyển đổi trước khi mua lượt xem; giữ giá, đầu tư vào trải nghiệm 10 đơn đầu</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Số tuần + listing Valentine · hạn Thứ 2 14/12 (listing Valentine trước 20/12)</span><span>Nhật ký đơn có đủ đơn · listing Valentine (nếu có) và ngày lên</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="c3-q0"><span><b>Giá cộng phí ship của bạn nằm ở đâu so với cụm giá đã chọn ở cổng L?</b><em><b>Đạt khi:</b> không cao hơn cụm giá mà thiếu lý do hiện trên ảnh hay tiêu đề.</em></span></label></li><li><label><input type="checkbox" data-k="c3-q1"><span><b>Ba câu khách hay hỏi đã được trả lời sẵn trong ảnh hoặc mô tả chưa?</b><em><b>Đạt khi:</b> khách không cần nhắn tin vẫn biết đủ để đặt.</em></span></label></li><li><label><input type="checkbox" data-k="c3-q2"><span><b>Với đơn đầu: đã xác nhận cá nhân hóa trong 24 giờ, giao sớm hơn hứa, gửi tin hỏi thăm sau khi nhận chưa?</b><em><b>Đạt khi:</b> nhật ký đơn có đủ 3 mốc.</em></span></label></li><li><label><input type="checkbox" data-k="c3-q3"><span><b>Bạn có định bật quảng cáo trong khi tỷ lệ chuyển đổi chưa ổn không?</b><em><b>Đạt khi:</b> chưa bật. Quảng cáo cho listing chuyển đổi kém là trả tiền để nhiều người thấy thứ họ không mua.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Hạ giá ngay khi có lượt xem mà chưa có đơn</li><li>Xin review bằng quà hay giảm giá: vi phạm chính sách của Etsy</li></ul></div>
+  </div>
+</details>
+<details class="ht-card gate" id="ht-g30">
+  <summary><span class="wk">Tuần 8 · Thứ 5 17/12 · 90 phút, mỗi người 15 phút 1:1</span><span class="ttl">Cổng 30 · Tiếp tục, sửa hay đổi hướng</span><span class="q"><b>Câu hỏi của buổi:</b> Bạn biết thêm gì về khách mà 30 ngày trước chưa biết?</span><span class="prog" data-card="g30">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="g30-t0"><span>Mở Kế hoạch 90 ngày tab 6: số tự tính từ tab 4 và tab 5</span></label></li><li><label><input type="checkbox" data-k="g30-t1"><span>Đánh dấu tiêu chí chất lượng ở Checklist tab 4</span></label></li><li><label><input type="checkbox" data-k="g30-t2"><span>Đặt dự đoán ban đầu (thẻ giả thuyết) cạnh kết quả thật</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Đối chiếu số thật với ngưỡng đã viết ở Buổi 4. Không đổi ngưỡng tại chỗ</li><li>Kết luận một trong ba: tiếp tục, sửa một biến, đổi hướng</li><li>Từ đây được thêm biến thể cho listing có tín hiệu</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Kết luận cổng 30 · hạn Ngay sau buổi review</span><span>Checklist tab 4 có Mentor xác nhận · một bài học ghi vào nhật ký quyết định · kế hoạch vận hành Tết (4–10/2)</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="g30-q0"><span><b>Lượt xem cộng dồn từ T0 đã tới 300 chưa?</b><em>Chưa tới thì kết luận đúng là "chưa đủ dữ liệu": sửa tìm kiếm và ảnh đầu, chưa đụng sản phẩm.</em></span></label></li><li><label><input type="checkbox" data-k="g30-q1"><span><b>Đã có ít nhất 1 đơn chưa?</b><em>Đủ lượt xem mà sau 2 lần sửa vẫn không có đơn thì quay lại cổng A, hoặc sang ngách dự phòng.</em></span></label></li><li><label><input type="checkbox" data-k="g30-q2"><span><b>Lãi thật mỗi đơn có thấp hơn bảng cổng R quá 20% không?</b><em><b>Đạt khi:</b> lệch ít hơn 20%. Lệch nhiều thì tìm khoản phí bạn đã quên.</em></span></label></li><li><label><input type="checkbox" data-k="g30-q3"><span><b>Nhật ký có đủ 4 tuần, mỗi tuần đổi đúng một thứ không?</b><em><b>Đạt khi:</b> đủ. Thiếu tuần nào thì tuần đó bạn không học được gì từ số.</em></span></label></li><li><label><input type="checkbox" data-k="g30-q4"><span><b>Quyết định của bạn có lý do bằng số không?</b><em><b>Đạt khi:</b> đọc lý do, Mentor không cần hỏi lại "em thấy sao".</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Đổi ngưỡng cho vừa với kết quả</li><li>Bỏ ngách vì "chán" khi lượt xem chưa tới 300</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-c4">
+  <summary><span class="wk">Tuần 9 · Thứ 3 22/12 · 60 phút</span><span class="ttl">Clinic 4 · Lãi thật trên đơn thật, chia tiền Profit First lần đầu</span><span class="q"><b>Câu hỏi của buổi:</b> Đơn thật cho bạn bao nhiêu tiền, so với bảng lãi bạn tính ở cổng R?</span><span class="prog" data-card="c4">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="c4-t0"><span>Nộp số tuần thứ 2 21/12</span></label></li><li><label><input type="checkbox" data-k="c4-t1"><span>Mở Etsy Payment account, ghi từng khoản phí của từng đơn vào nhật ký đơn</span></label></li><li><label><input type="checkbox" data-k="c4-t2"><span>Kiểm đơn mùa lễ: ngày giao dự kiến của từng đơn</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>So lãi từng đơn với bảng cổng R; sửa giá hoặc gói nếu lệch</li><li>Chia tiền theo Profit First lần đầu (Kế hoạch 90 ngày tab 7)</li><li>Xử lý đơn trễ hoặc lỗi in mùa lễ</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Số tuần + chia tiền · hạn Thứ 2 28/12</span><span>Nhật ký đơn có lãi thật · ảnh chuyển khoản sang tài khoản Lãi (che số)</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="c4-q0"><span><b>Khoản phí nào xuất hiện trên đơn thật mà bảng lãi của bạn chưa có?</b><em><b>Đạt khi:</b> bảng cổng R đã được cập nhật bằng số thật.</em></span></label></li><li><label><input type="checkbox" data-k="c4-q1"><span><b>Lãi mỗi đơn thật có đủ để trả một lần quảng cáo sau này không?</b><em><b>Đạt khi:</b> bạn biết con số này, vì nó là CAC tối đa ở Clinic 6.</em></span></label></li><li><label><input type="checkbox" data-k="c4-q2"><span><b>Bạn đã chuyển phần Lãi sang tài khoản riêng chưa, dù số tiền còn nhỏ?</b><em><b>Đạt khi:</b> đã chuyển. Thói quen quan trọng hơn số tiền.</em></span></label></li><li><label><input type="checkbox" data-k="c4-q3"><span><b>Đơn nào có nguy cơ giao trễ dịp lễ, và bạn đã nhắn khách trước chưa?</b><em><b>Đạt khi:</b> khách nghe tin từ bạn trước khi phải hỏi.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Tính lãi trên doanh thu thay vì trên tiền thật về tài khoản</li><li>Tiêu hết tiền về để "tái đầu tư" mà không trích phần Lãi</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-c5">
+  <summary><span class="wk">Tuần 10 · Thứ 3 29/12 · 60 phút</span><span class="ttl">Clinic 5 · Đơn thứ hai: biến thể cùng khách và đường mua lại</span><span class="q"><b>Câu hỏi của buổi:</b> Nếu shop chỉ phục vụ đúng một khách, món thứ hai bạn bán cho họ là gì?</span><span class="prog" data-card="c5">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="c5-t0"><span>Nộp số tuần thứ 2 28/12</span></label></li><li><label><input type="checkbox" data-k="c5-t1"><span>Đánh dấu listing có tín hiệu: favorite, thêm giỏ, đơn</span></label></li><li><label><input type="checkbox" data-k="c5-t2"><span>Đọc lại nguyên tắc 2 và 8 ở mục <a href="#nguoi-ban-gioi">Người bán giỏi</a></span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Thêm 1–2 biến thể cho listing có tín hiệu, cùng một khách</li><li>Thiết kế đơn thứ hai từ đơn đầu: tấm thẻ trong hộp, dịp kế tiếp, quà cho người khác trong nhà</li><li>Việc sau bán: tin hỏi thăm, lời mời xem shop</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Số tuần + biến thể · hạn Thứ 2 04/01</span><span>1–2 biến thể đã lên · một câu đường mua lại ghi ở Checklist S6.7</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="c5-q0"><span><b>Biến thể mới phục vụ cùng một khách, hay bạn đang mở ngách mới?</b><em><b>Đạt khi:</b> cùng khách. Ngách mới chờ sau cổng 90.</em></span></label></li><li><label><input type="checkbox" data-k="c5-q1"><span><b>Listing được chọn làm biến thể có tín hiệu thật không?</b><em><b>Đạt khi:</b> có favorite, thêm giỏ hoặc đơn, không phải listing bạn thích nhất.</em></span></label></li><li><label><input type="checkbox" data-k="c5-q2"><span><b>Trong hộp hàng của bạn có thứ gì khiến khách quay lại không?</b><em><b>Đạt khi:</b> có một thứ cụ thể, ví dụ thẻ gợi ý dịp kế tiếp.</em></span></label></li><li><label><input type="checkbox" data-k="c5-q3"><span><b>Bạn còn đổi một thứ mỗi tuần ở listing chính không?</b><em><b>Đạt khi:</b> nhật ký thử nghiệm vẫn đều tuần.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Thêm 10 listing mới cho 10 khách khác nhau vì "thấy shop khác làm"</li><li>Quên listing chính khi bận làm biến thể</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-c6">
+  <summary><span class="wk">Tuần 11 · Thứ 5 07/01 · 60 phút</span><span class="ttl">Clinic 6 · Sau mùa lễ: đọc lại số, quảng cáo có kỷ luật</span><span class="q"><b>Câu hỏi của buổi:</b> Sau mùa lễ, ai vẫn còn mua, và mua cho dịp gì?</span><span class="prog" data-card="c6">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="c6-t0"><span>Nộp số tuần thứ 2 04/01</span></label></li><li><label><input type="checkbox" data-k="c6-t1"><span>Tách số mùa lễ khỏi số nền: tuần nào là đỉnh, tuần nào là bình thường</span></label></li><li><label><input type="checkbox" data-k="c6-t2"><span>Tính CAC tối đa = lãi trước quảng cáo của mỗi đơn</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Khi nào bật Etsy Ads; ngân sách theo CAC tối đa; điểm tắt</li><li>Shopify: đọc CAC từng mẫu quảng cáo</li><li>Lịch 3 mùa: Valentine 14/2, Mother's Day 9/5, Father's Day 20/6</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Số tuần + lịch 3 mùa · hạn Thứ 2 11/01</span><span>Lịch 3 mùa trong Kế hoạch 90 ngày · quyết định bật hoặc không bật quảng cáo, có lý do</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="c6-q0"><span><b>CAC tối đa của bạn là bao nhiêu đô một đơn?</b><em><b>Đạt khi:</b> có con số, ghi lên đầu nhật ký quảng cáo.</em></span></label></li><li><label><input type="checkbox" data-k="c6-q1"><span><b>Listing định chạy quảng cáo đã chuyển đổi tốt khi chưa có quảng cáo chưa?</b><em><b>Đạt khi:</b> đã có đơn tự nhiên. Chưa có thì sửa listing trước.</em></span></label></li><li><label><input type="checkbox" data-k="c6-q2"><span><b>Ngân sách mỗi ngày và điểm tắt đã viết ra chưa?</b><em><b>Đạt khi:</b> viết dạng "tiêu hết một lần CAC tối đa mà chưa có đơn thì tắt".</em></span></label></li><li><label><input type="checkbox" data-k="c6-q3"><span><b>Mùa kế tiếp của bạn là gì, và listing cho mùa đó phải lên trước ngày nào?</b><em><b>Đạt khi:</b> có ngày cụ thể, lùi 6–8 tuần từ dịp lễ.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>So số tháng 1 với tháng 12 rồi hoảng</li><li>Bật quảng cáo để cứu một listing chưa từng có đơn tự nhiên</li></ul></div>
+  </div>
+</details>
+<details class="ht-card gate" id="ht-g60">
+  <summary><span class="wk">Tuần 12 · Thứ 5 14/01 · 90 phút, mỗi người 15 phút 1:1</span><span class="ttl">Cổng 60 · Đã hoàn vốn thử chưa</span><span class="q"><b>Câu hỏi của buổi:</b> Khách nào đã quay lại, hoặc giới thiệu người khác?</span><span class="prog" data-card="g60">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="g60-t0"><span>Kế hoạch 90 ngày tab 6: đọc cổng 60</span></label></li><li><label><input type="checkbox" data-k="g60-t1"><span>Opportunity Engine tab 7: cập nhật Sức khỏe tiền mặt bằng số thật</span></label></li><li><label><input type="checkbox" data-k="g60-t2"><span>Kế hoạch 90 ngày tab 9: chấm rủi ro một điểm hỏng</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Đối chiếu ngưỡng cổng 60; quyết định có lý do bằng số</li><li>Rủi ro một điểm hỏng: một listing, một nhà in, một nền tảng</li><li>Kế hoạch Tết: nhà in nghỉ ngày nào, đơn Valentine cuối cùng nhận đến ngày nào</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Kết luận cổng 60 · hạn Ngay sau buổi review</span><span>Checklist tab 4 có Mentor xác nhận · kế hoạch Tết bằng chữ</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="g60-q0"><span><b>Lãi lũy kế đã bằng hoặc vượt vốn thử chưa?</b><em><b>Đạt khi:</b> đã hoàn vốn thử (R2). Chưa thì ghi còn thiếu bao nhiêu, cần bao nhiêu đơn.</em></span></label></li><li><label><input type="checkbox" data-k="g60-q1"><span><b>Lãi mỗi đơn có còn đạt ngưỡng của mô hình không?</b><em><b>Đạt khi:</b> không bị phí, quảng cáo hay giảm giá ăn mòn.</em></span></label></li><li><label><input type="checkbox" data-k="g60-q2"><span><b>Tiền mặt còn đủ chạy ít nhất 3 tháng không?</b><em><b>Đạt khi:</b> tab 7 báo số tháng chạy được từ 3 trở lên.</em></span></label></li><li><label><input type="checkbox" data-k="g60-q3"><span><b>Nếu nhà in hoặc listing chính ngừng ngày mai, bạn còn gì?</b><em><b>Đạt khi:</b> mỗi rủi ro một điểm hỏng có một phương án dự phòng ghi sẵn.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Coi doanh thu mùa lễ là doanh thu bình thường của shop</li><li>Không có phương án dự phòng cho nhà in duy nhất</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-c7">
+  <summary><span class="wk">Tuần 13 · Thứ 5 21/01 · 60 phút</span><span class="ttl">Clinic 7 · SOP, lịch tuần cố định và chuẩn bị Tết</span><span class="q"><b>Câu hỏi của buổi:</b> Tuần Tết, khách Mỹ vẫn mua quà Valentine. Bạn giữ lời hứa với họ thế nào?</span><span class="prog" data-card="c7">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="c7-t0"><span>Nộp số tuần thứ 2 18/01</span></label></li><li><label><input type="checkbox" data-k="c7-t1"><span>Ghi lại các bước của việc lặp lại nhiều nhất (thường là xử lý đơn cá nhân hóa)</span></label></li><li><label><input type="checkbox" data-k="c7-t2"><span>Hỏi nhà in lịch nghỉ Tết bằng tin nhắn có ngày</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Viết SOP cho việc lặp lại nhiều nhất; chốt lịch tuần cố định</li><li>Họp tuần mẫu với chính mình theo Kế hoạch 90 ngày tab 10</li><li>Kéo dài thời gian xử lý hay bật chế độ nghỉ; tin nhắn báo trước cho khách</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">SOP + kế hoạch Tết · hạn Thứ 2 25/01</span><span>SOP mới (Checklist S11.2) · thời gian xử lý tuần Tết đã cập nhật trên mọi listing</span></div></div>
+    </div>
+    <p class="ht-note"><b>Tuần 14 (thứ 5 28/01):</b> office hour 60 phút, không giáo án. Mang câu hỏi và số của shop bạn đến buổi.</p>
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="c7-q0"><span><b>Một người khác đọc SOP của bạn có làm đúng mà không cần hỏi không?</b><em><b>Đạt khi:</b> bạn đã thử đưa cho một người làm theo.</em></span></label></li><li><label><input type="checkbox" data-k="c7-q1"><span><b>Mọi listing đã cập nhật thời gian xử lý cho tuần 4–10/2 chưa?</b><em><b>Đạt khi:</b> đã cập nhật, kể cả listing ít đơn.</em></span></label></li><li><label><input type="checkbox" data-k="c7-q2"><span><b>Đơn Valentine cuối cùng bạn nhận là ngày nào, và khách có thấy ngày đó không?</b><em><b>Đạt khi:</b> ngày đó ghi rõ trên listing hoặc ảnh.</em></span></label></li><li><label><input type="checkbox" data-k="c7-q3"><span><b>Ai trả lời tin nhắn khách trong tuần Tết?</b><em><b>Đạt khi:</b> có tên người, kể cả khi người đó là bạn mỗi tối 15 phút.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Định "Tết tính sau" trong khi khách Valentine đặt từ đầu tháng 2</li><li>Bật chế độ nghỉ mà quên báo khách đang có đơn dở</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-tet">
+  <summary><span class="wk">01/02 – 07/02 · lễ Tết 4–10/2/2027</span><span class="ttl">Nghỉ Tết · lớp nghỉ, shop vẫn chạy</span><span class="q"><b>Câu hỏi của buổi:</b> Shop của bạn vẫn giữ được lời hứa khi bạn đang nghỉ không?</span><span class="prog" data-card="tet">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="tet-t0"><span>Thời gian xử lý trên mọi listing đã đổi theo lịch nhà in</span></label></li><li><label><input type="checkbox" data-k="tet-t1"><span>Tin nhắn trả lời nhanh cho tuần Tết đã soạn sẵn</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Mỗi ngày dành 15 phút: đọc tin nhắn, xác nhận đơn mới</li><li>Không đổi gì trên listing trong tuần này</li><li>Không nộp số thứ 2 08/02; nộp lại từ thứ 2 15/02</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Không có bài nộp · hạn —</span><span>Ghi số đơn nhận trong Tết để đọc ở Clinic 8</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="tet-q0"><span><b>Có tin nhắn nào của khách chờ quá 24 giờ không?</b><em><b>Đạt khi:</b> không có.</em></span></label></li><li><label><input type="checkbox" data-k="tet-q1"><span><b>Đơn nào nhận trong Tết có nguy cơ trễ, và bạn đã báo khách chưa?</b><em><b>Đạt khi:</b> khách biết trước.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Tắt hẳn điện thoại một tuần khi đang có đơn Valentine</li></ul></div>
+  </div>
+</details>
+<details class="ht-card" id="ht-c8">
+  <summary><span class="wk">Tuần 15 · Thứ 5 11/02 · 60 phút</span><span class="ttl">Clinic 8 · Công suất mùa cao điểm, rủi ro một điểm hỏng, mùa sau</span><span class="q"><b>Câu hỏi của buổi:</b> Tuần Tết, khách có nhận hàng đúng hẹn không, và họ nói gì?</span><span class="prog" data-card="c8">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="c8-t0"><span>Ghi số đơn và số đơn trễ trong Tết</span></label></li><li><label><input type="checkbox" data-k="c8-t1"><span>Tính số đơn tối đa mỗi ngày của bạn và của nhà in</span></label></li><li><label><input type="checkbox" data-k="c8-t2"><span>Bắt đầu Kế hoạch 90 ngày tab 11 (Một trang) cho Demo day</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Nguyên tắc 5 và 9: sàn là nhà thuê; làm hàng cho mùa sau</li><li>3 rủi ro một điểm hỏng và phương án dự phòng</li><li>Lịch mùa: listing Mother's Day (9/5) lên trước giữa tháng 3, Father's Day (20/6) trước cuối tháng 4</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Bản nháp Demo day · hạn Thứ 2 15/02</span><span>Tab 11 bản nháp · con số công suất · 3 rủi ro một điểm hỏng có dự phòng</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="c8-q0"><span><b>Nếu tuần trước dịp lễ có 50 đơn, bạn và nhà in có làm kịp, đúng tên, đúng hạn không?</b><em><b>Đạt khi:</b> có con số công suất mỗi ngày và kế hoạch khi vượt số đó.</em></span></label></li><li><label><input type="checkbox" data-k="c8-q1"><span><b>Có listing, nhà in hay nền tảng nào chiếm gần hết đơn của bạn không?</b><em><b>Đạt khi:</b> điểm đó có phương án dự phòng.</em></span></label></li><li><label><input type="checkbox" data-k="c8-q2"><span><b>Listing cho mùa kế tiếp đã có lịch lên chưa?</b><em><b>Đạt khi:</b> có ngày, lùi 6–8 tuần từ dịp lễ.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Coi mùa Valentine là kết quả của cả shop</li><li>Chưa có bản nháp Demo day khi chỉ còn một tuần</li></ul></div>
+  </div>
+</details>
+<details class="ht-card gate" id="ht-g90">
+  <summary><span class="wk">Tuần 16 · Thứ 5 18/02 · 120 phút</span><span class="ttl">Cổng 90 và Demo day</span><span class="q"><b>Câu hỏi của buổi:</b> Bạn hiểu khách của mình đến đâu, và bằng chứng là gì?</span><span class="prog" data-card="g90">0/0</span></summary>
+  <div class="ht-body">
+    <div class="ht-grid">
+      <div class="ht-col"><h4>Trước buổi</h4><ul class="ck"><li><label><input type="checkbox" data-k="g90-t0"><span>Kế hoạch 90 ngày tab 6: đọc cổng 90</span></label></li><li><label><input type="checkbox" data-k="g90-t1"><span>Hoàn thiện tab 11 (Một trang): khách, số, quyết định đúng và sai, 90 ngày tới</span></label></li><li><label><input type="checkbox" data-k="g90-t2"><span>Làm lại file Đánh giá đầu vào để so với lần đầu</span></label></li></ul></div>
+      <div class="ht-col"><h4>Trong buổi</h4><ul><li>Mỗi người trình bày 8 phút: dự đoán so với thực tế, một bài học</li><li>Chọn đúng một trục nhân bản: biến thể cùng khách, dịp mới, hoặc kênh thứ hai</li><li>Kết luận cổng 90 với Mentor</li></ul></div>
+      <div class="ht-col"><h4>Nộp sau buổi</h4><div class="due"><span class="k">Việc trong 7 ngày · hạn Thứ 5 25/02</span><span>Kế hoạch 90 ngày tiếp theo có ngưỡng · thẻ giả thuyết mới · listing Mother's Day đang lên</span></div></div>
+    </div>
+    
+    <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="g90-q0"><span><b>Lãi sau quảng cáo có dương 2 tháng liền không?</b><em><b>Đạt khi:</b> dương. Chỉ khi đó mới mở kênh thứ hai.</em></span></label></li><li><label><input type="checkbox" data-k="g90-q1"><span><b>Đã có khách quay lại hoặc giới thiệu người khác chưa?</b><em><b>Đạt khi:</b> có ít nhất một, ghi tên đơn.</em></span></label></li><li><label><input type="checkbox" data-k="g90-q2"><span><b>Dự đoán ban đầu của bạn sai nhiều nhất ở đâu?</b><em><b>Đạt khi:</b> bạn nói được vì sao sai, và lần sau sẽ kiểm điều đó sớm hơn ở cổng nào.</em></span></label></li><li><label><input type="checkbox" data-k="g90-q3"><span><b>Nếu bắt đầu lại hôm nay với những gì đã biết, bạn có chọn ngách này không?</b><em><b>Đạt khi:</b> câu trả lời có lý do bằng số, dù là có hay không.</em></span></label></li><li><label><input type="checkbox" data-k="g90-q4"><span><b>Trục nhân bản bạn chọn có đúng một trục không?</b><em><b>Đạt khi:</b> chỉ một. Hai trục cùng lúc thường là không trục nào xong.</em></span></label></li></ol></div>
+    <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Mở 3 ngách mới ngay sau Demo day</li><li>Đổi sang Shopify khi kênh đầu chưa có lãi sau quảng cáo</li></ul></div>
+  </div>
+</details>
+    </div>
+  </div>
+</section>
+
 
 <section id="tru-cot">
   <div class="sec-head">
@@ -2027,6 +2373,43 @@ Ngưỡng của khóa học: chưa kết luận về sản phẩm khi tổng lư
 </footer>
 </div>
 
+<script>
+(function(){
+  var KEY='clear-k1-hanh-trinh';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){state={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+  var root=document.getElementById('hanh-trinh'); if(!root) return;
+  var boxes=root.querySelectorAll('input[type=checkbox][data-k]');
+  function refresh(){
+    var all=0,done=0;
+    root.querySelectorAll('.ht-card').forEach(function(card){
+      var bs=card.querySelectorAll('input[type=checkbox]'),n=0;
+      bs.forEach(function(b){if(b.checked)n++;});
+      var p=card.querySelector('.prog'); if(p){p.textContent=n+'/'+bs.length+' đã tích';p.classList.toggle('done',n===bs.length&&bs.length>0);}
+      all+=bs.length; done+=n;
+    });
+    var t=document.getElementById('ht-total'); if(t) t.textContent='Đã tích '+done+'/'+all+' ô';
+  }
+  boxes.forEach(function(b){
+    b.checked=!!state[b.dataset.k];
+    b.addEventListener('change',function(){ if(b.checked) state[b.dataset.k]=1; else delete state[b.dataset.k]; save(); refresh(); });
+  });
+  root.querySelectorAll('[data-ht]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var a=btn.dataset.ht, cards=root.querySelectorAll('.ht-card');
+      if(a==='open') cards.forEach(function(c){c.open=true;});
+      if(a==='close') cards.forEach(function(c){c.open=false;});
+      if(a==='reset'){ state={}; save(); boxes.forEach(function(b){b.checked=false;}); refresh(); }
+    });
+  });
+  // mở thẻ của tuần hiện tại
+  var map=[['b0','2026-10-19'],['b1','2026-10-26'],['b2','2026-11-02'],['b3','2026-11-09'],['b4','2026-11-16'],['c1','2026-11-23'],['c2','2026-11-30'],['c3','2026-12-07'],['g30','2026-12-14'],['c4','2026-12-21'],['c5','2026-12-28'],['c6','2027-01-04'],['g60','2027-01-11'],['c7','2027-01-18'],['tet','2027-02-01'],['c8','2027-02-08'],['g90','2027-02-15']];
+  var now=new Date(), cur='b0';
+  map.forEach(function(m){ if(now>=new Date(m[1]+'T00:00:00+07:00')) cur=m[0]; });
+  if(location.hash.indexOf('#ht-')!==0){ var el=document.getElementById('ht-'+cur); if(el) el.open=true; }
+  else { var h=document.getElementById(location.hash.slice(1)); if(h&&h.tagName==='DETAILS') h.open=true; }
+  refresh();
+})();
+</script>
 </body></html>
-</body>
-</html>
