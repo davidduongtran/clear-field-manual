@@ -339,6 +339,8 @@ ol.anat .q{font-size:13px;color:var(--muted)} ol.anat .els,ol.anat .ex{font-size
 ol.anat .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);margin-bottom:2px}
 table.spyt{min-width:760px}
 table.spyt td:first-child{font-weight:600;white-space:nowrap}
+table.spyt.case{min-width:0}table.spyt.case td:first-child{width:9.5em}
+@media(max-width:640px){table.spyt.case,table.spyt.case tbody,table.spyt.case tr,table.spyt.case td{display:block;width:auto}table.spyt.case thead{display:none}table.spyt.case td:first-child{width:auto;padding-bottom:0;border-bottom:0}table.spyt.case tr{padding:4px 0}}
 ol.flowl{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
 @media (max-width:900px){ol.anat>li{grid-template-columns:minmax(0,1fr)}}
 </style>
@@ -359,6 +361,7 @@ ol.flowl{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
 <div class="layout">
 <nav class="rail" aria-label="Các phần">
   <a href="#sprint"><span class="l">☑</span><span>Sprint 8 tuần</span></a>
+  <a href="#mmo-dn"><span class="l">◎</span><span>Từ MMO sang doanh nghiệp</span></a>
   <a href="#chon-sp"><span class="l">◎</span><span>Chọn ngách, sản phẩm</span></a>
   <a href="#spy"><span class="l">⌕</span><span>Spy &amp; research</span></a>
   <a href="#vat-ly"><span class="l">▣</span><span>Hàng vật lý</span></a>
@@ -394,7 +397,7 @@ ol.flowl{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
     <h2>Sprint 8 tuần: chọn sản phẩm, bán trên Etsy, mở rộng sang Shopify bằng Meta Ads</h2>
   </div>
   <p class="prose">Ba chặng, mỗi chặng một kết quả nhìn thấy được. Tuần 1 chọn xong sản phẩm. Tuần 2 có 5 listing đang bán trên Etsy. Tuần 3–4 tối ưu cho tới khi Etsy ra đơn. Tuần 5 dựng store Shopify cho sản phẩm đã có tín hiệu. Tuần 6–7 chạy Meta Ads. Mỗi tuần bạn có hai buổi 1:1 với Mentor, mỗi buổi 30 phút: thứ 2 giao việc và gỡ vướng, thứ 5 chữa bài trên shop thật. Các mục C.L.E.A.R. trong sổ tay này là công cụ tra cứu khi cần, không phải bài phải học hết trước khi làm.</p>
-  <p class="verdict">Có hai nhánh, chọn cùng Mentor ở buổi 1:1 đầu tiên. <b>Nhánh A · POD</b>: Etsy rồi Shopify, đi theo các thẻ tuần bên dưới. <b>Nhánh B · Hàng vật lý</b>: nguồn hàng từ Việt Nam, Trung Quốc, kho Mỹ hay nước khác, bán trên Shopify với Meta Ads, đi theo <a href="#vl-lo-trinh">lộ trình nhánh B</a> trong mục <a href="#vat-ly">Hàng vật lý</a>. Cùng nhịp 1:1, cùng hạn nộp, cùng tuần 8.</p>
+  <p class="verdict">Có hai nhánh, chọn cùng Mentor ở buổi 1:1 đầu tiên. <b>Nhánh A · POD</b>: Etsy rồi Shopify, đi theo các thẻ tuần bên dưới. <b>Nhánh B · Hàng vật lý</b>: nguồn hàng từ Việt Nam, Trung Quốc, kho Mỹ hay nước khác, bán trên Shopify với Meta Ads, đi theo <a href="#vl-lo-trinh">lộ trình nhánh B</a> trong mục <a href="#vat-ly">Hàng vật lý</a>. Cùng nhịp 1:1, cùng hạn nộp, cùng tuần 8. Trước buổi 1:1 đầu, đọc 6 case ở mục <a href="#mmo-dn">Từ MMO sang doanh nghiệp</a>.</p>
   <div class="ht-how">
     <div class="box"><span class="k">Chặng 1 · tuần 1</span><p><b>Chọn sản phẩm.</b> 7 ngày, bộ lọc 5 câu, Mentor chấm cùng.</p></div>
     <div class="box"><span class="k">Chặng 2 · tuần 2–4</span><p><b>Etsy.</b> Lên 5 listing, rồi tối ưu theo số: thấy, bấm, mua.</p></div>
@@ -549,6 +552,138 @@ ol.flowl{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
     <p class="src">Phí và chính sách nền tảng xem ngày 19/10/2026: <a href="https://www.etsy.com/legal/fees">Etsy, biểu phí</a> (0,20 USD mỗi listing, 6,5% phí giao dịch, Offsite Ads 15%, 12% khi shop đạt 10.000 USD/năm); <a href="https://help.etsy.com/hc/articles/360033701174">Etsy Ads</a> (ngân sách từ 1 USD/ngày, chờ 15 ngày sau khi mở shop); <a href="https://www.nerdwallet.com/article/small-business/shopify-pricing">giá gói Shopify</a>; <a href="https://www.airwallex.com/vn/blog/cong-thanh-toan-shopify">cổng thanh toán Shopify cho người bán Việt Nam</a> (Shopify Payments chưa hỗ trợ; phí cổng bên thứ ba 2% ở gói Basic); <a href="https://www.printful.com/blog/your-holiday-shipping-and-order-deadline-guide">hạn đặt hàng Giáng sinh 2026 của Printful</a>; <a href="https://www.jonloomer.com/meta-creative-testing/">công cụ Creative Testing của Meta</a>. Kiểm lại trước khi tính giá, vì các nền tảng đổi phí vài lần mỗi năm.</p>
   </div>
 </section>
+<section id="mmo-dn">
+  <div class="sec-head">
+    <div class="eyebrow">Case study · cả hai nhánh · đọc trước buổi 1:1 đầu tiên</div>
+    <h2>Từ MMO sang doanh nghiệp: 6 người bán đã đổi cách nghĩ thế nào</h2>
+  </div>
+  <p class="prose">MMO (make money online) hỏi: "món nào đang win, copy nhanh, chạy tới khi chết". Doanh nghiệp hỏi: "nhóm khách nào, họ cần gì, mình giữ họ thế nào trong 2 năm". Cả hai đều dùng Etsy, Shopify, nhà in và quảng cáo Meta. Khác nhau ở chỗ sau 12 tháng, người làm MMO còn lại một tài khoản có thể bị khóa. Người làm doanh nghiệp còn lại danh sách khách, nhà cung cấp tin cậy, quy trình và tên tuổi. Solopreneur vẫn là doanh nghiệp: một người, nhưng có hệ thống.</p>
+  <p class="verdict">Sáu case dưới đây là người thật, có nguồn công khai. Phần lớn số liệu do chính người bán hoặc nhà cung cấp dịch vụ của họ công bố, và một số là ước tính. Hãy đọc để thấy <b>cách họ ra quyết định</b>, đừng xem số liệu như lời hứa thu nhập.</p>
+
+  <div class="sub" id="mmo-bang">
+    <div class="tagline">Hai cách nghĩ · 10 câu hỏi</div>
+    <h3>Cùng một câu hỏi, hai câu trả lời</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Câu hỏi</th><th>Tư duy MMO</th><th>Tư duy doanh nghiệp</th></tr></thead>
+      <tbody>
+        <tr><td>Bắt đầu từ đâu?</td><td>Món nào đang "win" trên công cụ spy</td><td>Nhóm khách nào, dịp nào, việc gì họ cần giải</td></tr>
+        <tr><td>Sản phẩm là gì?</td><td>Bản sao của món đang chạy, đôi khi dùng luôn chữ và hình của thương hiệu khác</td><td>Bản khác biệt thấy được trong ảnh đầu: cá nhân hóa, chất liệu, bộ quà</td></tr>
+        <tr><td>Đo bằng gì?</td><td>Doanh thu, ROAS hôm nay</td><td>Lãi sau hoàn tiền, CAC tối đa, tỷ lệ khách quay lại</td></tr>
+        <tr><td>Tài sản là gì?</td><td>Store và tài khoản quảng cáo, dùng xong bỏ</td><td>Danh sách email, đánh giá, thương hiệu, quan hệ nhà cung cấp, quy trình</td></tr>
+        <tr><td>Nhà cung cấp là ai?</td><td>Người rẻ nhất hôm nay</td><td>Đối tác: đã thử mẫu, có dự phòng, biết mặt nhau</td></tr>
+        <tr><td>Pháp lý?</td><td>"Chưa bị khóa là được"</td><td>Tra nhãn hiệu, tuân thủ sàn và luật Mỹ trước khi đăng</td></tr>
+        <tr><td>Khi một món thắng?</td><td>Đổ ngân sách tới khi quảng cáo chết</td><td>Thêm biến thể, dịp, sản phẩm đi kèm; giữ khách bằng email</td></tr>
+        <tr><td>Khi thua?</td><td>Bỏ store, mở store mới</td><td>Đọc số, sửa một biến, thử lại có kế hoạch</td></tr>
+        <tr><td>Khung thời gian?</td><td>2–4 tuần</td><td>12–24 tháng, chia thành chu kỳ 8 tuần</td></tr>
+        <tr><td>Khách hàng là ai?</td><td>Người lạ mua một lần</td><td>Người sẽ quay lại và giới thiệu</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="sub" id="mmo-pod">
+    <div class="tagline">Nhánh A · POD · 3 case</div>
+    <h3>Case P1 · Starfish USA: áo POD trên Etsy, sống nhờ hệ thống mẫu</h3>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Mục</th><th>Nội dung</th></tr></thead>
+      <tbody>
+        <tr><td>Là ai</td><td>Shop áo POD trên Etsy ở Mỹ, in qua Printify (áo Gildan Softstyle, nhà in Monster Digital hoặc SwiftPOD).</td></tr>
+        <tr><td>Số liệu</td><td>Khoảng 46.920 lượt bán từ 5/2021 đến 7/2024, giá trung bình khoảng 17 USD, tức ước tính khoảng 250.000 USD doanh thu mỗi năm (chưa trừ chi phí). Đây là ước tính của người phân tích, không phải số shop công bố.</td></tr>
+        <tr><td>Làm gì khác</td><td>Áo theo bộ cho gia đình và nhóm (một đơn mua nhiều áo, cước gộp nên lãi tốt hơn). Mẫu cá nhân hóa lặp lại được: áo khủng long cho cả nhà, mỗi đơn chỉ đổi tên và con khủng long. Phủ sự kiện quanh năm, ví dụ "100 days of school" cho giáo viên và học sinh, nên không phụ thuộc mùa lễ. Catalog rộng, không dựa vào một món.</td></tr>
+        <tr><td>Nếu là MMO</td><td>Copy câu đùa đang hot, đăng 500 listing giống đối thủ, hết mùa thì hết đơn.</td></tr>
+        <tr><td>Áp vào K1</td><td>Mỗi concept thiết kế thành <b>khuôn</b> (template) để ra 10–20 biến thể theo tên, nghề, năm. Ưu tiên món mua theo bộ. Lịch dịp ở mục <a href="#cs-lich">Chọn ngách</a> là xương sống của catalog.</td></tr>
+      </tbody></table></div>
+
+    <h3>Case P2 · "Mr. S" và tấm thảm chùi chân: từ 20 đơn lên 15.000 đơn mỗi tháng</h3>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Mục</th><th>Nội dung</th></tr></thead>
+      <tbody>
+        <tr><td>Là ai</td><td>Seller POD khoảng 5 năm kinh nghiệm, được Merchize (nhà in có xưởng ở Việt Nam) kể lại trong bài tiếng Việt.</td></tr>
+        <tr><td>Hành trình</td><td>Thử nhiều món decor không ăn rồi mới tới thảm chùi chân. Chọn thảm để tránh thị trường áo quá đông. Mất <b>nhiều tháng</b> tìm một nhà cung cấp ổn định. Đơn tăng từ khoảng 17–20 đơn/tháng lên đỉnh khoảng 15.000 đơn/tháng.</td></tr>
+        <tr><td>Làm gì khác</td><td>Ngách rõ: người nuôi thú cưng, gia đình, tưởng nhớ. Thảm là lời chào "welcome home", hợp câu đùa về thú cưng. Khách thêm ảnh và tên con vật. Kênh chính là <b>website riêng</b> với ảnh rõ, SEO và email nhắc mua lại. Sau đó mở rộng sang cốc, chăn, biển kim loại, ornament cho cùng nhóm khách.</td></tr>
+        <tr><td>Nếu là MMO</td><td>Bỏ cuộc sau món thứ ba, hoặc chọn nhà in rẻ nhất rồi vỡ chất lượng đúng mùa cao điểm.</td></tr>
+        <tr><td>Áp vào K1</td><td>Mở rộng theo <b>nhóm khách</b>, không theo món đang hot: cùng một người nuôi chó mua thảm, cốc, chăn, ornament. Chọn nhà in bằng đơn thử (xem <a href="#db-uy-tin">kiểm uy tín trong 10 ngày</a>).</td></tr>
+      </tbody></table></div>
+    <p class="src">Lưu ý: bài do chính nhà in đăng, số liệu do người bán tự báo.</p>
+
+    <h3>Case P3 · Macorner: từ shop quà cá nhân hóa thành thương hiệu</h3>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Mục</th><th>Nội dung</th></tr></thead>
+      <tbody>
+        <tr><td>Là ai</td><td>Thương hiệu quà cá nhân hóa bán qua website riêng, ra đời giữa đại dịch, được báo Việt Nam (VIR, VnEconomy) đưa tin năm 2023.</td></tr>
+        <tr><td>Số liệu</td><td>Gần 2 triệu đơn đã giao kể từ khi thành lập, sau khoảng 2 năm (theo công ty; chưa kiểm chứng độc lập).</td></tr>
+        <tr><td>Làm gì khác</td><td>Sắp danh mục theo <b>mối quan hệ</b> (gia đình, bạn, thú cưng, người yêu) và dịp, không theo loại phôi. Có một thế mạnh riêng là vẽ chân dung người thân. Ra thêm dòng sản phẩm đều đặn, nhất là decor. Hỗ trợ khách 24/7 mùa lễ. Hứa một trải nghiệm: khách "thấy chính mình" trong món quà.</td></tr>
+        <tr><td>Nếu là MMO</td><td>Mỗi tuần một store mới cho một ngách, không ai nhớ tên.</td></tr>
+        <tr><td>Áp vào K1</td><td>Từ tuần 5–6, đặt tên shop, giọng văn và ảnh theo <b>một lời hứa</b> với một nhóm khách. Thương hiệu là lời hứa được giữ lặp lại, không phải logo.</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="sub" id="mmo-vatly">
+    <div class="tagline">Nhánh B · Hàng vật lý và dropship · 3 case</div>
+    <h3>Case D1 · Bumblebee Linens: khăn tay cưới, nhập từ châu Á, thành doanh nghiệp 7 con số</h3>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Mục</th><th>Nội dung</th></tr></thead>
+      <tbody>
+        <tr><td>Là ai</td><td>Steve và Jennifer Chou, California, bắt đầu năm 2007 ở nhà để vợ không phải đi làm khi có con.</td></tr>
+        <tr><td>Từ nhu cầu thật</td><td>Jennifer cần khăn tay thêu tên cho đám cưới của mình mà không tìm được. Hai người mua một lô khăn từ nhà cung cấp ở Hồng Kông, thêu tên, bán phần dư trên eBay. Cá nhân hóa là thứ cho phép nâng giá.</td></tr>
+        <tr><td>Số liệu</td><td>Theo chủ shop: hơn 100.000 USD lãi năm đầu; biên lợi nhuận gộp từ 66%, món cá nhân hóa trên 90%; giá trị đơn trung bình khoảng 60 USD; khách quay lại khoảng 36% doanh thu, email khoảng 30%. Đội ngũ 2 chủ, 4 nhân viên.</td></tr>
+        <tr><td>Làm gì khác</td><td>Tự bay sang <b>gặp nhà cung cấp</b>; quan hệ tốt tới mức nhà cung cấp từ chối bán cùng món cho người khác. Sau lỗi vải mỏng, sai màu thì thuê người kiểm hàng tại Trung Quốc trước khi gửi. Bán sỉ cho người tổ chức sự kiện (khách quay lại). Chuyển từ eBay sang website riêng, SEO cho cô dâu, quảng cáo Google vào từ khóa ít cạnh tranh. Xả hàng lỗi ở kênh khác để không gắn với thương hiệu.</td></tr>
+        <tr><td>Bài học ngược</td><td>Chính họ kể: tài khoản eBay từng bị khóa, và việc tự quảng cáo trên diễn đàn bằng nick giả đã khiến họ bị cấm. Đường tắt kiểu MMO tốn giá thật.</td></tr>
+        <tr><td>Áp vào K1</td><td>Đúng con đường nhánh B: món có sẵn từ châu Á + <b>một lớp khác biệt</b> (thêu, khắc tên) + một nhóm khách có dịp rõ. Mẫu về Việt Nam là lợi thế của bạn, tương tự việc họ tự đến gặp nhà cung cấp.</td></tr>
+      </tbody></table></div>
+
+    <h3>Case D2 · Davie Fogarty và The Oodie: 6 lần thất bại, rồi dùng dropship để thử chứ không để sống</h3>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Mục</th><th>Nội dung</th></tr></thead>
+      <tbody>
+        <tr><td>Là ai</td><td>Người Úc, từng thất bại khoảng 6 ý tưởng (quán cà phê, quần áo gym, tai nghe, gia vị…).</td></tr>
+        <tr><td>Bước ngoặt</td><td>Đọc để hiểu vì sao thất bại, rồi học bốn kỹ năng: viết quảng cáo, thiết kế cơ bản, quay video, mua quảng cáo. Ông học bằng cách <b>làm miễn phí</b> cho doanh nghiệp nhỏ và người quen. Năm 2018 bắt đầu lại với khoảng 500 USD: website Shopify mặc định, ảnh chụp mẹ và bạn gái, quảng cáo Facebook.</td></tr>
+        <tr><td>Số liệu</td><td>The Oodie (chăn mặc được, làm tại xưởng ở Trung Quốc) đã bán hơn 8,1 triệu chiếc, doanh thu lũy kế khoảng 500 triệu (theo Dynamic Business). Không còn là solopreneur, nhưng điểm xuất phát là một người với 500 USD.</td></tr>
+        <tr><td>Làm gì khác</td><td>Xem dropship là <b>công cụ thử sản phẩm</b>, không phải mô hình lâu dài. Chuyển sang kho riêng để giao nhanh và giữ khách mua lại. Đặt sự hài lòng của khách lên trước lãi ngắn hạn. Làm nội dung như một bộ phận chính, khoảng 100 video mỗi tháng. Xây quan hệ với cả agent lẫn xưởng.</td></tr>
+        <tr><td>Áp vào K1</td><td>Tuần 3–5 nhánh B: thử bằng CJ hoặc AliExpress. Khi bán đều thì đặt xưởng làm bản riêng (private label) và gửi kho Mỹ, đúng thứ tự trong mục <a href="#vl-cong-cu">công cụ nguồn hàng</a>. Kỹ năng quảng cáo và video là thứ bạn giữ được, kể cả khi sản phẩm đổi.</td></tr>
+      </tbody></table></div>
+
+    <h3>Case D3 · Lauren Mitchell: dưới 500 USD, sản phẩm giải quyết vấn đề, thử rẻ với người ảnh hưởng nhỏ</h3>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Mục</th><th>Nội dung</th></tr></thead>
+      <tbody>
+        <tr><td>Hành trình</td><td>Muốn rời công việc văn phòng, bắt đầu dropship với dưới 500 USD để không phải ôm hàng và dồn tiền cho marketing. Theo bài viết, store vượt thu nhập công việc cũ sau khoảng 2 tháng; về sau được mô tả là thương hiệu hơn 5 triệu USD doanh thu (tự báo, không có số lãi).</td></tr>
+        <tr><td>Làm gì khác</td><td>Chọn món dùng hằng ngày, giải một vấn đề rõ. Thử bằng bài đăng 20–80 USD với tài khoản nhỏ, đúng ngách; bài không ra đơn được xem là dữ liệu. Chọn nhà cung cấp ở Mỹ để giao nhanh. Khi lớn thì chuyển sang kho riêng để kiểm soát giao hàng.</td></tr>
+        <tr><td>Áp vào K1</td><td>Thử nhỏ, có ngân sách trần, đọc số rồi mới tăng. Tốc độ giao là một phần của sản phẩm.</td></tr>
+      </tbody></table></div>
+    <p class="src">Lưu ý: bài do SaleHoo (nền tảng nhà cung cấp) đăng, số liệu tự báo; không nêu ngách, biên lãi hay mốc thời gian chi tiết.</p>
+  </div>
+
+  <div class="sub" id="mmo-mau">
+    <div class="tagline">Điểm chung · 6 mẫu lặp lại</div>
+    <h3>Điều cả 6 case đều làm, và bạn làm được trong 8 tuần</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Mẫu</th><th>Thấy ở case</th><th>Việc của bạn trong K1</th></tr></thead>
+      <tbody>
+        <tr><td><b>1 · Bắt đầu từ một nhóm khách và một dịp</b></td><td>Cô dâu (D1), người nuôi thú cưng (P2), gia đình mua áo theo bộ (P1)</td><td>Tuần 1–2: viết một câu "Ai, mua cho ai, dịp gì" trước khi xem bất kỳ công cụ spy nào</td></tr>
+        <tr><td><b>2 · Khác biệt thấy được</b></td><td>Thêu tên (D1), ảnh thú cưng (P2), chân dung người thân (P3), chăn mặc được (D2)</td><td>Chọn 1 trong 6 cách khác biệt ở mục <a href="#vl-tu-duy">Hàng vật lý</a> hoặc giải phẫu concept ở <a href="#cs-concept">Chọn ngách</a></td></tr>
+        <tr><td><b>3 · Nhà cung cấp là đối tác</b></td><td>Gặp tận nơi, thuê kiểm hàng (D1); tìm nhiều tháng (P2); agent và xưởng (D2)</td><td>Đặt mẫu 2–3 nơi, chấm điểm ở tab 4d, giữ một nguồn dự phòng</td></tr>
+        <tr><td><b>4 · Có tài sản của riêng mình</b></td><td>Website và email (D1, P2, P3), kho riêng (D2, D3)</td><td>Từ tuần đầu có đơn: thu email, lưu ảnh đánh giá, ghi sổ quy trình</td></tr>
+        <tr><td><b>5 · Hệ thống lặp lại</b></td><td>Khuôn thiết kế (P1), lịch sự kiện cả năm (P1), 100 video/tháng (D2)</td><td>Mỗi việc làm hai lần thì viết thành checklist; tuần 8 nộp sổ tay vận hành</td></tr>
+        <tr><td><b>6 · Thử rẻ, đầu tư sau tín hiệu</b></td><td>500 USD (D2, D3), bài đăng 20–80 USD (D3), lô nhỏ trước (D1)</td><td>Ngân sách trần cho mỗi lần thử; chỉ nhập lô, thuê kho khi bán đều</td></tr>
+      </tbody></table></div>
+    <div class="mentor">
+      <div class="box"><h3>Ba dấu hiệu bạn đang quay lại tư duy MMO</h3><ol class="flowl">
+        <li>Bạn mở công cụ spy trước khi viết được nhóm khách của mình.</li>
+        <li>Bạn muốn mở store thứ hai trước khi store đầu có 30 đơn.</li>
+        <li>Bạn dùng chữ, hình, nhân vật của thương hiệu khác vì "ai cũng làm".</li></ol></div>
+      <div class="box"><h3>Ba dấu hiệu bạn đang xây doanh nghiệp</h3><ol class="flowl">
+        <li>Bạn biết CAC tối đa của từng món và dừng quảng cáo theo số, không theo cảm giác.</li>
+        <li>Bạn có ít nhất một nhà cung cấp hoặc nhà in đã kiểm bằng đơn thử, và một dự phòng.</li>
+        <li>Khách cũ có thể tìm lại bạn: qua email, tên shop hoặc website.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Trước buổi 1:1 đầu tiên</h3></div>
+    <ol><li>Trong 6 case, người nào giống điểm xuất phát của mình nhất, và họ làm gì trong năm đầu?</li><li>Nhóm khách của mình là ai, và vì sao họ sẽ quay lại lần hai?</li><li>Mình đang có thói quen MMO nào cần bỏ trong 8 tuần này?</li><li>Sau 12 tháng, mình muốn giữ lại tài sản gì ngoài tiền?</li></ol>
+  </div>
+  <p class="src">Nguồn, xem tháng 10/2026: <a href="https://insightsbyjess.com/etsy-print-on-demand-case-study-250k-yr">Insights by Jess, Starfish USA</a> (ước tính, có link tiếp thị); <a href="https://merchize.com/hanh-trinh-15000-don-moi-thang-cua-chien-than-doormat/">Merchize, hành trình 15.000 đơn của seller doormat</a> (bên bán dịch vụ); <a href="https://vir.com.vn/macorner-marking-special-times-with-unique-mementos-100057.html">VIR, Macorner</a>; <a href="https://mywifequitherjob.com/jennifer-chou-bumblebeelinens/">MyWifeQuitHerJob, phỏng vấn Jennifer Chou</a>; <a href="https://www.starterstory.com/stories/on-starting-a-7-figure-ecommerce-store-selling-handkerchiefs-and-linens">Starter Story, Bumblebee Linens</a>; <a href="https://glamadelaide.com.au/adelaides-oodie-founder-shares-his-multi-million-dollar-tips-for-success/">Glam Adelaide, Davie Fogarty</a>; <a href="https://dynamicbusiness.com/featured/founder-friday/from-cafe-failure-to-multi-million-dollar-success-meet-davie-fogarty.html">Dynamic Business, Davie Fogarty</a>; <a href="https://www.salehoo.com/dropshipping-success-stories-after-few-months">SaleHoo, Lauren Mitchell</a> (bên bán dịch vụ). Thu nhập của mỗi người khác nhau; các case này không phải lời hứa kết quả.</p>
+</section>
+
 <section id="chon-sp">
   <div class="sec-head">
     <div class="eyebrow">Tuần 1 · cả hai nhánh · đọc trước khi mở bất kỳ công cụ nào</div>
