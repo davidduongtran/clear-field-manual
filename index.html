@@ -332,6 +332,16 @@ ul.ck{list-style:none;padding:0}
   .ht-map td:nth-child(5)::before{content:"Hạn: "}
 }
 @media print{.ht-card{break-inside:avoid}.ht-tools{display:none}}
+
+ol.anat{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+ol.anat>li{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:14px;border-radius:10px;padding:14px 16px;align-items:start}
+ol.anat>li.a1{background:var(--t1)} ol.anat>li.a2{background:var(--t2)} ol.anat>li.a3{background:var(--t3)} ol.anat>li.a4{background:var(--t4)}
+ol.anat .q{font-size:13px;color:var(--muted)} ol.anat .els,ol.anat .ex{font-size:14px}
+ol.anat .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);margin-bottom:2px}
+table.spyt{min-width:760px}
+table.spyt td:first-child{font-weight:600;white-space:nowrap}
+ol.flowl{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
+@media (max-width:900px){ol.anat>li{grid-template-columns:minmax(0,1fr)}}
 </style>
 
 <div class="wrap">
@@ -350,6 +360,7 @@ ul.ck{list-style:none;padding:0}
 <div class="layout">
 <nav class="rail" aria-label="Các phần">
   <a href="#sprint"><span class="l">☑</span><span>Sprint 8 tuần</span></a>
+  <a href="#spy"><span class="l">⌕</span><span>Spy &amp; research</span></a>
   <a href="#lo-trinh"><span class="l">→</span><span>Lộ trình gốc</span></a>
   <a href="#tru-cot"><span class="l">◇</span><span>4 câu hỏi</span></a>
   <a href="#tu-duy"><span class="l">✦</span><span>Tư duy</span></a>
@@ -427,7 +438,7 @@ ul.ck{list-style:none;padding:0}
   <div class="ht-body">
     <div class="ht-grid">
       <div class="ht-col"><h4>1:1 lượt A</h4><p class="one">Thứ 2 19/10 · chốt nhóm khách và dịp để đi săn; mở shop Etsy ngay</p><h4>1:1 lượt B</h4><p class="one">Thứ 5 22/10 · Mentor chấm 3 ứng viên cùng bạn, chọn 1</p></div>
-      <div class="ht-col" style="grid-column:span 2"><h4>Việc của bạn trong tuần</h4><ul class="ck"><li><label><input type="checkbox" data-k="w1-t0"><span><b>Thứ 2:</b> mở shop Etsy và bắt đầu xác minh (Etsy Ads chỉ chạy được sau 15 ngày mở shop). Viết 1 câu: người mua × người nhận × dịp</span></label></li><li><label><input type="checkbox" data-k="w1-t1"><span><b>Thứ 2–3:</b> săn 10 ứng viên từ 3 nguồn: trang tìm kiếm Etsy (ship to US) có nhãn Bestseller hoặc nhiều review 90 ngày gần nhất; gợi ý tìm kiếm Etsy; Amazon (nhãn "bought in past month") cho cùng dịp</span></label></li><li><label><input type="checkbox" data-k="w1-t2"><span><b>Thứ 3:</b> cho 10 ứng viên qua bộ lọc 5 câu bên dưới, giữ 3. Mỗi ứng viên ghi 3 listing đối thủ: link, giá, ngày review gần nhất</span></label></li><li><label><input type="checkbox" data-k="w1-t3"><span><b>Thứ 4 trước 20:00:</b> nộp 3 ứng viên trên Classroom</span></label></li><li><label><input type="checkbox" data-k="w1-t4"><span><b>Thứ 6–CN:</b> thiết kế 3–5 biến thể, tra nhãn hiệu từng chữ trên USPTO, đặt mẫu với nhà in POD, tính giá ở Opportunity Engine tab 6</span></label></li></ul></div>
+      <div class="ht-col" style="grid-column:span 2"><h4>Việc của bạn trong tuần</h4><ul class="ck"><li><label><input type="checkbox" data-k="w1-t0"><span><b>Thứ 2:</b> mở shop Etsy và bắt đầu xác minh (Etsy Ads chỉ chạy được sau 15 ngày mở shop). Viết 1 câu: người mua × người nhận × dịp</span></label></li><li><label><input type="checkbox" data-k="w1-t1"><span><b>Thứ 2–3:</b> săn 10 ứng viên theo <a href="#spy-flow">workflow 90 phút</a> (POD hoặc dropship), từ 3 nguồn: trang tìm kiếm Etsy (ship to US) có nhãn Bestseller hoặc nhiều review 90 ngày gần nhất; gợi ý tìm kiếm Etsy; Amazon (nhãn "bought in past month") cho cùng dịp</span></label></li><li><label><input type="checkbox" data-k="w1-t2"><span><b>Thứ 3:</b> giải phẫu từng ứng viên theo <a href="#spy-doc">5 lớp</a>, ghi vào Opportunity Engine tab 4c, cho qua bộ lọc 5 câu bên dưới, giữ 3. Mỗi ứng viên ghi 3 listing đối thủ: link, giá, ngày review gần nhất</span></label></li><li><label><input type="checkbox" data-k="w1-t3"><span><b>Thứ 4 trước 20:00:</b> nộp 3 ứng viên trên Classroom</span></label></li><li><label><input type="checkbox" data-k="w1-t4"><span><b>Thứ 6–CN:</b> thiết kế 3–5 biến thể, tra nhãn hiệu từng chữ trên USPTO, đặt mẫu với nhà in POD, tính giá ở Opportunity Engine tab 6</span></label></li></ul></div>
     </div>
     <div class="ht-self"><h4>Bộ lọc 5 câu: trượt một câu là loại</h4><ol>
 <li><span><b>1. Có người mới đang bán được:</b> ít nhất 3 shop dưới 2 năm tuổi có review trong 90 ngày cho đúng món.</span></li>
@@ -535,6 +546,143 @@ ul.ck{list-style:none;padding:0}
     <p class="src">Phí và chính sách nền tảng xem ngày 19/10/2026: <a href="https://www.etsy.com/legal/fees">Etsy, biểu phí</a> (0,20 USD mỗi listing, 6,5% phí giao dịch, Offsite Ads 15%, 12% khi shop đạt 10.000 USD/năm); <a href="https://help.etsy.com/hc/articles/360033701174">Etsy Ads</a> (ngân sách từ 1 USD/ngày, chờ 15 ngày sau khi mở shop); <a href="https://www.nerdwallet.com/article/small-business/shopify-pricing">giá gói Shopify</a>; <a href="https://www.airwallex.com/vn/blog/cong-thanh-toan-shopify">cổng thanh toán Shopify cho người bán Việt Nam</a> (Shopify Payments chưa hỗ trợ; phí cổng bên thứ ba 2% ở gói Basic); <a href="https://www.printful.com/blog/your-holiday-shipping-and-order-deadline-guide">hạn đặt hàng Giáng sinh 2026 của Printful</a>; <a href="https://www.jonloomer.com/meta-creative-testing/">công cụ Creative Testing của Meta</a>. Kiểm lại trước khi tính giá, vì các nền tảng đổi phí vài lần mỗi năm.</p>
   </div>
 </section>
+<section id="spy">
+  <div class="sec-head">
+    <div class="eyebrow">Dùng ở tuần 1 · chọn sản phẩm · POD và dropshipping</div>
+    <h2>Spy và nghiên cứu thị trường: công cụ, cách đọc best seller, workflow 90 phút</h2>
+  </div>
+  <p class="prose">Người bán lâu năm dùng công cụ để <b>tìm nhanh</b>, rồi dùng chính sàn để <b>xác nhận</b>. Phần lớn con số doanh thu trong công cụ là số mô hình hóa: EverBee và Alura ghi rõ là ước tính, Kalodata khuyên không dùng số của họ để quyết toán, Jungle Scout hay Helium 10 cũng không có số thật từ Amazon. Thứ sàn hiển thị công khai thì đếm được: ngày của review, số đã bán trên TikTok Shop, nhãn "bought in past month" của Amazon, ngày bắt đầu chạy của một quảng cáo. Mục này cho bạn bộ công cụ theo từng việc, cách đọc một sản phẩm bán chạy trên từng nền tảng, hai workflow 90 phút và hai case study có số thật.</p>
+
+  <div class="mentor">
+    <div class="box"><h3>Luật 1 · công cụ gợi ý, sàn xác nhận</h3><p>Một con số ước tính chỉ để xếp ứng viên cao hay thấp. Kết luận "bán được" cần ít nhất một tín hiệu đếm được trên sàn, có link và ngày (bậc 4 trở lên ở <a href="#sop-b">SOP-B</a>).</p></div>
+    <div class="box"><h3>Luật 2 · spy để hiểu, không để chép</h3><p>Spy cho bạn biết khách là ai, mua vì dịp gì, chê điều gì, quảng cáo nói góc nào. Chép thiết kế, ảnh, câu chữ hay thương hiệu là đường ngắn nhất để mất shop và tài khoản quảng cáo.</p></div>
+  </div>
+
+  <div class="sub" id="spy-tools">
+    <div class="tagline">Bộ công cụ theo việc · giá xem tháng 7–10/2026</div>
+    <h3>Mỗi việc một công cụ. Bắt đầu bằng cột miễn phí</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Việc</th><th>Miễn phí, đủ cho người mới</th><th>Trả phí, khi đã có đơn</th><th>Đọc được gì</th><th>Loại số</th></tr></thead>
+      <tbody>
+        <tr><td>Nhu cầu và mùa vụ</td><td>Google Trends; Pinterest Trends (Mỹ, Canada, Anh, so 4 cụm, 12 tháng); gợi ý tìm kiếm của Etsy và Amazon</td><td>Exploding Topics Pro (từ 39 USD/tháng, trả năm)</td><td>Khi nào khách bắt đầu tìm, đỉnh mùa, cụm khách gõ thật</td><td>Tương đối, không phải lượt tìm</td></tr>
+        <tr><td>Từ khóa Etsy</td><td>eRank bản miễn phí (5 lượt tìm/ngày); trang RankHero; EtsyHunt bản miễn phí</td><td>eRank (từ khoảng 6 USD); Sale Samurai (khoảng 10 USD, hợp POD); EverBee (từ khoảng 14 USD); Alura (từ khoảng 20 USD)</td><td>Lượt tìm, số listing cạnh tranh, giá trung vị, thẻ đối thủ dùng</td><td>Ước tính</td></tr>
+        <tr><td>Listing bán chạy trên Etsy</td><td>Chính trang Etsy: nhãn Bestseller (doanh số cao trong 6 tháng), ngày review gần nhất, số sales của shop, tuổi shop</td><td>Extension EverBee hoặc Alura (doanh thu tháng ước tính ngay trên trang tìm kiếm)</td><td>Ai đang bán được, ở giá nào, từ bao giờ</td><td>Trang Etsy: đếm. Extension: ước tính</td></tr>
+        <tr><td>Amazon và Merch</td><td>Best Sellers, Movers &amp; Shakers; nhãn "bought in past month" (hiện từ 50 lượt mua); Keepa bản miễn phí (lịch sử giá); Helium 10 Xray (giới hạn lượt/ngày)</td><td>Keepa Pro (29 EUR/tháng, có đường Sales Rank); Jungle Scout (từ khoảng 49 USD)</td><td>Nhu cầu của cả loại sản phẩm, giá trần, độ ổn định qua 90 ngày</td><td>Nhãn: đếm. Doanh số: ước tính</td></tr>
+        <tr><td>TikTok Shop</td><td>TikTok Creative Center (Top Ads, xu hướng, lọc theo vùng); số đã bán trên trang sản phẩm</td><td>Kalodata (từ 45,99 USD/tháng, thử 7 ngày); FastMoss; EchoTik</td><td>Sản phẩm, video, creator, GMV theo tháng</td><td>Số đã bán: đếm. GMV: mô hình</td></tr>
+        <tr><td>Quảng cáo Meta</td><td>Meta Ad Library: ngày "Started running on", số phiên bản của một ý tưởng, các page cùng bán một món</td><td>BigSpy (miễn phí 5 lượt/ngày; Pro 149 USD); Minea (từ 49 USD); AdSpy (149 USD); Foreplay (59 USD, lưu và sắp xếp mẫu)</td><td>Quảng cáo nào sống lâu, góc nào đang được nhân bản</td><td>Đếm (chỉ quảng cáo đang chạy)</td></tr>
+        <tr><td>Store Shopify của đối thủ</td><td>Thêm <code>/collections/all?sort_by=best-selling</code> vào tên miền store; Koala Inspector (15 lượt/tháng); Similarweb bản miễn phí</td><td>Koala Inspector Premium (22 USD/tháng); TrendTrack; Commerce Inspector</td><td>Sản phẩm bán chạy nhất store, theme, app, lượng truy cập</td><td>Thứ tự bán: gần đúng. Doanh thu, truy cập: ước tính</td></tr>
+        <tr><td>Nguồn hàng dropship</td><td>AliExpress Dropshipping Center; extension tìm theo ảnh trên AliExpress và 1688; CJdropshipping; DSers</td><td>AutoDS (nhập hàng, tự đặt đơn)</td><td>Giá vốn, thời gian giao tới Mỹ, độ tin của nhà cung cấp</td><td>Báo giá thật</td></tr>
+        <tr><td>Giá vốn POD</td><td>Catalog Printify và Printful: giá in, ship, xưởng ở Mỹ, thời gian sản xuất</td><td>Gói trả phí của nhà in (giảm giá in)</td><td>Lãi thật của từng món</td><td>Báo giá thật</td></tr>
+      </tbody></table></div>
+    <p class="verdict">Bộ khởi đầu 0 đồng: Etsy, Amazon, Pinterest Trends, eRank miễn phí, RankHero, Meta Ad Library, TikTok Creative Center, Koala Inspector miễn phí, catalog nhà in. Chỉ trả tiền cho một công cụ khi bạn đã có đơn và nó tiết kiệm ít nhất 2 giờ mỗi tuần. Mỗi việc một công cụ; hai công cụ cùng việc thường cho hai con số khác nhau, và bạn mất thời gian cãi nhau với số.</p>
+  </div>
+
+  <div class="sub" id="spy-doc">
+    <div class="tagline">Tư duy · giải phẫu một sản phẩm bán chạy</div>
+    <h3>Năm lớp, đi từ trên xuống. Dừng ở lớp nào trượt</h3>
+    <ol class="anat">
+      <li class="a1"><div><h4>1 · Nhu cầu</h4><p class="q">Ai trả tiền, cho ai, vào dịp gì?</p></div><div class="els">Gợi ý tìm kiếm, Pinterest Trends, review nói về người nhận và dịp.</div><div class="ex"><b>Trượt khi</b>Không gọi được tên người mua và dịp, chỉ thấy "món đang hot".</div></li>
+      <li class="a2"><div><h4>2 · Bằng chứng bán</h4><p class="q">Có tín hiệu đếm được không?</p></div><div class="els">Review có ngày trong 90 ngày, số đã bán, nhãn "bought in past month", quảng cáo chạy trên 30 ngày.</div><div class="ex"><b>Trượt khi</b>Chỉ có số ước tính của công cụ, hoặc lượt yêu thích không kèm đơn.</div></li>
+      <li class="a3"><div><h4>3 · Đà</h4><p class="q">Đang lên, đứng yên, hay đang xuống?</p></div><div class="els">So 2 lần xem cách nhau 7 ngày: sales của shop, số đã bán, số phiên bản quảng cáo. Keepa cho Amazon, GMV từng tháng cho TikTok.</div><div class="ex"><b>Trượt khi</b>Đỉnh đã qua (mùa hè), hoặc một video viral rồi tắt.</div></li>
+      <li class="a4"><div><h4>4 · Vì sao nó thắng</h4><p class="q">Khách chọn nó vì đâu?</p></div><div class="els">Ảnh đầu, góc nói với ai, giá, ưu đãi, review khen điều gì lặp lại, quảng cáo nói câu gì 3 giây đầu.</div><div class="ex"><b>Trượt khi</b>Nó thắng nhờ thương hiệu, review tích lũy nhiều năm, hay giá xưởng mà bạn không chạm tới.</div></li>
+      <li class="a4"><div><h4>5 · Chỗ của mình</h4><p class="q">Mình làm gì khác, cho ai?</p></div><div class="els">Lời chê lặp lại (review 1–3 sao), người nhận chưa ai phục vụ, cá nhân hóa sâu hơn, kênh chưa ai chạy.</div><div class="ex"><b>Trượt khi</b>Câu trả lời là "rẻ hơn" hoặc "đẹp hơn".</div></li>
+    </ol>
+
+    <h3>Đọc tín hiệu trên từng nền tảng</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Nền tảng</th><th>Tín hiệu mạnh</th><th>Cách đọc đà</th><th>Bẫy hay gặp</th></tr></thead>
+      <tbody>
+        <tr><td>Etsy</td><td>Review có ngày trong 30–90 ngày; nhãn Bestseller; shop dưới 2 năm tuổi mà sales tăng đều</td><td>Ghi số sales của shop hôm nay, xem lại sau 7 ngày. Chênh lệch là số đơn thật của tuần</td><td>Favorite nhiều nhưng review cũ; shop 8 năm tuổi 50.000 sales (chứng minh ngách có tiền, không chứng minh người mới vào được)</td></tr>
+        <tr><td>Amazon</td><td>"bought in past month"; đường Sales Rank ổn định 90 ngày trên Keepa</td><td>Keepa: Sales Rank tốt lên hay xấu đi theo tháng; so cùng kỳ năm trước</td><td>Sales Rank của một ngày; đỉnh mùa vụ nhìn như nhu cầu cả năm</td></tr>
+        <tr><td>TikTok Shop</td><td>Số đã bán; nhiều creator khác nhau cùng bán; nhiều video, không chỉ một</td><td>GMV tháng này so tháng trước; sản phẩm có mặt nhiều tháng liền trong top</td><td>Một video viral rồi tắt; hoa hồng affiliate cao đẩy giá; hàng thương hiệu không được bán lại</td></tr>
+        <tr><td>Meta Ads</td><td>Quảng cáo chạy trên 30 ngày; một ý tưởng có nhiều phiên bản; nhiều page bán cùng món</td><td>Chụp lại mỗi tuần: quảng cáo biến mất giữa hai lần xem thường là đã thua</td><td>Thư viện chỉ hiện quảng cáo đang chạy, không có chi tiêu hay doanh số với quảng cáo thương mại</td></tr>
+        <tr><td>Shopify</td><td>Thứ tự bán chạy của store; sản phẩm mới thêm gần đây; store có truy cập tăng</td><td>Xem lại thứ tự bán chạy sau 7–14 ngày</td><td>Store chặn link sắp xếp; thứ tự bị chỉnh vì hàng tồn hay hàng lãi cao; doanh thu là ước tính</td></tr>
+        <tr><td>AliExpress</td><td>Đơn và review có ảnh trong 30 ngày gần nhất; nhà cung cấp có điểm cao</td><td>So số đơn hai lần xem</td><td>Số đơn tích lũy nhiều năm; ảnh sản phẩm đẹp hơn hàng thật</td></tr>
+      </tbody></table></div>
+    <div class="ht-self"><h4>5 câu hỏi trước khi kết luận "đây là best seller"</h4><ol>
+      <li><span><b>Mình đang thấy số đếm hay số ước tính?</b> Ghi rõ cạnh từng con số.</span></li>
+      <li><span><b>Số này của Mỹ hay của toàn cầu?</b> Etsy có lượng khách Đức, Anh rất lớn; xem đúng thị trường mình giao hàng.</span></li>
+      <li><span><b>Đà đang lên hay xuống?</b> Hai lần xem cách 7 ngày nói nhiều hơn một con số tổng.</span></li>
+      <li><span><b>Nó thắng nhờ thứ mình làm lại được trong 30 ngày không?</b> Thương hiệu và review tích lũy thì không.</span></li>
+      <li><span><b>Ai đang kiếm tiền khi mình tin con số này?</b> Danh sách "sản phẩm thắng" của các công cụ và nhà cung cấp là nội dung bán hàng của họ.</span></li></ol></div>
+  </div>
+
+  <div class="sub" id="spy-flow">
+    <div class="tagline">Workflow · làm trong ngày thứ 2 và thứ 3 của tuần 1</div>
+    <h3>Hai quy trình 90 phút, ghi vào Opportunity Engine tab 4c</h3>
+    <div class="mentor">
+      <div class="box"><h3>A · POD trên Etsy, sau đó Shopify</h3><ol class="flowl">
+        <li><b>15' · Nhu cầu.</b> Chọn người nhận × dịp. Gõ vào Etsy (ship to US) và Pinterest Trends, chép 10 gợi ý tìm kiếm, xem đỉnh mùa.</li>
+        <li><b>15' · Từ khóa.</b> Tra 5–8 cụm trên eRank hoặc RankHero: lượt tìm, số listing, giá trung vị. Tính lượt tìm trên 1.000 listing, <b>tính riêng cho Mỹ</b> nếu có.</li>
+        <li><b>25' · Trang 1 và best seller.</b> Với 2 cụm tốt nhất: chép 10 listing tự nhiên đầu, đánh dấu listing có review trong 90 ngày, nhãn Bestseller, tuổi shop. Ghi sales của 3 shop để xem lại sau 7 ngày.</li>
+        <li><b>10' · Đối chiếu.</b> Amazon cùng dịp (nhãn "bought in past month"); Meta Ad Library: có shop POD nào chạy quảng cáo cho dịp này trên 30 ngày không.</li>
+        <li><b>10' · Lãi.</b> Giá in và ship ở Printify hoặc Printful (xưởng ở Mỹ); lãi sau phí Etsy từ 30% giá bán.</li>
+        <li><b>15' · Quyết định.</b> Qua bộ lọc 5 câu ở thẻ tuần 1; viết góc của mình dựa trên lời chê lặp lại.</li></ol></div>
+      <div class="box"><h3>B · Dropship trên Shopify với Meta Ads</h3><ol class="flowl">
+        <li><b>15' · Tín hiệu.</b> TikTok Creative Center (Top Ads) và Meta Ad Library: tìm món có quảng cáo chạy trên 30 ngày, nhiều phiên bản, nhiều page.</li>
+        <li><b>15' · Đà.</b> TikTok Shop: số đã bán, số creator; nếu có Kalodata hoặc FastMoss, so GMV 2–3 tháng gần nhất. Còn lên hay đã qua đỉnh mùa?</li>
+        <li><b>20' · Nguồn hàng.</b> Tìm theo ảnh trên AliExpress hoặc CJ: giá vốn, thời gian giao tới Mỹ, review có ảnh 30 ngày gần nhất, điểm nhà cung cấp.</li>
+        <li><b>10' · Giá trần.</b> Amazon và Walmart bán món giống hệt giá bao nhiêu? Khách sẽ so.</li>
+        <li><b>15' · Bộ lọc dropship 7 câu</b> (bên dưới).</li>
+        <li><b>15' · Quyết định.</b> Giá bán, lãi trước quảng cáo, CAC tối đa, góc quảng cáo 3 giây đầu.</li></ol></div>
+    </div>
+    <div class="ht-flag"><h4>Bộ lọc dropship 7 câu · trượt một câu là loại với người mới</h4><ul>
+      <li>Không thương hiệu, không chép thiết kế đã đăng ký; không phải món chỉ hãng mới được bán.</li>
+      <li>Không pin lithium rời, chất lỏng, mỹ phẩm, thực phẩm chức năng, đồ cho trẻ dưới 12 tuổi: cần giấy tờ, dễ bị chặn quảng cáo và vận chuyển.</li>
+      <li>Nhẹ và không dễ vỡ: cước và hoàn hàng không ăn hết lãi.</li>
+      <li>Giá bán từ khoảng 3 lần giá vốn tới tay, và vẫn thấp hơn hoặc ngang giá Amazon cho món tương đương.</li>
+      <li>Giao tới Mỹ trong khoảng 10 ngày, hoặc có kho Mỹ.</li>
+      <li>Nhìn 3 giây video là hiểu món làm được gì.</li>
+      <li>Còn mùa: đỉnh không nằm ngay trước tháng bạn lên quảng cáo.</li></ul>
+      <p class="src">Lưu ý: Etsy không cho bán hàng mua sẵn về bán lại. Dropship chỉ chạy trên Shopify; Etsy dành cho POD và hàng bạn tự làm hoặc tự thiết kế.</p></div>
+  </div>
+
+  <div class="sub" id="spy-case1">
+    <div class="tagline">Case study 1 · POD · số liệu RankHero xem tháng 10/2026</div>
+    <h3>Quà nghỉ hưu: con số toàn cầu kéo bạn đi sai hướng, con số của Mỹ chỉ đường</h3>
+    <p class="prose">Lan muốn bán quà nghỉ hưu cho giáo viên, vì "teacher gift" rất đông người tìm. Thay vì đoán, Lan chạy workflow A. Bước 2 cho ra bảng dưới đây.</p>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Cụm từ</th><th>Lượt tìm/tháng</th><th>Listing cạnh tranh</th><th>Lượt tìm trên 1.000 listing</th><th>Giá trung vị</th></tr></thead>
+      <tbody>
+        <tr><td>retirement gift (toàn cầu)</td><td>60.500</td><td>339.438</td><td>178</td><td>23 USD</td></tr>
+        <tr><td>retirement gifts (chỉ Mỹ)</td><td>27.100</td><td>217.216</td><td>125</td><td>19,62 USD</td></tr>
+        <tr><td>retired gift (chỉ Mỹ)</td><td>27.100</td><td>63.316</td><td><b>428</b></td><td>21,99 USD</td></tr>
+        <tr><td>retired teacher (chỉ Mỹ)</td><td>1.000</td><td>17.713</td><td>56</td><td>21,95 USD</td></tr>
+      </tbody></table></div>
+    <ol class="steps">
+      <li><div><b>Bẫy toàn cầu.</b> Thẻ đứng đầu của "retirement gift" có rất nhiều chữ tiếng Đức (ruhestand geschenk, geldgeschenk rente): một phần lớn nhu cầu là khách Đức. Chỉ khoảng 45% lượt tìm đến từ Mỹ, nhưng khoảng 75% listing là của shop bán vào Mỹ. Đọc số toàn cầu, Lan sẽ tưởng thị trường rộng hơn thực tế.</div></li>
+      <li><div><b>Bẫy thu hẹp sai cách.</b> "retired teacher" nghe như ngách tốt, nhưng ở Mỹ chỉ khoảng 1.000 lượt tìm mỗi tháng cho gần 17.700 listing: 56 lượt trên 1.000 listing, kém hơn cụm rộng. Thu hẹp theo nghề làm nhu cầu giảm nhanh hơn cạnh tranh.</div></li>
+      <li><div><b>Cách gõ khác, cạnh tranh khác.</b> "retired gift" có cùng lượng tìm ở Mỹ với "retirement gifts" nhưng chỉ khoảng một phần ba số listing: 428 so với 125. Đây là cụm để Lan đặt vào 40 ký tự đầu tiêu đề, còn "retirement gift" vào thẻ.</div></li>
+      <li><div><b>Mùa.</b> Lượt tìm thấp nhất vào tháng 10 và tháng 2, cao nhất tháng 5–6 (mùa nghỉ hưu cuối năm học), tháng 12 đứng giữa. Quà nghỉ hưu bán quanh năm, không phụ thuộc Giáng sinh: hợp với một shop lên bán đầu tháng 11.</div></li>
+      <li><div><b>Giá.</b> Giá trung vị khoảng 22 USD, nhưng khoảng một phần tư mẫu nằm ở 25–50 USD và một phần tư ở 50–100 USD. Lan nhắm cụm 25–40 USD bằng cá nhân hóa sâu (tên, năm công tác, lời nhắn của đồng nghiệp), không đánh nhau ở cụm dưới 10 USD.</div></li>
+      <li><div><b>Việc Lan làm tiếp trên sàn</b> (bước 3–6): chép 10 listing đầu của "retired gift" (ship to US), đánh dấu review trong 90 ngày, ghi sales 3 shop để xem lại sau 7 ngày, đọc lời chê; tra Meta Ad Library chữ "retirement gift". Các số này Lan tự đo và ghi link, ngày vào tab 4c. Số ở bảng trên là ước tính của RankHero, chỉ dùng để chọn cụm.</div></li>
+    </ol>
+    <p class="verdict">Bài học: đọc số của đúng thị trường bạn giao hàng, so tỷ lệ lượt tìm trên listing giữa các cách gõ khác nhau, và đừng mặc định rằng thu hẹp ngách là tốt hơn.</p>
+  </div>
+
+  <div class="sub" id="spy-case2">
+    <div class="tagline">Case study 2 · Dropship · số liệu FastMoss quý 2/2026</div>
+    <h3>Máy rửa áp lực không dây: đứng top TikTok Shop, vẫn bị loại</h3>
+    <p class="prose">Huy thấy máy rửa áp lực không dây trong danh sách bán chạy quý 2/2026 của TikTok Shop Mỹ: doanh thu quý khoảng 7,15 triệu USD, giá 55–79 USD, tháng 6 khoảng 5,2 triệu USD so với 1,95 triệu tháng 5. Đà quá đẹp. Huy chạy workflow B.</p>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Câu hỏi</th><th>Kết quả</th><th>Đạt</th></tr></thead>
+      <tbody>
+        <tr><td>Thương hiệu</td><td>Sản phẩm đứng top là hàng có thương hiệu (SEESE); hàng không thương hiệu cùng loại phải cạnh tranh với tên đã có review</td><td>Rủi ro</td></tr>
+        <tr><td>Pin và vận chuyển</td><td>Máy chạy pin lithium: hạn chế vận chuyển, dễ bị giữ hàng, bảo hành phức tạp</td><td>Trượt</td></tr>
+        <tr><td>Cân nặng, hoàn hàng</td><td>Máy cồng kềnh; một lần hoàn hàng ăn hết lãi nhiều đơn</td><td>Trượt</td></tr>
+        <tr><td>Mùa</td><td>Đỉnh nằm ở tháng 5–6 (mùa rửa xe, sân vườn). Huy lên quảng cáo cuối tháng 11: đúng lúc nhu cầu xuống</td><td>Trượt</td></tr>
+        <tr><td>Hoa hồng affiliate</td><td>Khoảng 6%, thấp: cho thấy biên lãi của chính người bán lớn cũng không dày</td><td>Tín hiệu xấu</td></tr>
+      </tbody></table></div>
+    <p class="verdict">Kết luận: loại. Một sản phẩm đứng top cho biết <b>nhu cầu tồn tại</b>, không cho biết <b>chỗ của bạn</b>. Huy giữ lại bài học: dùng danh sách top để thấy loại nhu cầu (dọn dẹp ngoài trời), rồi tìm món nhẹ, không pin, đúng mùa đông của Mỹ, và chạy lại workflow B.</p>
+  </div>
+
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Trước khi nộp 3 ứng viên ngày thứ 4</h3></div>
+    <ol><li>Mỗi ứng viên có ít nhất một tín hiệu đếm được, có link và ngày?</li><li>Mình đã tính lượt tìm trên 1.000 listing cho đúng thị trường Mỹ chưa?</li><li>Mình đã xem lại sales của 3 shop sau vài ngày để biết đà chưa?</li><li>Nếu bỏ hết công cụ trả phí, kết luận của mình có còn đứng được không?</li></ol>
+  </div>
+  <p class="src">Nguồn, xem tháng 10/2026: <a href="https://profittree.io/blog/best-etsy-seller-seo-tools-2026">ProfitTree, công cụ Etsy 2026</a> (bài của một bên bán công cụ); <a href="https://revenuegeeks.com/software/keepa">RevenueGeeks về Keepa</a>; <a href="https://www.sellersprite.com/en/blog/Best-Chrome-Extensions-for-Amazon-Sellers">SellerSprite, extension Amazon</a> (bên bán công cụ); <a href="https://koala-apps.io/blog/kalodata-everything-you-need-to-know/">Koala về Kalodata</a>; <a href="https://koala-apps.io/koala-inspector-for-shopify/">Koala Inspector</a>; <a href="https://www.admapix.com/blog/best-practices/best-ad-spy-tools-2026">AdMapix, công cụ spy quảng cáo 2026</a> (bên bán công cụ); <a href="https://affmaven.com/minea-pricing/">giá Minea</a>; <a href="https://billo.app/blog/meta-ad-library/">cách đọc Meta Ad Library</a>; <a href="https://www.logicinbound.com/1-trick-spy-top-shopify-stores-stop-spies-store">thứ tự bán chạy của store Shopify</a>; <a href="https://explodingtopics.com/blog/exploding-topics-pro-vs-free">Exploding Topics</a>; <a href="https://craftprofessional.com/pinterest-trends-tool.html">Pinterest Trends</a>; <a href="https://www.listadum.com/blog/does-the-bestseller-badge-on-etsy-actually-mean-anything">nhãn Bestseller của Etsy</a>; RankHero: <a href="https://www.rankhero.com/keywords/retirement-gift">retirement gift</a>, <a href="https://www.rankhero.com/keywords/retirement-gifts">retirement gifts</a>, <a href="https://www.rankhero.com/keywords/retired-gift">retired gift</a>, <a href="https://www.rankhero.com/keywords/retired-teacher">retired teacher</a>; <a href="https://www.fastmoss.com/blog/best-selling-tiktok-shop-products-us-q2-2026/">FastMoss, TikTok Shop Mỹ quý 2/2026</a> (bên bán công cụ, số mô hình). Giá công cụ đổi thường xuyên: kiểm lại trên trang của từng hãng trước khi mua.</p>
+</section>
+
 <section id="lo-trinh">
   <div class="sec-head">
     <div class="eyebrow">Bắt đầu ở đây</div>
