@@ -1,0 +1,653 @@
+<!doctype html><html><head><meta charset=utf8><meta name="robots" content="noindex,nofollow"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<title>Mẫu bài đạt · C.L.E.A.R.</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: sổ tay hiện trường — thanh 5 cổng dính bên trái (desktop); mỗi cổng là một trạm: luật đạt, cách làm, framework, ví dụ thật, câu hỏi vặn, kiểm tra của Mentor */
+:root{
+  --bg:#f6f7f4; --paper:#ffffff; --ink:#1c2321; --muted:#5b6662; --line:#dfe3df;
+  --accent:#0f6b5c; --accent-soft:#e3f1ec; --warn:#a3501b; --warn-soft:#fbede3;
+  --pass:#1f7a3f; --pass-soft:#e6f3ea; --kill:#b42318; --kill-soft:#fdeceb;
+  --quote:#efeee8; --t1:#e9efe9; --t2:#dcebe5; --t3:#cfe5dd; --t4:#c1ded4;
+  --f-body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-quote:"Literata",Georgia,"Times New Roman",serif;
+  --f-data:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121715; --paper:#1a201e; --ink:#e7ece9; --muted:#9aa6a1; --line:#2c3532;
+  --accent:#5fc3ad; --accent-soft:#16312b; --warn:#f0a36d; --warn-soft:#352419;
+  --pass:#6fcf8f; --pass-soft:#16301f; --kill:#ff8a80; --kill-soft:#3a1d1b; --quote:#222a27;
+  --t1:#1c2421; --t2:#1d2c27; --t3:#1e342d; --t4:#1f3c33; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121715; --paper:#1a201e; --ink:#e7ece9; --muted:#9aa6a1; --line:#2c3532;
+  --accent:#5fc3ad; --accent-soft:#16312b; --warn:#f0a36d; --warn-soft:#352419;
+  --pass:#6fcf8f; --pass-soft:#16301f; --kill:#ff8a80; --kill-soft:#3a1d1b; --quote:#222a27;
+  --t1:#1c2421; --t2:#1d2c27; --t3:#1e342d; --t4:#1f3c33; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.62;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.25;margin:0}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto}
+header.top{padding-block:40px 28px;border-bottom:1px solid var(--line);display:grid;gap:14px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.02em}
+h1 .gates{color:var(--accent)}
+.lede{max-width:68ch;color:var(--muted);font-size:17px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:600}
+
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;margin-top:32px}
+nav.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;display:grid;gap:4px}
+nav.rail a{display:grid;grid-template-columns:34px 1fr;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:14px}
+nav.rail a:hover{background:var(--accent-soft)}
+nav.rail .l{font-weight:800;font-size:20px;color:var(--accent);text-align:center}
+nav.rail .sep{height:1px;background:var(--line);margin:8px 0}
+main{display:grid;gap:56px;min-width:0}
+
+section{display:grid;gap:22px;min-width:0;scroll-margin-top:20px}
+.sec-head{display:grid;gap:8px}
+h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:19px;font-weight:700}
+h4{font-size:16px;font-weight:700}
+.sub{display:grid;gap:14px;padding-top:6px;border-top:1px solid var(--line)}
+.sub .tagline{font-family:var(--f-data);font-size:13px;color:var(--accent)}
+.prose{max-width:72ch;display:grid;gap:12px}
+p.prose{display:block}
+
+.gate-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:start}
+.letter{font-size:76px;line-height:.85;font-weight:800;color:var(--accent);letter-spacing:-.04em}
+.gate-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted);margin-top:6px}
+.gate-meta span b{color:var(--ink)}
+
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rule{border-radius:10px;padding:14px 16px;display:grid;gap:6px;font-size:15px;align-content:start}
+.rule.pass{background:var(--pass-soft)}
+.rule.kill{background:var(--kill-soft)}
+.rule .tag{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.rule.pass .tag{color:var(--pass)} .rule.kill .tag{color:var(--kill)}
+.rule ul{margin:0;padding-left:18px;display:grid;gap:4px}
+
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:14px}
+ol.steps>li{counter-increment:s;display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px}
+ol.steps>li::before{content:counter(s);font-family:var(--f-data);font-size:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:1px solid var(--line);color:var(--accent)}
+code{font-family:var(--f-data);font-size:13px;background:var(--paper);border:1px solid var(--line);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+
+.live{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:14px;min-width:0}
+.live-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline}
+.live-head .eyebrow{color:var(--accent)}
+.src{font-size:12px;color:var(--muted)}
+.tbl{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+td.n{font-family:var(--f-data);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+th.n{text-align:right}
+table.canvas{min-width:880px}
+table.canvas td:first-child{font-weight:700;white-space:nowrap}
+table.canvas td:nth-child(2){color:var(--muted);min-width:170px}
+.grp td{background:var(--accent-soft);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:6px 10px}
+.st{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;border-radius:5px;padding:1px 6px;white-space:nowrap}
+.st.ok{background:var(--pass-soft);color:var(--pass)}
+.st.gd{background:var(--warn-soft);color:var(--warn)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--bg)}
+.chip.hot{border-color:var(--accent);background:var(--accent-soft);font-weight:600}
+.chip.miss{border-style:dashed;color:var(--muted);text-decoration:line-through}
+.verdict{border-left:3px solid var(--accent);padding:4px 0 4px 14px;font-weight:500}
+.verdict.warn{border-left-color:var(--warn)}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.stat{border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;gap:2px;background:var(--bg)}
+.stat .v{font-family:var(--f-data);font-size:22px;font-variant-numeric:tabular-nums}
+.stat .k{font-size:13px;color:var(--muted)}
+
+blockquote{margin:0;background:var(--quote);border-radius:8px;padding:12px 14px;font-family:var(--f-quote);font-style:italic;font-size:15.5px;display:grid;gap:4px}
+blockquote cite{font-family:var(--f-body);font-style:normal;font-size:12px;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+
+.avatar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;background:var(--accent-soft);border-radius:12px;padding:18px}
+.avatar .who{display:grid;gap:6px}
+.avatar .who .nm{font-size:20px;font-weight:800}
+.avatar dl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 12px;margin:0;font-size:15px}
+.avatar dt{font-weight:700}
+.avatar dd{margin:0}
+
+.ladder{display:grid;gap:8px}
+.rung{display:grid;grid-template-columns:190px minmax(0,1fr) minmax(0,1fr);gap:14px;border-radius:10px;padding:14px 16px;align-items:start}
+.rung.r4{background:var(--t4)} .rung.r3{background:var(--t3)} .rung.r2{background:var(--t2)} .rung.r1{background:var(--t1)}
+.rung h4{font-size:16px}
+.rung .q{font-size:13px;color:var(--muted)}
+.rung .els{font-size:14px}
+.rung .ex{font-size:14px}
+.rung .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+
+.errc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.errc .cell{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--paper);display:grid;gap:6px;align-content:start}
+.errc .cell h4{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.errc .cell ul{margin:0;padding-left:18px;font-size:14px;display:grid;gap:4px}
+
+.ask{display:grid;gap:10px}
+.ask details{border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.ask summary{cursor:pointer;padding:12px 16px;font-weight:600;list-style:none;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px}
+.ask summary::-webkit-details-marker{display:none}
+.ask summary::before{content:"Hỏi";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--warn);background:var(--warn-soft);border-radius:5px;padding:2px 6px;height:fit-content;margin-top:2px}
+.ask .a{padding:0 16px 14px 16px;display:grid;gap:8px}
+
+.mentor,.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.box{border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:8px;background:var(--paper);align-content:start}
+.box h3{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.box ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:15px}
+
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pillar{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start}
+.pillar .q{font-size:13px;color:var(--muted)}
+.pillar h3{font-size:17px}
+.pillar .g{display:flex;gap:4px;flex-wrap:wrap}
+.pillar .g span{font-weight:800;color:var(--accent);font-size:14px;border:1px solid var(--accent);border-radius:5px;padding:0 6px}
+.through{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.through .box p{font-size:15px}
+
+.rdef{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.rdef .box .num{font-family:var(--f-data);font-size:13px;color:var(--accent)}
+
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px}
+.flow .stp{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.flow .stp b{color:var(--accent)}
+.flow .ar{color:var(--muted)}
+
+.decision{background:var(--accent-soft);border-radius:14px;padding:22px;display:grid;gap:12px}
+.decision dl{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 16px;margin:0}
+.decision dt{font-weight:700}
+.decision dd{margin:0}
+.limits{border:1px dashed var(--warn);border-radius:12px;padding:18px;display:grid;gap:8px;background:var(--warn-soft)}
+.limits ul{margin:0;padding-left:18px;display:grid;gap:4px}
+footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted);display:grid;gap:6px}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  nav.rail{position:static;grid-auto-flow:column;grid-auto-columns:max-content;overflow-x:auto;padding-bottom:4px}
+  nav.rail .sep{display:none}
+  nav.rail a{grid-template-columns:auto auto}
+  .pillars,.errc,.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rung{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .rules,.quotes,.mentor,.two,.through,.pillars,.rdef,.errc,.avatar{grid-template-columns:minmax(0,1fr)}
+  .letter{font-size:56px}
+  .decision dl,.avatar dl{grid-template-columns:minmax(0,1fr)}
+}
+
+.prompt{font-family:var(--f-data);font-size:13px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 10px;white-space:pre-wrap;overflow-wrap:anywhere}
+.vizwrap{margin:0;display:grid;gap:6px}.vizwrap figcaption{font-size:13px;color:var(--muted)}
+.viz{width:100%;height:auto;display:block;--hi:#0a8a5a;--rest:#a3a8a5}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .viz{--hi:#2a9d6c;--rest:#6b7470}}
+:root[data-theme="dark"] .viz{--hi:#2a9d6c;--rest:#6b7470}
+.viz .zone{fill:var(--pass-soft)}.viz .zl{fill:var(--pass);font-size:12px;font-weight:600}.viz .gl{stroke:var(--line);stroke-width:1}.viz .th{stroke:var(--pass);stroke-width:1.5;stroke-dasharray:4 4}
+.viz .tk{fill:var(--muted);font-size:12px;font-family:var(--f-data)}.viz .ax{fill:var(--muted);font-size:12px}
+.viz .dot{fill:var(--paper);stroke:var(--rest);stroke-width:2}.viz .hi .dot{fill:var(--hi);stroke:var(--paper)}.viz .hit{fill:transparent}.viz .pt:hover .dot{stroke-width:3}
+.viz .pl{fill:var(--ink);font-size:12px}.viz .pl.hi{font-weight:600}
+table.sopk{min-width:0}table.sopk td:first-child{font-family:var(--f-data);white-space:nowrap}table.sopk td:nth-child(2){font-weight:600}
+.ladder{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ladder li{width:var(--w);min-width:min(100%,520px);max-width:100%;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:start;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:8px;padding:10px 12px;font-size:15px}
+.ladder .lv{font-family:var(--f-data);font-weight:700;color:var(--accent);font-size:18px;line-height:1.3}
+.ladder i{color:var(--muted);font-style:normal;font-weight:600}
+@media (max-width:640px){.ladder li{width:100%}}
+.tprev{font-family:var(--f-data);font-size:14px;line-height:1.5;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-wrap:anywhere;margin:0}
+.tprev mark{background:var(--accent-soft);color:inherit;padding:0 2px;border-radius:3px}
+.shots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.shot{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--paper);font-size:14px;display:grid;gap:4px;align-content:start}
+.shot b{font-family:var(--f-data);color:var(--accent);font-size:13px}
+@media (max-width:900px){.shots{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.shots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Lộ trình, chọn đường, bản đồ ngách, ghi chú cho hàng vật lý và Shopify */
+.road{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:r}
+.road li{counter-increment:r;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px;align-content:start;position:relative}
+.road li .wk{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.road li h3{font-size:16px}
+.road li p{font-size:14.5px}
+.road li .out{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px}
+.road li .out b{color:var(--ink)}
+.road li.gate{background:var(--accent-soft);border-color:transparent}
+.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.path{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;background:var(--paper);align-content:start}
+.path.rec{border:2px solid var(--accent)}
+.path .ph{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;align-items:baseline}
+.path .ph h3{font-size:18px}
+.path dl{display:grid;grid-template-columns:96px minmax(0,1fr);gap:6px 12px;margin:0;font-size:14.5px}
+.path dt{font-weight:700;color:var(--muted);font-size:13px;padding-top:1px}
+.path dd{margin:0}
+.st.rec{background:var(--accent);color:var(--paper)}
+.st.no{background:var(--kill-soft);color:var(--kill)}
+.st.new{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.formula{font-family:var(--f-data);font-size:14px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow-x:auto}
+.formula b{color:var(--accent);font-weight:500}
+table.niche{min-width:980px}
+table.niche td:first-child{font-weight:700;min-width:150px}
+table.niche td code{white-space:nowrap}
+.alt{border:1px dashed var(--accent);border-radius:12px;padding:16px;display:grid;gap:12px}
+.alt>.eyebrow{color:var(--accent)}
+.alt .two .box h3{color:var(--accent)}
+.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.checks .box ul{list-style:none;padding-left:0}
+.checks .box li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:6px}
+.checks .box li::before{content:"□";color:var(--accent)}
+@media (max-width:900px){.road,.checks{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.paths{grid-template-columns:minmax(0,1fr)}.path dl{grid-template-columns:minmax(0,1fr)}}
+/* Tư duy, bẫy tư duy, phản tư */
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;counter-reset:pr}
+.principle{counter-increment:pr;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:30px minmax(0,1fr);gap:4px 12px;align-content:start}
+.principle::before{content:counter(pr);grid-row:span 2;font-family:var(--f-data);font-size:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--paper)}
+.principle h3{font-size:16px}
+.principle p{font-size:14.5px;color:var(--ink)}
+table.traps{min-width:760px}
+table.traps td:first-child{font-weight:700;min-width:150px}
+.reflect{border-left:4px solid var(--warn);background:var(--warn-soft);border-radius:0 12px 12px 0;padding:14px 18px;display:grid;gap:10px}
+.reflect .rh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.reflect .rk{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--warn)}
+.reflect h3{font-size:16px}
+.reflect ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:15px}
+.reflect .log{font-size:14px;border-top:1px dashed var(--warn);padding-top:8px}
+.score{min-width:720px}
+.score td.c{text-align:center;font-family:var(--f-data)}
+@media (max-width:640px){.principles{grid-template-columns:minmax(0,1fr)}}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Hành trình từng buổi */
+.ht-how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.ht-how .box p{font-size:14px}
+.ht-how .box .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-start{background:var(--accent-soft);border-radius:14px;padding:20px 22px;display:grid;gap:14px}
+.ht-start ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:s}
+.ht-start ol>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start}
+.ht-start ol>li::before{content:counter(s);font-weight:800;color:var(--accent);font-size:18px;text-align:center;line-height:1.5}
+.ht-start .ready{font-size:14px;border-top:1px dashed var(--accent);padding-top:10px}
+table.links{min-width:0}
+table.links td:first-child{white-space:nowrap;font-weight:600}
+.ht-map td:nth-child(1){font-family:var(--f-data);white-space:nowrap}
+.ht-map td:nth-child(2){white-space:nowrap}
+.ht-map tr.gate td{background:var(--accent-soft)}
+.ht-map tr.off td{background:var(--quote);color:var(--muted)}
+.ht-cards{display:grid;gap:10px}
+.ht-card{border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.ht-card[open]{border-color:var(--accent)}
+.ht-card.gate{background:linear-gradient(var(--accent-soft),var(--accent-soft)) top/100% 0 no-repeat,var(--paper)}
+.ht-card>summary{cursor:pointer;list-style:none;padding:14px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:center}
+.ht-card>summary::-webkit-details-marker{display:none}
+.ht-card .wk{font-family:var(--f-data);font-size:12px;color:var(--accent);grid-column:1}
+.ht-card .ttl{font-weight:700;font-size:17px;grid-column:1}
+.ht-card .q{font-size:14px;color:var(--muted);grid-column:1}
+.ht-card .q b{color:var(--ink);font-weight:600}
+.ht-card .prog{grid-column:2;grid-row:1/span 3;font-family:var(--f-data);font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.ht-card .prog.done{color:var(--pass);border-color:var(--pass);background:var(--pass-soft)}
+.ht-card.gate>summary{background:var(--accent-soft);border-radius:11px}
+.ht-body{padding:4px 18px 18px;display:grid;gap:16px}
+.ht-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ht-col{display:grid;gap:8px;align-content:start}
+.ht-col h4,.ht-self h4,.ht-flag h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ht-col p.one{font-size:14.5px;margin-bottom:6px}
+.ht-col ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px}
+ul.ck{list-style:none;padding:0}
+.ck li label,.ht-self li label{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;align-items:start;cursor:pointer}
+.ck input,.ht-self input{width:17px;height:17px;margin:3px 0 0;accent-color:var(--accent)}
+.ck input:checked+span,.ht-self input:checked+span{color:var(--muted)}
+.due{border:1px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px;display:grid;gap:4px;background:var(--paper)}
+.due .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-self{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;display:grid;gap:10px}
+.ht-self ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
+.ht-self em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
+.ht-self em b{color:var(--pass);font-weight:600}
+.ht-flag{border:1px dashed var(--kill);border-radius:10px;padding:10px 14px;display:grid;gap:6px;background:var(--kill-soft)}
+.ht-flag ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14.5px}
+.ht-note{font-size:14px;border-left:3px solid var(--warn);padding:2px 0 2px 12px}
+.ht-note b{color:var(--warn)}
+.ht-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+.ht-tools button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.ht-tools button:hover{border-color:var(--accent)}
+.rhythm{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.rhythm .box{padding:10px 12px}
+.rhythm .box .d{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.rhythm .box p{font-size:14px}
+@media (max-width:900px){.ht-how,.ht-grid,.rhythm{grid-template-columns:minmax(0,1fr)}.ht-card>summary{grid-template-columns:minmax(0,1fr)}.ht-card .prog{grid-column:1;grid-row:auto;justify-self:start}}
+@media (max-width:600px){
+  table.links thead,.ht-map thead{display:none}
+  table.links tr,.ht-map tr{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;padding:10px 4px;border-bottom:1px solid var(--line)}
+  table.links td,.ht-map td{display:block;border:0!important;padding:0!important;white-space:normal!important;background:none!important}
+  table.links td:nth-child(2)::before{content:"Ô: ";color:var(--muted)}
+  table.links td:nth-child(3)::before{content:"Dán link: ";color:var(--muted)}
+  table.links td:nth-child(4)::before{content:"Khi nào: ";color:var(--muted)}
+  .ht-map tr{grid-template-columns:auto minmax(0,1fr);column-gap:10px}
+  .ht-map tr.gate{background:var(--accent-soft)} .ht-map tr.off{background:var(--quote)}
+  .ht-map td:nth-child(1)::before{content:"Tuần ";}
+  .ht-map td:nth-child(3){grid-column:1/-1;font-weight:600}
+  .ht-map td:nth-child(4){grid-column:1/-1}
+  .ht-map td:nth-child(5){grid-column:1/-1;color:var(--muted)}
+  .ht-map td:nth-child(5)::before{content:"Hạn: "}
+}
+@media print{.ht-card{break-inside:avoid}.ht-tools{display:none}}
+
+ol.anat{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+ol.anat>li{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:14px;border-radius:10px;padding:14px 16px;align-items:start}
+ol.anat>li.a1{background:var(--t1)} ol.anat>li.a2{background:var(--t2)} ol.anat>li.a3{background:var(--t3)} ol.anat>li.a4{background:var(--t4)}
+ol.anat .q{font-size:13px;color:var(--muted)} ol.anat .els,ol.anat .ex{font-size:14px}
+ol.anat .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);margin-bottom:2px}
+table.spyt{min-width:760px}
+table.spyt td:first-child{font-weight:600;white-space:nowrap}
+table.spyt.case{min-width:0}table.spyt.case td:first-child{width:9.5em}
+@media(max-width:640px){table.spyt.case,table.spyt.case tbody,table.spyt.case tr,table.spyt.case td{display:block;width:auto}table.spyt.case thead{display:none}table.spyt.case td:first-child{width:auto;padding-bottom:0;border-bottom:0}table.spyt.case tr{padding:4px 0}}
+ol.flowl{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
+pre.tpl{margin:0;padding:14px 16px;background:var(--paper);border:1px dashed var(--line);border-radius:10px;font-family:var(--f-data);font-size:12.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow-x:auto}
+@media (max-width:900px){ol.anat>li{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<style>
+.layout{grid-template-columns:minmax(0,1fr)!important}
+nav.parts{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+nav.parts a{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);font-size:13.5px;background:var(--paper)}
+nav.parts a:hover{background:var(--accent-soft)}
+nav.parts a.cur{background:var(--accent);border-color:var(--accent);color:#fff}
+nav.parts a .i{color:var(--accent);font-weight:800}
+nav.parts a.cur .i{color:#fff}
+nav.parts a.home{font-weight:700}
+.inpage{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;color:var(--muted)}
+.inpage b{color:var(--ink)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;flex-wrap:wrap}
+.pn a{flex:1 1 220px;border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink);background:var(--paper)}
+.pn a small{display:block;color:var(--muted);font-size:12px}
+.pn a.nx{text-align:right}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.hub-card{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--paper);text-decoration:none;color:var(--ink);display:grid;gap:6px}
+.hub-card:hover{border-color:var(--accent)}
+.hub-card .k{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.02em}
+.hub-card h3{margin:0;font-size:16px}
+.hub-card p{margin:0;color:var(--muted);font-size:13.5px}
+.hub-card .t{font-size:12.5px;color:var(--muted)}
+table.wk td{vertical-align:top}
+table.wk tr.now td{background:var(--accent-soft)}
+table.wk tr.now td:first-child::after{content:" · tuần này";color:var(--accent);font-weight:700}
+table.wk a{white-space:normal}
+.ftag{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.ftag.off{background:var(--line);color:var(--muted)}
+@media(max-width:640px){table.wk{min-width:0!important}table.wk a{word-break:break-word}table.wk,table.wk tbody,table.wk tr,table.wk td{display:block;width:auto}table.wk thead{display:none}table.wk td{border-bottom:0;padding:4px 10px}table.wk tr{border-bottom:1px solid var(--line);padding:8px 0}table.wk td:first-child{font-weight:700}table.wk td[data-l]::before{content:attr(data-l) ": ";font-weight:600;color:var(--muted)}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <nav class="parts" aria-label="Các phần">
+<a class="home" href="index.html"><span class="i">⌂</span>Bắt đầu ở đây</a>
+<a href="lo-trinh-8-tuan.html"><span class="i">☑</span>Lộ trình 8 tuần</a>
+<a href="tu-duy.html"><span class="i">✦</span>Tư duy</a>
+<a href="chon-san-pham.html"><span class="i">◎</span>Chọn ngách, sản phẩm</a>
+<a href="kiem-chung.html"><span class="i">C</span>Kiểm chứng 5 cổng</a>
+<a href="len-ban.html"><span class="i">§</span>Lên bán, thử bán</a>
+<a href="hang-vat-ly.html"><span class="i">▣</span>Hàng vật lý (B)</a>
+<a class="cur" href="mau-bai-dat.html"><span class="i">✎</span>Mẫu bài đạt</a>
+<a href="tra-cuu.html"><span class="i">⌕</span>Tra cứu</a>
+</nav>
+  <div class="eyebrow">Mẫu bài đạt · dùng khi làm bài nộp</div>
+  
+  <p class="lede">Khuôn để điền, ví dụ đã điền và lý do từng phần đạt cho 6 bài nộp chính: phiếu ứng viên, listing Etsy, trang Shopify, bộ mẫu quảng cáo, tin nhắn với khách và một trang tổng kết.</p>
+  <div class="meta"><span><b>Dùng khi:</b> Trước mỗi lần nộp bài</span><span><b>Đọc hết:</b> khoảng 20 phút, nhưng chỉ đọc phần được giao</span></div>
+  <div class="inpage"><b>Trong trang:</b> <a href="#mau-ung-vien">1 · Phiếu ứng viên</a> · <a href="#mau-listing">2 · Listing Etsy</a> · <a href="#mau-shopify">3 · Trang Shopify</a> · <a href="#mau-ads">4 · Mẫu quảng cáo</a> · <a href="#mau-tin-nhan">5 · Tin nhắn khách</a> · <a href="#mau-mot-trang">6 · Một trang tổng kết</a></div>
+</header>
+<div class="layout">
+<main>
+<section id="mau">
+  <div class="sec-head">
+    <div class="eyebrow">Mẫu bài đạt · cả hai nhánh · dùng khi làm bài nộp</div>
+    <h2>Mẫu bài đạt: khuôn để điền, ví dụ đã điền, và lý do từng phần đạt</h2>
+  </div>
+  <p class="prose">Mỗi bài nộp quan trọng có ba thứ: <b>khuôn</b> để chép và điền, <b>ví dụ đã điền</b>, và <b>vì sao từng phần đạt</b>. Đừng chép ví dụ: chép lý do. Ví dụ dùng hai sản phẩm minh họa xuyên suốt khóa: dây chuyền thêm đá tháng sinh (nhánh A, POD) và bộ 3 giỏ cói (nhánh B). Shop và số trong ví dụ là giả định để luyện, không phải shop thật.</p>
+  <div class="tbl"><table class="spyt">
+    <thead><tr><th>Bài nộp</th><th>Nhánh A</th><th>Nhánh B</th><th>Mẫu</th></tr></thead>
+    <tbody>
+      <tr><td>Phiếu ứng viên sản phẩm</td><td>T4 21/10</td><td>T4 21/10</td><td><a href="#mau-ung-vien">Mẫu 1</a></td></tr>
+      <tr><td>Listing Etsy hoàn chỉnh và trang shop</td><td>Tuần 2</td><td>Không dùng</td><td><a href="#mau-listing">Mẫu 2</a></td></tr>
+      <tr><td>Trang sản phẩm Shopify và 6 trang bắt buộc</td><td>Tuần 5</td><td>Tuần 2–3</td><td><a href="#mau-shopify">Mẫu 3</a></td></tr>
+      <tr><td>Bộ 3 mẫu quảng cáo Meta</td><td>Tuần 6</td><td>Tuần 4</td><td><a href="#mau-ads">Mẫu 4</a></td></tr>
+      <tr><td>Tin nhắn với khách sau khi có đơn</td><td>Từ đơn đầu</td><td>Từ đơn đầu</td><td><a href="#mau-tin-nhan">Mẫu 5</a></td></tr>
+      <tr><td>Một trang tổng kết</td><td>Tuần 8</td><td>Tuần 8</td><td><a href="#mau-mot-trang">Mẫu 6</a></td></tr>
+    </tbody></table></div>
+  <p class="src">Mẫu thư hỏi giá nhà cung cấp (RFQ) và bảng chấm nhà cung cấp của nhánh B nằm ở mục <a href="hang-vat-ly.html#vl-nguon">Hàng vật lý, nguồn hàng</a>.</p>
+
+  <div class="sub" id="mau-ung-vien">
+    <div class="tagline">Mẫu 1 · Phiếu ứng viên · nộp T4 21/10 · 3 phiếu, mỗi ứng viên một phiếu</div>
+    <h3>Một ứng viên tốt chứng minh được 4 điều: ai mua, đang có người bán được, khác ở đâu, còn lãi</h3>
+<pre class="tpl">ỨNG VIÊN [số] · [tên món]
+1. Câu khách:      A: [người mua] mua cho [người nhận] dịp [dịp]
+                   B: [nhóm khách] cần [việc cần làm]
+2. Tín hiệu đếm được (link + ngày xem):  [1]  [2]  [3]
+3. 3 đối thủ:      [link] · [giá] · [ngày review gần nhất]   ×3
+4. Lời khách nguyên văn (review, bình luận):  "[câu]"  (link)
+5. Khác biệt:      Khác hàng đang bán ở [điểm], thấy trong ảnh [số]
+6. Bộ lọc:         A: 5 câu  ·  B: 10 câu   → Đạt / Trượt ở câu [số]
+7. Tiền:           Giá bán [ ] · Giá vốn tới tay khách [ ] · Lãi mỗi đơn [ ] · CAC tối đa [ ]
+8. Rủi ro lớn nhất: [một câu]</pre>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Ô</th><th>Ví dụ đạt (nhánh A)</th><th>Vì sao đạt</th></tr></thead>
+      <tbody>
+        <tr><td>Câu khách</td><td>Con trưởng thành mua cho mẹ, dịp Giáng sinh và sinh nhật mẹ; mẹ muốn thêm đá khi có cháu</td><td>Gọi tên được người bấm mua (con) và người nhận (mẹ). "Quà cho phụ nữ" là trượt: không ai gõ như vậy và không viết được ảnh đầu.</td></tr>
+        <tr><td>Tín hiệu đếm được</td><td>3 listing "add on birthstone necklace" có review trong 90 ngày gần nhất; gợi ý tìm kiếm Etsy có "birthstone necklace for mom"; link và ngày xem 20/10</td><td>Đếm được trên sàn, ai mở link cũng thấy. Doanh thu ước tính của công cụ spy không được tính là tín hiệu.</td></tr>
+        <tr><td>Lời khách nguyên văn</td><td>"…impossible to add charms onto another necklace." (review 3 sao, 08/2025)</td><td>Lời chê của khách đối thủ là nguyên liệu cho góc thắng và ảnh đầu. Viết lại bằng lời mình là mất bằng chứng.</td></tr>
+        <tr><td>Khác biệt</td><td>Dây thêm được charm về sau; thấy ngay ở ảnh 1 (tay đang gắn charm)</td><td>Khác biệt phải <b>nhìn thấy</b> trong ảnh. "Chất lượng tốt hơn" hay "ảnh đẹp hơn" không phải khác biệt.</td></tr>
+        <tr><td>Tiền</td><td>Giá 39 USD, gói hộp quà 45 USD; lãi từ 30% giá bán sau phí Etsy, giá in, ship</td><td>Có số trước khi đặt mẫu. Ứng viên chưa có lãi trên giấy thì không có lý do để tốn tiền mẫu.</td></tr>
+        <tr><td>Rủi ro lớn nhất</td><td>Nhà in khắc chữ mờ trên charm nhỏ: đặt mẫu 2 nhà in để so</td><td>Người bán giỏi nói trước điều làm mình thua, rồi kiểm điều đó bằng tiền ít nhất.</td></tr>
+      </tbody></table></div>
+    <div class="mentor">
+      <div class="box"><h3>Nhánh B điền khác ở đâu</h3><ol class="flowl">
+        <li><b>Câu khách</b> theo việc cần làm: "người thuê căn hộ nhỏ cần chỗ cất đồ đẹp, không khoan tường".</li>
+        <li><b>Tiền</b> dùng giá vốn tới tay khách từ tab 4d, không dùng giá xưởng; CAC tối đa phải từ khoảng 12–15 USD và từ 35% giá bán.</li>
+        <li><b>Rủi ro</b> thường là cước thể tích, thuế theo nước xuất xứ, hoặc giấy tờ của nhóm hàng.</li></ol></div>
+      <div class="box"><h3>Phiếu bị trả lại khi</h3><ol class="flowl">
+        <li>Ô tín hiệu chỉ có số của công cụ spy, không có link sàn.</li>
+        <li>Ô khác biệt là "rẻ hơn".</li>
+        <li>Ô tiền để trống hoặc chỉ có giá xưởng.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="sub" id="mau-listing">
+    <div class="tagline">Mẫu 2 · Listing Etsy hoàn chỉnh · nhánh A · tuần 2</div>
+    <h3>Một listing đạt là một chuỗi câu trả lời cho người mua, theo đúng thứ tự họ hỏi</h3>
+    <p class="prose">Luật chi tiết và phiếu 12 điểm ở mục <a href="len-ban.html#len-ban">Listing bán được</a>. Đây là bản ghép đủ các phần thành một listing để bạn thấy chúng ăn khớp thế nào.</p>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Phần</th><th>Ví dụ đạt</th><th>Vì sao đạt</th></tr></thead>
+      <tbody>
+        <tr><td>Tiêu đề</td><td>Add On Birthstone Necklace for Mom, Gold Family Charms with Kids Names</td><td>12 từ, không lặp. 40 ký tự đầu là đúng cụm khách gõ, phần khách thấy trên điện thoại. Phần sau là chi tiết khách dùng để lọc (vàng, tên con).</td></tr>
+        <tr><td>13 thẻ</td><td>birthstone necklace · necklace for mom · add on necklace · grandma necklace · family necklace · christmas gift mom · gift for grandma · kids birthstone · charm necklace mom · new grandma gift · grandkids necklace · mom birthday gift · gold name necklace</td><td>Đủ 13, mỗi thẻ là cụm 2–3 từ có người gõ, dưới 20 ký tự. Thẻ dịp lễ đổi theo mùa.</td></tr>
+        <tr><td>Thuộc tính</td><td>Danh mục sâu nhất: Necklaces › Charm Necklaces. Màu, chất liệu, dịp (Christmas, Birthday), người nhận (Mom, Grandma), có cá nhân hóa</td><td>Khách lọc theo màu, dịp, người nhận. Thiếu thuộc tính là biến mất khỏi kết quả đã lọc.</td></tr>
+        <tr><td>10 ảnh</td><td>1 tay đang gắn charm · 2 hạn đặt Giáng sinh · 3 dây trên cổ, đá cạnh đồng xu · 4 cách đặt · 5 "2 đá hôm nay, 4 đá sau 3 năm" · 6 cận chữ khắc · 7 bảng 12 màu đá · 8 hộp quà · 9 cam kết làm lại · 10 video mở hộp</td><td>Ảnh 1 bán góc thắng. Mỗi ảnh sau trả lời đúng một nỗi lo: kịp không, to không, chữ rõ không, đặt thế nào, sai thì sao.</td></tr>
+        <tr><td>Giá và giao</td><td>39 USD, gói hộp quà 45 USD; giao miễn phí vì 5 USD ship đã nằm trong giá; xử lý 3 ngày (nhà in 2 ngày + 1 ngày đệm)</td><td>Giá lấy từ bảng lãi. Thời gian xử lý là số thật cộng đệm, không phải số đẹp nhất nhà in quảng cáo.</td></tr>
+      </tbody></table></div>
+<pre class="tpl">MÔ TẢ · ví dụ đạt (tiếng Anh, vì khách ở Mỹ)
+
+Start her family necklace today and add a birthstone charm each time the family grows.
+Gold or silver, names engraved, ships from the US in 3–5 days.            ← 160 ký tự đầu
+
+CAN I ADD CHARMS LATER?  Yes. Order extra charms any time; they clip onto the same chain.
+WILL THE NAMES BE CLEAR?  Each charm is laser engraved, not printed. See photo 6.
+WILL IT ARRIVE FOR CHRISTMAS?  Order by [hạn của nhà in] for US delivery before Dec 24 (photo 2).
+
+DETAILS
+– Chain 18 in (46 cm) with 2 in extender · charms 8 mm · names up to 8 letters
+– Gold-plated or sterling silver
+– $45 option adds a gift box and a birthstone meaning card
+
+HOW TO ORDER
+1. Choose chain color and number of charms.
+2. In Personalization, enter each name and birth month, one per line. Example: Emma – May
+3. We message you within 24 hours to confirm the names before we make it.
+
+OUR PROMISE  If we misspell a name, we remake it free.</pre>
+    <div class="mentor">
+      <div class="box"><h3>Vì sao mô tả này đạt</h3><ol class="flowl">
+        <li><b>160 ký tự đầu</b> nói góc (thêm đá về sau), người nhận và thời gian giao: phần hiện trên kết quả Etsy và Google.</li>
+        <li><b>Ba câu hỏi in hoa</b> là ba lời chê hàng đầu của listing đối thủ, trả lời trước khi khách kịp hỏi.</li>
+        <li><b>Thông số</b> đo từ mẫu thật, có cả inch lẫn cm.</li>
+        <li><b>Cách đặt</b> có ví dụ nhập, nên khách ít nhập sai; shop hứa xác nhận trong 24 giờ.</li>
+        <li><b>Cam kết</b> là điều shop giữ được. Không hứa điều nhà in không làm được.</li></ol></div>
+      <div class="box"><h3>Trang shop đạt cần</h3><ol class="flowl">
+        <li><b>About</b>: ảnh thật của bạn hoặc chỗ làm việc, 3–4 câu vì sao bạn làm món này, ai sản xuất (nhà in là đối tác sản xuất).</li>
+        <li><b>Chính sách</b>: đổi trả với hàng cá nhân hóa (chỉ khi lỗi do shop), thời gian xử lý, liên hệ.</li>
+        <li><b>Banner và logo</b> đơn giản, cùng một khách với listing. Không cần thuê thiết kế ở tuần 2.</li>
+        <li><b>Không</b> dán review từ nơi khác, không viết "best seller" khi chưa có.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="sub" id="mau-shopify">
+    <div class="tagline">Mẫu 3 · Trang sản phẩm Shopify · nhánh A tuần 5 · nhánh B tuần 2–3</div>
+    <h3>Trên điện thoại, màn hình đầu phải trả lời: món gì, giá bao nhiêu, nhận khi nào, và nút mua</h3>
+    <p class="prose">Khách từ quảng cáo Meta chưa biết bạn là ai, lướt nhanh trên điện thoại, và không có review Etsy để tin. Trang Shopify phải tự làm việc mà Etsy làm hộ: tạo lòng tin. Ví dụ dưới đây là bộ 3 giỏ cói của nhánh B, giá 59 USD.</p>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Khối, từ trên xuống</th><th>Ví dụ đạt</th><th>Vì sao đạt</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Ảnh đầu</td><td>Ba giỏ lồng nhau trên kệ thật, có cây và sách, ánh sáng tự nhiên; ảnh 2 là giỏ trong tay để thấy cỡ</td><td>Cùng góc với mẫu quảng cáo khách vừa bấm, để họ biết mình đến đúng chỗ.</td></tr>
+        <tr><td>2 · Tên và một câu hứa</td><td>Handwoven Seagrass Basket Set of 3 · "Nests flat for storage, made by artisans in Ninh Binh, Vietnam"</td><td>Tên nói món gì; câu hứa nói khác biệt (gấp phẳng, làm tay, xuất xứ). Không dùng tính từ rỗng.</td></tr>
+        <tr><td>3 · Giá và ưu đãi bộ</td><td>59 USD · "Add a lid basket for 15 USD"</td><td>Ưu đãi nâng giá trị đơn, làm CAC tối đa rộng hơn. Không giảm giá giả (gạch giá ảo).</td></tr>
+        <tr><td>4 · Ngày nhận</td><td>"Ships from our US partner in 1–2 days · arrives in 3–6 business days · order by Dec 15 for Christmas"</td><td>Câu hỏi lớn nhất của người mua quà. Ghi theo số thật của kho hoặc nhà in.</td></tr>
+        <tr><td>5 · Nút mua</td><td>Nút Add to cart to, rõ; PayPal hiện ngay dưới</td><td>Khách thấy cách trả tiền quen thuộc trước khi bấm.</td></tr>
+        <tr><td>6 · Ba nỗi lo</td><td>Kích thước từng giỏ (cm và inch) · cách vệ sinh · mùi cói khi mới mở hộp</td><td>Lấy từ lời chê của đối thủ trên Amazon và Etsy, giống mô tả Etsy.</td></tr>
+        <tr><td>7 · Câu chuyện thật</td><td>2–3 câu và ảnh xưởng Ninh Bình bạn tự quay khi đi lấy mẫu</td><td>Lợi thế người bán Việt có sẵn. Ảnh thật đáng tin hơn mọi lời khen.</td></tr>
+        <tr><td>8 · Chính sách tóm tắt</td><td>"30-day returns if unused · reply within 24 hours · contact@[tên miền]"</td><td>Shop mới cần lời hứa rõ. Email theo tên miền đáng tin hơn Gmail.</td></tr>
+        <tr><td>9 · Đánh giá</td><td>Để trống khi chưa có đơn; bật app đánh giá sau đơn đầu</td><td>Không chép review từ Etsy, Amazon hay nhà cung cấp: sai luật và mất lòng tin khi bị phát hiện.</td></tr>
+      </tbody></table></div>
+    <div class="mentor">
+      <div class="box"><h3>6 trang bắt buộc, mỗi trang cần gì</h3><ol class="flowl">
+        <li><b>Shipping</b>: nơi gửi, thời gian xử lý, thời gian giao, hạn lễ, thuế đã gồm trong giá (DDP).</li>
+        <li><b>Returns</b>: điều kiện, số ngày, ai trả phí gửi lại; hàng cá nhân hóa chỉ đổi khi lỗi.</li>
+        <li><b>Contact</b>: email theo tên miền, thời gian trả lời.</li>
+        <li><b>About</b>: bạn là ai, vì sao làm món này, ảnh thật.</li>
+        <li><b>Privacy</b> và <b>Terms</b>: dùng mẫu của Shopify, sửa tên shop và email.</li></ol></div>
+      <div class="box"><h3>Trang bị trả lại khi</h3><ol class="flowl">
+        <li>Trên điện thoại phải cuộn mới thấy giá hoặc nút mua.</li>
+        <li>Có đồng hồ đếm ngược giả, "chỉ còn 3 cái" giả, review chép.</li>
+        <li>Ngày giao ghi theo số đẹp nhất thay vì số thật.</li>
+        <li>Pixel chưa báo Purchase bằng một đơn thật.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="sub" id="mau-ads">
+    <div class="tagline">Mẫu 4 · Bộ 3 mẫu quảng cáo Meta · nhánh A tuần 6 · nhánh B tuần 4</div>
+    <h3>Ba mẫu khác nhau ở góc nhìn, không phải ở màu nền</h3>
+<pre class="tpl">MẪU [số] · Góc: [người nhận / dịp / cảm xúc / vấn đề]
+0–3 giây (tắt tiếng vẫn hiểu):  [hình] + chữ trên màn hình "[câu ≤ 7 từ]"
+3–10 giây:   [cảnh 2: sản phẩm thật, cá nhân hóa hoặc kích thước]
+10–15 giây:  [cảnh 3: kết quả, cảm xúc] + "[ưu đãi hoặc hạn đặt]"
+Primary text: [câu 1 nói góc] [câu 2 nói khác biệt] [câu 3 nói hạn hoặc ưu đãi]
+Headline:    [món + lợi ích, ≤ 40 ký tự]
+Đích đến:    trang sản phẩm có cùng ảnh đầu</pre>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Mẫu</th><th>Ví dụ đạt (dây chuyền, nhánh A)</th><th>Vì sao đạt</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Góc người nhận</td><td>0–3s: tay mẹ mở hộp, chữ "Mom cried at this one". Sau đó cận tên các con, rồi mẹ đeo lên. Headline: "Her kids' names, one chain"</td><td>Câu mở là cảm xúc người mua muốn tạo ra. 3 giây đầu đã thấy sản phẩm.</td></tr>
+        <tr><td>2 · Góc khác biệt</td><td>0–3s: tay gắn thêm charm, chữ "Add a charm when the family grows". Cảnh 2 đá rồi 4 đá. Headline: "Add-on birthstone necklace"</td><td>Bán đúng điểm đối thủ bị chê. Người đã thấy dây đá tháng sinh khác vẫn dừng lại vì điều mới.</td></tr>
+        <tr><td>3 · Góc hạn dịp</td><td>Ảnh tĩnh: dây trên thiệp Giáng sinh, chữ "Order by [hạn] for Christmas". Headline: "Engraved gift, arrives on time"</td><td>Trả lời nỗi lo lớn nhất mùa lễ. Ảnh tĩnh để so với video: biết định dạng nào rẻ hơn.</td></tr>
+      </tbody></table></div>
+    <div class="mentor">
+      <div class="box"><h3>Nhánh B đổi góc thế nào (giỏ cói)</h3><ol class="flowl">
+        <li><b>Vấn đề:</b> trước/sau một góc phòng bừa, chữ "Small apartment, no drilling".</li>
+        <li><b>Xuất xứ:</b> tay người thợ đan, chữ "Handwoven in Vietnam, not a factory".</li>
+        <li><b>Món quà:</b> giỏ đựng quà Giáng sinh, chữ "The gift basket they keep".</li></ol></div>
+      <div class="box"><h3>Bộ mẫu bị trả lại khi</h3><ol class="flowl">
+        <li>Ba mẫu cùng một góc, chỉ khác màu nền hoặc phông chữ.</li>
+        <li>3 giây đầu là logo hoặc chữ chào, chưa thấy sản phẩm.</li>
+        <li>Dùng ảnh hoặc video của nhà cung cấp mà shop khác cũng dùng.</li>
+        <li>Chữ hứa điều trang sản phẩm không có (giảm giá, ngày giao).</li></ol></div>
+    </div>
+  </div>
+
+  <div class="sub" id="mau-tin-nhan">
+    <div class="tagline">Mẫu 5 · Tin nhắn với khách · từ đơn đầu tiên</div>
+    <h3>Ba tin nhắn giữ được đánh giá tốt: xác nhận, báo gửi, báo trễ</h3>
+<pre class="tpl">1 · XÁC NHẬN CÁ NHÂN HÓA (trong 24 giờ sau khi có đơn)
+Hi [tên], thank you for your order! Before we make it, please check the names:
+[tên 1 – tháng], [tên 2 – tháng]. Reply "OK" or send any changes within 24 hours.
+
+2 · ĐÃ GỬI (ngày có mã vận đơn)
+Good news: your order is on its way. Tracking: [link]. Expected delivery: [ngày].
+
+3 · BÁO TRỄ (ngay khi biết, trước khi khách hỏi)
+Hi [tên], your order is running [số] days late because [lý do thật].
+New expected date: [ngày]. If that's too late for your gift, reply and we'll [hoàn tiền / làm lại / gửi nhanh].</pre>
+    <div class="mentor">
+      <div class="box"><h3>Vì sao ba tin này đạt</h3><ol class="flowl">
+        <li><b>Xác nhận trước khi làm</b> chặn lỗi sai tên, lỗi tốn tiền nhất của hàng cá nhân hóa.</li>
+        <li><b>Báo trễ trước khi khách hỏi</b> và đưa lựa chọn: khách mất ngày nhận nhưng không mất lòng tin.</li>
+        <li>Ngắn, có tên khách, có ngày cụ thể. Không xin đánh giá kèm quà hay giảm giá: Etsy không cho phép.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="sub" id="mau-mot-trang">
+    <div class="tagline">Mẫu 6 · Một trang tổng kết · tuần 8</div>
+    <h3>Một trang đọc trong 2 phút: số thật, một bài học, một quyết định</h3>
+<pre class="tpl">MỘT TRANG · [tên] · K1 · 19/10–13/12/2026
+Sản phẩm và khách:   [món] cho [ai], dịp [dịp]
+Số 8 tuần:           Etsy: [lượt xem] · [đơn] · [doanh thu]
+                     Shopify: [phiên] · [thêm giỏ] · [đơn] · [doanh thu]
+                     Quảng cáo: [chi] · CPA [ ] so với CAC tối đa [ ]
+Lãi thật:            [doanh thu − giá vốn − phí − quảng cáo − mẫu] = [ ]
+Chỗ tắc lớn nhất:    thấy / bấm / mua → [bằng chứng]
+3 bài học:           [1] [2] [3]
+Quyết định:          Giữ [kênh] · Dừng [kênh] · 30 ngày tới làm [một trọng tâm]
+Lịch:                Valentine lên trước 20/12 · Tết [ngày nghỉ nhà in, ai trả lời khách]</pre>
+    <div class="mentor">
+      <div class="box"><h3>Vì sao một trang tốt</h3><ol class="flowl">
+        <li><b>Lãi thật</b> trừ cả tiền mẫu và quảng cáo. Số âm có lý do vẫn là một trang đạt.</li>
+        <li><b>Một trọng tâm</b> cho 30 ngày tới, không phải năm. Doanh nghiệp nhỏ thắng bằng tập trung.</li>
+        <li>Mỗi bài học gắn với một con số, không phải cảm nhận.</li></ol></div>
+    </div>
+  </div>
+</section>
+<div class="pn"><a href="hang-vat-ly.html"><small>← Phần trước</small>Hàng vật lý (B)</a><a class="nx" href="tra-cuu.html"><small>Phần sau →</small>Tra cứu</a></div>
+</main>
+</div>
+<footer>
+  <div>C.L.E.A.R. Path™ · Bản học viên · Quy định sàn, phí và thuế nhập khẩu thay đổi thường xuyên: kiểm lại trước khi tính tiền thật. · Dữ liệu ví dụ thu thập trên Etsy ngày 14/10/2026, xem với ship to US, giá quy đổi từ VND theo khoảng 26.300 VND/USD.</div>
+  <div>Thang kết quả dựa trên "The Elements of Value" (Almquist, Senior, Bloch, Harvard Business Review, 2016). Bảng 4 hành động dựa trên công cụ ERRC của Blue Ocean Strategy (Kim, Mauborgne). Ngưỡng là của khóa học, Mentor có thể chỉnh.</div>
+</footer>
+</div>
+<script>
+(function(){
+  var KEY='clear-k1-sprint';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){state={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+  var root=document.getElementById('sprint'); if(!root) return;
+  var boxes=root.querySelectorAll('input[type=checkbox][data-k]');
+  function refresh(){
+    var all=0,done=0;
+    root.querySelectorAll('.ht-card').forEach(function(card){
+      var bs=card.querySelectorAll('input[type=checkbox]'),n=0;
+      bs.forEach(function(b){if(b.checked)n++;});
+      var p=card.querySelector('.prog'); if(p){p.textContent=n+'/'+bs.length+' đã tích';p.classList.toggle('done',n===bs.length&&bs.length>0);}
+      all+=bs.length; done+=n;
+    });
+    var t=document.getElementById('ht-total'); if(t) t.textContent='Đã tích '+done+'/'+all+' ô';
+  }
+  boxes.forEach(function(b){
+    b.checked=!!state[b.dataset.k];
+    b.addEventListener('change',function(){ if(b.checked) state[b.dataset.k]=1; else delete state[b.dataset.k]; save(); refresh(); });
+  });
+  root.querySelectorAll('[data-ht]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var a=btn.dataset.ht, cards=root.querySelectorAll('.ht-card');
+      if(a==='open') cards.forEach(function(c){c.open=true;});
+      if(a==='close') cards.forEach(function(c){c.open=false;});
+      if(a==='reset'){ state={}; save(); boxes.forEach(function(b){b.checked=false;}); refresh(); }
+    });
+  });
+  // mở thẻ của tuần hiện tại
+  var map=[['w1','2026-10-19'],['w2','2026-10-26'],['w3','2026-11-02'],['w4','2026-11-09'],['w5','2026-11-16'],['w6','2026-11-23'],['w7','2026-11-30'],['w8','2026-12-07']];
+  var now=new Date(), cur='w1';
+  map.forEach(function(m){ if(now>=new Date(m[1]+'T00:00:00+07:00')) cur=m[0]; });
+  if(location.hash.indexOf('#ht-')!==0){ var el=document.getElementById('ht-'+cur); if(el) el.open=true; }
+  else { var h=document.getElementById(location.hash.slice(1)); if(h&&h.tagName==='DETAILS') h.open=true; }
+  refresh();
+})();
+</script>
+</body></html>
