@@ -1,0 +1,727 @@
+<!doctype html><html><head><meta charset=utf8><meta name="robots" content="noindex,nofollow"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<title>Lên bán, thử bán · C.L.E.A.R.</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: sổ tay hiện trường — thanh 5 cổng dính bên trái (desktop); mỗi cổng là một trạm: luật đạt, cách làm, framework, ví dụ thật, câu hỏi vặn, kiểm tra của Mentor */
+:root{
+  --bg:#f6f7f4; --paper:#ffffff; --ink:#1c2321; --muted:#5b6662; --line:#dfe3df;
+  --accent:#0f6b5c; --accent-soft:#e3f1ec; --warn:#a3501b; --warn-soft:#fbede3;
+  --pass:#1f7a3f; --pass-soft:#e6f3ea; --kill:#b42318; --kill-soft:#fdeceb;
+  --quote:#efeee8; --t1:#e9efe9; --t2:#dcebe5; --t3:#cfe5dd; --t4:#c1ded4;
+  --f-body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-quote:"Literata",Georgia,"Times New Roman",serif;
+  --f-data:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121715; --paper:#1a201e; --ink:#e7ece9; --muted:#9aa6a1; --line:#2c3532;
+  --accent:#5fc3ad; --accent-soft:#16312b; --warn:#f0a36d; --warn-soft:#352419;
+  --pass:#6fcf8f; --pass-soft:#16301f; --kill:#ff8a80; --kill-soft:#3a1d1b; --quote:#222a27;
+  --t1:#1c2421; --t2:#1d2c27; --t3:#1e342d; --t4:#1f3c33; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121715; --paper:#1a201e; --ink:#e7ece9; --muted:#9aa6a1; --line:#2c3532;
+  --accent:#5fc3ad; --accent-soft:#16312b; --warn:#f0a36d; --warn-soft:#352419;
+  --pass:#6fcf8f; --pass-soft:#16301f; --kill:#ff8a80; --kill-soft:#3a1d1b; --quote:#222a27;
+  --t1:#1c2421; --t2:#1d2c27; --t3:#1e342d; --t4:#1f3c33; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.62;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.25;margin:0}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto}
+header.top{padding-block:40px 28px;border-bottom:1px solid var(--line);display:grid;gap:14px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.02em}
+h1 .gates{color:var(--accent)}
+.lede{max-width:68ch;color:var(--muted);font-size:17px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:600}
+
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;margin-top:32px}
+nav.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;display:grid;gap:4px}
+nav.rail a{display:grid;grid-template-columns:34px 1fr;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:14px}
+nav.rail a:hover{background:var(--accent-soft)}
+nav.rail .l{font-weight:800;font-size:20px;color:var(--accent);text-align:center}
+nav.rail .sep{height:1px;background:var(--line);margin:8px 0}
+main{display:grid;gap:56px;min-width:0}
+
+section{display:grid;gap:22px;min-width:0;scroll-margin-top:20px}
+.sec-head{display:grid;gap:8px}
+h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:19px;font-weight:700}
+h4{font-size:16px;font-weight:700}
+.sub{display:grid;gap:14px;padding-top:6px;border-top:1px solid var(--line)}
+.sub .tagline{font-family:var(--f-data);font-size:13px;color:var(--accent)}
+.prose{max-width:72ch;display:grid;gap:12px}
+p.prose{display:block}
+
+.gate-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:start}
+.letter{font-size:76px;line-height:.85;font-weight:800;color:var(--accent);letter-spacing:-.04em}
+.gate-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted);margin-top:6px}
+.gate-meta span b{color:var(--ink)}
+
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rule{border-radius:10px;padding:14px 16px;display:grid;gap:6px;font-size:15px;align-content:start}
+.rule.pass{background:var(--pass-soft)}
+.rule.kill{background:var(--kill-soft)}
+.rule .tag{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.rule.pass .tag{color:var(--pass)} .rule.kill .tag{color:var(--kill)}
+.rule ul{margin:0;padding-left:18px;display:grid;gap:4px}
+
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:14px}
+ol.steps>li{counter-increment:s;display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px}
+ol.steps>li::before{content:counter(s);font-family:var(--f-data);font-size:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:1px solid var(--line);color:var(--accent)}
+code{font-family:var(--f-data);font-size:13px;background:var(--paper);border:1px solid var(--line);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+
+.live{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:14px;min-width:0}
+.live-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline}
+.live-head .eyebrow{color:var(--accent)}
+.src{font-size:12px;color:var(--muted)}
+.tbl{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+td.n{font-family:var(--f-data);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+th.n{text-align:right}
+table.canvas{min-width:880px}
+table.canvas td:first-child{font-weight:700;white-space:nowrap}
+table.canvas td:nth-child(2){color:var(--muted);min-width:170px}
+.grp td{background:var(--accent-soft);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:6px 10px}
+.st{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;border-radius:5px;padding:1px 6px;white-space:nowrap}
+.st.ok{background:var(--pass-soft);color:var(--pass)}
+.st.gd{background:var(--warn-soft);color:var(--warn)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--bg)}
+.chip.hot{border-color:var(--accent);background:var(--accent-soft);font-weight:600}
+.chip.miss{border-style:dashed;color:var(--muted);text-decoration:line-through}
+.verdict{border-left:3px solid var(--accent);padding:4px 0 4px 14px;font-weight:500}
+.verdict.warn{border-left-color:var(--warn)}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.stat{border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;gap:2px;background:var(--bg)}
+.stat .v{font-family:var(--f-data);font-size:22px;font-variant-numeric:tabular-nums}
+.stat .k{font-size:13px;color:var(--muted)}
+
+blockquote{margin:0;background:var(--quote);border-radius:8px;padding:12px 14px;font-family:var(--f-quote);font-style:italic;font-size:15.5px;display:grid;gap:4px}
+blockquote cite{font-family:var(--f-body);font-style:normal;font-size:12px;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+
+.avatar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;background:var(--accent-soft);border-radius:12px;padding:18px}
+.avatar .who{display:grid;gap:6px}
+.avatar .who .nm{font-size:20px;font-weight:800}
+.avatar dl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 12px;margin:0;font-size:15px}
+.avatar dt{font-weight:700}
+.avatar dd{margin:0}
+
+.ladder{display:grid;gap:8px}
+.rung{display:grid;grid-template-columns:190px minmax(0,1fr) minmax(0,1fr);gap:14px;border-radius:10px;padding:14px 16px;align-items:start}
+.rung.r4{background:var(--t4)} .rung.r3{background:var(--t3)} .rung.r2{background:var(--t2)} .rung.r1{background:var(--t1)}
+.rung h4{font-size:16px}
+.rung .q{font-size:13px;color:var(--muted)}
+.rung .els{font-size:14px}
+.rung .ex{font-size:14px}
+.rung .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+
+.errc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.errc .cell{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--paper);display:grid;gap:6px;align-content:start}
+.errc .cell h4{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.errc .cell ul{margin:0;padding-left:18px;font-size:14px;display:grid;gap:4px}
+
+.ask{display:grid;gap:10px}
+.ask details{border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.ask summary{cursor:pointer;padding:12px 16px;font-weight:600;list-style:none;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px}
+.ask summary::-webkit-details-marker{display:none}
+.ask summary::before{content:"Hỏi";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--warn);background:var(--warn-soft);border-radius:5px;padding:2px 6px;height:fit-content;margin-top:2px}
+.ask .a{padding:0 16px 14px 16px;display:grid;gap:8px}
+
+.mentor,.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.box{border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:8px;background:var(--paper);align-content:start}
+.box h3{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.box ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:15px}
+
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pillar{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start}
+.pillar .q{font-size:13px;color:var(--muted)}
+.pillar h3{font-size:17px}
+.pillar .g{display:flex;gap:4px;flex-wrap:wrap}
+.pillar .g span{font-weight:800;color:var(--accent);font-size:14px;border:1px solid var(--accent);border-radius:5px;padding:0 6px}
+.through{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.through .box p{font-size:15px}
+
+.rdef{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.rdef .box .num{font-family:var(--f-data);font-size:13px;color:var(--accent)}
+
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px}
+.flow .stp{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.flow .stp b{color:var(--accent)}
+.flow .ar{color:var(--muted)}
+
+.decision{background:var(--accent-soft);border-radius:14px;padding:22px;display:grid;gap:12px}
+.decision dl{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 16px;margin:0}
+.decision dt{font-weight:700}
+.decision dd{margin:0}
+.limits{border:1px dashed var(--warn);border-radius:12px;padding:18px;display:grid;gap:8px;background:var(--warn-soft)}
+.limits ul{margin:0;padding-left:18px;display:grid;gap:4px}
+footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted);display:grid;gap:6px}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  nav.rail{position:static;grid-auto-flow:column;grid-auto-columns:max-content;overflow-x:auto;padding-bottom:4px}
+  nav.rail .sep{display:none}
+  nav.rail a{grid-template-columns:auto auto}
+  .pillars,.errc,.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rung{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .rules,.quotes,.mentor,.two,.through,.pillars,.rdef,.errc,.avatar{grid-template-columns:minmax(0,1fr)}
+  .letter{font-size:56px}
+  .decision dl,.avatar dl{grid-template-columns:minmax(0,1fr)}
+}
+
+.prompt{font-family:var(--f-data);font-size:13px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 10px;white-space:pre-wrap;overflow-wrap:anywhere}
+.vizwrap{margin:0;display:grid;gap:6px}.vizwrap figcaption{font-size:13px;color:var(--muted)}
+.viz{width:100%;height:auto;display:block;--hi:#0a8a5a;--rest:#a3a8a5}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .viz{--hi:#2a9d6c;--rest:#6b7470}}
+:root[data-theme="dark"] .viz{--hi:#2a9d6c;--rest:#6b7470}
+.viz .zone{fill:var(--pass-soft)}.viz .zl{fill:var(--pass);font-size:12px;font-weight:600}.viz .gl{stroke:var(--line);stroke-width:1}.viz .th{stroke:var(--pass);stroke-width:1.5;stroke-dasharray:4 4}
+.viz .tk{fill:var(--muted);font-size:12px;font-family:var(--f-data)}.viz .ax{fill:var(--muted);font-size:12px}
+.viz .dot{fill:var(--paper);stroke:var(--rest);stroke-width:2}.viz .hi .dot{fill:var(--hi);stroke:var(--paper)}.viz .hit{fill:transparent}.viz .pt:hover .dot{stroke-width:3}
+.viz .pl{fill:var(--ink);font-size:12px}.viz .pl.hi{font-weight:600}
+table.sopk{min-width:0}table.sopk td:first-child{font-family:var(--f-data);white-space:nowrap}table.sopk td:nth-child(2){font-weight:600}
+.ladder{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ladder li{width:var(--w);min-width:min(100%,520px);max-width:100%;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:start;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:8px;padding:10px 12px;font-size:15px}
+.ladder .lv{font-family:var(--f-data);font-weight:700;color:var(--accent);font-size:18px;line-height:1.3}
+.ladder i{color:var(--muted);font-style:normal;font-weight:600}
+@media (max-width:640px){.ladder li{width:100%}}
+.tprev{font-family:var(--f-data);font-size:14px;line-height:1.5;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-wrap:anywhere;margin:0}
+.tprev mark{background:var(--accent-soft);color:inherit;padding:0 2px;border-radius:3px}
+.shots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.shot{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--paper);font-size:14px;display:grid;gap:4px;align-content:start}
+.shot b{font-family:var(--f-data);color:var(--accent);font-size:13px}
+@media (max-width:900px){.shots{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.shots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Lộ trình, chọn đường, bản đồ ngách, ghi chú cho hàng vật lý và Shopify */
+.road{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:r}
+.road li{counter-increment:r;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px;align-content:start;position:relative}
+.road li .wk{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.road li h3{font-size:16px}
+.road li p{font-size:14.5px}
+.road li .out{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px}
+.road li .out b{color:var(--ink)}
+.road li.gate{background:var(--accent-soft);border-color:transparent}
+.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.path{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;background:var(--paper);align-content:start}
+.path.rec{border:2px solid var(--accent)}
+.path .ph{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;align-items:baseline}
+.path .ph h3{font-size:18px}
+.path dl{display:grid;grid-template-columns:96px minmax(0,1fr);gap:6px 12px;margin:0;font-size:14.5px}
+.path dt{font-weight:700;color:var(--muted);font-size:13px;padding-top:1px}
+.path dd{margin:0}
+.st.rec{background:var(--accent);color:var(--paper)}
+.st.no{background:var(--kill-soft);color:var(--kill)}
+.st.new{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.formula{font-family:var(--f-data);font-size:14px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow-x:auto}
+.formula b{color:var(--accent);font-weight:500}
+table.niche{min-width:980px}
+table.niche td:first-child{font-weight:700;min-width:150px}
+table.niche td code{white-space:nowrap}
+.alt{border:1px dashed var(--accent);border-radius:12px;padding:16px;display:grid;gap:12px}
+.alt>.eyebrow{color:var(--accent)}
+.alt .two .box h3{color:var(--accent)}
+.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.checks .box ul{list-style:none;padding-left:0}
+.checks .box li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:6px}
+.checks .box li::before{content:"□";color:var(--accent)}
+@media (max-width:900px){.road,.checks{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.paths{grid-template-columns:minmax(0,1fr)}.path dl{grid-template-columns:minmax(0,1fr)}}
+/* Tư duy, bẫy tư duy, phản tư */
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;counter-reset:pr}
+.principle{counter-increment:pr;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:30px minmax(0,1fr);gap:4px 12px;align-content:start}
+.principle::before{content:counter(pr);grid-row:span 2;font-family:var(--f-data);font-size:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--paper)}
+.principle h3{font-size:16px}
+.principle p{font-size:14.5px;color:var(--ink)}
+table.traps{min-width:760px}
+table.traps td:first-child{font-weight:700;min-width:150px}
+.reflect{border-left:4px solid var(--warn);background:var(--warn-soft);border-radius:0 12px 12px 0;padding:14px 18px;display:grid;gap:10px}
+.reflect .rh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.reflect .rk{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--warn)}
+.reflect h3{font-size:16px}
+.reflect ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:15px}
+.reflect .log{font-size:14px;border-top:1px dashed var(--warn);padding-top:8px}
+.score{min-width:720px}
+.score td.c{text-align:center;font-family:var(--f-data)}
+@media (max-width:640px){.principles{grid-template-columns:minmax(0,1fr)}}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Hành trình từng buổi */
+.ht-how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.ht-how .box p{font-size:14px}
+.ht-how .box .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-start{background:var(--accent-soft);border-radius:14px;padding:20px 22px;display:grid;gap:14px}
+.ht-start ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:s}
+.ht-start ol>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start}
+.ht-start ol>li::before{content:counter(s);font-weight:800;color:var(--accent);font-size:18px;text-align:center;line-height:1.5}
+.ht-start .ready{font-size:14px;border-top:1px dashed var(--accent);padding-top:10px}
+table.links{min-width:0}
+table.links td:first-child{white-space:nowrap;font-weight:600}
+.ht-map td:nth-child(1){font-family:var(--f-data);white-space:nowrap}
+.ht-map td:nth-child(2){white-space:nowrap}
+.ht-map tr.gate td{background:var(--accent-soft)}
+.ht-map tr.off td{background:var(--quote);color:var(--muted)}
+.ht-cards{display:grid;gap:10px}
+.ht-card{border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.ht-card[open]{border-color:var(--accent)}
+.ht-card.gate{background:linear-gradient(var(--accent-soft),var(--accent-soft)) top/100% 0 no-repeat,var(--paper)}
+.ht-card>summary{cursor:pointer;list-style:none;padding:14px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:center}
+.ht-card>summary::-webkit-details-marker{display:none}
+.ht-card .wk{font-family:var(--f-data);font-size:12px;color:var(--accent);grid-column:1}
+.ht-card .ttl{font-weight:700;font-size:17px;grid-column:1}
+.ht-card .q{font-size:14px;color:var(--muted);grid-column:1}
+.ht-card .q b{color:var(--ink);font-weight:600}
+.ht-card .prog{grid-column:2;grid-row:1/span 3;font-family:var(--f-data);font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.ht-card .prog.done{color:var(--pass);border-color:var(--pass);background:var(--pass-soft)}
+.ht-card.gate>summary{background:var(--accent-soft);border-radius:11px}
+.ht-body{padding:4px 18px 18px;display:grid;gap:16px}
+.ht-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ht-col{display:grid;gap:8px;align-content:start}
+.ht-col h4,.ht-self h4,.ht-flag h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ht-col p.one{font-size:14.5px;margin-bottom:6px}
+.ht-col ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px}
+ul.ck{list-style:none;padding:0}
+.ck li label,.ht-self li label{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;align-items:start;cursor:pointer}
+.ck input,.ht-self input{width:17px;height:17px;margin:3px 0 0;accent-color:var(--accent)}
+.ck input:checked+span,.ht-self input:checked+span{color:var(--muted)}
+.due{border:1px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px;display:grid;gap:4px;background:var(--paper)}
+.due .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-self{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;display:grid;gap:10px}
+.ht-self ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
+.ht-self em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
+.ht-self em b{color:var(--pass);font-weight:600}
+.ht-flag{border:1px dashed var(--kill);border-radius:10px;padding:10px 14px;display:grid;gap:6px;background:var(--kill-soft)}
+.ht-flag ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14.5px}
+.ht-note{font-size:14px;border-left:3px solid var(--warn);padding:2px 0 2px 12px}
+.ht-note b{color:var(--warn)}
+.ht-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+.ht-tools button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.ht-tools button:hover{border-color:var(--accent)}
+.rhythm{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.rhythm .box{padding:10px 12px}
+.rhythm .box .d{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.rhythm .box p{font-size:14px}
+@media (max-width:900px){.ht-how,.ht-grid,.rhythm{grid-template-columns:minmax(0,1fr)}.ht-card>summary{grid-template-columns:minmax(0,1fr)}.ht-card .prog{grid-column:1;grid-row:auto;justify-self:start}}
+@media (max-width:600px){
+  table.links thead,.ht-map thead{display:none}
+  table.links tr,.ht-map tr{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;padding:10px 4px;border-bottom:1px solid var(--line)}
+  table.links td,.ht-map td{display:block;border:0!important;padding:0!important;white-space:normal!important;background:none!important}
+  table.links td:nth-child(2)::before{content:"Ô: ";color:var(--muted)}
+  table.links td:nth-child(3)::before{content:"Dán link: ";color:var(--muted)}
+  table.links td:nth-child(4)::before{content:"Khi nào: ";color:var(--muted)}
+  .ht-map tr{grid-template-columns:auto minmax(0,1fr);column-gap:10px}
+  .ht-map tr.gate{background:var(--accent-soft)} .ht-map tr.off{background:var(--quote)}
+  .ht-map td:nth-child(1)::before{content:"Tuần ";}
+  .ht-map td:nth-child(3){grid-column:1/-1;font-weight:600}
+  .ht-map td:nth-child(4){grid-column:1/-1}
+  .ht-map td:nth-child(5){grid-column:1/-1;color:var(--muted)}
+  .ht-map td:nth-child(5)::before{content:"Hạn: "}
+}
+@media print{.ht-card{break-inside:avoid}.ht-tools{display:none}}
+
+ol.anat{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+ol.anat>li{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:14px;border-radius:10px;padding:14px 16px;align-items:start}
+ol.anat>li.a1{background:var(--t1)} ol.anat>li.a2{background:var(--t2)} ol.anat>li.a3{background:var(--t3)} ol.anat>li.a4{background:var(--t4)}
+ol.anat .q{font-size:13px;color:var(--muted)} ol.anat .els,ol.anat .ex{font-size:14px}
+ol.anat .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);margin-bottom:2px}
+table.spyt{min-width:760px}
+table.spyt td:first-child{font-weight:600;white-space:nowrap}
+table.spyt.case{min-width:0}table.spyt.case td:first-child{width:9.5em}
+@media(max-width:640px){table.spyt.case,table.spyt.case tbody,table.spyt.case tr,table.spyt.case td{display:block;width:auto}table.spyt.case thead{display:none}table.spyt.case td:first-child{width:auto;padding-bottom:0;border-bottom:0}table.spyt.case tr{padding:4px 0}}
+ol.flowl{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
+@media (max-width:900px){ol.anat>li{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<style>
+.layout{grid-template-columns:minmax(0,1fr)!important}
+nav.parts{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+nav.parts a{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);font-size:13.5px;background:var(--paper)}
+nav.parts a:hover{background:var(--accent-soft)}
+nav.parts a.cur{background:var(--accent);border-color:var(--accent);color:#fff}
+nav.parts a .i{color:var(--accent);font-weight:800}
+nav.parts a.cur .i{color:#fff}
+nav.parts a.home{font-weight:700}
+.inpage{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;color:var(--muted)}
+.inpage b{color:var(--ink)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;flex-wrap:wrap}
+.pn a{flex:1 1 220px;border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink);background:var(--paper)}
+.pn a small{display:block;color:var(--muted);font-size:12px}
+.pn a.nx{text-align:right}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.hub-card{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--paper);text-decoration:none;color:var(--ink);display:grid;gap:6px}
+.hub-card:hover{border-color:var(--accent)}
+.hub-card .k{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.02em}
+.hub-card h3{margin:0;font-size:16px}
+.hub-card p{margin:0;color:var(--muted);font-size:13.5px}
+.hub-card .t{font-size:12.5px;color:var(--muted)}
+table.wk td{vertical-align:top}
+table.wk tr.now td{background:var(--accent-soft)}
+table.wk tr.now td:first-child::after{content:" · tuần này";color:var(--accent);font-weight:700}
+table.wk a{white-space:normal}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.tag.off{background:var(--line);color:var(--muted)}
+@media(max-width:640px){table.wk{min-width:0!important}table.wk a{word-break:break-word}table.wk,table.wk tbody,table.wk tr,table.wk td{display:block;width:auto}table.wk thead{display:none}table.wk td{border-bottom:0;padding:4px 10px}table.wk tr{border-bottom:1px solid var(--line);padding:8px 0}table.wk td:first-child{font-weight:700}table.wk td[data-l]::before{content:attr(data-l) ": ";font-weight:600;color:var(--muted)}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <nav class="parts" aria-label="Các phần">
+<a class="home" href="index.html"><span class="i">⌂</span>Bắt đầu ở đây</a>
+<a href="lo-trinh-8-tuan.html"><span class="i">☑</span>Lộ trình 8 tuần</a>
+<a href="tu-duy.html"><span class="i">✦</span>Tư duy</a>
+<a href="chon-san-pham.html"><span class="i">◎</span>Chọn ngách, sản phẩm</a>
+<a href="kiem-chung.html"><span class="i">C</span>Kiểm chứng 5 cổng</a>
+<a class="cur" href="len-ban.html"><span class="i">§</span>Lên bán, thử bán</a>
+<a href="hang-vat-ly.html"><span class="i">▣</span>Hàng vật lý (B)</a>
+<a href="tra-cuu.html"><span class="i">⌕</span>Tra cứu</a>
+</nav>
+  <div class="eyebrow">Phần 4 · Tuần 2–4 · nhánh A</div>
+  <h1>Lên bán và thử bán trên Etsy</h1>
+  <p class="lede">Viết listing cho người mua đọc: tiêu đề, 13 thẻ, 10 ảnh, mô tả, giá và hồ sơ giao hàng. Sau đó thử bán có kỷ luật trong 30 ngày.</p>
+  <div class="meta"><span><b>Dùng khi:</b> Tuần 2–4 (nhánh A)</span><span><b>Đọc hết:</b> khoảng 25 phút, nhưng chỉ đọc phần được giao</span></div>
+  <div class="inpage"><b>Trong trang:</b> <a href="#len-ban">Lên bán</a> · <a href="#thu-ban">Thử bán 30 ngày</a></div>
+</header>
+<div class="layout">
+<main>
+<section id="len-ban">
+  <div class="gate-head">
+    <div class="letter">M2</div>
+    <div>
+      <div class="eyebrow">Module 2 · Tuần 4 · trước T0</div>
+      <h2>Listing bán được: viết lại thẻ giả thuyết cho khách đọc</h2>
+      <div class="gate-meta"><span><b>Trả lời:</b> Khách thấy, hiểu, tin và mua</span><span><b>Thời gian:</b> Cấp 1 khoảng 7 giờ, Cấp 2–3 khoảng 9 giờ</span><span><b>Làm trên:</b> Etsy hoặc Shopify, Bộ vận hành, Checklist chặng S8</span></div>
+    </div>
+  </div>
+  <p class="prose">Năm cổng đã cho bạn mọi nguyên liệu. Tuần này không nghiên cứu thêm. Mỗi phần của listing chỉ là một câu trả lời đã có, viết lại bằng lời của khách. Nếu thấy mình đang phải nghĩ ra điều gì mới để viết, thường là một cổng phía trước còn làm dở.</p>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Phần listing</th><th>Lấy từ</th><th>Câu khách đang tự hỏi</th></tr></thead>
+    <tbody>
+      <tr><td>Tiêu đề, 13 thẻ</td><td>Cụm từ khách gõ ở cổng C, đã kiểm trang 1 ở cổng L</td><td>Đây có phải thứ tôi đang tìm không?</td></tr>
+      <tr><td>Ảnh đầu</td><td>Góc thắng ở cổng A</td><td>Cái này khác 23 cái kia ở đâu?</td></tr>
+      <tr><td>Ảnh 2–10, mô tả</td><td>Hồ sơ khách ở cổng C, lời chê ở cổng A</td><td>Có đúng ý tôi không, có kịp dịp không, có đáng tin không?</td></tr>
+      <tr><td>Giá, phí ship</td><td>Bảng lãi ở cổng R, cụm giá ở cổng L</td><td>Giá này có hợp lý không?</td></tr>
+      <tr><td>Thời gian xử lý và giao</td><td>Báo giá nhà in hoặc xưởng ở cổng R</td><td>Tôi nhận được trước ngày cần không?</td></tr>
+    </tbody></table></div>
+
+  <div class="sub">
+    <div class="tagline">Bước 0 · 15 phút mỗi SKU, làm trước khi viết chữ nào</div>
+    <h3>Kiểm tuân thủ: một listing vi phạm có thể làm khóa cả shop</h3>
+    <div class="rules">
+      <div class="rule pass"><div class="tag">Đạt khi</div><ul>
+        <li>Đã tra từng chữ trong thiết kế và tiêu đề trên cơ sở dữ liệu nhãn hiệu USPTO, ghi ngày tra</li>
+        <li>Thiết kế là của bạn, không chép, không sửa nhẹ từ shop khác, không dùng tên nhân vật hay thương hiệu</li>
+        <li>Nhà in POD hoặc xưởng được khai báo là đối tác sản xuất trên listing và ở trang shop</li>
+        <li>Có dùng AI để làm thiết kế thì ghi rõ trong mô tả</li></ul></div>
+      <div class="rule kill"><div class="tag">Không đăng khi</div><ul>
+        <li>Hàng mua sẵn về bán lại: không thuộc nhóm nào Etsy cho phép</li>
+        <li>Một chữ trong thiết kế đang là nhãn hiệu còn hiệu lực cho cùng nhóm hàng</li>
+        <li>Nhóm hàng cần giấy tờ (đồ cho trẻ nhỏ, mỹ phẩm, đồ ăn) mà chưa có giấy tờ</li></ul></div>
+    </div>
+    <p class="src">Theo Tiêu chuẩn sáng tạo của Etsy, hàng POD do bạn thiết kế và đối tác sản xuất thuộc nhóm "Designed by". Etsy siết các tiêu chuẩn này từ tháng 6/2025; đọc lại trang chính sách của Etsy trước mỗi lớp vì quy định thay đổi.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Phần 1 · tiêu đề</div>
+    <h3>Ngắn, cụm chính đứng đầu, không lặp từ</h3>
+    <div class="rules">
+      <div class="rule pass"><div class="tag">Đạt khi</div><ul>
+        <li>Dưới 15 từ, theo khuyến nghị của Etsy từ năm 2025</li>
+        <li>Cụm từ chính ở cổng C nằm trong khoảng 40 ký tự đầu, phần khách thấy trên điện thoại</li>
+        <li>Sau cụm chính là chi tiết khách dùng để lọc: màu, chất liệu, kiểu cá nhân hóa</li>
+        <li>Không từ nào lặp lại</li></ul></div>
+      <div class="rule kill"><div class="tag">Sửa khi</div><ul>
+        <li>Nhồi nhiều cụm gần giống nhau, cách nhau bằng dấu phẩy</li>
+        <li>Có từ chủ quan như beautiful, perfect, best: chuyển sang thẻ hoặc mô tả</li>
+        <li>Tên shop hoặc tên dịp lễ đứng đầu thay cho thứ khách tìm</li></ul></div>
+    </div>
+    <div class="live">
+      <div class="live-head"><div class="eyebrow">Ví dụ · dây chuyền thêm đá cho mẹ</div><div class="src">Phần tô màu là 40 ký tự đầu</div></div>
+      <div class="two">
+        <div class="box"><h3>Trước · 16 từ, "necklace" lặp 4 lần</h3><p class="tprev">Birthstone Necklace for Mom, Mothers Day Gift, Personalized Necklace, Gift for Mom, Grandma Necklace, Family Necklace</p></div>
+        <div class="box"><h3>Sau · 12 từ, không lặp</h3><p class="tprev"><mark>Add On Birthstone Necklace for Mom, Gold</mark> Family Charms with Kids Names</p></div>
+      </div>
+      <p class="verdict">Bản sau giữ đúng cụm khách gõ ("birthstone necklace for mom … add on"), cho biết vàng, có tên con, và để dành chỗ cho 13 thẻ làm phần việc còn lại.</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Phần 2 · 13 thẻ</div>
+    <h3>Đủ 13 thẻ, mỗi thẻ là một cụm khách thật sự gõ</h3>
+    <ol class="steps">
+      <li><div><b>Mở danh sách 30–50 gợi ý tìm kiếm ở Opportunity Engine tab 2.</b> Chọn các cụm có tín hiệu mua mà tiêu đề chưa nói: người nhận, dịp, kiểu dáng, góc.</div></li>
+      <li><div><b>Mỗi thẻ tối đa 20 ký tự, viết thành cụm 2–3 từ.</b> Một từ đơn như "necklace" phải cạnh tranh với cả triệu listing.</div></li>
+      <li><div><b>Dùng đủ 13 thẻ.</b> Ô trống là bỏ lỡ một cách được tìm thấy.</div></li>
+      <li><div><b>Không dùng thẻ để lặp những gì thuộc tính đã khai,</b> như màu hay chất liệu, khi còn cụm khác chưa có chỗ.</div></li>
+    </ol>
+    <div class="chips">
+      <span class="chip hot">birthstone necklace</span><span class="chip">necklace for mom</span><span class="chip hot">add on necklace</span><span class="chip">grandma necklace</span><span class="chip">family necklace</span><span class="chip">christmas gift mom</span><span class="chip">gift for grandma</span><span class="chip">kids birthstone</span><span class="chip">charm necklace mom</span><span class="chip">new grandma gift</span><span class="chip">grandkids necklace</span><span class="chip">mom birthday gift</span><span class="chip">gold name necklace</span>
+    </div>
+    <p class="src">13 thẻ của ví dụ, tất cả dưới 20 ký tự. Thẻ tô màu nói góc thắng. Dịp lễ trong thẻ đổi theo mùa: lớp khai giảng tháng 11 thì Christmas và Valentine đi trước Mother's Day.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Phần 3 · danh mục và thuộc tính</div>
+    <h3>Không có thuộc tính thì không có mặt trong kết quả đã lọc</h3>
+    <p class="prose">Etsy nói rõ: listing chỉ hiện trong kết quả tìm kiếm đã lọc khi listing có đúng thuộc tính đó. Khách mua quà thường lọc theo màu, chất liệu, dịp và người nhận. Chọn danh mục sâu nhất đúng với sản phẩm, rồi điền mọi thuộc tính đúng. Thuộc tính mô tả sản phẩm là gì, không mô tả dùng để làm gì. Điền thuộc tính không đúng chỉ làm khách thất vọng và tăng hoàn hàng.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Phần 4 · ảnh</div>
+    <h3>Ảnh đầu bán góc thắng, 9 ảnh sau trả lời từng nỗi lo</h3>
+    <p class="prose">Etsy cho tối đa 20 ảnh và 1 video mỗi listing (từ tháng 8/2025). 10 ảnh dưới đây là đủ cho lô đầu. Ảnh đầu và ảnh kích thước phải chụp từ mẫu thật; mockup chỉ dùng cho ảnh phụ như bảng màu.</p>
+    <div class="shots">
+      <div class="shot"><b>1</b><span>Góc thắng: tay đang gắn thêm một charm vào dây</span></div>
+      <div class="shot"><b>2</b><span>Hạn đặt cho dịp lễ gần nhất và thời gian giao</span></div>
+      <div class="shot"><b>3</b><span>Kích thước: dây trên cổ người thật, đá cạnh đồng xu</span></div>
+      <div class="shot"><b>4</b><span>Cách đặt: chọn số đá, tháng sinh, tên</span></div>
+      <div class="shot"><b>5</b><span>"Mua một lần, thêm mãi": 2 đá hôm nay, 4 đá sau 3 năm</span></div>
+      <div class="shot"><b>6</b><span>Cận cảnh chữ khắc, trả lời lời chê "chữ mờ"</span></div>
+      <div class="shot"><b>7</b><span>Bảng 12 màu đá theo tháng</span></div>
+      <div class="shot"><b>8</b><span>Hộp quà và thẻ ý nghĩa đá (gói $45)</span></div>
+      <div class="shot"><b>9</b><span>Cam kết: sai tên do shop thì làm lại miễn phí</span></div>
+      <div class="shot"><b>10</b><span>Video 5–15 giây: mở hộp, gắn charm</span></div>
+    </div>
+    <div class="rules">
+      <div class="rule pass"><div class="tag">Phép thử ảnh đầu</div><ul>
+        <li>Thu ảnh xuống cỡ ngón tay cái, đưa người lạ xem 3 giây</li>
+        <li>Đạt khi họ nói được bạn bán gì và nó khác các listing khác ở đâu</li>
+        <li>Đặt ảnh cạnh 24 listing đã chép ở cổng L: ảnh của bạn không được lẫn vào</li></ul></div>
+      <div class="rule kill"><div class="tag">Lỗi hay gặp</div><ul>
+        <li>Dùng mockup mà nghìn shop khác cũng dùng</li>
+        <li>Ảnh đầu đẹp nhưng không cho thấy góc thắng</li>
+        <li>Không có ảnh nào cho biết kích thước thật, dẫn tới review "nhỏ hơn tôi nghĩ"</li></ul></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Phần 5 · mô tả và ô cá nhân hóa</div>
+    <h3>160 ký tự đầu bán hàng, phần còn lại trả lời phản bác</h3>
+    <ol class="steps">
+      <li><div><b>160 ký tự đầu</b> hiện trong kết quả của Etsy và Google. Nói góc, người nhận và thời gian giao trong đó.</div></li>
+      <li><div><b>Trả lời 3 lời chê hàng đầu</b> từ bảng ở cổng A, mỗi lời chê một đoạn ngắn. Khách đọc mô tả để tìm lý do không mua; hãy trả lời trước.</div></li>
+      <li><div><b>Thông số:</b> kích thước, chất liệu, cách chăm sóc. Ghi đúng như mẫu thật bạn đã đo.</div></li>
+      <li><div><b>Ô cá nhân hóa</b> có hướng dẫn và một ví dụ, để khách không nhập sai. Shop xác nhận lại với khách trong 24 giờ theo SOP đơn hàng.</div></li>
+      <li><div><b>Kết bằng cam kết bạn giữ được,</b> như làm lại nếu sai do shop. Không hứa điều nhà in không làm được.</div></li>
+    </ol>
+    <div class="live">
+      <div class="live-head"><div class="eyebrow">Ví dụ · mở đầu mô tả và ô cá nhân hóa</div><div class="src">Viết bằng tiếng Anh vì khách ở Mỹ</div></div>
+      <p class="tprev">Start her family necklace today and add a birthstone charm each time the family grows. Gold or silver, names engraved, ships from the US in 3–5 days.</p>
+      <p class="tprev">Enter each name and birth month, one per line. Example: Emma – May. Up to 4 names now; add more charms any time.</p>
+      <p class="verdict">Câu đầu nói góc ("add a charm each time the family grows"), câu sau trả lời hai nỗi lo lớn nhất ở cổng A: chất liệu và kịp ngày.</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Phần 6 · giá, phí ship, thời gian giao</div>
+    <h3>Khách trả đúng con số trong bảng lãi, không hơn, không kém</h3>
+    <div class="rules">
+      <div class="rule pass"><div class="tag">Đạt khi</div><ul>
+        <li>Giá bằng giá đã đạt cổng R. Ví dụ: $39, gói hộp quà $45</li>
+        <li>Phí ship không bị tính hai lần: bảng lãi đã gồm $5 ship thì để giao miễn phí và giữ giá $39</li>
+        <li>Thời gian xử lý bằng thời gian thật của nhà in hoặc xưởng cộng 1 ngày đệm</li>
+        <li>Hạn đặt cho dịp lễ gần nhất ghi trong ảnh 2 và mô tả</li></ul></div>
+      <div class="rule kill"><div class="tag">Sửa khi</div><ul>
+        <li>Hạ giá xuống cụm phổ thông "cho dễ bán": quay lại bảng cổng R, ở $22 là lỗ</li>
+        <li>Ghi thời gian giao theo con số đẹp nhất nhà in quảng cáo</li>
+        <li>Giá chưa tính phí Offsite Ads ở kịch bản xấu</li></ul></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Phần 7 · đăng và ghi T0</div>
+    <h3>3 listing cho Cấp 1, 5 listing cho Cấp 2–3, cùng một khách</h3>
+    <p class="prose">Các listing nhắm cùng một khách, khác nhau ở góc hoặc biến thể, ví dụ dây 2 đá, dây 4 đá, gói hộp quà. Đừng đăng 20 listing na ná nhau: chúng tranh lượt xem của nhau, và đến ngày 30 bạn không biết cái gì có tác dụng. Ngày listing đầu tiên lên là ngày T0: ghi vào Checklist tab 0. Ba cổng 30, 60, 90 tính từ ngày này.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Ngày trong tuần 4</th><th>Việc</th><th class="n">Giờ</th></tr></thead>
+      <tbody>
+        <tr><td>Thứ 2</td><td>Kiểm tuân thủ từng SKU, khai báo đối tác sản xuất</td><td class="n">1</td></tr>
+        <tr><td>Thứ 3–4</td><td>Chụp 10 ảnh từ mẫu thật theo danh sách trên</td><td class="n">1,5</td></tr>
+        <tr><td>Thứ 5, 20:00</td><td>Buổi 4: viết listing cùng lớp, Mentor sửa trực tiếp 2–3 listing</td><td class="n">2</td></tr>
+        <tr><td>Thứ 6 – chủ nhật</td><td>Viết và đăng 3 listing theo phiếu chấm bên dưới</td><td class="n">3</td></tr>
+        <tr><td>Chủ nhật</td><td>Nhập SKU vào Bộ vận hành, ghi T0, gửi Mentor 3 link</td><td class="n">0,5</td></tr>
+        <tr><td>Cấp 2–3</td><td>Đăng thêm 2 listing khác góc hoặc biến thể</td><td class="n">+2</td></tr>
+      </tbody></table></div>
+    <p class="src">Kế hoạch 90 ngày tab 4 tính 7 giờ tự làm cho Cấp 1: 6 giờ ở bảng này (không gồm Buổi 4) và 1 giờ cho phần vận hành bên dưới nếu bạn bán hàng vật lý hoặc Shopify; bán POD thì đó là giờ đệm.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Trước khi bấm đăng · phiếu chấm 12 điểm</div>
+    <h3>Mentor chấm listing bằng đúng phiếu này</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>#</th><th>Tiêu chí</th><th>Bắt buộc</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Có ghi chú kiểm nhãn hiệu có ngày; đã khai báo đối tác sản xuất</td><td><span class="st gd">Bắt buộc</span></td></tr>
+        <tr><td>2</td><td>Tiêu đề dưới 15 từ, cụm chính trong 40 ký tự đầu, không lặp từ</td><td></td></tr>
+        <tr><td>3</td><td>Đủ 13 thẻ, mỗi thẻ là cụm nhiều từ lấy từ danh sách ở cổng C</td><td></td></tr>
+        <tr><td>4</td><td>Danh mục sâu nhất đúng, điền đủ thuộc tính đúng</td><td></td></tr>
+        <tr><td>5</td><td>Ảnh đầu qua phép thử 3 giây</td><td><span class="st gd">Bắt buộc</span></td></tr>
+        <tr><td>6</td><td>Ảnh đầu và ảnh kích thước chụp từ mẫu thật</td><td></td></tr>
+        <tr><td>7</td><td>Ảnh hoặc mô tả trả lời đủ 3 lời chê hàng đầu ở cổng A</td><td></td></tr>
+        <tr><td>8</td><td>160 ký tự đầu của mô tả nói góc, người nhận và thời gian giao</td><td></td></tr>
+        <tr><td>9</td><td>Giá bằng giá trong bảng lãi cổng R, phí ship không bị tính hai lần</td><td><span class="st gd">Bắt buộc</span></td></tr>
+        <tr><td>10</td><td>Thời gian xử lý và giao đúng thực tế, có hạn đặt cho dịp gần nhất</td><td></td></tr>
+        <tr><td>11</td><td>Ô cá nhân hóa có hướng dẫn và ví dụ (nếu bán hàng cá nhân hóa)</td><td></td></tr>
+        <tr><td>12</td><td>SKU đã có trong Bộ vận hành, ngày T0 đã ghi ở Checklist tab 0</td><td></td></tr>
+      </tbody></table></div>
+    <p class="verdict">Đăng được khi đạt từ 10/12 và đạt cả 3 mục bắt buộc. Thiếu mục bắt buộc thì sửa trước, dù các mục khác đều đạt.</p>
+  </div>
+
+  <div class="alt">
+    <div class="eyebrow">Nếu bạn bán hàng vật lý hoặc trên Shopify</div>
+    <div class="two">
+      <div class="box"><h3>Hàng vật lý gửi tới khách Mỹ</h3>
+        <ul><li>Từ 9/7/2026, Etsy yêu cầu đơn gửi từ ngoài Mỹ tới khách Mỹ phải đi theo hình thức người bán trả trước thuế và phí nhập khẩu (DDP) thì mới được Bảo vệ mua hàng của Etsy. Mỹ không còn miễn thuế cho bưu kiện giá trị thấp.</li><li>Dùng công cụ ước tính thuế Mỹ trong form listing của Etsy, đặt giá riêng cho Mỹ đã gồm thuế, rồi chạy lại bảng lãi cổng R với con số đó. Công cụ chỉ là ước tính; hỏi đơn vị vận chuyển và ghi ngày hỏi.</li><li>Gửi qua kho Mỹ thì thuế trả lúc nhập lô; đơn lẻ đi nội địa.</li><li>Ảnh có vật quen để so kích thước; ghi kích thước thật trong mô tả. Thử đóng gói và kiểm hàng trước khi bán.</li></ul></div>
+      <div class="box"><h3>Shopify · trang sản phẩm</h3>
+        <ul><li>Tiêu đề trang theo cách khách gõ trên Google: loại sản phẩm cùng các chi tiết họ lọc. Tên thương hiệu để sau.</li><li>Ảnh đầu dùng lại góc thắng; 2–3 mẫu quảng cáo, mỗi mẫu một góc từ cổng A.</li><li>Phần trả lời 3 lời chê đặt ngay dưới nút mua; chính sách giao hàng, đổi trả và liên hệ có link ở chân trang.</li><li>Trước T0, chạy một đơn thử thật để kiểm thanh toán, email xác nhận và sự kiện pixel.</li></ul></div>
+    </div>
+  </div>
+
+  <div class="ask">
+    <details><summary>Đăng nhiều listing hơn thì có đơn nhanh hơn không?</summary>
+      <div class="a"><p>Không chắc. 3–5 listing cùng một khách là đủ để đo. Nhiều listing na ná nhau chia nhau lượt xem, và khi có đơn bạn không biết góc nào hiệu quả. Thêm listing sau khi đã có tín hiệu, theo nhịp ở Kế hoạch 90 ngày.</p></div></details>
+    <details><summary>Có nên bật Etsy Ads ngay từ T0 không?</summary>
+      <div class="a"><p>Không. Hai tuần đầu dùng để xem listing tự kéo được bao nhiêu lượt xem. Nếu tới ngày 30 lượt xem cộng dồn vẫn dưới 300, SOP thử bán cho phép bật quảng cáo nhỏ. Bật để mở rộng thì chờ tới tuần 11, khi lãi mỗi đơn thật đã đúng với bảng cổng R.</p></div></details>
+    <details><summary>Dùng mockup cho ảnh đầu có bị Etsy cấm không?</summary>
+      <div class="a"><p>Etsy không cấm mockup cho hàng POD. Khóa học yêu cầu ảnh đầu và ảnh kích thước chụp từ mẫu thật vì hai lý do: ảnh thật khác hẳn nghìn shop dùng chung mockup, và khách nhận hàng đúng như ảnh nên ít review xấu và ít hoàn hàng.</p></div></details>
+  </div>
+
+  <div class="mentor">
+    <div class="box"><h3>Nộp cho Mentor</h3><ul><li>3–5 link listing và ngày T0</li><li>Phiếu chấm 12 điểm tự chấm cho từng listing</li><li>Ghi chú kiểm nhãn hiệu có ngày</li></ul></div>
+    <div class="box"><h3>Mentor sẽ hỏi</h3><ul><li>"Che tiêu đề đi, nhìn ảnh đầu thì khách biết em khác ai ở đâu?"</li><li>"Lời chê số 1 ở cổng A, listing trả lời ở chỗ nào?"</li></ul></div>
+  </div>
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Trước khi bấm đăng</h3></div>
+    <ol><li>Nếu chỉ thấy ảnh đầu ở cỡ ngón tay cái, khách có biết listing này khác 23 listing kia ở đâu không?</li><li>Lời chê nào của khách ở cổng A mà listing của mình chưa trả lời?</li><li>Nếu tuần trước lễ có 50 đơn, mình và xưởng có làm kịp, đúng tên, đúng hạn không?</li></ol>
+    <p class="log"><b>Ghi vào nhật ký (Kế hoạch 90 ngày, tab 6):</b> ngày T0, link các listing, dự đoán lượt xem và số đơn sau 14 ngày, và mức tự tin của bạn.</p>
+  </div>
+</section>
+<section id="thu-ban">
+  <div class="sec-head">
+    <div class="eyebrow">Sau thẻ giả thuyết</div>
+    <h2>SOP thử bán 30 ngày</h2>
+  </div>
+  <p class="prose">5 cổng chỉ cho bạn một giả thuyết tốt. Người mua thật mới cho câu trả lời. SOP này giữ 30 ngày thử bán ở mức <b>khoảng 1 giờ đọc số mỗi tuần</b>, còn lại là làm sản phẩm và trả lời khách. Mọi con số ghi vào nhật ký, không ghi trong đầu.</p>
+
+  <div class="sub">
+    <div class="tagline">Trước ngày 1 · chuẩn bị theo đường bạn chọn</div>
+    <h3>Chỉ bấm đăng bán khi tích đủ cột của mình</h3>
+    <div class="checks">
+      <div class="box"><h3>Etsy · POD</h3><ul>
+        <li>Đặt 1 mẫu cho mỗi biến thể chính, tự kiểm chất lượng, chụp ảnh từ mẫu</li>
+        <li>Khai báo nhà in POD là đối tác sản xuất trong listing</li>
+        <li>3–5 listing cùng một khách, khác nhau ở góc hoặc biến thể</li>
+        <li>Thời gian xử lý và giao ghi đúng thực tế của nhà in</li>
+        <li>Dùng file Bộ vận hành Etsy POD cho lịch tuần, nhật ký và mẫu tin nhắn</li></ul></div>
+      <div class="box"><h3>Etsy · hàng vật lý</h3><ul>
+        <li>Mẫu từ ít nhất 2 xưởng; chọn theo chất lượng, không chỉ theo giá</li>
+        <li>Lô đầu nhỏ nhất xưởng chịu làm, nằm trong vốn thử của cấp bạn</li>
+        <li>Chọn gửi thẳng từ Việt Nam hay qua kho Mỹ; thời gian giao ghi đúng cách đã chọn</li>
+        <li>Thử đóng gói: gửi 1 kiện cho người quen ở Mỹ hoặc thả rơi thử trước khi bán</li>
+        <li>Khai báo xưởng là đối tác sản xuất; ghi kích thước thật trong ảnh và mô tả</li></ul></div>
+      <div class="box"><h3>Shopify</h3><ul>
+        <li>Cửa hàng tối thiểu: 1 trang sản phẩm, trang chính sách giao hàng, đổi trả, liên hệ</li>
+        <li>Cổng thanh toán nhận được tiền với seller Việt Nam, theo điều kiện ở tab 9</li>
+        <li>Ghi CAC tối đa từ cổng R lên đầu nhật ký</li>
+        <li>Ngân sách quảng cáo thử chia sẵn theo tuần, nằm trong vốn thử</li>
+        <li>2–3 mẫu quảng cáo, mỗi mẫu nói một góc khác nhau từ cổng A</li></ul></div>
+    </div>
+    <p class="src">Cách viết từng phần của listing và phiếu chấm 12 điểm ở <a href="#len-ban">Module 2 · Lên bán</a>.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Tuần 1–4 · nhịp mỗi tuần, cùng một ngày</div>
+    <h3>Đọc số, đổi một thứ, ghi lại</h3>
+    <ol class="steps">
+      <li><div><b>Thứ 2 trước 20:00, chép số tuần vào tab 5 file Kế hoạch 90 ngày</b> (nơi duy nhất ghi số, tiền bằng USD; Checklist tab 3 tự lấy số để Mentor xem). Etsy: lượt xem, favorites, đơn, nguồn khách (Etsy Stats). Shopify: lượt nhấp quảng cáo, thêm giỏ, bắt đầu thanh toán, đơn, chi phí mỗi đơn.</div></li>
+      <li><div><b>Tìm chỗ tắc trong phễu.</b> Ít lượt xem: tiêu đề, từ khóa, ảnh đầu. Xem nhiều mà không ai thêm giỏ hoặc favorite: ảnh, giá, góc. Thêm giỏ mà không mua: phí ship, thời gian giao, lòng tin.</div></li>
+      <li><div><b>Chỉ đổi một thứ ở đúng chỗ tắc,</b> ghi ngày đổi vào nhật ký thử nghiệm. Đổi nhiều thứ một lúc thì không biết thứ gì có tác dụng.</div></li>
+      <li><div><b>Có đơn thì làm SOP đơn hàng:</b> xác nhận cá nhân hóa trong 24 giờ, giao đúng hẹn, hỏi review sau khi khách nhận hàng. Mỗi đơn ghi lãi thật vào nhật ký đơn.</div></li>
+      <li><div><b>Shopify: dừng ngay mẫu quảng cáo</b> có chi phí mỗi đơn vượt CAC tối đa sau khi đã tiêu bằng một lần CAC tối đa mà chưa có đơn. Không chờ hết tuần.</div></li>
+    </ol>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Ngày 30 · đọc lại thẻ giả thuyết</div>
+    <h3>Ba kết quả, ba hành động</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Kết quả ngày 30</th><th>Đọc là</th><th>Làm tiếp</th></tr></thead>
+      <tbody>
+        <tr><td>Có đơn, lãi mỗi đơn đúng như bảng ở cổng R</td><td>Giả thuyết đang đúng</td><td>Giữ nguyên, thêm biến thể cùng khách. Hướng tới cổng 60: hoàn vốn thử</td></tr>
+        <tr><td>Có đơn, nhưng lãi thấp hơn tính toán</td><td>Sản phẩm bán được, mô hình tiền chưa đúng</td><td>Quay lại cổng R với số thật: giá vốn, phí ship, CAC. Sửa giá hoặc gói sản phẩm</td></tr>
+        <tr><td>Chưa có đơn, và tổng lượt xem dưới 300 (Shopify: mỗi mẫu quảng cáo chưa tiêu đủ một lần CAC tối đa)</td><td>Chưa đủ dữ liệu để kết luận về sản phẩm. Vấn đề đang nằm ở chỗ khách chưa thấy bạn</td><td>Sửa tiêu đề, từ khóa, ảnh đầu, có thể bật quảng cáo Etsy nhỏ. Gia hạn thêm 14 ngày, không đổi ngách</td></tr>
+        <tr><td>Chưa có đơn, đã đủ 300 lượt xem và đã sửa 2 lần ở chỗ tắc</td><td>Giả thuyết sai ở khách, góc hoặc giá</td><td>Quay lại cổng A, hoặc lấy ngách dự phòng từ bảng chấm song song</td></tr>
+      </tbody></table></div>
+    <p class="src">Hàng vật lý: hàng tồn của lô đầu không phải lý do để kéo dài thử nghiệm. Nếu trượt, bán xả ở giá hòa vốn và giữ lại bài học. Ngưỡng 300 lượt xem là ngưỡng khởi điểm của khóa học cho 3–5 listing cộng lại; Mentor có thể chỉnh theo mức giá và ngành hàng.</p>
+  </div>
+  <div class="mentor">
+    <div class="box"><h3>Nộp cho Mentor mỗi tuần</h3><ul><li>Số tuần đã có ở Kế hoạch 90 ngày tab 5</li><li>Chỗ tắc của phễu, một thứ bạn đã đổi và bài học về khách, viết ở Checklist tab 3</li></ul></div>
+    <div class="box"><h3>Mentor sẽ hỏi</h3><ul><li>"Tuần này em đổi mấy thứ? Thứ nào?"</li><li>"Lãi thật của đơn vừa rồi so với bảng cổng R chênh bao nhiêu?"</li></ul></div>
+  </div>
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Mỗi tuần, sau khi đọc số</h3></div>
+    <ol><li>Tuần này mình học được gì về khách mà tuần trước chưa biết? Nếu câu trả lời là "không gì cả", tuần sau cần đổi cách thử.</li><li>Dự đoán trong nhật ký quyết định đang đúng hay sai? Mình đoán lệch về phía lạc quan hay bi quan?</li><li>Nếu bắt đầu lại từ hôm nay với những gì đã biết, mình có chọn ngách này không?</li><li>Việc nào tuần này mình làm vì sốt ruột, không vì số liệu?</li></ol>
+    <p class="log"><b>Ghi vào nhật ký quyết định:</b> ngày 30: đặt dự đoán ban đầu cạnh kết quả thật, ghi một bài học cho ngách kế tiếp.</p>
+  </div>
+</section>
+<div class="pn"><a href="kiem-chung.html"><small>← Phần trước</small>Kiểm chứng 5 cổng</a><a class="nx" href="hang-vat-ly.html"><small>Phần sau →</small>Hàng vật lý (B)</a></div>
+</main>
+</div>
+<footer>
+  <div>C.L.E.A.R. Path™ · Bản học viên · Quy định sàn, phí và thuế nhập khẩu thay đổi thường xuyên: kiểm lại trước khi tính tiền thật. · Dữ liệu ví dụ thu thập trên Etsy ngày 14/10/2026, xem với ship to US, giá quy đổi từ VND theo khoảng 26.300 VND/USD.</div>
+  <div>Thang kết quả dựa trên "The Elements of Value" (Almquist, Senior, Bloch, Harvard Business Review, 2016). Bảng 4 hành động dựa trên công cụ ERRC của Blue Ocean Strategy (Kim, Mauborgne). Ngưỡng là của khóa học, Mentor có thể chỉnh.</div>
+</footer>
+</div>
+<script>
+(function(){
+  var KEY='clear-k1-sprint';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){state={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+  var root=document.getElementById('sprint'); if(!root) return;
+  var boxes=root.querySelectorAll('input[type=checkbox][data-k]');
+  function refresh(){
+    var all=0,done=0;
+    root.querySelectorAll('.ht-card').forEach(function(card){
+      var bs=card.querySelectorAll('input[type=checkbox]'),n=0;
+      bs.forEach(function(b){if(b.checked)n++;});
+      var p=card.querySelector('.prog'); if(p){p.textContent=n+'/'+bs.length+' đã tích';p.classList.toggle('done',n===bs.length&&bs.length>0);}
+      all+=bs.length; done+=n;
+    });
+    var t=document.getElementById('ht-total'); if(t) t.textContent='Đã tích '+done+'/'+all+' ô';
+  }
+  boxes.forEach(function(b){
+    b.checked=!!state[b.dataset.k];
+    b.addEventListener('change',function(){ if(b.checked) state[b.dataset.k]=1; else delete state[b.dataset.k]; save(); refresh(); });
+  });
+  root.querySelectorAll('[data-ht]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var a=btn.dataset.ht, cards=root.querySelectorAll('.ht-card');
+      if(a==='open') cards.forEach(function(c){c.open=true;});
+      if(a==='close') cards.forEach(function(c){c.open=false;});
+      if(a==='reset'){ state={}; save(); boxes.forEach(function(b){b.checked=false;}); refresh(); }
+    });
+  });
+  // mở thẻ của tuần hiện tại
+  var map=[['w1','2026-10-19'],['w2','2026-10-26'],['w3','2026-11-02'],['w4','2026-11-09'],['w5','2026-11-16'],['w6','2026-11-23'],['w7','2026-11-30'],['w8','2026-12-07']];
+  var now=new Date(), cur='w1';
+  map.forEach(function(m){ if(now>=new Date(m[1]+'T00:00:00+07:00')) cur=m[0]; });
+  if(location.hash.indexOf('#ht-')!==0){ var el=document.getElementById('ht-'+cur); if(el) el.open=true; }
+  else { var h=document.getElementById(location.hash.slice(1)); if(h&&h.tagName==='DETAILS') h.open=true; }
+  refresh();
+})();
+</script>
+</body></html>

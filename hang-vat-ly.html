@@ -1,0 +1,741 @@
+<!doctype html><html><head><meta charset=utf8><meta name="robots" content="noindex,nofollow"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<title>Hàng vật lý (B) · C.L.E.A.R.</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: sổ tay hiện trường — thanh 5 cổng dính bên trái (desktop); mỗi cổng là một trạm: luật đạt, cách làm, framework, ví dụ thật, câu hỏi vặn, kiểm tra của Mentor */
+:root{
+  --bg:#f6f7f4; --paper:#ffffff; --ink:#1c2321; --muted:#5b6662; --line:#dfe3df;
+  --accent:#0f6b5c; --accent-soft:#e3f1ec; --warn:#a3501b; --warn-soft:#fbede3;
+  --pass:#1f7a3f; --pass-soft:#e6f3ea; --kill:#b42318; --kill-soft:#fdeceb;
+  --quote:#efeee8; --t1:#e9efe9; --t2:#dcebe5; --t3:#cfe5dd; --t4:#c1ded4;
+  --f-body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-quote:"Literata",Georgia,"Times New Roman",serif;
+  --f-data:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121715; --paper:#1a201e; --ink:#e7ece9; --muted:#9aa6a1; --line:#2c3532;
+  --accent:#5fc3ad; --accent-soft:#16312b; --warn:#f0a36d; --warn-soft:#352419;
+  --pass:#6fcf8f; --pass-soft:#16301f; --kill:#ff8a80; --kill-soft:#3a1d1b; --quote:#222a27;
+  --t1:#1c2421; --t2:#1d2c27; --t3:#1e342d; --t4:#1f3c33; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121715; --paper:#1a201e; --ink:#e7ece9; --muted:#9aa6a1; --line:#2c3532;
+  --accent:#5fc3ad; --accent-soft:#16312b; --warn:#f0a36d; --warn-soft:#352419;
+  --pass:#6fcf8f; --pass-soft:#16301f; --kill:#ff8a80; --kill-soft:#3a1d1b; --quote:#222a27;
+  --t1:#1c2421; --t2:#1d2c27; --t3:#1e342d; --t4:#1f3c33; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.62;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.25;margin:0}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto}
+header.top{padding-block:40px 28px;border-bottom:1px solid var(--line);display:grid;gap:14px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.02em}
+h1 .gates{color:var(--accent)}
+.lede{max-width:68ch;color:var(--muted);font-size:17px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:600}
+
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;margin-top:32px}
+nav.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;display:grid;gap:4px}
+nav.rail a{display:grid;grid-template-columns:34px 1fr;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:14px}
+nav.rail a:hover{background:var(--accent-soft)}
+nav.rail .l{font-weight:800;font-size:20px;color:var(--accent);text-align:center}
+nav.rail .sep{height:1px;background:var(--line);margin:8px 0}
+main{display:grid;gap:56px;min-width:0}
+
+section{display:grid;gap:22px;min-width:0;scroll-margin-top:20px}
+.sec-head{display:grid;gap:8px}
+h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:19px;font-weight:700}
+h4{font-size:16px;font-weight:700}
+.sub{display:grid;gap:14px;padding-top:6px;border-top:1px solid var(--line)}
+.sub .tagline{font-family:var(--f-data);font-size:13px;color:var(--accent)}
+.prose{max-width:72ch;display:grid;gap:12px}
+p.prose{display:block}
+
+.gate-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:start}
+.letter{font-size:76px;line-height:.85;font-weight:800;color:var(--accent);letter-spacing:-.04em}
+.gate-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted);margin-top:6px}
+.gate-meta span b{color:var(--ink)}
+
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rule{border-radius:10px;padding:14px 16px;display:grid;gap:6px;font-size:15px;align-content:start}
+.rule.pass{background:var(--pass-soft)}
+.rule.kill{background:var(--kill-soft)}
+.rule .tag{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.rule.pass .tag{color:var(--pass)} .rule.kill .tag{color:var(--kill)}
+.rule ul{margin:0;padding-left:18px;display:grid;gap:4px}
+
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:14px}
+ol.steps>li{counter-increment:s;display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px}
+ol.steps>li::before{content:counter(s);font-family:var(--f-data);font-size:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:1px solid var(--line);color:var(--accent)}
+code{font-family:var(--f-data);font-size:13px;background:var(--paper);border:1px solid var(--line);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+
+.live{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:14px;min-width:0}
+.live-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline}
+.live-head .eyebrow{color:var(--accent)}
+.src{font-size:12px;color:var(--muted)}
+.tbl{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+td.n{font-family:var(--f-data);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+th.n{text-align:right}
+table.canvas{min-width:880px}
+table.canvas td:first-child{font-weight:700;white-space:nowrap}
+table.canvas td:nth-child(2){color:var(--muted);min-width:170px}
+.grp td{background:var(--accent-soft);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:6px 10px}
+.st{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;border-radius:5px;padding:1px 6px;white-space:nowrap}
+.st.ok{background:var(--pass-soft);color:var(--pass)}
+.st.gd{background:var(--warn-soft);color:var(--warn)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--bg)}
+.chip.hot{border-color:var(--accent);background:var(--accent-soft);font-weight:600}
+.chip.miss{border-style:dashed;color:var(--muted);text-decoration:line-through}
+.verdict{border-left:3px solid var(--accent);padding:4px 0 4px 14px;font-weight:500}
+.verdict.warn{border-left-color:var(--warn)}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.stat{border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;gap:2px;background:var(--bg)}
+.stat .v{font-family:var(--f-data);font-size:22px;font-variant-numeric:tabular-nums}
+.stat .k{font-size:13px;color:var(--muted)}
+
+blockquote{margin:0;background:var(--quote);border-radius:8px;padding:12px 14px;font-family:var(--f-quote);font-style:italic;font-size:15.5px;display:grid;gap:4px}
+blockquote cite{font-family:var(--f-body);font-style:normal;font-size:12px;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+
+.avatar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;background:var(--accent-soft);border-radius:12px;padding:18px}
+.avatar .who{display:grid;gap:6px}
+.avatar .who .nm{font-size:20px;font-weight:800}
+.avatar dl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 12px;margin:0;font-size:15px}
+.avatar dt{font-weight:700}
+.avatar dd{margin:0}
+
+.ladder{display:grid;gap:8px}
+.rung{display:grid;grid-template-columns:190px minmax(0,1fr) minmax(0,1fr);gap:14px;border-radius:10px;padding:14px 16px;align-items:start}
+.rung.r4{background:var(--t4)} .rung.r3{background:var(--t3)} .rung.r2{background:var(--t2)} .rung.r1{background:var(--t1)}
+.rung h4{font-size:16px}
+.rung .q{font-size:13px;color:var(--muted)}
+.rung .els{font-size:14px}
+.rung .ex{font-size:14px}
+.rung .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+
+.errc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.errc .cell{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--paper);display:grid;gap:6px;align-content:start}
+.errc .cell h4{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.errc .cell ul{margin:0;padding-left:18px;font-size:14px;display:grid;gap:4px}
+
+.ask{display:grid;gap:10px}
+.ask details{border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.ask summary{cursor:pointer;padding:12px 16px;font-weight:600;list-style:none;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px}
+.ask summary::-webkit-details-marker{display:none}
+.ask summary::before{content:"Hỏi";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--warn);background:var(--warn-soft);border-radius:5px;padding:2px 6px;height:fit-content;margin-top:2px}
+.ask .a{padding:0 16px 14px 16px;display:grid;gap:8px}
+
+.mentor,.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.box{border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:8px;background:var(--paper);align-content:start}
+.box h3{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.box ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:15px}
+
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pillar{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start}
+.pillar .q{font-size:13px;color:var(--muted)}
+.pillar h3{font-size:17px}
+.pillar .g{display:flex;gap:4px;flex-wrap:wrap}
+.pillar .g span{font-weight:800;color:var(--accent);font-size:14px;border:1px solid var(--accent);border-radius:5px;padding:0 6px}
+.through{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.through .box p{font-size:15px}
+
+.rdef{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.rdef .box .num{font-family:var(--f-data);font-size:13px;color:var(--accent)}
+
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px}
+.flow .stp{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.flow .stp b{color:var(--accent)}
+.flow .ar{color:var(--muted)}
+
+.decision{background:var(--accent-soft);border-radius:14px;padding:22px;display:grid;gap:12px}
+.decision dl{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 16px;margin:0}
+.decision dt{font-weight:700}
+.decision dd{margin:0}
+.limits{border:1px dashed var(--warn);border-radius:12px;padding:18px;display:grid;gap:8px;background:var(--warn-soft)}
+.limits ul{margin:0;padding-left:18px;display:grid;gap:4px}
+footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted);display:grid;gap:6px}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  nav.rail{position:static;grid-auto-flow:column;grid-auto-columns:max-content;overflow-x:auto;padding-bottom:4px}
+  nav.rail .sep{display:none}
+  nav.rail a{grid-template-columns:auto auto}
+  .pillars,.errc,.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rung{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .rules,.quotes,.mentor,.two,.through,.pillars,.rdef,.errc,.avatar{grid-template-columns:minmax(0,1fr)}
+  .letter{font-size:56px}
+  .decision dl,.avatar dl{grid-template-columns:minmax(0,1fr)}
+}
+
+.prompt{font-family:var(--f-data);font-size:13px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 10px;white-space:pre-wrap;overflow-wrap:anywhere}
+.vizwrap{margin:0;display:grid;gap:6px}.vizwrap figcaption{font-size:13px;color:var(--muted)}
+.viz{width:100%;height:auto;display:block;--hi:#0a8a5a;--rest:#a3a8a5}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .viz{--hi:#2a9d6c;--rest:#6b7470}}
+:root[data-theme="dark"] .viz{--hi:#2a9d6c;--rest:#6b7470}
+.viz .zone{fill:var(--pass-soft)}.viz .zl{fill:var(--pass);font-size:12px;font-weight:600}.viz .gl{stroke:var(--line);stroke-width:1}.viz .th{stroke:var(--pass);stroke-width:1.5;stroke-dasharray:4 4}
+.viz .tk{fill:var(--muted);font-size:12px;font-family:var(--f-data)}.viz .ax{fill:var(--muted);font-size:12px}
+.viz .dot{fill:var(--paper);stroke:var(--rest);stroke-width:2}.viz .hi .dot{fill:var(--hi);stroke:var(--paper)}.viz .hit{fill:transparent}.viz .pt:hover .dot{stroke-width:3}
+.viz .pl{fill:var(--ink);font-size:12px}.viz .pl.hi{font-weight:600}
+table.sopk{min-width:0}table.sopk td:first-child{font-family:var(--f-data);white-space:nowrap}table.sopk td:nth-child(2){font-weight:600}
+.ladder{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ladder li{width:var(--w);min-width:min(100%,520px);max-width:100%;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:start;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:8px;padding:10px 12px;font-size:15px}
+.ladder .lv{font-family:var(--f-data);font-weight:700;color:var(--accent);font-size:18px;line-height:1.3}
+.ladder i{color:var(--muted);font-style:normal;font-weight:600}
+@media (max-width:640px){.ladder li{width:100%}}
+.tprev{font-family:var(--f-data);font-size:14px;line-height:1.5;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-wrap:anywhere;margin:0}
+.tprev mark{background:var(--accent-soft);color:inherit;padding:0 2px;border-radius:3px}
+.shots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.shot{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--paper);font-size:14px;display:grid;gap:4px;align-content:start}
+.shot b{font-family:var(--f-data);color:var(--accent);font-size:13px}
+@media (max-width:900px){.shots{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.shots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Lộ trình, chọn đường, bản đồ ngách, ghi chú cho hàng vật lý và Shopify */
+.road{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:r}
+.road li{counter-increment:r;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px;align-content:start;position:relative}
+.road li .wk{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.road li h3{font-size:16px}
+.road li p{font-size:14.5px}
+.road li .out{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px}
+.road li .out b{color:var(--ink)}
+.road li.gate{background:var(--accent-soft);border-color:transparent}
+.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.path{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;background:var(--paper);align-content:start}
+.path.rec{border:2px solid var(--accent)}
+.path .ph{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;align-items:baseline}
+.path .ph h3{font-size:18px}
+.path dl{display:grid;grid-template-columns:96px minmax(0,1fr);gap:6px 12px;margin:0;font-size:14.5px}
+.path dt{font-weight:700;color:var(--muted);font-size:13px;padding-top:1px}
+.path dd{margin:0}
+.st.rec{background:var(--accent);color:var(--paper)}
+.st.no{background:var(--kill-soft);color:var(--kill)}
+.st.new{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.formula{font-family:var(--f-data);font-size:14px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow-x:auto}
+.formula b{color:var(--accent);font-weight:500}
+table.niche{min-width:980px}
+table.niche td:first-child{font-weight:700;min-width:150px}
+table.niche td code{white-space:nowrap}
+.alt{border:1px dashed var(--accent);border-radius:12px;padding:16px;display:grid;gap:12px}
+.alt>.eyebrow{color:var(--accent)}
+.alt .two .box h3{color:var(--accent)}
+.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.checks .box ul{list-style:none;padding-left:0}
+.checks .box li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:6px}
+.checks .box li::before{content:"□";color:var(--accent)}
+@media (max-width:900px){.road,.checks{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.paths{grid-template-columns:minmax(0,1fr)}.path dl{grid-template-columns:minmax(0,1fr)}}
+/* Tư duy, bẫy tư duy, phản tư */
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;counter-reset:pr}
+.principle{counter-increment:pr;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:30px minmax(0,1fr);gap:4px 12px;align-content:start}
+.principle::before{content:counter(pr);grid-row:span 2;font-family:var(--f-data);font-size:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--paper)}
+.principle h3{font-size:16px}
+.principle p{font-size:14.5px;color:var(--ink)}
+table.traps{min-width:760px}
+table.traps td:first-child{font-weight:700;min-width:150px}
+.reflect{border-left:4px solid var(--warn);background:var(--warn-soft);border-radius:0 12px 12px 0;padding:14px 18px;display:grid;gap:10px}
+.reflect .rh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.reflect .rk{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--warn)}
+.reflect h3{font-size:16px}
+.reflect ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:15px}
+.reflect .log{font-size:14px;border-top:1px dashed var(--warn);padding-top:8px}
+.score{min-width:720px}
+.score td.c{text-align:center;font-family:var(--f-data)}
+@media (max-width:640px){.principles{grid-template-columns:minmax(0,1fr)}}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Hành trình từng buổi */
+.ht-how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.ht-how .box p{font-size:14px}
+.ht-how .box .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-start{background:var(--accent-soft);border-radius:14px;padding:20px 22px;display:grid;gap:14px}
+.ht-start ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:s}
+.ht-start ol>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start}
+.ht-start ol>li::before{content:counter(s);font-weight:800;color:var(--accent);font-size:18px;text-align:center;line-height:1.5}
+.ht-start .ready{font-size:14px;border-top:1px dashed var(--accent);padding-top:10px}
+table.links{min-width:0}
+table.links td:first-child{white-space:nowrap;font-weight:600}
+.ht-map td:nth-child(1){font-family:var(--f-data);white-space:nowrap}
+.ht-map td:nth-child(2){white-space:nowrap}
+.ht-map tr.gate td{background:var(--accent-soft)}
+.ht-map tr.off td{background:var(--quote);color:var(--muted)}
+.ht-cards{display:grid;gap:10px}
+.ht-card{border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.ht-card[open]{border-color:var(--accent)}
+.ht-card.gate{background:linear-gradient(var(--accent-soft),var(--accent-soft)) top/100% 0 no-repeat,var(--paper)}
+.ht-card>summary{cursor:pointer;list-style:none;padding:14px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:center}
+.ht-card>summary::-webkit-details-marker{display:none}
+.ht-card .wk{font-family:var(--f-data);font-size:12px;color:var(--accent);grid-column:1}
+.ht-card .ttl{font-weight:700;font-size:17px;grid-column:1}
+.ht-card .q{font-size:14px;color:var(--muted);grid-column:1}
+.ht-card .q b{color:var(--ink);font-weight:600}
+.ht-card .prog{grid-column:2;grid-row:1/span 3;font-family:var(--f-data);font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.ht-card .prog.done{color:var(--pass);border-color:var(--pass);background:var(--pass-soft)}
+.ht-card.gate>summary{background:var(--accent-soft);border-radius:11px}
+.ht-body{padding:4px 18px 18px;display:grid;gap:16px}
+.ht-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ht-col{display:grid;gap:8px;align-content:start}
+.ht-col h4,.ht-self h4,.ht-flag h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ht-col p.one{font-size:14.5px;margin-bottom:6px}
+.ht-col ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px}
+ul.ck{list-style:none;padding:0}
+.ck li label,.ht-self li label{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;align-items:start;cursor:pointer}
+.ck input,.ht-self input{width:17px;height:17px;margin:3px 0 0;accent-color:var(--accent)}
+.ck input:checked+span,.ht-self input:checked+span{color:var(--muted)}
+.due{border:1px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px;display:grid;gap:4px;background:var(--paper)}
+.due .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-self{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;display:grid;gap:10px}
+.ht-self ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
+.ht-self em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
+.ht-self em b{color:var(--pass);font-weight:600}
+.ht-flag{border:1px dashed var(--kill);border-radius:10px;padding:10px 14px;display:grid;gap:6px;background:var(--kill-soft)}
+.ht-flag ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14.5px}
+.ht-note{font-size:14px;border-left:3px solid var(--warn);padding:2px 0 2px 12px}
+.ht-note b{color:var(--warn)}
+.ht-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+.ht-tools button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.ht-tools button:hover{border-color:var(--accent)}
+.rhythm{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.rhythm .box{padding:10px 12px}
+.rhythm .box .d{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.rhythm .box p{font-size:14px}
+@media (max-width:900px){.ht-how,.ht-grid,.rhythm{grid-template-columns:minmax(0,1fr)}.ht-card>summary{grid-template-columns:minmax(0,1fr)}.ht-card .prog{grid-column:1;grid-row:auto;justify-self:start}}
+@media (max-width:600px){
+  table.links thead,.ht-map thead{display:none}
+  table.links tr,.ht-map tr{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;padding:10px 4px;border-bottom:1px solid var(--line)}
+  table.links td,.ht-map td{display:block;border:0!important;padding:0!important;white-space:normal!important;background:none!important}
+  table.links td:nth-child(2)::before{content:"Ô: ";color:var(--muted)}
+  table.links td:nth-child(3)::before{content:"Dán link: ";color:var(--muted)}
+  table.links td:nth-child(4)::before{content:"Khi nào: ";color:var(--muted)}
+  .ht-map tr{grid-template-columns:auto minmax(0,1fr);column-gap:10px}
+  .ht-map tr.gate{background:var(--accent-soft)} .ht-map tr.off{background:var(--quote)}
+  .ht-map td:nth-child(1)::before{content:"Tuần ";}
+  .ht-map td:nth-child(3){grid-column:1/-1;font-weight:600}
+  .ht-map td:nth-child(4){grid-column:1/-1}
+  .ht-map td:nth-child(5){grid-column:1/-1;color:var(--muted)}
+  .ht-map td:nth-child(5)::before{content:"Hạn: "}
+}
+@media print{.ht-card{break-inside:avoid}.ht-tools{display:none}}
+
+ol.anat{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+ol.anat>li{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:14px;border-radius:10px;padding:14px 16px;align-items:start}
+ol.anat>li.a1{background:var(--t1)} ol.anat>li.a2{background:var(--t2)} ol.anat>li.a3{background:var(--t3)} ol.anat>li.a4{background:var(--t4)}
+ol.anat .q{font-size:13px;color:var(--muted)} ol.anat .els,ol.anat .ex{font-size:14px}
+ol.anat .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);margin-bottom:2px}
+table.spyt{min-width:760px}
+table.spyt td:first-child{font-weight:600;white-space:nowrap}
+table.spyt.case{min-width:0}table.spyt.case td:first-child{width:9.5em}
+@media(max-width:640px){table.spyt.case,table.spyt.case tbody,table.spyt.case tr,table.spyt.case td{display:block;width:auto}table.spyt.case thead{display:none}table.spyt.case td:first-child{width:auto;padding-bottom:0;border-bottom:0}table.spyt.case tr{padding:4px 0}}
+ol.flowl{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
+@media (max-width:900px){ol.anat>li{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<style>
+.layout{grid-template-columns:minmax(0,1fr)!important}
+nav.parts{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+nav.parts a{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);font-size:13.5px;background:var(--paper)}
+nav.parts a:hover{background:var(--accent-soft)}
+nav.parts a.cur{background:var(--accent);border-color:var(--accent);color:#fff}
+nav.parts a .i{color:var(--accent);font-weight:800}
+nav.parts a.cur .i{color:#fff}
+nav.parts a.home{font-weight:700}
+.inpage{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;color:var(--muted)}
+.inpage b{color:var(--ink)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;flex-wrap:wrap}
+.pn a{flex:1 1 220px;border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink);background:var(--paper)}
+.pn a small{display:block;color:var(--muted);font-size:12px}
+.pn a.nx{text-align:right}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.hub-card{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--paper);text-decoration:none;color:var(--ink);display:grid;gap:6px}
+.hub-card:hover{border-color:var(--accent)}
+.hub-card .k{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.02em}
+.hub-card h3{margin:0;font-size:16px}
+.hub-card p{margin:0;color:var(--muted);font-size:13.5px}
+.hub-card .t{font-size:12.5px;color:var(--muted)}
+table.wk td{vertical-align:top}
+table.wk tr.now td{background:var(--accent-soft)}
+table.wk tr.now td:first-child::after{content:" · tuần này";color:var(--accent);font-weight:700}
+table.wk a{white-space:normal}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.tag.off{background:var(--line);color:var(--muted)}
+@media(max-width:640px){table.wk{min-width:0!important}table.wk a{word-break:break-word}table.wk,table.wk tbody,table.wk tr,table.wk td{display:block;width:auto}table.wk thead{display:none}table.wk td{border-bottom:0;padding:4px 10px}table.wk tr{border-bottom:1px solid var(--line);padding:8px 0}table.wk td:first-child{font-weight:700}table.wk td[data-l]::before{content:attr(data-l) ": ";font-weight:600;color:var(--muted)}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <nav class="parts" aria-label="Các phần">
+<a class="home" href="index.html"><span class="i">⌂</span>Bắt đầu ở đây</a>
+<a href="lo-trinh-8-tuan.html"><span class="i">☑</span>Lộ trình 8 tuần</a>
+<a href="tu-duy.html"><span class="i">✦</span>Tư duy</a>
+<a href="chon-san-pham.html"><span class="i">◎</span>Chọn ngách, sản phẩm</a>
+<a href="kiem-chung.html"><span class="i">C</span>Kiểm chứng 5 cổng</a>
+<a href="len-ban.html"><span class="i">§</span>Lên bán, thử bán</a>
+<a class="cur" href="hang-vat-ly.html"><span class="i">▣</span>Hàng vật lý (B)</a>
+<a href="tra-cuu.html"><span class="i">⌕</span>Tra cứu</a>
+</nav>
+  <div class="eyebrow">Nhánh B · Tuần 1–8</div>
+  
+  <p class="lede">Toàn bộ nhánh B trên một trang: chọn nhánh, tư duy và cách tìm món độc đáo, tìm và chấm nhà cung cấp, công cụ nguồn hàng, giao hàng vào Mỹ, giá vốn, tuân thủ, case và lộ trình 8 tuần.</p>
+  <div class="meta"><span><b>Dùng khi:</b> Nhánh B, tuần 1–8</span><span><b>Đọc hết:</b> khoảng 40 phút, nhưng chỉ đọc phần được giao</span></div>
+  <div class="inpage"><b>Trong trang:</b> <a href="#vl-chon">Chọn nhánh A hay B</a> · <a href="#vl-tu-duy">Tư duy</a> · <a href="#vl-tim">Tìm sản phẩm</a> · <a href="#vl-nguon">Nguồn hàng theo nước</a> · <a href="#vl-cong-cu">Công cụ nguồn hàng</a> · <a href="#vl-giao">Thuế và giao hàng vào Mỹ</a> · <a href="#vl-lai">Lãi tới tay khách</a> · <a href="#vl-tuan-thu">Tuân thủ của Mỹ</a> · <a href="#vl-tien">Dòng tiền</a> · <a href="#vl-flow">Workflow</a> · <a href="#vl-case3">Case study 3</a> · <a href="#vl-case4">Case study 4</a> · <a href="#vl-lo-trinh">Lộ trình 8 tuần nhánh B</a></div>
+</header>
+<div class="layout">
+<main>
+<section id="vat-ly">
+  <div class="sec-head">
+    <div class="eyebrow">Nhánh B · chạy song song với nhánh A (POD) · Shopify + Meta Ads</div>
+    <h2>Hàng vật lý: tìm sản phẩm độc đáo, tìm nhà cung cấp ở nhiều nước, tính lãi tới tay khách</h2>
+  </div>
+  <p class="prose">Nhánh B dành cho người muốn bán <b>sản phẩm vật lý</b>: hàng có sẵn hoặc đặt xưởng làm, nguồn từ Việt Nam, Trung Quốc, kho ở Mỹ hay một nước khác, bán trên store Shopify của mình và tìm khách bằng Meta Ads. Etsy không cho bán lại hàng mua sẵn, nên nhánh B không đi qua Etsy. Khác POD ở ba điểm: bạn <b>bỏ tiền trước</b> (mẫu, đơn thử), lãi phụ thuộc vào <b>thuế, cước và nhà cung cấp</b> ở nước khác, và sai một bước tuân thủ là mất hàng, mất tiền. Bù lại, biên lãi thường dày hơn, và sản phẩm có thể khác biệt thật, không chỉ khác ở thiết kế in.</p>
+
+  <div class="sub" id="vl-chon">
+    <div class="tagline">Tuần 1, thứ 2 · chọn nhánh cùng Mentor</div>
+    <h3>A hay B: chọn theo tiền, giờ và rủi ro bạn chịu được</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th></th><th>A · POD (Etsy → Shopify)</th><th>B · Hàng vật lý (Shopify + Meta)</th></tr></thead>
+      <tbody>
+        <tr><td>Tiền bỏ ra trước đơn đầu</td><td>Thấp: phí listing, một vài mẫu in</td><td>Cao hơn: mẫu từ 2–3 nhà cung cấp, cước nhanh, một đơn thử trọn đường; thường vài chục tới vài trăm USD trước khi chạy quảng cáo</td></tr>
+        <tr><td>Khách đến từ đâu</td><td>Etsy có sẵn người đang tìm; Meta từ tuần 6</td><td>Không có sàn đỡ: mọi khách đến từ quảng cáo hoặc nội dung; ads mở từ T3 17/11</td></tr>
+        <tr><td>Khác biệt nằm ở</td><td>Thiết kế, cá nhân hóa, góc khách</td><td>Bản thân sản phẩm: chất liệu, nguồn gốc, bộ, cải tiến, cá nhân hóa</td></tr>
+        <tr><td>Rủi ro chính</td><td>Nhãn hiệu, khóa shop, cạnh tranh trang 1</td><td>Thuế và hải quan, tuân thủ của Mỹ, nhà cung cấp giao sai hoặc chậm, PayPal giữ tiền</td></tr>
+        <tr><td>Hợp với</td><td>Người mới hoàn toàn, vốn mỏng, thích làm thiết kế</td><td>Người đã từng bán hàng, có vốn thử khá hơn, chịu được việc làm với nhà cung cấp và giấy tờ</td></tr>
+      </tbody></table></div>
+    <p class="verdict">Hai nhánh cùng nhịp 1:1 (thứ 2 giao việc, thứ 5 chữa bài), cùng hạn nộp chủ nhật 20:00, cùng tuần 8 tổng kết. Chọn một nhánh và đi hết 8 tuần; đổi nhánh giữa chừng là bắt đầu lại từ tuần 1.</p>
+  </div>
+
+  <div class="sub" id="vl-tu-duy">
+    <div class="tagline">Mindset · cách nghĩ của người bán hàng vật lý lâu năm</div>
+    <h3>Bốn cặp ý nghĩ, đổi trước khi đi tìm hàng</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Người mới nghĩ</th><th>Người bán giỏi nghĩ</th></tr></thead>
+      <tbody>
+        <tr><td>"Tìm món đang viral rồi bán rẻ hơn"</td><td>Món viral đã có trăm người bán. Tìm <b>loại nhu cầu</b> đang lên, rồi tìm cách phục vụ nó khác đi</td></tr>
+        <tr><td>"Giá xưởng 3 USD, bán 30 USD, lãi 27 USD"</td><td>Lãi tính trên <b>giá vốn tới tay khách</b>: giá xưởng, cước, thuế, thông quan, kho, ship nội địa Mỹ, phí thanh toán, hoàn hàng</td></tr>
+        <tr><td>"Nhà cung cấp nào rẻ nhất thì chọn"</td><td>Chọn nhà cung cấp <b>giao đúng mẫu, đúng hạn, trả lời trong 24 giờ</b>; giá rẻ mà giao sai là mất review và tiền quảng cáo</td></tr>
+        <tr><td>"Bán trước, giấy tờ tính sau"</td><td>Tuân thủ trước, tối ưu sau. Hàng bị giữ ở hải quan hay bị gỡ quảng cáo thì không còn gì để tối ưu</td></tr>
+      </tbody></table></div>
+    <h3>"Độc đáo" nghĩa là khác ở chỗ khách nhìn thấy trong 3 giây</h3>
+    <p class="prose">Cùng một món AliExpress với ảnh đẹp hơn không phải là độc đáo: khách tìm ảnh ngược là ra giá gốc. Sáu cách khác biệt dưới đây là những cách người bán nhỏ làm được trong 8 tuần.</p>
+    <ol class="anat">
+      <li class="a1"><div><h4>1 · Nguồn gốc và chất liệu thật</h4><p class="q">Món kể được câu chuyện bằng chất liệu</p></div><div class="els">Cói, mây, tre, gỗ dừa, gốm, lụa, sơn mài làm ở Việt Nam; dệt ở Ấn Độ; khăn bông Thổ Nhĩ Kỳ. "Handwoven in Vietnam" là lợi thế người bán Việt có sẵn.</div><div class="ex"><b>Không đủ khi</b>Chỉ có câu chuyện mà ảnh không cho thấy chất liệu khác gì hàng nhà máy.</div></li>
+      <li class="a2"><div><h4>2 · Sửa một lời chê</h4><p class="q">Bản tốt hơn của món đang bán chạy</p></div><div class="els">Đọc review 1–3 sao của 3 món bán chạy nhất trên Amazon: "quá nhỏ", "mùi nhựa", "không có nắp", "gãy sau 2 tuần". Đặt xưởng sửa đúng điểm đó.</div><div class="ex"><b>Không đủ khi</b>Lời chê chỉ xuất hiện một lần, hoặc sửa xong giá vốn tăng quá giá trần.</div></li>
+      <li class="a3"><div><h4>3 · Gộp thành bộ</h4><p class="q">Giải trọn một việc, nâng giá trị đơn</p></div><div class="els">Bát gỗ + thìa + khăn thành bộ quà; giỏ 3 cỡ lồng vào nhau. Bộ khó so giá với Amazon và cho CAC tối đa rộng hơn.</div><div class="ex"><b>Không đủ khi</b>Món thêm vào không ai cần, chỉ làm hộp to và cước đắt.</div></li>
+      <li class="a4"><div><h4>4 · Cá nhân hóa hoặc cho một nhóm khách</h4><p class="q">Khắc tên, in tên; hoặc đúng gu của một nhóm</p></div><div class="els">Khắc laser tên lên đồ gỗ, da; bản dành riêng cho người nuôi mèo, người chơi cây, thợ làm bánh. Nhiều xưởng Việt Nam và Trung Quốc nhận khắc theo đơn lẻ.</div><div class="ex"><b>Không đủ khi</b>Thời gian khắc làm lỡ hạn giao mùa lễ.</div></li>
+      <li class="a4"><div><h4>5 · Thiết kế riêng, đặt xưởng làm (private label)</h4><p class="q">Món của mình, logo của mình</p></div><div class="els">Đổi màu, kích thước, chất liệu, bao bì trên khuôn có sẵn của xưởng. Đây là đường từ "bán hàng" sang "có thương hiệu".</div><div class="ex"><b>Không đủ khi</b>Chưa có tín hiệu bán mà đã đặt lô lớn: để sau khi có đơn.</div></li>
+      <li class="a4"><div><h4>6 · Mang món từ chợ nước khác sang Mỹ</h4><p class="q">Món đã quen ở Nhật, Hàn, Việt Nam, Trung Quốc mà ở Mỹ còn ít người bán</p></div><div class="els">Xem Rakuten, Coupang, Taobao, Shopee Việt Nam; rồi kiểm xem Amazon Mỹ đã có bao nhiêu người bán món đó.</div><div class="ex"><b>Không đủ khi</b>Món dính bằng sáng chế hoặc thương hiệu của người khác (kiểm ở bước tuân thủ).</div></li>
+    </ol>
+  </div>
+
+  <div class="sub" id="vl-tim">
+    <div class="tagline">Tìm sản phẩm · nguồn ý tưởng và cách đọc</div>
+    <h3>Sáu nơi tìm ứng viên, mỗi nơi cho một loại bằng chứng</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Nơi tìm</th><th>Làm gì cụ thể</th><th>Bằng chứng nhận được</th><th>Bẫy</th></tr></thead>
+      <tbody>
+        <tr><td>Amazon Mỹ</td><td>Best Sellers, Movers &amp; Shakers, New Releases theo từng danh mục; mở 3 món đầu, đọc 30 review 1–3 sao</td><td>Nhãn "bought in past month" (đếm), giá trần, lời chê lặp lại</td><td>Món của thương hiệu lớn; danh mục cần giấy tờ (đồ trẻ em, mỹ phẩm)</td></tr>
+        <tr><td>TikTok Creative Center, TikTok Shop</td><td>Top Ads và Top Products, lọc Mỹ, 30 ngày; xem số đã bán và số creator trên trang sản phẩm</td><td>Số đã bán (đếm), nhiều creator cùng bán</td><td>Viral một video rồi tắt; giá TikTok bị đẩy xuống bởi hoa hồng affiliate</td></tr>
+        <tr><td>Meta Ad Library</td><td>Gõ loại sản phẩm, lọc Mỹ; tìm quảng cáo chạy trên 30 ngày, nhiều phiên bản, nhiều page</td><td>Ngày "Started running on" (đếm)</td><td>Chỉ thấy quảng cáo đang chạy, không thấy chi tiêu</td></tr>
+        <tr><td>Kickstarter, Indiegogo</td><td>Dự án đã gọi vốn xong trong 12 tháng; số người ủng hộ, giá ủng hộ</td><td>Người thật đã trả tiền trước cho một món mới</td><td>Món có bằng sáng chế: chỉ lấy <b>loại nhu cầu</b>, không làm lại món</td></tr>
+        <tr><td>Etsy, Faire</td><td>Etsy: món handmade bán chạy có review trong 90 ngày. Faire: món các cửa hàng nhỏ ở Mỹ đang nhập sỉ</td><td>Gu thẩm mỹ khách Mỹ trả tiền cho hàng thủ công</td><td>Chép thiết kế của nghệ nhân; chỉ học chất liệu, cỡ, giá</td></tr>
+        <tr><td>Chợ nước khác</td><td>Rakuten, Coupang, Taobao, Shopee Việt Nam: món bán chạy chưa phổ biến ở Mỹ; tìm ảnh ngược trên Amazon Mỹ</td><td>Sản phẩm đã được kiểm chứng ở thị trường khác</td><td>Khác gu, khác cỡ; nhu cầu không chuyển được sang Mỹ</td></tr>
+      </tbody></table></div>
+
+    <h3>Năm lớp kiểm một ứng viên hàng vật lý</h3>
+    <ol class="anat">
+      <li class="a1"><div><h4>1 · Nhu cầu và mùa</h4><p class="q">Ai mua, để làm gì, vào lúc nào?</p></div><div class="els">Gọi được tên người mua và việc họ cần làm. Pinterest Trends, Google Trends 12 tháng: đỉnh mùa nằm sau tuần bạn lên quảng cáo.</div><div class="ex"><b>Trượt khi</b>Chỉ nói được "món này đang hot", hoặc đỉnh mùa đã qua.</div></li>
+      <li class="a2"><div><h4>2 · Bằng chứng bán</h4><p class="q">Có ít nhất một tín hiệu đếm được?</p></div><div class="els">"bought in past month", số đã bán TikTok, quảng cáo chạy trên 30 ngày, dự án gọi vốn thành công. Ghi link và ngày.</div><div class="ex"><b>Trượt khi</b>Chỉ có số doanh thu ước tính của công cụ spy.</div></li>
+      <li class="a3"><div><h4>3 · Khác biệt</h4><p class="q">Khác ở đâu trong 6 cách ở trên?</p></div><div class="els">Viết một câu: "Khác món đang bán ở ___, nhìn thấy trong ảnh đầu tiên vì ___".</div><div class="ex"><b>Trượt khi</b>Câu trả lời là "rẻ hơn" hoặc "ảnh đẹp hơn".</div></li>
+      <li class="a4"><div><h4>4 · Lãi tới tay khách</h4><p class="q">Còn lãi sau thuế, cước, phí, hoàn hàng?</p></div><div class="els">CAC tối đa từ khoảng 35% giá bán; giá trị đơn từ khoảng 35–40 USD để Meta Ads có chỗ thở. Tính ở tab 4d.</div><div class="ex"><b>Trượt khi</b>CAC tối đa dưới khoảng 12–15 USD: quảng cáo gần như không thể có lãi.</div></li>
+      <li class="a4"><div><h4>5 · Vận hành và tuân thủ</h4><p class="q">Giao được, hợp pháp, có nhà cung cấp dự phòng?</p></div><div class="els">Qua bộ lọc 10 câu bên dưới; có ít nhất 2 nhà cung cấp báo giá cho cùng món.</div><div class="ex"><b>Trượt khi</b>Rơi vào nhóm hàng cần chứng nhận, hoặc chỉ có một nguồn duy nhất.</div></li>
+    </ol>
+
+    <div class="ht-flag"><h4>Bộ lọc hàng vật lý 10 câu · trượt một câu là loại với người mới</h4><ul>
+      <li>Không thương hiệu, không nhân vật, không chép thiết kế; đã tra nhãn hiệu (USPTO) và bằng sáng chế (Google Patents) cho tên và hình dáng món.</li>
+      <li>Không thuộc nhóm cần chứng nhận: đồ cho trẻ dưới 12 tuổi, mỹ phẩm, thực phẩm chức năng, thiết bị y tế, pin lithium rời, đồ điện cắm tường.</li>
+      <li>Nếu chạm vào đồ ăn, thức uống: nhà cung cấp có giấy kiểm nghiệm an toàn thực phẩm cho lớp men hoặc lớp phủ.</li>
+      <li>Nhẹ, không dễ vỡ, hộp nhỏ: cước thể tích không ăn hết lãi.</li>
+      <li>Lãi trước quảng cáo (CAC tối đa) từ khoảng 12–15 USD và từ khoảng 35% giá bán; giá trị đơn từ khoảng 35–40 USD (một món hoặc một bộ).</li>
+      <li>Giá vẫn hợp lý khi khách so với Amazon và Walmart cho món tương đương.</li>
+      <li>Giao tới khách Mỹ trong khoảng 12 ngày, có mã vận đơn theo dõi được, thuế đã trả trước (DDP).</li>
+      <li>Có ít nhất 2 nhà cung cấp làm được cùng món, cùng chất lượng.</li>
+      <li>Nhìn 3 giây video là hiểu món làm được gì, hoặc thấy ngay chất liệu khác biệt.</li>
+      <li>Còn mùa: đỉnh không nằm trước tháng bạn lên quảng cáo, và hạn giao Giáng sinh còn kịp.</li></ul></div>
+  </div>
+
+  <div class="sub" id="vl-nguon">
+    <div class="tagline">Nguồn hàng theo nước · xem tháng 10/2026</div>
+    <h3>Bốn nguồn, mỗi nguồn một cách làm, một loại rủi ro</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Nguồn</th><th>Hợp với món</th><th>Tìm ở đâu</th><th>Cách mua cho người mới</th><th>Giao tới Mỹ, thuế, rủi ro</th></tr></thead>
+      <tbody>
+        <tr><td><b>Việt Nam</b></td><td>Mây tre cói, gỗ, gỗ dừa, gốm, sơn mài, lụa, thêu, da, đồ dệt, nội thất nhỏ</td><td>Làng nghề (Bát Tràng, Phú Vinh, Kim Bồng, Vạn Phúc, Ninh Bình, Bến Tre); Alibaba lọc nhà cung cấp ở Việt Nam; danh bạ xuất khẩu của Cục Xúc tiến thương mại; hội chợ đồ gỗ và thủ công mỹ nghệ ở TP.HCM, Hà Nội; nhóm Facebook của từng ngành</td><td>Gọi hoặc nhắn Zalo trực tiếp; xin video xưởng thật; đặt mẫu lẻ, trả trước mẫu; lô nhỏ 30–100 món, thanh toán 30% cọc, 70% khi duyệt ảnh hàng xong</td><td>Đường bưu chính hoặc dịch vụ fulfillment từ Việt Nam: khoảng 10–14 ngày. Thuế Mỹ cho hàng Việt Nam: thuế thường (MFN) + lớp 12,5% (từ 24/7/2026). Rủi ro: xưởng nhỏ trễ hạn mùa cao điểm, đóng gói xuất khẩu chưa chuẩn</td></tr>
+        <tr><td><b>Trung Quốc</b></td><td>Đồ gia dụng, phụ kiện, đồ dùng thú cưng, đồ thể thao, gần như mọi thứ đúc khuôn</td><td>AliExpress, CJdropshipping (dropship lẻ); Alibaba có Trade Assurance (lô nhỏ, có bảo vệ); 1688 (giá xưởng, rẻ hơn Alibaba khoảng 20–40%, cần agent)</td><td>Bắt đầu bằng CJ hoặc AliExpress để thử; khi có đơn chuyển sang Alibaba Trade Assurance hoặc agent 1688 (phí khoảng 5–10%)</td><td>Thuế cao nhất: MFN + 12,5% + lớp Section 301 riêng cho hàng Trung Quốc tùy dòng HTS. Rủi ro: người bán lại đóng vai xưởng; hàng thật khác ảnh</td></tr>
+        <tr><td><b>Kho ở Mỹ</b></td><td>Món cần giao nhanh, món đang thử nghiệm, mùa lễ</td><td>Kho Mỹ của CJ và AliExpress; nền tảng nhà cung cấp Mỹ (Spocket, Syncee); khi có đơn đều: gửi lô vào kho thuê (3PL) ở Mỹ</td><td>Thử 2–4 tuần bằng kho Mỹ của nhà cung cấp: không giữ hàng, không lo thông quan</td><td>Giao 3–7 ngày, không có thuế với khách. Giá vốn cao hơn; nhiều món "kho Mỹ" vẫn là hàng nhập, cần hỏi rõ</td></tr>
+        <tr><td><b>Nước khác</b></td><td>Ấn Độ: vải dệt tay, đồ đồng, da, block print. Thổ Nhĩ Kỳ: khăn bông, gốm, đèn khảm. Indonesia, Thái Lan: gỗ teak, mây, đồ trang trí</td><td>IndiaMART; Alibaba lọc theo nước; hội chợ ngành; tìm ảnh ngược từ món bán chạy trên Etsy, Faire</td><td>Như Việt Nam: mẫu lẻ trước, lô nhỏ sau; ưu tiên nhà cung cấp đã xuất khẩu sang Mỹ</td><td>Thuế theo dòng HTS và nước xuất xứ; tra trước khi báo giá. Giao bưu chính 7–20 ngày tùy nước</td></tr>
+      </tbody></table></div>
+    <p class="src">Thuế nhập khẩu Mỹ đổi nhiều lần trong 2025–2026. Số trong bảng là để định hướng, xem tháng 10/2026. Trước khi chốt giá, tra dòng HTS 10 số của món trên hts.usitc.gov và hỏi nhà vận chuyển hoặc đại lý hải quan mức thuế đang áp.</p>
+
+    <h3>Tìm và chấm nhà cung cấp: 8 bước</h3>
+    <ol class="steps">
+      <li><div><b>Tìm 5–8 nhà cung cấp cho cùng một món</b>, từ ít nhất 2 nguồn (ví dụ Việt Nam và Trung Quốc, hoặc Trung Quốc và kho Mỹ). Tìm bằng tên món, bằng ảnh, bằng chất liệu.</div></li>
+      <li><div><b>Phân biệt xưởng với người bán lại.</b> Trung Quốc: tên công ty có 制造, 工厂 (sản xuất, nhà máy) hay 贸易, 商贸 (thương mại); tra giấy phép trên 天眼查 hoặc 企查查; ảnh xưởng có phải ảnh mạng. Việt Nam: tra mã số thuế và ngành nghề; xin video gọi trực tiếp từ xưởng. Alibaba: xem năm hoạt động, Verified, Trade Assurance.</div></li>
+      <li><div><b>Gửi cùng một yêu cầu báo giá (RFQ)</b> cho tất cả (mẫu ở dưới). Cùng câu hỏi thì so được câu trả lời.</div></li>
+      <li><div><b>Chấm 6 tiêu chí</b> ở bảng dưới, ghi vào Opportunity Engine tab 4d. Loại ai không trả lời trong 48 giờ.</div></li>
+      <li><div><b>Đặt mẫu từ 2–3 nhà cung cấp tốt nhất</b>, gửi nhanh về Việt Nam hoặc tới một địa chỉ ở Mỹ. Mẫu là chi phí bắt buộc, không phải chi phí có thể tiết kiệm.</div></li>
+      <li><div><b>Chấm mẫu</b>: đúng ảnh, đúng kích thước, mùi, độ bền (dùng thật 3 ngày), đóng gói có chịu được vận chuyển. Quay video mở hộp: đó cũng là nguyên liệu quảng cáo.</div></li>
+      <li><div><b>Chốt điều khoản bằng văn bản</b>: giá theo bậc số lượng, thời gian làm, đóng gói, ai trả thuế (chỉ nhận DDP khi giao thẳng cho khách), làm gì khi hàng lỗi, chụp ảnh từng lô trước khi gửi.</div></li>
+      <li><div><b>Luôn giữ một nhà cung cấp dự phòng</b> đã gửi mẫu đạt. Mùa lễ là lúc nhà cung cấp chính hết hàng hoặc trễ.</div></li>
+    </ol>
+
+    <div class="mentor">
+      <div class="box"><h3>Mẫu RFQ gửi nhà cung cấp (tiếng Anh)</h3>
+        <p>Hello, I run an online store selling to customers in the United States. I'm looking for: <i>[tên món, chất liệu, kích thước, màu]</i>.</p>
+        <p>1. Price per unit for 1 sample, 50 units, 200 units.<br>2. Production time for each quantity.<br>3. Can you ship single orders directly to US customers with tracking, duties paid (DDP)? Cost and delivery time to the US.<br>4. Packaging: size and weight of one packed unit.<br>5. Can you add custom engraving or a custom label? Extra cost?<br>6. Please send real photos or a short video of this product from your workshop.<br>7. Do you have test reports (for example food-contact or material tests) for this item?</p>
+        <p>Thank you. I will order samples this week.</p></div>
+      <div class="box"><h3>Chấm nhà cung cấp · 6 tiêu chí, thang 1–5</h3><ol class="flowl">
+        <li><b>Trả lời</b>: trong 24 giờ, trả lời đủ 7 câu, không hỏi lại điều đã ghi.</li>
+        <li><b>Là xưởng thật</b>: video tự quay, giấy phép, năm hoạt động.</li>
+        <li><b>Mẫu</b>: đúng ảnh, đúng cỡ, chất lượng ổn sau 3 ngày dùng.</li>
+        <li><b>Giá vốn tới tay khách</b>: tính đủ cước, thuế, phí ở tab 4d.</li>
+        <li><b>Giao hàng</b>: có DDP, có mã theo dõi, thời gian giao ổn định.</li>
+        <li><b>Linh hoạt</b>: nhận đơn lẻ, khắc tên, nhãn riêng, lô nhỏ.</li></ol>
+        <p class="src">Dưới 20/30 điểm thì không dùng, kể cả khi rẻ nhất.</p></div>
+    </div>
+  </div>
+
+  <div class="sub" id="vl-cong-cu">
+    <div class="tagline">Toolset · công cụ nguồn hàng theo từng bước · xem tháng 10/2026</div>
+    <h3>Mỗi bước một công cụ: tìm, hỏi giá, đặt mẫu, thử bán, tự động đơn, nhập lô, kiểm hàng</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Bước</th><th>Công cụ</th><th>Dùng thế nào</th><th>Bẫy</th></tr></thead>
+      <tbody>
+        <tr><td><b>1 · Tìm cùng món ở nhiều nguồn</b></td><td>Google Lens; tìm bằng ảnh trên AliExpress, Alibaba, 1688 (ứng dụng 1688 có tìm bằng ảnh); extension tìm ảnh ngược</td><td>Chụp ảnh sản phẩm đối thủ, tìm trên cả 3 sàn; ghi 3 giá: lẻ (AliExpress), sỉ (Alibaba), xưởng (1688)</td><td>Ảnh giống nhưng chất liệu, cỡ khác: luôn hỏi thông số</td></tr>
+        <tr><td><b>2 · Hỏi giá</b></td><td>Alibaba RFQ (đăng một yêu cầu, nhận nhiều báo giá); nhắn trực tiếp; CJ sourcing request</td><td>Dùng mẫu RFQ ở trên. Với CJ: gửi link hoặc ảnh món chưa có trong catalog, CJ thường báo giá hàng và cước trong 1–2 ngày làm việc</td><td>Báo giá không ghi rõ đã gồm cước và thuế Mỹ chưa</td></tr>
+        <tr><td><b>3 · Kiểm nhà cung cấp</b></td><td>Alibaba: Verified Supplier, Trade Assurance, năm hoạt động; Trung Quốc: 天眼查, 企查查; Việt Nam: tra mã số thuế</td><td>Chấm 6 tiêu chí ở tab 4d; xin video quay trực tiếp tại xưởng</td><td>Người bán lại đóng vai xưởng; đòi chuyển tiền ra ngoài nền tảng</td></tr>
+        <tr><td><b>4 · Đặt mẫu</b></td><td>AliExpress (lẻ, nhanh); Alibaba qua Trade Assurance; 1688 qua agent hoặc dịch vụ order hàng Trung Quốc về Việt Nam</td><td>Mẫu về Việt Nam là lợi thế của người bán Việt: rẻ, nhanh, tự tay chụp ảnh, quay video. Đặt 2–3 nhà cung cấp cùng lúc</td><td>Mẫu "đẹp hơn hàng lô": giữ một mẫu làm chuẩn để so khi nhận lô</td></tr>
+        <tr><td><b>5 · Thử bán không giữ hàng</b></td><td>CJdropshipping (không phí tháng, có kho Mỹ, CJPacket); AliExpress qua DSers; Spocket, Syncee (nhà cung cấp Mỹ, có phí tháng)</td><td>Kho Mỹ của CJ giao khoảng 2–5 ngày làm việc; từ Trung Quốc bằng CJPacket khoảng 7–15 ngày, người bán báo cáo có lúc 12–17 ngày. Ghi 8–15 ngày trên trang</td><td>Chỉ một phần nhỏ catalog có sẵn ở kho Mỹ; hỏi rõ món của bạn có không</td></tr>
+        <tr><td><b>6 · Tự động đơn</b></td><td>DSers (AliExpress), app CJ (nối Shopify)</td><td>DSers: gán nhiều nhà cung cấp cho một sản phẩm (dự phòng khi hết hàng), ghép biến thể, đặt đơn hàng loạt, tự đồng bộ trạng thái và mã vận đơn về Shopify. Kiểm mỗi ngày mã đã lên PayPal chưa</td><td>DSers không giúp nghiên cứu sản phẩm; chỉ lo khâu đơn</td></tr>
+        <tr><td><b>7 · Giao vào Mỹ</b></td><td>Tuyến thương mại điện tử đã trả thuế trước (DDP) của nhà vận chuyển xuyên biên giới; dịch vụ fulfillment từ Việt Nam</td><td>Cung cấp đủ: dòng HTS 10 số, giá khai đúng, nước xuất xứ. Hỏi bằng văn bản: "giá này đã gồm thuế nhập khẩu Mỹ chưa, khách có bị thu thêm không?"</td><td>Tuyến rẻ không ghi DDP: khách bị đòi thuế khi nhận</td></tr>
+        <tr><td><b>8 · Nhập lô và kiểm hàng</b></td><td>Private inventory của CJ; kho thuê ở Mỹ (3PL); dịch vụ kiểm hàng trước giao (bên thứ ba)</td><td>Lô nhỏ: yêu cầu ảnh, video từng thùng và cân nặng trước khi gửi. Lô lớn hoặc nhà cung cấp mới: thuê kiểm hàng, thường khoảng 250–350 USD mỗi ngày công, chuẩn AQL (lỗi lớn 2,5; lỗi nhỏ 4,0)</td><td>Kho thuê tính phí lưu kho: chỉ nhập khi bán đều</td></tr>
+        <tr><td><b>9 · Tính lãi</b></td><td>Opportunity Engine tab 4d; hts.usitc.gov</td><td>Mỗi báo giá mới đều nhập vào tab 4d trước khi trả lời nhà cung cấp</td><td>So giá xưởng thay vì so giá vốn tới tay khách</td></tr>
+      </tbody></table></div>
+    <div class="mentor">
+      <div class="box"><h3>Chọn công cụ theo giai đoạn</h3><ol class="flowl">
+        <li><b>Chưa có đơn nào:</b> AliExpress hoặc CJ để thử, không giữ hàng, không phí tháng.</li>
+        <li><b>Có món cần khác biệt</b> (khắc tên, chất liệu, bao bì): Alibaba hoặc xưởng Việt Nam, đặt mẫu về Việt Nam.</li>
+        <li><b>Bán đều 3–5 đơn/ngày:</b> chuyển sang nguồn rẻ nhất mỗi đơn (1688 qua agent, xưởng Việt Nam) và kho Mỹ.</li>
+        <li><b>Mùa lễ:</b> ưu tiên kho Mỹ, chấp nhận giá vốn cao hơn để giữ lời hứa giao hàng.</li></ol></div>
+      <div class="box"><h3>Năm dấu hiệu nên dừng với một nhà cung cấp</h3><ol class="flowl">
+        <li>Đề nghị chuyển khoản ra ngoài Trade Assurance hoặc vào tài khoản cá nhân.</li>
+        <li>Không chịu quay video trực tiếp tại xưởng hay kho.</li>
+        <li>Giá thấp hơn mặt bằng 30–40% mà không giải thích được.</li>
+        <li>Trả lời lệch câu hỏi, hỏi lại điều đã ghi trong RFQ.</li>
+        <li>Không có, hoặc không đưa được, giấy kiểm nghiệm khi món cần.</li></ol></div>
+    </div>
+    <p class="src">Nguồn, xem tháng 10/2026: <a href="https://dropshippingchampions.com/blog/cj-dropshipping-review">Dropshipping Champions, đánh giá CJ 2026</a>; <a href="https://www.trendtrack.io/blog-post/dsers-review">TrendTrack, đánh giá DSers 2026</a> (bên bán công cụ); <a href="https://www.epicsourcing.co/epic-guide/pre-shipment-inspection-china-quality-control-guide">Epic Sourcing, kiểm hàng trước giao</a> (bên bán dịch vụ); <a href="https://www.newbuyingagent.com/resources/1688-vs-sourcing-agent-can-foreign-buyers-use-1688-directly-in-2026">NewBuyingAgent, 1688 và agent</a>. Phí, thời gian giao và tính năng thay đổi: kiểm trên trang của từng hãng. Danh sách đầy đủ hơn ở mục <a href="tra-cuu.html#danh-ba">Danh bạ công cụ</a>.</p>
+  </div>
+
+  <div class="sub" id="vl-giao">
+    <div class="tagline">Thuế và giao hàng vào Mỹ · tình hình tháng 10/2026</div>
+    <h3>Không còn miễn thuế 800 USD: hàng nào vào Mỹ cũng phải khai và trả thuế</h3>
+    <ol class="steps">
+      <li><div><b>Miễn thuế cho hàng dưới 800 USD (de minimis) đã bị đình chỉ</b> với hàng từ mọi nước từ 29/8/2025. Đường thư bưu chính bị siết theo quy trình khai mới từ 24/7/2026; từ 22/10/2026 phải khai mã HTS 10 số. Luật đã quy định bỏ hẳn miễn thuế này từ 1/7/2027.</div></li>
+      <li><div><b>Mỗi gói hàng lẻ gửi thẳng cho khách đều phải trả đủ thuế</b> của dòng HTS và nước xuất xứ. Với hàng Việt Nam và Trung Quốc hiện có lớp 12,5% cộng thêm vào thuế thường; hàng Trung Quốc còn thêm lớp Section 301 riêng tùy dòng hàng.</div></li>
+      <li><div><b>Chỉ dùng tuyến DDP</b> (người gửi trả thuế trước) khi giao thẳng cho khách. Nếu khách phải trả thuế khi nhận, họ sẽ từ chối nhận, mở tranh chấp PayPal, và tài khoản quảng cáo nhận phản hồi xấu.</div></li>
+      <li><div><b>Ghi rõ trên trang sản phẩm</b>: "Ships from ___, duties included, delivery in ___ business days". Khách chấp nhận chờ khi được báo trước.</div></li>
+    </ol>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Mô hình giao</th><th>Khi nào dùng</th><th>Thời gian tới khách</th><th>Tiền bỏ trước</th><th>Lưu ý</th></tr></thead>
+      <tbody>
+        <tr><td>Nhà cung cấp gửi thẳng từ nước ngoài (dropship, DDP)</td><td>Tuần 2–7: thử sản phẩm, chưa biết có bán được không</td><td>Khoảng 8–20 ngày tùy nước và tuyến</td><td>Không giữ hàng</td><td>Hạn chót đơn Giáng sinh sớm; phải tải mã vận đơn lên PayPal ngay</td></tr>
+        <tr><td>Kho Mỹ của nhà cung cấp</td><td>Thử nhanh mùa lễ; món nhiều người bán cạnh tranh về tốc độ</td><td>3–7 ngày</td><td>Không giữ hàng, giá vốn cao hơn</td><td>Hỏi rõ hàng có sẵn trong kho Mỹ hay chỉ "ship from US" sau khi nhập</td></tr>
+        <tr><td>Gửi lô nhỏ vào kho thuê ở Mỹ (3PL)</td><td>Sau tuần 8, khi một món đã có đơn đều</td><td>2–5 ngày</td><td>Tiền hàng, cước lô, thuế lô, phí kho</td><td>Rẻ nhất mỗi đơn khi bán đều; chỉ làm khi có số liệu thật</td></tr>
+      </tbody></table></div>
+    <p class="verdict warn">Hạn chót đơn Giáng sinh = 24/12 trừ thời gian làm hàng, trừ thời gian giao dài nhất nhà cung cấp cam kết, trừ 3 ngày dự phòng. Với tuyến 10–14 ngày từ Việt Nam, đơn sau khoảng ngày 5–7/12 không còn kịp: giảm quảng cáo và ghi rõ trên trang.</p>
+  </div>
+
+  <div class="sub" id="vl-lai">
+    <div class="tagline">Lãi tới tay khách · làm trên Opportunity Engine tab 4d</div>
+    <h3>Công thức: tính từ xưởng tới tay khách, rồi mới biết CAC tối đa</h3>
+    <ol class="flowl">
+      <li><b>Giá vốn tới tay khách</b> = giá xưởng + đóng gói + phí agent (nếu có) + cước quốc tế + thuế nhập khẩu (thuế suất × giá khai) + phí thông quan + phí kho và đóng hàng (nếu qua kho) + cước nội địa Mỹ.</li>
+      <li><b>Phí bán</b> = phí PayPal (thường khoảng 4–6% với giao dịch quốc tế; kiểm biểu phí tài khoản của bạn) + khoảng 2% phí giao dịch Shopify khi không dùng Shopify Payments.</li>
+      <li><b>Dự phòng hoàn hàng, lỗi</b>: 3–5% giá bán khi mới bắt đầu.</li>
+      <li><b>Lãi trước quảng cáo</b> = giá bán − giá vốn tới tay khách − phí bán − dự phòng. Đây là <b>CAC tối đa</b>: một đơn được phép tốn tối đa bằng này tiền quảng cáo để hòa vốn.</li>
+    </ol>
+    <p class="verdict">Quy tắc thực chiến: CAC tối đa dưới khoảng 12–15 USD thì Meta Ads gần như không có lãi với store mới. Muốn rộng hơn: tăng giá trị đơn bằng bộ, cá nhân hóa, mua 2 giảm giá, trước khi tìm nhà cung cấp rẻ hơn.</p>
+  </div>
+
+  <div class="sub" id="vl-tuan-thu">
+    <div class="tagline">Tuân thủ của Mỹ · kiểm trước khi đặt mẫu</div>
+    <h3>Loại hàng nào cần giấy gì</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Loại hàng</th><th>Yêu cầu</th><th>Với người mới</th></tr></thead>
+      <tbody>
+        <tr><td>Mọi món nhập khẩu</td><td>Ghi nước xuất xứ trên món hoặc bao bì ("Made in Vietnam"); khai đúng dòng HTS và giá trị</td><td>Bắt buộc, yêu cầu nhà cung cấp làm sẵn</td></tr>
+        <tr><td>Quần áo, khăn, đồ vải</td><td>Nhãn thành phần sợi, nước xuất xứ, hướng dẫn giặt (quy định nhãn dệt may của FTC)</td><td>Làm được: yêu cầu xưởng may nhãn</td></tr>
+        <tr><td>Cốc, bát, đĩa, thìa, đồ gỗ dừa, gốm men</td><td>An toàn tiếp xúc thực phẩm theo FDA; men gốm có giới hạn chì; bán vào California có thể cần cảnh báo Prop 65</td><td>Chỉ làm khi nhà cung cấp có giấy kiểm nghiệm; nếu không, ghi rõ "trang trí, không dùng cho thực phẩm" và chọn món khác cho quảng cáo</td></tr>
+        <tr><td>Đồ gỗ, mây, tre, cói</td><td>Một số sản phẩm từ thực vật phải khai theo Lacey Act; gỗ, tre chưa xử lý có thể bị kiểm dịch</td><td>Làm được với hàng đã xử lý, hỏi nhà cung cấp đã xuất Mỹ chưa</td></tr>
+        <tr><td>Đồ cho trẻ dưới 12 tuổi</td><td>Thử nghiệm ở phòng lab được CPSC công nhận, Giấy chứng nhận sản phẩm trẻ em (CPC), nhãn truy xuất</td><td>Loại</td></tr>
+        <tr><td>Đồ điện, pin lithium, mỹ phẩm, thực phẩm chức năng</td><td>FCC, quy định vận chuyển pin, đăng ký mỹ phẩm với FDA</td><td>Loại</td></tr>
+      </tbody></table></div>
+    <p class="src">Kiểm thêm quảng cáo: Meta hạn chế nhiều nhóm hàng (sức khỏe, giảm cân, vũ khí, đồ người lớn). Đọc chính sách quảng cáo của Meta cho đúng nhóm hàng trước khi đặt mẫu.</p>
+  </div>
+
+  <div class="sub" id="vl-tien">
+    <div class="tagline">Dòng tiền · PayPal là cổng chính của người bán Việt Nam</div>
+    <h3>PayPal giữ tiền với người bán mới: chuẩn bị trước, đừng hoảng</h3>
+    <ol class="flowl">
+      <li>Tài khoản mới, doanh số tăng đột ngột hoặc giao hàng lâu thường bị giữ tiền, thường tối đa 21 ngày, hoặc tới khi có xác nhận đã giao.</li>
+      <li>Tải mã vận đơn của nhà cung cấp lên PayPal (Shopify tự đẩy nếu bạn điền mã vào đơn) trong vòng 24–48 giờ sau khi hàng gửi đi.</li>
+      <li>Tăng ngân sách quảng cáo từ từ: doanh số nhảy gấp 5 lần trong một ngày dễ kích hoạt kiểm tra.</li>
+      <li>Vốn thử phải đủ trả nhà cung cấp và quảng cáo trong khoảng 3 tuần khi tiền bán hàng chưa về.</li>
+      <li>Lưu ảnh mẫu, ảnh lô hàng, tin nhắn với khách: đó là bằng chứng khi có tranh chấp.</li>
+    </ol>
+  </div>
+
+  <div class="sub" id="vl-flow">
+    <div class="tagline">Workflow · tuần 1 của nhánh B</div>
+    <h3>Hai quy trình: tìm sản phẩm 90 phút, tìm nhà cung cấp 2 giờ</h3>
+    <div class="mentor">
+      <div class="box"><h3>C · Tìm sản phẩm vật lý · 90 phút</h3><ol class="flowl">
+        <li><b>15' · Loại nhu cầu.</b> Chọn một nhóm khách hoặc một việc cần làm (dọn nhà, nuôi mèo, làm bếp, tặng quà tân gia). Xem Pinterest Trends và Google Trends 12 tháng ở Mỹ.</li>
+        <li><b>20' · Bằng chứng.</b> Amazon (Best Sellers, Movers &amp; Shakers), TikTok Shop, Meta Ad Library: ghi 10 món có ít nhất một tín hiệu đếm được, kèm link, ngày.</li>
+        <li><b>20' · Lời chê.</b> Với 3 món tốt nhất, đọc 30 review 1–3 sao; ghi 3 lời chê lặp lại nhiều nhất.</li>
+        <li><b>15' · Khác biệt.</b> Mỗi món viết một câu khác biệt theo 1 trong 6 cách. Món nào không viết được thì bỏ.</li>
+        <li><b>10' · Lãi nhanh.</b> Giá AliExpress, CJ hoặc báo giá Việt Nam × khoảng 1,6 để ước giá vốn tới tay khách; giá bán trừ số đó và khoảng 10% phí phải còn từ khoảng 35% giá bán.</li>
+        <li><b>10' · Lọc.</b> Cho qua bộ lọc 10 câu, giữ 3 ứng viên, ghi vào tab 4c.</li></ol></div>
+      <div class="box"><h3>D · Tìm và chấm nhà cung cấp · 2 giờ</h3><ol class="flowl">
+        <li><b>30' · Tìm.</b> Mỗi ứng viên: 3 nhà cung cấp từ ít nhất 2 nguồn (Việt Nam, Trung Quốc, kho Mỹ, nước khác). Tìm ảnh ngược trên AliExpress, 1688, Alibaba.</li>
+        <li><b>20' · Lọc.</b> Xưởng hay người bán lại; năm hoạt động; có DDP sang Mỹ không.</li>
+        <li><b>20' · Gửi RFQ</b> theo mẫu cho 5–8 nhà cung cấp.</li>
+        <li><b>20' · Tuân thủ.</b> Kiểm loại hàng ở bảng tuân thủ; tra dòng HTS trên hts.usitc.gov; tra USPTO, Google Patents.</li>
+        <li><b>30' · Ghi tab 4d</b> khi có báo giá: điểm 6 tiêu chí và giá vốn tới tay khách. Chọn 2–3 nhà cung cấp để đặt mẫu.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="sub" id="vl-case3">
+    <div class="tagline">Case study 3 · Hàng vật lý · bài tính mẫu, số giả định</div>
+    <h3>Bộ 3 giỏ cói lồng nhau: giá xưởng rẻ nhất chưa chắc là giá vốn rẻ nhất</h3>
+    <p class="prose">Mai muốn bán bộ 3 giỏ cói đựng đồ, giá dự kiến 59 USD. Mai có 3 lựa chọn nguồn: xưởng Ninh Bình gửi lô 50 bộ vào kho thuê ở Mỹ; xưởng Trung Quốc qua agent 1688, cũng lô 50 bộ vào kho Mỹ; hoặc nhà cung cấp (NCC) có sẵn kho ở Mỹ giao từng đơn. Tiền lô chưa gồm phí kho và ship nội địa, trả theo từng đơn. Các con số dưới đây là <b>số giả định để luyện cách tính</b>, không phải báo giá thật; khi làm, bạn thay bằng báo giá của nhà cung cấp và mức thuế tra trên HTS. Giả định: thuế thường của dòng giỏ đan là 5%; lớp chung 12,5% cho hàng Việt Nam và Trung Quốc; lớp Section 301 riêng 25% cho hàng Trung Quốc.</p>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>USD mỗi bộ</th><th>Ninh Bình · lô 50</th><th>Trung Quốc · 1688 · lô 50</th><th>Kho Mỹ của NCC</th></tr></thead>
+      <tbody>
+        <tr><td>Giá xưởng (gồm phí agent)</td><td>6,50</td><td>5,18</td><td rowspan="5">31,00 trọn gói (hàng, thuế, giao trong Mỹ)</td></tr>
+        <tr><td>Đóng gói, cước quốc tế (theo thể tích)</td><td>5,50</td><td>5,50</td></tr>
+        <tr><td>Thuế nhập khẩu</td><td>1,23 (17,5% × 7,00)</td><td>2,25 (42,5% × 5,30)</td></tr>
+        <tr><td>Thông quan (chia đều lô)</td><td>1,00</td><td>1,00</td></tr>
+        <tr><td>Kho Mỹ đóng hàng + ship nội địa (hộp lớn)</td><td>12,50</td><td>12,50</td></tr>
+        <tr><td><b>Giá vốn tới tay khách</b></td><td><b>26,73</b></td><td><b>26,44</b></td><td><b>31,00</b></td></tr>
+        <tr><td>Phí PayPal + Shopify (7%), dự phòng 3%</td><td>5,90</td><td>5,90</td><td>5,90</td></tr>
+        <tr><td><b>Lãi trước quảng cáo = CAC tối đa</b></td><td><b>26,38</b></td><td><b>26,66</b></td><td><b>22,10</b></td></tr>
+        <tr><td>Tiền bỏ trước</td><td>Khoảng 710 USD cho lô</td><td>Khoảng 700 USD cho lô</td><td>0 (chỉ mẫu)</td></tr>
+      </tbody></table></div>
+    <ol class="steps">
+      <li><div><b>Giá xưởng Trung Quốc rẻ hơn 20%, nhưng thuế ăn hết.</b> Sau thuế, hai nguồn gần như bằng nhau. Nguồn Việt Nam còn có câu "handwoven in Vietnam" để bán giá cao hơn.</div></li>
+      <li><div><b>Khoản lớn nhất không phải giá xưởng mà là ship nội địa Mỹ của hộp lớn.</b> Với hàng cồng kềnh, kích thước hộp quyết định lãi: Mai đổi sang thiết kế giỏ gấp phẳng được, hỏi lại xưởng.</div></li>
+      <li><div><b>Giai đoạn thử dùng kho Mỹ của nhà cung cấp.</b> CAC tối đa thấp hơn 4 USD nhưng không giữ khoảng 700 USD trong hàng tồn. Chỉ nhập lô từ Ninh Bình khi bán đều 3–5 đơn mỗi ngày.</div></li>
+      <li><div><b>Tuân thủ:</b> cói đã xử lý, nhãn "Made in Vietnam" trên từng giỏ, hỏi xưởng đã từng xuất Mỹ và khai Lacey Act chưa.</div></li>
+    </ol>
+    <p class="verdict">Bài học: so nguồn bằng <b>giá vốn tới tay khách</b> và <b>tiền phải bỏ trước</b>, không bằng giá xưởng. Thử bằng đường không giữ hàng, mở rộng bằng đường rẻ nhất mỗi đơn.</p>
+  </div>
+
+  <div class="sub" id="vl-case4">
+    <div class="tagline">Case study 4 · Hàng vật lý · bài tính mẫu, số giả định</div>
+    <h3>Bát gỗ dừa Bến Tre: loại một nhà cung cấp vì lớp phủ, nâng giá trị đơn bằng bộ quà</h3>
+    <p class="prose">Tú chọn bát gỗ dừa: nhẹ, không vỡ, nhìn là biết làm từ vỏ dừa thật. Bộ 4 bát + 4 thìa có giá vốn tới tay khách khoảng 14,40 USD (giá xưởng 5,20, đóng gói 0,40, tuyến DDP từ Việt Nam khoảng 8,00 gồm thuế, giả định 0,80). Bán 29 USD thì lãi trước quảng cáo chỉ khoảng 11,70 USD.</p>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Câu hỏi</th><th>Kết quả</th><th>Quyết định</th></tr></thead>
+      <tbody>
+        <tr><td>Lớp phủ trong lòng bát</td><td>Nhà cung cấp 1 dùng sơn bóng, không có giấy kiểm nghiệm tiếp xúc thực phẩm. Nhà cung cấp 2 dùng dầu dừa, có giấy kiểm nghiệm của phòng lab</td><td>Loại nhà cung cấp 1</td></tr>
+        <tr><td>CAC tối đa 11,70 USD</td><td>Dưới ngưỡng khoảng 12–15 USD: Meta Ads khó có lãi</td><td>Phải nâng giá trị đơn</td></tr>
+        <tr><td>Khác biệt</td><td>Bộ quà tân gia: 4 bát, 4 thìa, khăn lau, hộp giấy kraft, khắc tên gia đình bằng laser dưới đáy bát (xưởng làm được, thêm 2,00 USD)</td><td>Giá 44 USD; giá vốn tới tay khoảng 18 USD (thêm khắc, khăn, hộp); lãi trước quảng cáo khoảng 21–22 USD</td></tr>
+        <tr><td>Hạn Giáng sinh</td><td>Làm 3 ngày + giao 10–14 ngày + dự phòng 3 ngày</td><td>Ngừng nhận đơn kịp Giáng sinh từ khoảng 5/12, ghi rõ trên trang</td></tr>
+      </tbody></table></div>
+    <p class="verdict">Bài học: với hàng chạm vào đồ ăn, <b>giấy kiểm nghiệm</b> là điều kiện chọn nhà cung cấp, không phải chi tiết. Khi CAC tối đa quá hẹp, sửa <b>giá trị đơn</b> trước, đừng ép giá xưởng.</p>
+  </div>
+
+  <div class="sub" id="vl-lo-trinh">
+    <div class="tagline">Lộ trình 8 tuần · nhánh B · cùng nhịp 1:1 thứ 2 và thứ 5</div>
+    <h3>Từ chọn món tới quảng cáo: mẫu và store đi song song</h3>
+    <div class="tbl"><table class="ht-map"><thead><tr><th>Tuần</th><th>Ngày</th><th>Chặng</th><th>Kết quả phải có</th><th>Hạn</th></tr></thead><tbody>
+      <tr class="gate"><td>1</td><td>19–25/10</td><td>Sản phẩm và nguồn</td><td>3 ứng viên qua bộ lọc 10 câu (T4 21/10). Chốt 1 món, gửi RFQ cho 5–8 nhà cung cấp, đặt mẫu từ 2–3 nhà cung cấp</td><td>CN 25/10</td></tr>
+      <tr><td>2</td><td>26/10–1/11</td><td>Nhà cung cấp, tuân thủ, nền store</td><td>Tab 4d: điểm nhà cung cấp, giá vốn tới tay từ báo giá thật, dòng HTS. Shopify: gói, tên miền, PayPal Business, 6 trang bắt buộc</td><td>CN 1/11</td></tr>
+      <tr><td>3</td><td>2–8/11</td><td>Mẫu và trang bán</td><td>Chấm mẫu, chọn nhà cung cấp chính và dự phòng. Ảnh, video từ mẫu thật. Trang sản phẩm có bộ hoặc ưu đãi nâng giá trị đơn. Pixel và Conversions API đủ 4 sự kiện</td><td>CN 8/11</td></tr>
+      <tr class="gate"><td>4</td><td>9–15/11</td><td>Đơn thử và mẫu quảng cáo</td><td>Một đơn thật đi trọn đường tới địa chỉ ở Mỹ, mã vận đơn về PayPal. 5–8 video, ảnh quảng cáo; 5 video đăng thử tự nhiên. CAC tối đa và điểm tắt viết sẵn</td><td>CN 15/11</td></tr>
+      <tr class="gate"><td>5</td><td>16–22/11</td><td>Mở quảng cáo</td><td>Chiến dịch Sales chạy từ T3 17/11, 3–5 mẫu, ngân sách nhỏ, trước khi giá quảng cáo tăng mùa Black Friday</td><td>T3 17/11</td></tr>
+      <tr><td>6–7</td><td>23/11–6/12</td><td>Meta Ads và vận hành đơn</td><td>Bảng từng mẫu, quyết định giữ, tắt, tăng. Mọi đơn có mã vận đơn trong 48 giờ. Hạn giao Giáng sinh ghi trên trang</td><td>CN 6/12</td></tr>
+      <tr><td>8</td><td>7–13/12</td><td>Tổng kết</td><td>Lãi thật sau mọi phí. Quyết định: nhập lô vào kho Mỹ, đổi nhà cung cấp, hay dừng món này</td><td>CN 13/12</td></tr>
+    </tbody></table></div>
+    <p class="src">Từ tuần 5, nhánh B dùng chung Module 5 (Meta Ads) và Module 6 (Tổng kết) với nhánh A; chỉ khác là quảng cáo mở sớm một tuần. Ghi số mỗi chủ nhật vào Checklist tab Sprint: để trống các cột Etsy.</p>
+  </div>
+
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Trước khi đặt tiền vào mẫu</h3></div>
+    <ol><li>Món này khác hàng đang bán ở điểm nào, và ảnh đầu tiên có cho thấy điểm đó không?</li><li>Mình đã tính giá vốn tới tay khách với thuế của đúng nước xuất xứ chưa, hay mới nhìn giá xưởng?</li><li>CAC tối đa có trên khoảng 12–15 USD không? Nếu không, mình nâng giá trị đơn bằng cách nào?</li><li>Món có rơi vào nhóm cần giấy tờ không, và nhà cung cấp đưa được giấy gì?</li><li>Nếu nhà cung cấp chính im lặng 3 ngày giữa tháng 12, ai giao hàng thay?</li></ol>
+  </div>
+  <p class="src">Nguồn, xem tháng 10/2026: <a href="https://dutylane.com/tariff/policy/de-minimis">DutyLane, tình trạng de minimis</a>; <a href="https://www.whitehouse.gov/presidential-actions/2026/02/continuing-the-suspension-of-duty-free-de-minimis-treatment-for-all-countries/">Nhà Trắng, tiếp tục đình chỉ de minimis (2/2026)</a>; <a href="https://www.federalregister.gov/documents/2026/06/24/2026-12670/indefinite-suspension-of-the-de-minimis-exemption-for-merchandise-arriving-through-all-modes-other">Federal Register, 24/6/2026</a>; <a href="https://www.tariffstool.com/guides/importing-from-vietnam-to-us">TariffsTool, thuế hàng Việt Nam và Trung Quốc</a> (trang phân tích, không phải văn bản chính thức); <a href="https://hts.usitc.gov/">Biểu thuế HTS của Mỹ</a>; <a href="https://www.newbuyingagent.com/resources/1688-vs-sourcing-agent-can-foreign-buyers-use-1688-directly-in-2026">NewBuyingAgent, 1688 và agent</a> (bên bán dịch vụ agent); <a href="https://dodropshipping.com/dropshipping-suppliers-in-vietnam/">DoDropshipping, nhà cung cấp và fulfillment ở Việt Nam</a>; <a href="https://www.salehoo.com/blog/coping-with-paypal-payment-holds">SaleHoo, PayPal giữ tiền</a>; <a href="https://syncee.com/blog/drop-shipping/de-minimis-exemption-is-over/">Syncee, dropship sau de minimis</a> (bên bán nền tảng); <a href="https://www.ecfr.gov/current/title-19/chapter-I/part-134">19 CFR Part 134, ghi nước xuất xứ</a>; <a href="https://www.cpsc.gov/Business--Manufacturing">CPSC, hướng dẫn cho doanh nghiệp</a>; <a href="https://www.p65warnings.ca.gov/">California Prop 65</a>. Thuế và quy định đổi thường xuyên: kiểm lại trước khi chốt giá.</p>
+</section>
+<div class="pn"><a href="len-ban.html"><small>← Phần trước</small>Lên bán, thử bán</a><a class="nx" href="tra-cuu.html"><small>Phần sau →</small>Tra cứu</a></div>
+</main>
+</div>
+<footer>
+  <div>C.L.E.A.R. Path™ · Bản học viên · Quy định sàn, phí và thuế nhập khẩu thay đổi thường xuyên: kiểm lại trước khi tính tiền thật. · Dữ liệu ví dụ thu thập trên Etsy ngày 14/10/2026, xem với ship to US, giá quy đổi từ VND theo khoảng 26.300 VND/USD.</div>
+  <div>Thang kết quả dựa trên "The Elements of Value" (Almquist, Senior, Bloch, Harvard Business Review, 2016). Bảng 4 hành động dựa trên công cụ ERRC của Blue Ocean Strategy (Kim, Mauborgne). Ngưỡng là của khóa học, Mentor có thể chỉnh.</div>
+</footer>
+</div>
+<script>
+(function(){
+  var KEY='clear-k1-sprint';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){state={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+  var root=document.getElementById('sprint'); if(!root) return;
+  var boxes=root.querySelectorAll('input[type=checkbox][data-k]');
+  function refresh(){
+    var all=0,done=0;
+    root.querySelectorAll('.ht-card').forEach(function(card){
+      var bs=card.querySelectorAll('input[type=checkbox]'),n=0;
+      bs.forEach(function(b){if(b.checked)n++;});
+      var p=card.querySelector('.prog'); if(p){p.textContent=n+'/'+bs.length+' đã tích';p.classList.toggle('done',n===bs.length&&bs.length>0);}
+      all+=bs.length; done+=n;
+    });
+    var t=document.getElementById('ht-total'); if(t) t.textContent='Đã tích '+done+'/'+all+' ô';
+  }
+  boxes.forEach(function(b){
+    b.checked=!!state[b.dataset.k];
+    b.addEventListener('change',function(){ if(b.checked) state[b.dataset.k]=1; else delete state[b.dataset.k]; save(); refresh(); });
+  });
+  root.querySelectorAll('[data-ht]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var a=btn.dataset.ht, cards=root.querySelectorAll('.ht-card');
+      if(a==='open') cards.forEach(function(c){c.open=true;});
+      if(a==='close') cards.forEach(function(c){c.open=false;});
+      if(a==='reset'){ state={}; save(); boxes.forEach(function(b){b.checked=false;}); refresh(); }
+    });
+  });
+  // mở thẻ của tuần hiện tại
+  var map=[['w1','2026-10-19'],['w2','2026-10-26'],['w3','2026-11-02'],['w4','2026-11-09'],['w5','2026-11-16'],['w6','2026-11-23'],['w7','2026-11-30'],['w8','2026-12-07']];
+  var now=new Date(), cur='w1';
+  map.forEach(function(m){ if(now>=new Date(m[1]+'T00:00:00+07:00')) cur=m[0]; });
+  if(location.hash.indexOf('#ht-')!==0){ var el=document.getElementById('ht-'+cur); if(el) el.open=true; }
+  else { var h=document.getElementById(location.hash.slice(1)); if(h&&h.tagName==='DETAILS') h.open=true; }
+  refresh();
+})();
+</script>
+</body></html>

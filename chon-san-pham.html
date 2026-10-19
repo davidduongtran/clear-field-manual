@@ -1,0 +1,1118 @@
+<!doctype html><html><head><meta charset=utf8><meta name="robots" content="noindex,nofollow"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<title>Chọn ngách, sản phẩm · C.L.E.A.R.</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@1,7..72,400;1,7..72,500&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: sổ tay hiện trường — thanh 5 cổng dính bên trái (desktop); mỗi cổng là một trạm: luật đạt, cách làm, framework, ví dụ thật, câu hỏi vặn, kiểm tra của Mentor */
+:root{
+  --bg:#f6f7f4; --paper:#ffffff; --ink:#1c2321; --muted:#5b6662; --line:#dfe3df;
+  --accent:#0f6b5c; --accent-soft:#e3f1ec; --warn:#a3501b; --warn-soft:#fbede3;
+  --pass:#1f7a3f; --pass-soft:#e6f3ea; --kill:#b42318; --kill-soft:#fdeceb;
+  --quote:#efeee8; --t1:#e9efe9; --t2:#dcebe5; --t3:#cfe5dd; --t4:#c1ded4;
+  --f-body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-quote:"Literata",Georgia,"Times New Roman",serif;
+  --f-data:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121715; --paper:#1a201e; --ink:#e7ece9; --muted:#9aa6a1; --line:#2c3532;
+  --accent:#5fc3ad; --accent-soft:#16312b; --warn:#f0a36d; --warn-soft:#352419;
+  --pass:#6fcf8f; --pass-soft:#16301f; --kill:#ff8a80; --kill-soft:#3a1d1b; --quote:#222a27;
+  --t1:#1c2421; --t2:#1d2c27; --t3:#1e342d; --t4:#1f3c33; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121715; --paper:#1a201e; --ink:#e7ece9; --muted:#9aa6a1; --line:#2c3532;
+  --accent:#5fc3ad; --accent-soft:#16312b; --warn:#f0a36d; --warn-soft:#352419;
+  --pass:#6fcf8f; --pass-soft:#16301f; --kill:#ff8a80; --kill-soft:#3a1d1b; --quote:#222a27;
+  --t1:#1c2421; --t2:#1d2c27; --t3:#1e342d; --t4:#1f3c33; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.62;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.25;margin:0}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto}
+header.top{padding-block:40px 28px;border-bottom:1px solid var(--line);display:grid;gap:14px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.02em}
+h1 .gates{color:var(--accent)}
+.lede{max-width:68ch;color:var(--muted);font-size:17px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:600}
+
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;margin-top:32px}
+nav.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;display:grid;gap:4px}
+nav.rail a{display:grid;grid-template-columns:34px 1fr;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:14px}
+nav.rail a:hover{background:var(--accent-soft)}
+nav.rail .l{font-weight:800;font-size:20px;color:var(--accent);text-align:center}
+nav.rail .sep{height:1px;background:var(--line);margin:8px 0}
+main{display:grid;gap:56px;min-width:0}
+
+section{display:grid;gap:22px;min-width:0;scroll-margin-top:20px}
+.sec-head{display:grid;gap:8px}
+h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:19px;font-weight:700}
+h4{font-size:16px;font-weight:700}
+.sub{display:grid;gap:14px;padding-top:6px;border-top:1px solid var(--line)}
+.sub .tagline{font-family:var(--f-data);font-size:13px;color:var(--accent)}
+.prose{max-width:72ch;display:grid;gap:12px}
+p.prose{display:block}
+
+.gate-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:start}
+.letter{font-size:76px;line-height:.85;font-weight:800;color:var(--accent);letter-spacing:-.04em}
+.gate-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted);margin-top:6px}
+.gate-meta span b{color:var(--ink)}
+
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rule{border-radius:10px;padding:14px 16px;display:grid;gap:6px;font-size:15px;align-content:start}
+.rule.pass{background:var(--pass-soft)}
+.rule.kill{background:var(--kill-soft)}
+.rule .tag{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.rule.pass .tag{color:var(--pass)} .rule.kill .tag{color:var(--kill)}
+.rule ul{margin:0;padding-left:18px;display:grid;gap:4px}
+
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:14px}
+ol.steps>li{counter-increment:s;display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px}
+ol.steps>li::before{content:counter(s);font-family:var(--f-data);font-size:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:1px solid var(--line);color:var(--accent)}
+code{font-family:var(--f-data);font-size:13px;background:var(--paper);border:1px solid var(--line);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+
+.live{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:14px;min-width:0}
+.live-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline}
+.live-head .eyebrow{color:var(--accent)}
+.src{font-size:12px;color:var(--muted)}
+.tbl{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+td.n{font-family:var(--f-data);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+th.n{text-align:right}
+table.canvas{min-width:880px}
+table.canvas td:first-child{font-weight:700;white-space:nowrap}
+table.canvas td:nth-child(2){color:var(--muted);min-width:170px}
+.grp td{background:var(--accent-soft);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:6px 10px}
+.st{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;border-radius:5px;padding:1px 6px;white-space:nowrap}
+.st.ok{background:var(--pass-soft);color:var(--pass)}
+.st.gd{background:var(--warn-soft);color:var(--warn)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--bg)}
+.chip.hot{border-color:var(--accent);background:var(--accent-soft);font-weight:600}
+.chip.miss{border-style:dashed;color:var(--muted);text-decoration:line-through}
+.verdict{border-left:3px solid var(--accent);padding:4px 0 4px 14px;font-weight:500}
+.verdict.warn{border-left-color:var(--warn)}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.stat{border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;gap:2px;background:var(--bg)}
+.stat .v{font-family:var(--f-data);font-size:22px;font-variant-numeric:tabular-nums}
+.stat .k{font-size:13px;color:var(--muted)}
+
+blockquote{margin:0;background:var(--quote);border-radius:8px;padding:12px 14px;font-family:var(--f-quote);font-style:italic;font-size:15.5px;display:grid;gap:4px}
+blockquote cite{font-family:var(--f-body);font-style:normal;font-size:12px;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+
+.avatar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;background:var(--accent-soft);border-radius:12px;padding:18px}
+.avatar .who{display:grid;gap:6px}
+.avatar .who .nm{font-size:20px;font-weight:800}
+.avatar dl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 12px;margin:0;font-size:15px}
+.avatar dt{font-weight:700}
+.avatar dd{margin:0}
+
+.ladder{display:grid;gap:8px}
+.rung{display:grid;grid-template-columns:190px minmax(0,1fr) minmax(0,1fr);gap:14px;border-radius:10px;padding:14px 16px;align-items:start}
+.rung.r4{background:var(--t4)} .rung.r3{background:var(--t3)} .rung.r2{background:var(--t2)} .rung.r1{background:var(--t1)}
+.rung h4{font-size:16px}
+.rung .q{font-size:13px;color:var(--muted)}
+.rung .els{font-size:14px}
+.rung .ex{font-size:14px}
+.rung .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+
+.errc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.errc .cell{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--paper);display:grid;gap:6px;align-content:start}
+.errc .cell h4{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.errc .cell ul{margin:0;padding-left:18px;font-size:14px;display:grid;gap:4px}
+
+.ask{display:grid;gap:10px}
+.ask details{border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.ask summary{cursor:pointer;padding:12px 16px;font-weight:600;list-style:none;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px}
+.ask summary::-webkit-details-marker{display:none}
+.ask summary::before{content:"Hỏi";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--warn);background:var(--warn-soft);border-radius:5px;padding:2px 6px;height:fit-content;margin-top:2px}
+.ask .a{padding:0 16px 14px 16px;display:grid;gap:8px}
+
+.mentor,.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.box{border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:8px;background:var(--paper);align-content:start}
+.box h3{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.box ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:15px}
+
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pillar{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start}
+.pillar .q{font-size:13px;color:var(--muted)}
+.pillar h3{font-size:17px}
+.pillar .g{display:flex;gap:4px;flex-wrap:wrap}
+.pillar .g span{font-weight:800;color:var(--accent);font-size:14px;border:1px solid var(--accent);border-radius:5px;padding:0 6px}
+.through{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.through .box p{font-size:15px}
+
+.rdef{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.rdef .box .num{font-family:var(--f-data);font-size:13px;color:var(--accent)}
+
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px}
+.flow .stp{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.flow .stp b{color:var(--accent)}
+.flow .ar{color:var(--muted)}
+
+.decision{background:var(--accent-soft);border-radius:14px;padding:22px;display:grid;gap:12px}
+.decision dl{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 16px;margin:0}
+.decision dt{font-weight:700}
+.decision dd{margin:0}
+.limits{border:1px dashed var(--warn);border-radius:12px;padding:18px;display:grid;gap:8px;background:var(--warn-soft)}
+.limits ul{margin:0;padding-left:18px;display:grid;gap:4px}
+footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted);display:grid;gap:6px}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  nav.rail{position:static;grid-auto-flow:column;grid-auto-columns:max-content;overflow-x:auto;padding-bottom:4px}
+  nav.rail .sep{display:none}
+  nav.rail a{grid-template-columns:auto auto}
+  .pillars,.errc,.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rung{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .rules,.quotes,.mentor,.two,.through,.pillars,.rdef,.errc,.avatar{grid-template-columns:minmax(0,1fr)}
+  .letter{font-size:56px}
+  .decision dl,.avatar dl{grid-template-columns:minmax(0,1fr)}
+}
+
+.prompt{font-family:var(--f-data);font-size:13px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 10px;white-space:pre-wrap;overflow-wrap:anywhere}
+.vizwrap{margin:0;display:grid;gap:6px}.vizwrap figcaption{font-size:13px;color:var(--muted)}
+.viz{width:100%;height:auto;display:block;--hi:#0a8a5a;--rest:#a3a8a5}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .viz{--hi:#2a9d6c;--rest:#6b7470}}
+:root[data-theme="dark"] .viz{--hi:#2a9d6c;--rest:#6b7470}
+.viz .zone{fill:var(--pass-soft)}.viz .zl{fill:var(--pass);font-size:12px;font-weight:600}.viz .gl{stroke:var(--line);stroke-width:1}.viz .th{stroke:var(--pass);stroke-width:1.5;stroke-dasharray:4 4}
+.viz .tk{fill:var(--muted);font-size:12px;font-family:var(--f-data)}.viz .ax{fill:var(--muted);font-size:12px}
+.viz .dot{fill:var(--paper);stroke:var(--rest);stroke-width:2}.viz .hi .dot{fill:var(--hi);stroke:var(--paper)}.viz .hit{fill:transparent}.viz .pt:hover .dot{stroke-width:3}
+.viz .pl{fill:var(--ink);font-size:12px}.viz .pl.hi{font-weight:600}
+table.sopk{min-width:0}table.sopk td:first-child{font-family:var(--f-data);white-space:nowrap}table.sopk td:nth-child(2){font-weight:600}
+.ladder{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ladder li{width:var(--w);min-width:min(100%,520px);max-width:100%;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:start;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:8px;padding:10px 12px;font-size:15px}
+.ladder .lv{font-family:var(--f-data);font-weight:700;color:var(--accent);font-size:18px;line-height:1.3}
+.ladder i{color:var(--muted);font-style:normal;font-weight:600}
+@media (max-width:640px){.ladder li{width:100%}}
+.tprev{font-family:var(--f-data);font-size:14px;line-height:1.5;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-wrap:anywhere;margin:0}
+.tprev mark{background:var(--accent-soft);color:inherit;padding:0 2px;border-radius:3px}
+.shots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.shot{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--paper);font-size:14px;display:grid;gap:4px;align-content:start}
+.shot b{font-family:var(--f-data);color:var(--accent);font-size:13px}
+@media (max-width:900px){.shots{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.shots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Lộ trình, chọn đường, bản đồ ngách, ghi chú cho hàng vật lý và Shopify */
+.road{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:r}
+.road li{counter-increment:r;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px;align-content:start;position:relative}
+.road li .wk{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.road li h3{font-size:16px}
+.road li p{font-size:14.5px}
+.road li .out{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px}
+.road li .out b{color:var(--ink)}
+.road li.gate{background:var(--accent-soft);border-color:transparent}
+.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.path{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;background:var(--paper);align-content:start}
+.path.rec{border:2px solid var(--accent)}
+.path .ph{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;align-items:baseline}
+.path .ph h3{font-size:18px}
+.path dl{display:grid;grid-template-columns:96px minmax(0,1fr);gap:6px 12px;margin:0;font-size:14.5px}
+.path dt{font-weight:700;color:var(--muted);font-size:13px;padding-top:1px}
+.path dd{margin:0}
+.st.rec{background:var(--accent);color:var(--paper)}
+.st.no{background:var(--kill-soft);color:var(--kill)}
+.st.new{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.formula{font-family:var(--f-data);font-size:14px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow-x:auto}
+.formula b{color:var(--accent);font-weight:500}
+table.niche{min-width:980px}
+table.niche td:first-child{font-weight:700;min-width:150px}
+table.niche td code{white-space:nowrap}
+.alt{border:1px dashed var(--accent);border-radius:12px;padding:16px;display:grid;gap:12px}
+.alt>.eyebrow{color:var(--accent)}
+.alt .two .box h3{color:var(--accent)}
+.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.checks .box ul{list-style:none;padding-left:0}
+.checks .box li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:6px}
+.checks .box li::before{content:"□";color:var(--accent)}
+@media (max-width:900px){.road,.checks{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.paths{grid-template-columns:minmax(0,1fr)}.path dl{grid-template-columns:minmax(0,1fr)}}
+/* Tư duy, bẫy tư duy, phản tư */
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;counter-reset:pr}
+.principle{counter-increment:pr;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:30px minmax(0,1fr);gap:4px 12px;align-content:start}
+.principle::before{content:counter(pr);grid-row:span 2;font-family:var(--f-data);font-size:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--paper)}
+.principle h3{font-size:16px}
+.principle p{font-size:14.5px;color:var(--ink)}
+table.traps{min-width:760px}
+table.traps td:first-child{font-weight:700;min-width:150px}
+.reflect{border-left:4px solid var(--warn);background:var(--warn-soft);border-radius:0 12px 12px 0;padding:14px 18px;display:grid;gap:10px}
+.reflect .rh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.reflect .rk{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--warn)}
+.reflect h3{font-size:16px}
+.reflect ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:15px}
+.reflect .log{font-size:14px;border-top:1px dashed var(--warn);padding-top:8px}
+.score{min-width:720px}
+.score td.c{text-align:center;font-family:var(--f-data)}
+@media (max-width:640px){.principles{grid-template-columns:minmax(0,1fr)}}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Hành trình từng buổi */
+.ht-how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.ht-how .box p{font-size:14px}
+.ht-how .box .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-start{background:var(--accent-soft);border-radius:14px;padding:20px 22px;display:grid;gap:14px}
+.ht-start ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:s}
+.ht-start ol>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start}
+.ht-start ol>li::before{content:counter(s);font-weight:800;color:var(--accent);font-size:18px;text-align:center;line-height:1.5}
+.ht-start .ready{font-size:14px;border-top:1px dashed var(--accent);padding-top:10px}
+table.links{min-width:0}
+table.links td:first-child{white-space:nowrap;font-weight:600}
+.ht-map td:nth-child(1){font-family:var(--f-data);white-space:nowrap}
+.ht-map td:nth-child(2){white-space:nowrap}
+.ht-map tr.gate td{background:var(--accent-soft)}
+.ht-map tr.off td{background:var(--quote);color:var(--muted)}
+.ht-cards{display:grid;gap:10px}
+.ht-card{border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.ht-card[open]{border-color:var(--accent)}
+.ht-card.gate{background:linear-gradient(var(--accent-soft),var(--accent-soft)) top/100% 0 no-repeat,var(--paper)}
+.ht-card>summary{cursor:pointer;list-style:none;padding:14px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:center}
+.ht-card>summary::-webkit-details-marker{display:none}
+.ht-card .wk{font-family:var(--f-data);font-size:12px;color:var(--accent);grid-column:1}
+.ht-card .ttl{font-weight:700;font-size:17px;grid-column:1}
+.ht-card .q{font-size:14px;color:var(--muted);grid-column:1}
+.ht-card .q b{color:var(--ink);font-weight:600}
+.ht-card .prog{grid-column:2;grid-row:1/span 3;font-family:var(--f-data);font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.ht-card .prog.done{color:var(--pass);border-color:var(--pass);background:var(--pass-soft)}
+.ht-card.gate>summary{background:var(--accent-soft);border-radius:11px}
+.ht-body{padding:4px 18px 18px;display:grid;gap:16px}
+.ht-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ht-col{display:grid;gap:8px;align-content:start}
+.ht-col h4,.ht-self h4,.ht-flag h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ht-col p.one{font-size:14.5px;margin-bottom:6px}
+.ht-col ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px}
+ul.ck{list-style:none;padding:0}
+.ck li label,.ht-self li label{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;align-items:start;cursor:pointer}
+.ck input,.ht-self input{width:17px;height:17px;margin:3px 0 0;accent-color:var(--accent)}
+.ck input:checked+span,.ht-self input:checked+span{color:var(--muted)}
+.due{border:1px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px;display:grid;gap:4px;background:var(--paper)}
+.due .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-self{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;display:grid;gap:10px}
+.ht-self ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
+.ht-self em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
+.ht-self em b{color:var(--pass);font-weight:600}
+.ht-flag{border:1px dashed var(--kill);border-radius:10px;padding:10px 14px;display:grid;gap:6px;background:var(--kill-soft)}
+.ht-flag ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14.5px}
+.ht-note{font-size:14px;border-left:3px solid var(--warn);padding:2px 0 2px 12px}
+.ht-note b{color:var(--warn)}
+.ht-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+.ht-tools button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.ht-tools button:hover{border-color:var(--accent)}
+.rhythm{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.rhythm .box{padding:10px 12px}
+.rhythm .box .d{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.rhythm .box p{font-size:14px}
+@media (max-width:900px){.ht-how,.ht-grid,.rhythm{grid-template-columns:minmax(0,1fr)}.ht-card>summary{grid-template-columns:minmax(0,1fr)}.ht-card .prog{grid-column:1;grid-row:auto;justify-self:start}}
+@media (max-width:600px){
+  table.links thead,.ht-map thead{display:none}
+  table.links tr,.ht-map tr{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;padding:10px 4px;border-bottom:1px solid var(--line)}
+  table.links td,.ht-map td{display:block;border:0!important;padding:0!important;white-space:normal!important;background:none!important}
+  table.links td:nth-child(2)::before{content:"Ô: ";color:var(--muted)}
+  table.links td:nth-child(3)::before{content:"Dán link: ";color:var(--muted)}
+  table.links td:nth-child(4)::before{content:"Khi nào: ";color:var(--muted)}
+  .ht-map tr{grid-template-columns:auto minmax(0,1fr);column-gap:10px}
+  .ht-map tr.gate{background:var(--accent-soft)} .ht-map tr.off{background:var(--quote)}
+  .ht-map td:nth-child(1)::before{content:"Tuần ";}
+  .ht-map td:nth-child(3){grid-column:1/-1;font-weight:600}
+  .ht-map td:nth-child(4){grid-column:1/-1}
+  .ht-map td:nth-child(5){grid-column:1/-1;color:var(--muted)}
+  .ht-map td:nth-child(5)::before{content:"Hạn: "}
+}
+@media print{.ht-card{break-inside:avoid}.ht-tools{display:none}}
+
+ol.anat{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+ol.anat>li{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:14px;border-radius:10px;padding:14px 16px;align-items:start}
+ol.anat>li.a1{background:var(--t1)} ol.anat>li.a2{background:var(--t2)} ol.anat>li.a3{background:var(--t3)} ol.anat>li.a4{background:var(--t4)}
+ol.anat .q{font-size:13px;color:var(--muted)} ol.anat .els,ol.anat .ex{font-size:14px}
+ol.anat .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);margin-bottom:2px}
+table.spyt{min-width:760px}
+table.spyt td:first-child{font-weight:600;white-space:nowrap}
+table.spyt.case{min-width:0}table.spyt.case td:first-child{width:9.5em}
+@media(max-width:640px){table.spyt.case,table.spyt.case tbody,table.spyt.case tr,table.spyt.case td{display:block;width:auto}table.spyt.case thead{display:none}table.spyt.case td:first-child{width:auto;padding-bottom:0;border-bottom:0}table.spyt.case tr{padding:4px 0}}
+ol.flowl{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
+@media (max-width:900px){ol.anat>li{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<style>
+.layout{grid-template-columns:minmax(0,1fr)!important}
+nav.parts{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+nav.parts a{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);font-size:13.5px;background:var(--paper)}
+nav.parts a:hover{background:var(--accent-soft)}
+nav.parts a.cur{background:var(--accent);border-color:var(--accent);color:#fff}
+nav.parts a .i{color:var(--accent);font-weight:800}
+nav.parts a.cur .i{color:#fff}
+nav.parts a.home{font-weight:700}
+.inpage{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;color:var(--muted)}
+.inpage b{color:var(--ink)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;flex-wrap:wrap}
+.pn a{flex:1 1 220px;border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink);background:var(--paper)}
+.pn a small{display:block;color:var(--muted);font-size:12px}
+.pn a.nx{text-align:right}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.hub-card{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--paper);text-decoration:none;color:var(--ink);display:grid;gap:6px}
+.hub-card:hover{border-color:var(--accent)}
+.hub-card .k{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.02em}
+.hub-card h3{margin:0;font-size:16px}
+.hub-card p{margin:0;color:var(--muted);font-size:13.5px}
+.hub-card .t{font-size:12.5px;color:var(--muted)}
+table.wk td{vertical-align:top}
+table.wk tr.now td{background:var(--accent-soft)}
+table.wk tr.now td:first-child::after{content:" · tuần này";color:var(--accent);font-weight:700}
+table.wk a{white-space:normal}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.tag.off{background:var(--line);color:var(--muted)}
+@media(max-width:640px){table.wk{min-width:0!important}table.wk a{word-break:break-word}table.wk,table.wk tbody,table.wk tr,table.wk td{display:block;width:auto}table.wk thead{display:none}table.wk td{border-bottom:0;padding:4px 10px}table.wk tr{border-bottom:1px solid var(--line);padding:8px 0}table.wk td:first-child{font-weight:700}table.wk td[data-l]::before{content:attr(data-l) ": ";font-weight:600;color:var(--muted)}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <nav class="parts" aria-label="Các phần">
+<a class="home" href="index.html"><span class="i">⌂</span>Bắt đầu ở đây</a>
+<a href="lo-trinh-8-tuan.html"><span class="i">☑</span>Lộ trình 8 tuần</a>
+<a href="tu-duy.html"><span class="i">✦</span>Tư duy</a>
+<a class="cur" href="chon-san-pham.html"><span class="i">◎</span>Chọn ngách, sản phẩm</a>
+<a href="kiem-chung.html"><span class="i">C</span>Kiểm chứng 5 cổng</a>
+<a href="len-ban.html"><span class="i">§</span>Lên bán, thử bán</a>
+<a href="hang-vat-ly.html"><span class="i">▣</span>Hàng vật lý (B)</a>
+<a href="tra-cuu.html"><span class="i">⌕</span>Tra cứu</a>
+</nav>
+  <div class="eyebrow">Phần 2 · Tuần 1 · cả hai nhánh</div>
+  <h1>Chọn ngách và sản phẩm: bắt đầu từ người mua</h1>
+  <p class="lede">Tám nguyên tắc chọn món, ma trận ý tưởng, lịch dịp lễ Mỹ, tìm người mua trước khi tìm sản phẩm, bản đồ ngách và workflow spy 90 phút.</p>
+  <div class="meta"><span><b>Dùng khi:</b> Tuần 1, và mỗi lần chọn sản phẩm mới</span><span><b>Đọc hết:</b> khoảng 90 phút, nhưng chỉ đọc phần được giao</span></div>
+  <div class="inpage"><b>Trong trang:</b> <a href="#chon-sp">Chọn ngách, sản phẩm</a> · <a href="#nguoi-mua">Người mua</a> · <a href="#case-nha">Case: ngôi nhà</a> · <a href="#ngach">Bản đồ ngách</a> · <a href="#spy">Spy &amp; research</a></div>
+</header>
+<div class="layout">
+<main>
+<section id="chon-sp">
+  <div class="sec-head">
+    <div class="eyebrow">Tuần 1 · cả hai nhánh · đọc trước khi mở bất kỳ công cụ nào</div>
+    <h2>Tư duy chọn ngách và sản phẩm: nghĩ như người bán lâu năm, không như người săn hàng hot</h2>
+  </div>
+  <p class="prose">Công cụ spy chỉ trả lời được câu "cái gì đang bán". Câu khó hơn là "mình nên bán gì, cho ai, và vì sao mình thắng được". Mục này cho bạn 8 nguyên tắc người bán giỏi dùng để chọn, cách sinh 20 ý tưởng trong 20 phút, lịch dịp của Mỹ, cách đọc một concept thiết kế, bước kiểm nhãn hiệu, bảng thắng, sửa hay bỏ sau khi lên bán, và một bài tập tự chấm có đáp án.</p>
+
+  <div class="sub" id="cs-nguyen-tac">
+    <div class="tagline">Mindset · 8 nguyên tắc</div>
+    <h3>Tám câu người bán giỏi tự hỏi trước khi chọn</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Nguyên tắc</th><th>Nghĩa là</th><th>Người mới hay sai thế nào</th></tr></thead>
+      <tbody>
+        <tr><td><b>1 · Người trả tiền trước, sản phẩm sau</b></td><td>Bắt đầu bằng một nhóm người có tiền và có lý do mua, rồi mới hỏi họ cần món gì</td><td>Bắt đầu từ món mình thích hoặc món đang hot, rồi đi tìm người mua</td></tr>
+        <tr><td><b>2 · Ngách là một nhóm người, không phải một loại hàng</b></td><td>"Cốc" không phải ngách. "Điều dưỡng sắp nghỉ hưu" hay "người nuôi mèo ở chung cư" là ngách: có danh tính, có nỗi lo, có chỗ tụ tập</td><td>Chọn "áo thun", "đồ gia dụng" rồi cạnh tranh với cả thế giới</td></tr>
+        <tr><td><b>3 · Người mua có khi không phải người dùng</b></td><td>Quà tặng: người mua là con, đồng nghiệp, vợ chồng; người dùng là người nhận. Ảnh và tiêu đề nói với người mua về người nhận</td><td>Viết cho người nhận, trong khi người bấm mua là người khác</td></tr>
+        <tr><td><b>4 · Bằng chứng có thứ bậc</b></td><td>Số đếm được trên sàn (review có ngày, số đã bán, quảng cáo chạy lâu) hơn số ước tính của công cụ; số ước tính hơn cảm giác</td><td>Tin con số doanh thu của extension như sự thật</td></tr>
+        <tr><td><b>5 · Lãi là cổng đầu tiên, không phải cổng cuối</b></td><td>Tính lãi mỗi đơn và CAC tối đa ngay ở bước chọn; món không có lãi thì không cần đẹp</td><td>Làm thiết kế, chụp ảnh xong mới tính phí, rồi phát hiện lỗ</td></tr>
+        <tr><td><b>6 · Thời điểm quyết định nửa kết quả</b></td><td>Mỗi dịp có một cửa sổ: lên listing 6–8 tuần trước, chạy quảng cáo 3–4 tuần trước, ngừng hứa giao trước hạn của nhà in hoặc tuyến vận chuyển</td><td>Chọn đúng món nhưng lên bán khi đỉnh mùa đã qua</td></tr>
+        <tr><td><b>7 · Chỗ của mình phải gọi tên được</b></td><td>Lợi thế riêng: bạn hiểu nghề đó, nói được tiếng đó, quen xưởng đó, cá nhân hóa sâu hơn, hay phục vụ người nhận chưa ai phục vụ</td><td>Câu trả lời là "rẻ hơn" hoặc "đẹp hơn"</td></tr>
+        <tr><td><b>8 · Ngách tốt cho phép làm tiếp</b></td><td>Một ngách đáng chọn khi thắng một món thì làm được 20 biến thể, dịp tiếp theo, món thứ hai cho cùng khách</td><td>Thắng một món rồi phải tìm ngách mới từ đầu</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="sub" id="cs-ma-tran">
+    <div class="tagline">Skillset · sinh 20 ý tưởng trong 20 phút</div>
+    <h3>Ma trận ý tưởng: ghép các cột, không ngồi chờ cảm hứng</h3>
+    <p class="prose">Chọn một ô ở mỗi cột, ghép lại thành một câu. Mỗi câu là một ứng viên để đưa vào workflow spy. Làm 20 câu, giữ 10 câu có người thật đang tìm (gợi ý tìm kiếm của Etsy hoặc Amazon có cụm đó).</p>
+    <div style="display:grid;gap:12px">
+      <div class="box"><h3>Nhánh A · POD</h3>
+        <div class="tbl"><table class="spyt"><thead><tr><th>Người nhận</th><th>Dịp</th><th>Danh tính, sở thích</th><th>Kiểu cá nhân hóa</th><th>Món</th></tr></thead><tbody>
+          <tr><td>Mẹ, bà, bố, ông</td><td>Giáng sinh, sinh nhật</td><td>Nghề: điều dưỡng, giáo viên, lính cứu hỏa</td><td>Tên, năm, ngày</td><td>Ornament, cốc</td></tr>
+          <tr><td>Đồng nghiệp, sếp</td><td>Nghỉ hưu, chuyển việc</td><td>Sở thích: câu cá, làm vườn, đan len</td><td>Ảnh thú cưng, ảnh gia đình</td><td>Áo, áo nỉ</td></tr>
+          <tr><td>Vợ chồng, người yêu</td><td>Kỷ niệm cưới, Valentine</td><td>Vai trò: mẹ của mèo, ông nội lần đầu</td><td>Tọa độ, bản đồ, câu nói riêng</td><td>Chăn, gối</td></tr>
+          <tr><td>Cô giáo, huấn luyện viên</td><td>Cuối năm học, tốt nghiệp</td><td>Thành tựu: chạy marathon, tốt nghiệp y tá</td><td>Tên học sinh, tên đội</td><td>Túi tote, bảng gỗ</td></tr>
+          <tr><td>Người vừa mất thú cưng</td><td>Tưởng niệm</td><td>Quê hương, gốc gác</td><td>Vẽ lại từ ảnh</td><td>Tranh in, khung ảnh</td></tr>
+        </tbody></table></div>
+        <p class="src">Ví dụ ghép: "Ornament Giáng sinh khắc tên và năm cho điều dưỡng nghỉ hưu năm 2026, con gái mua tặng mẹ".</p></div>
+      <div class="box"><h3>Nhánh B · Hàng vật lý</h3>
+        <div class="tbl"><table class="spyt"><thead><tr><th>Nhóm khách</th><th>Việc cần làm</th><th>Nỗi khó chịu</th><th>Cách khác biệt</th><th>Nguồn</th></tr></thead><tbody>
+          <tr><td>Người ở căn hộ nhỏ</td><td>Cất đồ, sắp xếp</td><td>Chật, xấu, dễ bẩn</td><td>Chất liệu tự nhiên, gấp phẳng</td><td>Việt Nam (cói, tre)</td></tr>
+          <tr><td>Người nuôi mèo, chó</td><td>Cho ăn, chơi, dọn</td><td>Nhựa rẻ tiền, mùi</td><td>Gỗ, gốm, bộ đồng bộ</td><td>Việt Nam, Trung Quốc</td></tr>
+          <tr><td>Người thích nấu ăn tại nhà</td><td>Bày bàn, phục vụ</td><td>Đồ nhà máy giống nhau</td><td>Thủ công, khắc tên, bộ quà</td><td>Việt Nam (gỗ dừa, gốm)</td></tr>
+          <tr><td>Người chơi cây trong nhà</td><td>Trồng, trưng bày</td><td>Chậu xấu, không thoát nước</td><td>Sửa lời chê, cỡ hợp lý</td><td>Trung Quốc, Việt Nam</td></tr>
+          <tr><td>Người mới chuyển nhà</td><td>Tặng quà tân gia</td><td>Quà vô hồn</td><td>Câu chuyện xuất xứ, hộp quà</td><td>Việt Nam, Ấn Độ</td></tr>
+        </tbody></table></div>
+        <p class="src">Ví dụ ghép: "Bộ khay tre gấp phẳng cho người ở căn hộ nhỏ, không mùi nhựa, làm ở Việt Nam, giao kèm hộp quà".</p></div>
+    </div>
+  </div>
+
+  <div class="sub" id="cs-lich">
+    <div class="tagline">Toolset · lịch dịp của khách Mỹ · đặt vào Google Calendar của bạn</div>
+    <h3>Mỗi dịp có một cửa sổ: lên bán trước, không chạy theo</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Dịp</th><th>Ngày</th><th>POD: lên listing trước</th><th>Hàng vật lý: chốt nguồn hàng trước</th><th>Món hay bán</th></tr></thead>
+      <tbody>
+        <tr><td>Giáng sinh</td><td>25/12</td><td>Đầu tháng 11 (muộn nhất)</td><td>Giữa tháng 10</td><td>Ornament cá nhân hóa, quà gia đình, quà đồng nghiệp</td></tr>
+        <tr><td>Valentine</td><td>14/2/2027</td><td>Trước 20/12</td><td>Cuối tháng 11</td><td>Quà cặp đôi, bản đồ, câu nói riêng</td></tr>
+        <tr><td>St. Patrick's Day</td><td>17/3/2027</td><td>Cuối tháng 1</td><td>Giữa tháng 1</td><td>Áo, phụ kiện màu xanh</td></tr>
+        <tr><td>Phục sinh</td><td>28/3/2027</td><td>Đầu tháng 2</td><td>Giữa tháng 1</td><td>Giỏ, đồ trẻ em (cẩn thận quy định đồ trẻ em)</td></tr>
+        <tr><td>Tuần tri ân giáo viên</td><td>3–7/5/2027</td><td>Giữa tháng 3</td><td>Đầu tháng 3</td><td>Quà giáo viên, túi tote, cốc</td></tr>
+        <tr><td>Ngày của Mẹ</td><td>9/5/2027</td><td>Giữa tháng 3</td><td>Đầu tháng 3</td><td>Quà mẹ và bà, tên con cháu</td></tr>
+        <tr><td>Tốt nghiệp, nghỉ hưu cuối năm học</td><td>Tháng 5–6</td><td>Đầu tháng 4</td><td>Giữa tháng 3</td><td>Quà tốt nghiệp, quà nghỉ hưu giáo viên</td></tr>
+        <tr><td>Ngày của Cha</td><td>20/6/2027</td><td>Đầu tháng 5</td><td>Giữa tháng 4</td><td>Quà bố, ông, câu cá, nướng BBQ</td></tr>
+        <tr><td>Quốc khánh Mỹ</td><td>4/7</td><td>Giữa tháng 5</td><td>Đầu tháng 5</td><td>Áo, đồ tiệc ngoài trời</td></tr>
+        <tr><td>Tựu trường</td><td>Tháng 8</td><td>Giữa tháng 6</td><td>Đầu tháng 6</td><td>Quà giáo viên, đồ học sinh</td></tr>
+        <tr><td>Halloween</td><td>31/10</td><td>Đầu tháng 9</td><td>Giữa tháng 8</td><td>Áo, đồ trang trí, đồ thú cưng</td></tr>
+        <tr><td>Lễ Tạ ơn, Black Friday</td><td>25–26/11/2027</td><td>Đầu tháng 10</td><td>Giữa tháng 9</td><td>Đồ bàn ăn, quà gia đình</td></tr>
+        <tr><td>Quanh năm</td><td>Bất kỳ</td><td colspan="3">Nghỉ hưu, sinh nhật, đám cưới, sinh em bé, tân gia, tưởng niệm thú cưng: tốt cho tháng thấp điểm, ít phụ thuộc mùa</td></tr>
+      </tbody></table></div>
+    <p class="src">Quy tắc: lên listing Etsy khoảng 6–8 tuần trước dịp để kịp có lượt xem và review đầu; chạy quảng cáo 3–4 tuần trước; hàng vật lý cần thêm 3–4 tuần cho mẫu và nguồn. Ngày của các dịp thay đổi theo năm: kiểm lại trước khi đặt lịch.</p>
+  </div>
+
+  <div class="sub" id="cs-concept">
+    <div class="tagline">Skillset · nhánh A · POD thắng nhờ concept, không nhờ mockup</div>
+    <h3>Giải phẫu một concept thiết kế, rồi làm 10 biến thể của riêng mình</h3>
+    <ol class="anat">
+      <li class="a1"><div><h4>1 · Kiểu concept</h4><p class="q">Thiết kế này thuộc loại nào?</p></div><div class="els">Câu đùa trong nghề; tuyên ngôn tự hào ("proud…"); cá nhân hóa tên, ngày, ảnh; kỷ niệm, ký ức; câu chơi chữ; hoa văn, thẩm mỹ thuần.</div><div class="ex"><b>Ghi lại</b>Kiểu nào đang thắng trong ngách của bạn: đếm 10 listing trang 1.</div></li>
+      <li class="a2"><div><h4>2 · Ai nói, nói với ai</h4><p class="q">Câu chữ là giọng của người mua hay người nhận?</p></div><div class="els">"Best Mom Ever" là giọng người mua. "Retired, not my problem anymore" là giọng người nhận. Hai giọng hợp hai kiểu ảnh khác nhau.</div><div class="ex"><b>Ghi lại</b>Một câu: concept này giúp người mua nói điều gì với người nhận?</div></li>
+      <li class="a3"><div><h4>3 · Cái gì làm nó cụ thể</h4><p class="q">Chi tiết nào khiến khách thấy "đúng là mình"?</p></div><div class="els">Thuật ngữ nghề, năm, số năm công tác, tên thú cưng, tọa độ nơi gặp nhau. Cụ thể bán tốt hơn chung chung.</div><div class="ex"><b>Ghi lại</b>3 chi tiết cụ thể bạn có thể đổi.</div></li>
+      <li class="a4"><div><h4>4 · Biến đổi 3 trục</h4><p class="q">Giữ cơ chế, đổi nội dung</p></div><div class="els">Đổi người nhận (điều dưỡng → dược sĩ), đổi dịp (nghỉ hưu → tốt nghiệp), đổi món (áo → ornament). 1 concept × 3 trục cho ít nhất 10 biến thể.</div><div class="ex"><b>Không được</b>Giữ nguyên câu chữ, bố cục, hình vẽ của người khác. Học cơ chế, không chép biểu hiện.</div></li>
+    </ol>
+  </div>
+
+  <div class="sub" id="cs-ip">
+    <div class="tagline">Bước bắt buộc · 5 phút cho mỗi ứng viên · cả hai nhánh</div>
+    <h3>Kiểm nhãn hiệu trước khi bỏ một đồng nào</h3>
+    <ol class="steps">
+      <li><div><b>Gõ từng cụm chữ chính</b> (câu slogan, tên sản phẩm) vào công cụ tra nhãn hiệu của USPTO. Có bản ghi đang hiệu lực cho đúng nhóm hàng (áo, cốc, đồ trang trí) thì bỏ hoặc viết lại.</div></li>
+      <li><div><b>Danh sách đỏ, không cần tra:</b> tên đội thể thao, giải đấu, trường đại học, quân đội Mỹ, nhân vật phim và hoạt hình, ban nhạc, ca sĩ, thương hiệu, tên game, câu thoại phim nổi tiếng.</div></li>
+      <li><div><b>Hàng vật lý tra thêm bằng sáng chế</b> trên Google Patents cho hình dáng và cơ chế của món, nhất là món lấy ý tưởng từ Kickstarter.</div></li>
+      <li><div><b>Ghi kết quả vào tab 4c</b>: "đã tra USPTO ngày ___, không thấy bản ghi trùng". Người kiểm tra sau (Mentor, sàn) cần thấy bạn đã làm.</div></li>
+    </ol>
+    <p class="verdict warn">Một lần vi phạm nhãn hiệu có thể làm mất shop Etsy hoặc tài khoản quảng cáo, kéo theo mọi listing tốt khác. Bước này rẻ nhất trong cả khóa.</p>
+  </div>
+
+  <div class="sub" id="cs-thang">
+    <div class="tagline">Sau khi lên bán · thế nào là "thắng"</div>
+    <h3>Thắng, sửa hay bỏ: quyết định bằng mốc, không bằng cảm giác</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Kênh, giai đoạn</th><th>Chưa đủ dữ liệu</th><th>Sửa</th><th>Bỏ hoặc đổi góc</th><th>Giữ và mở rộng</th></tr></thead>
+      <tbody>
+        <tr><td>Etsy, từng listing</td><td>Dưới khoảng 300 lượt xem hoặc dưới 14 ngày</td><td>Có lượt hiển thị mà ít bấm: sửa ảnh đầu, giá. Có bấm, có favorite mà không đơn: sửa ảnh 2–5, phí ship, hạn giao</td><td>Sau 2 lần sửa và khoảng 600 lượt xem vẫn không favorite, không đơn</td><td>Có đơn hoặc favorite đều: làm 3–5 biến thể cùng khách, bật Etsy Ads nhỏ</td></tr>
+        <tr><td>Meta Ads, từng mẫu</td><td>Chưa tiêu hết khoảng một lần CAC tối đa</td><td>CTR link dưới khoảng 1%: đổi 3 giây đầu. Bấm nhiều mà thêm giỏ dưới khoảng 5% số lượt bấm: sửa trang, giá</td><td>Đã tiêu khoảng một lần CAC tối đa mà 0 đơn và ít thêm giỏ</td><td>CPA dưới khoảng 70% CAC tối đa trong 3 ngày: tăng ngân sách 20–30%</td></tr>
+        <tr><td>Cả sản phẩm, sau 4 tuần</td><td></td><td>Có tín hiệu (favorite, thêm giỏ) nhưng lãi mỏng: nâng giá trị đơn bằng bộ, cá nhân hóa</td><td>Mọi kênh đều không có tín hiệu: về ma trận ý tưởng, giữ ngách, đổi món</td><td>Có đơn, lãi dương: nhân bản theo một trục (biến thể, dịp mới, kênh thứ hai)</td></tr>
+      </tbody></table></div>
+    <p class="src">Các mốc là ngưỡng thực chiến để ra quyết định cho người mới, không phải số chuẩn do Etsy hay Meta công bố. Mentor có thể chỉnh theo giá bán và ngân sách của bạn.</p>
+  </div>
+
+  <div class="sub" id="cs-bai-tap">
+    <div class="tagline">Bài tập hiệu chỉnh mắt · 20 phút · làm trước buổi 1:1 thứ 5</div>
+    <h3>Mười ứng viên: tự chấm Đi tiếp, Sửa hay Loại, rồi mở đáp án</h3>
+    <p class="prose">Ghi quyết định và một lý do cho từng ứng viên trước khi mở. Lệch với đáp án từ 3 câu trở lên thì đọc lại 8 nguyên tắc và bộ lọc của nhánh mình.</p>
+    <div class="ask">
+      <details><summary>1 · Áo "Proud Army Mom" in logo quân đội, bán quanh năm</summary><div class="a"><p><b>Loại.</b> Tên và biểu tượng của quân đội Mỹ là nhãn hiệu được cấp phép. Nhu cầu "mẹ có con đi lính" là thật: giữ người nhận, bỏ chữ và hình được bảo hộ, viết concept của riêng bạn rồi tra USPTO.</p></div></details>
+      <details><summary>2 · Cốc in câu đùa nghề y tá rất phổ biến, giá 15 USD</summary><div class="a"><p><b>Sửa.</b> Ngách tốt nhưng trang 1 có hàng nghìn listing cùng câu, và câu phổ biến dễ trùng nhãn hiệu. Cá nhân hóa (tên, khoa, năm tốt nghiệp), chọn dịp cụ thể (tuần điều dưỡng tháng 5, tốt nghiệp), nâng giá lên 22–28 USD.</p></div></details>
+      <details><summary>3 · Ornament "Our first Christmas in our new home", khắc tên và năm 2026, lên bán 1/11</summary><div class="a"><p><b>Đi tiếp.</b> Người mua rõ, dịp rõ, cá nhân hóa tự nhiên, kịp cửa sổ Giáng sinh. Kiểm hạn giao của nhà in và ghi rõ trên listing.</p></div></details>
+      <details><summary>4 · Chăn in ảnh thú cưng đã mất, giá 65 USD</summary><div class="a"><p><b>Đi tiếp, có điều kiện.</b> Cảm xúc cao, giá trị đơn cao, quanh năm. Điều kiện: quy trình duyệt ảnh khách gửi (độ phân giải, cắt nền) và gửi bản xem trước trước khi in; không có quy trình thì đơn lỗi ăn hết lãi.</p></div></details>
+      <details><summary>5 · Áo fan một đội NFL với tên cầu thủ</summary><div class="a"><p><b>Loại.</b> Tên đội, giải và cầu thủ đều được bảo hộ. Không có cách "sửa" an toàn ngoài bỏ hẳn.</p></div></details>
+      <details><summary>6 · Máy massage cổ cầm tay có pin sạc, top TikTok Shop</summary><div class="a"><p><b>Loại với người mới.</b> Pin lithium hạn chế vận chuyển, dễ bị giữ ở hải quan, quảng cáo về sức khỏe dễ bị Meta hạn chế, bảo hành phức tạp. Top TikTok cho biết có nhu cầu, không cho biết chỗ của bạn.</p></div></details>
+      <details><summary>7 · Bộ khay tre gấp phẳng khắc tên, xưởng ở Việt Nam, giá 42 USD</summary><div class="a"><p><b>Đi tiếp.</b> Khác biệt nhìn thấy được (chất liệu, khắc tên), nhẹ, gấp phẳng nên cước thấp, nguồn Việt Nam không có lớp thuế riêng như hàng Trung Quốc. Kiểm lớp phủ nếu dùng đựng đồ ăn, ghi nhãn "Made in Vietnam".</p></div></details>
+      <details><summary>8 · Đồ chơi gỗ xếp hình cho bé 1–3 tuổi</summary><div class="a"><p><b>Loại với người mới.</b> Đồ cho trẻ dưới 12 tuổi cần thử nghiệm ở phòng lab được CPSC công nhận và giấy chứng nhận CPC. Để dành khi đã có vốn và quy trình.</p></div></details>
+      <details><summary>9 · Giỏ cói đựng đồ chơi cỡ lớn 50 cm, giá 39 USD</summary><div class="a"><p><b>Sửa.</b> Ý tưởng tốt nhưng hộp lớn làm cước thể tích và ship nội địa Mỹ ăn hết lãi. Đổi sang bộ giỏ lồng nhau hoặc gấp phẳng, hoặc nâng giá trị đơn bằng bộ 3 cỡ.</p></div></details>
+      <details><summary>10 · Đèn lồng lụa Hội An bộ 3, kèm bóng đèn và dây điện</summary><div class="a"><p><b>Sửa.</b> Câu chuyện xuất xứ mạnh, gấp gọn được. Nhưng phần điện cần chứng nhận an toàn ở Mỹ: bán chỉ phần lồng (khách dùng đèn dây có sẵn), ghi rõ trên trang, đóng gói chống bẹp.</p></div></details>
+    </div>
+  </div>
+
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Trước khi nộp 3 ứng viên</h3></div>
+    <ol><li>Mình gọi được tên nhóm người, không chỉ tên món?</li><li>Người bấm mua là ai, và ảnh đầu nói với người đó chưa?</li><li>Dịp của món này còn cửa sổ, hay mình đang chạy theo?</li><li>Mình đã tra USPTO và ghi ngày tra chưa?</li><li>Nếu món này thắng, 10 biến thể tiếp theo là gì?</li></ol>
+  </div>
+</section>
+<section id="nguoi-mua">
+  <div class="sec-head">
+    <div class="eyebrow">Trước bản đồ ngách · SOP-K · khoảng 30 phút mỗi ý tưởng</div>
+    <h2>Tìm người mua trước khi tìm sản phẩm</h2>
+  </div>
+  <p class="prose">Hầu hết học viên đến lớp với một nhóm người và một món hàng: "y tá, áo in ống nghe", "giáo viên, cốc", "người nuôi chó, móc khóa". Thứ bị bỏ trống là phần ở giữa: <b>ai cụ thể trả tiền, vào lúc nào, thay cho thứ gì, và vì sao chọn bạn</b>. SOP này lấp phần ở giữa bằng 23 câu hỏi, chia 8 bước. Câu hỏi được viết để khó trả lời bằng cảm giác: câu nào cũng đòi một câu khách tự nói ra, có link.</p>
+
+  <div class="sub">
+    <div class="tagline">4 luật hỏi · áp dụng cho mọi câu bên dưới</div>
+    <h3>Hỏi về điều đã xảy ra, không hỏi ý kiến</h3>
+    <ol class="steps">
+      <li><div><b>Hỏi quá khứ, không hỏi tương lai.</b> "Lần gần nhất họ mua quà cho dịp này là gì, giá bao nhiêu?" cho bạn sự thật. "Họ có mua cái này không?" chỉ cho bạn lời khen lịch sự.</div></li>
+      <li><div><b>Mỗi câu trả lời cần một câu khách tự nói,</b> chép nguyên văn, có link và ngày. Câu bạn tự suy ra ghi là Giả định.</div></li>
+      <li><div><b>Nghe ở ít nhất 3 nơi khác nhau.</b> Nơi khách nói chuyện thật thường không phải nơi họ mua: review Etsy và Amazon, Reddit, bình luận TikTok, nhóm Facebook, Pinterest, bài viết của hiệp hội nghề.</div></li>
+      <li><div><b>Đi tìm một bằng chứng chống lại.</b> Câu trả lời nào làm ý tưởng yếu đi thì ghi trước tiên.</div></li>
+    </ol>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Câu hỏi tầm thường so với câu hỏi tốt</div>
+    <h3>Cùng một ý định, câu hỏi khác nhau cho kết quả khác nhau</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Câu hay được hỏi</th><th>Hỏi thế này thay vào</th><th>Vì sao</th></tr></thead>
+      <tbody>
+        <tr><td>Khách hàng mục tiêu của em là ai?</td><td>Ai rút thẻ trả tiền, và người đó có phải người dùng món này không?</td><td>"Khách hàng" gộp hai người có hai nỗi lo khác nhau</td></tr>
+        <tr><td>Ngách này có nhu cầu không?</td><td>Chuyện gì vừa xảy ra khiến người này bắt đầu tìm hôm nay, mà tuần trước họ chưa tìm?</td><td>Nhu cầu luôn có. Thứ tạo ra đơn hàng là một khoảnh khắc</td></tr>
+        <tr><td>Đối thủ của em là shop nào?</td><td>Nếu không mua của em, tối nay họ sẽ trả tiền cho thứ gì?</td><td>Đối thủ thật thường không bán trên Etsy: chai rượu, thẻ quà, hoặc không mua gì</td></tr>
+        <tr><td>Khách sẵn sàng trả bao nhiêu?</td><td>Lần gần nhất họ trả bao nhiêu cho thứ thay thế, bằng tiền túi hay tiền công việc?</td><td>Số đã trả là sự thật, số "sẵn sàng" là đoán</td></tr>
+        <tr><td>Thiết kế nào sẽ đẹp?</td><td>Họ dùng từ gì để nói về mình mà người ngoài không dùng? Biểu tượng nào người ngoài hay dùng mà họ thấy sáo?</td><td>Ống nghe là cách người ngoài nhìn y tá; y tá nói về ca đêm và chuyên khoa</td></tr>
+        <tr><td>Em có làm được không?</td><td>Em làm được điều gì mà đa số shop trong ngách không làm vì tốn công?</td><td>Làm được chưa đủ. Phải làm được thứ người khác ngại làm</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">23 câu hỏi · 8 bước</div>
+    <h3>Bộ câu hỏi SOP-K</h3>
+    <p class="prose">Bản nhanh (khoảng 30 phút) làm cho 3 ý tưởng đứng đầu sau bộ lọc 6 câu, trước khi chấm song song: bắt buộc bước 0, 1, 2, 4, 5. Bản đầy đủ làm cho ngách được chọn, ngay trước cổng C. Ghi câu trả lời ở tab "Người mua" của Opportunity Engine.</p>
+    <div class="tbl"><table class="sopk">
+      <thead><tr><th>#</th><th>Câu hỏi</th><th>Vì sao câu này quan trọng</th><th>Tìm câu trả lời ở đâu</th><th>Trả lời đạt khi</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="5">Bước 0 · Viết giả định ra giấy</td></tr>
+        <tr><td>0.1</td><td>Viết một câu: [ai] sẽ trả [bao nhiêu] cho [món gì] vào [lúc nào], vì [lý do]. Ô nào bạn đang để trống hoặc đoán?</td><td>Ô trống chính là chỗ bạn sẽ mất tiền nếu không kiểm</td><td>Trong đầu bạn</td><td>Chỉ ra được ít nhất 2 ô đang là đoán</td></tr>
+        <tr><td>0.2</td><td>Ý tưởng này đến từ đâu: khách nói ra, thấy người khác bán, hay vì bạn làm được?</td><td>Ý tưởng đến từ người bán khác thường đến muộn và đông</td><td>Lịch sử của chính bạn</td><td>Nói thật nguồn; nếu không phải từ khách thì bước 1–3 phải bù</td></tr>
+        <tr class="grp"><td colspan="5">Bước 1 · Tách vai người mua</td></tr>
+        <tr><td>1.1</td><td>Ai rút thẻ trả tiền, ai dùng món này? Hai người có phải một không?</td><td>Người trả tiền đọc tiêu đề và ảnh; người dùng viết review sau này</td><td>Review Etsy, Amazon: "I bought this for…", "my husband got me…"</td><td>Có câu nguyên văn chỉ rõ ai trả tiền</td></tr>
+        <tr><td>1.2</td><td>Ngoài người bạn đang nghĩ, còn ai khác trả tiền cho đúng món này? Kể ít nhất 3.</td><td>Cùng một món, người trả tiền khác nhau thì giá, mùa và kênh khác nhau</td><td>Review, Reddit, bài viết của hiệp hội nghề</td><td>Có 3 người trả tiền, mỗi người một bằng chứng</td></tr>
+        <tr><td>1.3</td><td>Trong số đó, ai mua lặp lại nhiều lần trong năm?</td><td>Người mua lặp lại là cổng R3 có sẵn</td><td>Review có "again", "every year", "for all my clients"</td><td>Chỉ ra được người mua lặp lại, hoặc ghi rõ không có</td></tr>
+        <tr><td>1.4</td><td>Ai mua bằng ngân sách công việc thay vì tiền túi?</td><td>Tiền công việc ít nhạy giá hơn và mua theo lô</td><td>Nhóm nghề trên Reddit, Facebook; trang hiệp hội</td><td>Có hoặc không, kèm bằng chứng</td></tr>
+        <tr class="grp"><td colspan="5">Bước 2 · Khoảnh khắc · chọn một người trả tiền để đi tiếp</td></tr>
+        <tr><td>2.1</td><td>Chuyện gì vừa xảy ra trong đời họ khiến họ bắt đầu tìm hôm nay, mà tuần trước họ chưa tìm?</td><td>Khoảnh khắc quyết định cụm từ họ gõ và ảnh đầu bạn chụp</td><td>Gợi ý tìm kiếm, review nhắc dịp, Pinterest</td><td>Gọi tên được một sự kiện cụ thể, không phải "muốn mua quà"</td></tr>
+        <tr><td>2.2</td><td>Họ phải có món này trước ngày nào? Trễ một ngày thì món quà mất gì?</td><td>Hạn cứng quyết định thời gian làm, cách gửi và review 1 sao</td><td>Review chê giao trễ, câu hỏi gửi shop</td><td>Có hạn cụ thể và hậu quả khi trễ</td></tr>
+        <tr><td>2.3</td><td>Khoảnh khắc này xảy ra bao lâu một lần: một lần trong đời, mỗi năm, mỗi tuần?</td><td>Quyết định có khách quay lại hay mỗi đơn phải tìm khách mới</td><td>Google Trends 5 năm, lịch dịp lễ</td><td>Có tần suất và mùa cao điểm</td></tr>
+        <tr class="grp"><td colspan="5">Bước 3 · Bốn lực của quyết định mua</td></tr>
+        <tr><td>3.1</td><td>Đẩy: họ bực điều gì với cách đang làm?</td><td>Không có bực bội thì không có lý do đổi</td><td>Review 1–3 sao của món thay thế, Reddit</td><td>Câu nguyên văn chê cách cũ</td></tr>
+        <tr><td>3.2</td><td>Kéo: khi tặng hoặc dùng món mới, họ mong người nhận nói câu gì?</td><td>Câu người nhận nói chính là thông điệp của ảnh đầu</td><td>Review 5 sao: "she cried", "he loved it"</td><td>Câu nguyên văn về phản ứng của người nhận</td></tr>
+        <tr><td>3.3</td><td>Lo âu: điều gì làm họ ngập ngừng trước khi mua của một người lạ trên mạng?</td><td>Lo âu không được trả lời thì khách thêm giỏ rồi bỏ</td><td>Câu hỏi gửi shop, FAQ của đối thủ, review "but"</td><td>Có ít nhất 2 nỗi lo cụ thể</td></tr>
+        <tr><td>3.4</td><td>Thói quen: nếu không làm gì mới, họ sẽ quay về lựa chọn quen thuộc nào?</td><td>Thói quen là đối thủ lớn nhất của người mới</td><td>Reddit, nhóm Facebook: "I usually just…"</td><td>Gọi tên được lựa chọn quen thuộc</td></tr>
+        <tr class="grp"><td colspan="5">Bước 4 · Đối thủ thật</td></tr>
+        <tr><td>4.1</td><td>Kể 5 thứ họ đang trả tiền thay cho món của bạn, kể cả thứ không bán trên Etsy.</td><td>Bạn cạnh tranh với ngân sách của họ, không chỉ với shop khác</td><td>Reddit, bài viết hướng dẫn quà của hiệp hội</td><td>Có 5 thứ, ít nhất 2 thứ ngoài Etsy</td></tr>
+        <tr><td>4.2</td><td>Mỗi thứ thay thế thắng ở đâu (tiện, rẻ, an toàn) và thua ở đâu?</td><td>Chỗ nó thua là góc của bạn ở cổng A</td><td>Review chê, bình luận</td><td>Mỗi thứ có một điểm thua có bằng chứng</td></tr>
+        <tr><td>4.3</td><td>Có bao nhiêu người chọn "không mua gì"? Vì sao?</td><td>Nếu "không mua" là lựa chọn phổ biến, bạn phải cho họ lý do mới</td><td>Reddit, bình luận</td><td>Có câu nguyên văn của người không mua</td></tr>
+        <tr class="grp"><td colspan="5">Bước 5 · Tín hiệu tiền</td></tr>
+        <tr><td>5.1</td><td>Lần gần nhất họ trả bao nhiêu cho thứ thay thế?</td><td>Số đã trả là sự thật; số "sẵn sàng trả" là đoán</td><td>Reddit, giá trung vị của cụm từ trên Etsy</td><td>Có ít nhất 2 con số thật</td></tr>
+        <tr><td>5.2</td><td>Tiền túi hay tiền công việc? Có giới hạn nào không?</td><td>Cùng một món, hai túi tiền có hai mức giá</td><td>Nhóm nghề, bài viết hiệp hội</td><td>Ghi rõ túi tiền và giới hạn nếu có</td></tr>
+        <tr><td>5.3</td><td>Nếu giá của bạn gấp đôi thứ thay thế, họ cần thấy điều gì để vẫn chọn bạn?</td><td>Câu trả lời là điều ảnh và mô tả phải chứng minh</td><td>Review 5 sao của shop giá cao</td><td>Một điều cụ thể, kiểm được</td></tr>
+        <tr class="grp"><td colspan="5">Bước 6 · Ngôn ngữ của người trong cuộc</td></tr>
+        <tr><td>6.1</td><td>Họ gọi nhu cầu này bằng từ gì? Liệt kê 10 từ họ dùng mà người ngoài không dùng.</td><td>Từ của họ là tiêu đề và thẻ của bạn</td><td>Reddit, bình luận TikTok, gợi ý tìm kiếm</td><td>Có 10 từ, mỗi từ có nguồn</td></tr>
+        <tr><td>6.2</td><td>Biểu tượng nào người ngoài hay dùng cho nhóm này mà chính họ thấy sáo?</td><td>Thiết kế dùng biểu tượng sáo thì lẫn vào hàng nghìn listing</td><td>Đếm trên trang 1; đọc bình luận chê</td><td>Gọi tên được biểu tượng cần tránh</td></tr>
+        <tr class="grp"><td colspan="5">Bước 7 · Lợi thế của bạn</td></tr>
+        <tr><td>7.1</td><td>Bạn làm được điều gì mà đa số shop không làm vì tốn công?</td><td>Lợi thế thật thường là việc người khác ngại làm</td><td>So với 5 listing đầu trang 1</td><td>Một việc cụ thể, đo được</td></tr>
+        <tr><td>7.2</td><td>Nếu shop lớn nhất chép ý tưởng này tuần sau, bạn còn giữ được gì?</td><td>Giữ được quy trình, tay nghề hay khách cũ thì mới bền</td><td>Tự trả lời, rồi hỏi Mentor</td><td>Có ít nhất một thứ không chép được trong một tuần</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Đầu ra của SOP-K</div>
+    <h3>Thẻ người mua: một câu, mỗi ô có bằng chứng</h3>
+    <p class="tprev">[Người trả tiền] mua cho [người nhận] khi [khoảnh khắc], trước [hạn]. Họ muốn người nhận nói "[câu nguyên văn]". Hôm nay họ trả [số tiền] cho [thứ thay thế] và chê [điều gì]. Họ sợ [lo âu]. Họ gọi nó là [từ của họ].</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Kết luận</th><th>Khi nào</th><th>Làm tiếp</th></tr></thead>
+      <tbody>
+        <tr><td><span class="st ok">Đi tiếp</span></td><td>Đủ các ô, mỗi ô có ít nhất một câu nguyên văn; nghe ở ít nhất 3 nơi; có một bằng chứng chống lại đã ghi</td><td>Vào cổng C với đúng người trả tiền và khoảnh khắc này</td></tr>
+        <tr><td>Đổi người trả tiền</td><td>Người đang chọn trả quá ít (bước 5) hoặc không có khoảnh khắc rõ (bước 2)</td><td>Quay lại câu 1.2, chọn người trả tiền khác cho cùng món</td></tr>
+        <tr><td>Đổi khoảnh khắc</td><td>Khoảnh khắc quá chật hoặc dồn vào một dịp đã lỡ</td><td>Quay lại câu 2.1 với cùng người trả tiền</td></tr>
+        <tr><td>Loại</td><td>Không tìm được câu nguyên văn nào cho bước 1–3 sau 30 phút ở 3 nơi</td><td>Ghi bài học vào nhật ký, lấy ý tưởng kế tiếp</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Sau SOP-K</h3></div>
+    <ol><li>Thẻ người mua của mình có ô nào vẫn là điều mình muốn tin, chưa phải điều khách đã nói?</li><li>Nếu đưa thẻ này cho một người lạ, họ có hình dung ra đúng một người đang cầm điện thoại tìm món quà không?</li><li>Món hàng ban đầu của mình còn đúng không, hay khách vừa chỉ cho mình một món khác?</li></ol>
+    <p class="log"><b>Ghi vào nhật ký quyết định:</b> thẻ người mua, và một ô mình kém chắc nhất.</p>
+  </div>
+</section>
+<section id="case-nha">
+  <div class="sec-head">
+    <div class="eyebrow">Case study · SOP-K làm thật</div>
+    <h2>Từ "em vẽ đẹp" đến người mua tranh vẽ ngôi nhà</h2>
+  </div>
+  <p class="prose">Minh là học viên giả định: 27 tuổi, ở Đà Nẵng, vẽ minh họa bán thời gian, Cấp 1, khoảng 8 giờ mỗi tuần. Ý tưởng ban đầu: "Em vẽ đẹp, em muốn bán tranh vẽ theo yêu cầu trên Etsy." Nhân vật là giả định; mọi con số và câu trích bên dưới là thật, có link, xem ngày 15/10/2026. Case này cho thấy SOP-K làm được gì mà bản đồ ngách không làm được: <b>cùng một món hàng, đổi người trả tiền là đổi cả giá, mùa, kênh và khả năng khách quay lại.</b></p>
+
+  <div class="sub">
+    <div class="tagline">Bước 0 · giả định của Minh</div>
+    <h3>"Ai đó sẽ trả ? cho tranh vẽ ? vào lúc ?, vì ?"</h3>
+    <p class="prose">Minh chỉ điền được một ô: món hàng. Ý tưởng đến từ việc Minh làm được (câu 0.2), không đến từ khách. Ba ô còn lại là đoán, nên bước 1–3 phải làm kỹ.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Bước 1 · tách vai người mua</div>
+    <h3>Ai trả tiền cho một bức vẽ ngôi nhà? Ít nhất bốn người khác nhau</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Người trả tiền</th><th>Người nhận</th><th>Mua lặp lại?</th><th>Túi tiền</th></tr></thead>
+      <tbody>
+        <tr><td>Bạn bè, người thân</td><td>Người vừa nhận nhà mới</td><td>Hiếm</td><td>Tiền túi</td></tr>
+        <tr><td>Chủ nhà tự mua</td><td>Chính họ</td><td>Hiếm</td><td>Tiền túi</td></tr>
+        <tr><td>Con cái bán căn nhà cũ của bố mẹ</td><td>Cả gia đình, giữ kỷ niệm</td><td>Hiếm</td><td>Tiền túi</td></tr>
+        <tr><td>Môi giới bất động sản</td><td>Khách vừa nhận nhà qua tay họ</td><td>Có, mỗi lần giao nhà</td><td>Tiền công việc</td></tr>
+      </tbody></table></div>
+    <p class="prose">Câu 1.3 và 1.4 chỉ ra người đáng chú ý nhất: môi giới mua lặp lại và mua bằng tiền công việc. Hiệp hội môi giới Mỹ (NAR) có hẳn một bài về quà giao nhà cá nhân hóa, trong đó tranh màu nước vẽ ngôi nhà có giá từ $39,95, kèm lời một môi giới: <i>"It has to be personal to create a memorable experience."</i></p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Bước 2 và 5 · khoảnh khắc và tín hiệu tiền trên Etsy</div>
+    <h3>Người tặng quà tìm trên Etsy; môi giới gần như không</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Cụm khách gõ</th><th>Người trả tiền</th><th>Lượt tìm mỗi tháng</th><th>Listing cạnh tranh</th><th>Lượt tìm / 1.000 listing</th><th>Giá trung vị</th></tr></thead>
+      <tbody>
+        <tr><td><code>house sketch</code></td><td>Người tặng quà, chủ nhà</td><td class="n">12.100</td><td class="n">61.017</td><td class="n">198</td><td class="n">$47,88</td></tr>
+        <tr><td><code>housewarming gift</code></td><td>Người tặng quà</td><td class="n">246.000</td><td class="n">2.559.176</td><td class="n">96</td><td class="n">$32,47</td></tr>
+        <tr><td><code>realtor gift</code></td><td>Người tặng quà cho môi giới</td><td class="n">3.600</td><td class="n">79.124</td><td class="n">45</td><td class="n">$15,00</td></tr>
+        <tr><td><code>closing gift</code></td><td>Môi giới</td><td class="n">khoảng 660</td><td class="n">92.512</td><td class="n">7</td><td>chưa có số</td></tr>
+      </tbody></table></div>
+    <p class="prose">Hai phát hiện. Thứ nhất, <code>house sketch</code> có tỷ lệ lượt tìm trên listing cao nhất trong mọi cụm khóa học đã đo, và giá trung vị gần $48: người tặng quà tân gia đang tìm đúng món Minh làm được. Thứ hai, môi giới gần như không tìm <code>closing gift</code> trên Etsy. Nơi khách mua không phải lúc nào cũng là nơi khách nói chuyện, và với môi giới thì nơi đó là các nhóm nghề.</p>
+    <p class="src">Số liệu ước tính của RankHero, xem ngày 15/10/2026; chỉ dùng để so các cụm với nhau. <code>realtor gift</code> phần lớn là khách mua quà cho môi giới, giá thấp: không phải người Minh cần.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Bước 3 và 4 · môi giới đang trả tiền cho thứ gì, và chê gì</div>
+    <h3>Đối thủ thật của Minh là chai rượu và thẻ quà, không phải shop vẽ khác</h3>
+    <p class="prose">Một môi giới mới hỏi trên Reddit r/realtors (khoảng cuối tháng 10/2025) rằng mọi người chi bao nhiêu cho quà giao nhà. Các câu trả lời là bản đồ đối thủ thật:</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Lực</th><th>Câu nguyên văn</th><th>Đọc thế nào</th></tr></thead>
+      <tbody>
+        <tr><td>Thói quen</td><td><i>"A bottle of wine and a congratulations card."</i> · <i>"Each side got a $100 gift card and I brought mimosas and donuts."</i></td><td>Lựa chọn quen thuộc: rượu, thẻ quà</td></tr>
+        <tr><td>Thói quen, giá cao</td><td><i>"I usually gift a Dyson vacuum, hair dryer, fan, Breville coffee maker, or combo of the above."</i></td><td>Có người chi cho đồ gia dụng đắt tiền</td></tr>
+        <tr><td>Tiền</td><td><i>"I will spend about 5% of my commission on a gift."</i> · <i>"I plan to spend 200 - 300 on gifts per client"</i> · <i>"$0"</i></td><td>Ngân sách rất rộng; phần lớn trên giá trung vị $48 của một bức vẽ</td></tr>
+        <tr><td>Đẩy</td><td><i>"Don't be that agent who buys wine."</i></td><td>Chính môi giới chê lựa chọn quen thuộc là dễ quên</td></tr>
+        <tr><td>Kéo</td><td><i>"Get your clients something they will use and something they'll have for a long time."</i></td><td>Thứ treo trong nhà nhiều năm thắng chai rượu ở đúng điểm này</td></tr>
+        <tr><td>Bằng chứng chống lại</td><td><i>"As a customer, a gift is completely irrelevant."</i> · <i>"The gift thing got WAY out of hand."</i></td><td>Không phải môi giới nào cũng tin vào quà. Minh không nên nhắm mọi môi giới</td></tr>
+      </tbody></table></div>
+    <p class="prose">Bài tổng hợp quà giao nhà năm 2026 của Luxury Presence nói thêm điều môi giới thật sự mua: <i>"A well-chosen closing gift can directly lead to referrals and repeat business"</i>, và quà cá nhân hóa <i>"tend to stay in the home for years"</i>. Môi giới không mua một bức tranh; họ mua việc được khách nhớ tới khi có người quen cần mua nhà. Các bài về quà "pop-by" và quà kỷ niệm một năm nhận nhà cho thấy họ còn tặng quà cho khách cũ sau ngày giao nhà: một khoảnh khắc thứ hai, lặp lại mỗi năm.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Bước 3.3, 6 và 7 · lo âu, ngôn ngữ, lợi thế</div>
+    <h3>Ba điều Minh phải giải quyết trước khi vẽ nét đầu tiên</h3>
+    <div class="mentor">
+      <div class="box"><h3>Lo âu cần trả lời trong listing</h3><ul>
+        <li>Vẽ sai chi tiết ngôi nhà: gửi bản phác để khách duyệt trước khi in</li>
+        <li>Không kịp ngày nhận nhà hoặc ngày tân gia: ghi rõ số ngày vẽ, số ngày in và gửi</li>
+        <li>Ảnh nguồn: chỉ vẽ từ ảnh khách gửi, không lấy ảnh trên mạng hay ảnh bản đồ đường phố</li></ul></div>
+      <div class="box"><h3>Ngôn ngữ và lợi thế</h3><ul>
+        <li>Từ của khách: <code>house sketch</code>, <code>first home</code>, <code>housewarming</code>, <code>closing gift</code>, <code>past clients</code></li>
+        <li>Biểu tượng sáo cần tránh: hình ngôi nhà chung chung kèm chìa khóa, chữ "Home Sweet Home"</li>
+        <li>Lợi thế của Minh: vẽ tay từng nhà, duyệt bản phác trong 48 giờ. Shop lớn chép được ý tưởng, nhưng khó chép tốc độ và độ kỹ khi phải vẽ tay từng đơn</li></ul></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Kết quả · thẻ người mua của Minh</div>
+    <h3>Bắt đầu với người tặng quà tân gia; để môi giới là bước hai</h3>
+    <p class="tprev">Bạn bè và người thân mua cho người vừa nhận nhà, trong vài tuần sau ngày nhận nhà hoặc trước tiệc tân gia. Họ muốn người nhận nói "đúng là nhà mình". Hôm nay họ chọn rượu, cây, thẻ quà và chê quà dễ quên. Họ sợ bản vẽ sai chi tiết và giao trễ. Họ gõ "house sketch", "first home gift".</p>
+    <ol class="steps">
+      <li><div><b>Vì sao không bắt đầu ngay với môi giới:</b> họ ít tìm trên Etsy, cần thấy ảnh thật và đánh giá thật trước khi đặt cho khách của mình. Mười đơn đầu từ người tặng quà chính là bằng chứng Minh mang đến môi giới sau này.</div></li>
+      <li><div><b>Đã loại:</b> <code>realtor gift</code> giá trung vị $15, không qua được cổng R với tranh in; tranh chân dung người, vì quá rộng và Minh chưa có góc riêng.</div></li>
+      <li><div><b>Mang sang cổng C:</b> hạt giống <code>house sketch from photo</code>, <code>first home gift</code>, <code>house portrait</code>; gắn nhãn review của 2–3 listing vẽ nhà bán chạy, chú ý lời chê về chi tiết sai và thời gian giao.</div></li>
+      <li><div><b>Kiểm ở cổng R:</b> giờ vẽ mỗi đơn là giá vốn thật. 8 giờ mỗi tuần giới hạn số đơn mỗi tuần; công vẽ phải có trong bảng lãi.</div></li>
+      <li><div><b>Bước hai, sau cổng 90:</b> khi đã có ít nhất 10 đơn và ảnh khách treo tranh, thử gói cho môi giới (vẽ nhà cho khách giao nhà và quà kỷ niệm một năm nhận nhà) ở nơi họ trò chuyện, theo đúng luật của từng nhóm.</div></li>
+    </ol>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Năm bài học dùng được cho mọi ngách</div>
+    <h3>Điều case này dạy, kể cả khi bạn không vẽ</h3>
+    <ol class="steps">
+      <li><div><b>Món hàng không phải ngách.</b> "Tranh vẽ" có ít nhất 4 người trả tiền, mỗi người một mức giá và một mùa.</div></li>
+      <li><div><b>Người mua lặp lại thường không phải người mua đầu tiên.</b> Chọn người dễ tiếp cận để có 10 đơn, rồi dùng bằng chứng đó để đến với người mua lặp lại.</div></li>
+      <li><div><b>Đối thủ thật nằm ngoài sàn.</b> Minh cạnh tranh với chai rượu và thẻ quà $100 nhiều hơn với shop vẽ khác.</div></li>
+      <li><div><b>Nơi khách nói khác nơi khách mua.</b> Môi giới nói chuyện trong nhóm nghề, người tặng quà tìm trên Etsy.</div></li>
+      <li><div><b>Bằng chứng chống lại làm thẻ người mua sắc hơn.</b> Câu "a gift is completely irrelevant" khiến Minh bỏ ý định nhắm mọi môi giới.</div></li>
+    </ol>
+  </div>
+
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Áp vào ý tưởng của bạn</h3></div>
+    <ol><li>Món hàng của mình có những ai trả tiền? Mình đã kể đủ 4 người chưa?</li><li>Ai trong số đó mua lặp lại, và mình cần bằng chứng gì để đến được với họ?</li><li>Khách của mình đang trả tiền cho thứ gì ngoài Etsy?</li></ol>
+    <p class="log"><b>Ghi vào nhật ký quyết định:</b> người trả tiền mình chọn trước, và người mình để dành cho bước hai.</p>
+  </div>
+  <p class="src">Nguồn: <a href="https://reddit.sentinel-team.org/posts/1srvra7/snapshots/2026-04-22T08%3A00%3A56.74412Z">r/realtors, bản lưu ngày 22/04/2026</a>; <a href="https://www.nar.realtor/news/real-estate-news/sales-marketing/10-clever-ideas-for-personalized-closing-gifts">NAR, 10 Clever Ideas for Personalized Closing Gifts (19/09/2023)</a>; <a href="https://www.luxurypresence.com/blogs/best-realtor-closing-gifts/">Luxury Presence, Best Real Estate Closing Gifts of 2026</a>; <a href="https://agentfire.com/pop-by-ideas-for-realtors-the-joy-and-benefits-of-giving">AgentFire, pop-by ideas</a>; <a href="https://blog.embracehomeloans.com/8-client-gifts-for-their-first-home-anniversary/">Embrace Home Loans, quà kỷ niệm một năm nhận nhà</a>; RankHero: <a href="https://www.rankhero.com/keywords/house-sketch">house sketch</a>, <a href="https://www.rankhero.com/keywords/housewarming-gift">housewarming gift</a>, <a href="https://www.rankhero.com/keywords/realtor-gift">realtor gift</a>, <a href="https://www.rankhero.com/keywords/closing-gift">closing gift</a>.</p>
+</section>
+<section id="ngach">
+  <div class="sec-head">
+    <div class="eyebrow">Trước cổng C</div>
+    <h2>Bản đồ ngách: bắt đầu từ đâu cho khỏi mò</h2>
+  </div>
+  <p class="prose">Không có danh sách ngách "chắc chắn thắng". Danh sách như vậy, nếu có, thì hàng nghìn người khác cũng đang dùng. Thứ bạn cần là <b>một bản đồ điểm xuất phát</b> và một bộ lọc nhanh, để chọn 3–5 ngách đáng đưa qua 5 cổng. Ngách đáng đầu tư là ngách qua được cổng R, không phải ngách nghe hay.</p>
+
+  <div class="sub" id="danh-muc">
+    <div class="tagline">Định hướng · tiền đang ở đâu theo báo cáo của chính các nền tảng</div>
+    <h3>Danh mục dẫn đầu là biển lớn, không phải ngách. Dùng nó để biết bơi ở vùng biển nào</h3>
+    <p class="prose">Các nền tảng công bố danh mục, không công bố ngách. Danh mục dẫn đầu cho bạn biết người mua đang tiêu tiền ở đâu; nó không cho biết người mới vào được chỗ nào. Cách dùng đúng: chọn một danh mục lớn, rồi đi xuống bằng một khoảnh khắc và cá nhân hóa, theo SOP-K.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Nền tảng</th><th>Dẫn đầu</th><th>Đang tăng</th><th>Loại số liệu</th><th>Đọc cho người mới</th></tr></thead>
+      <tbody>
+        <tr><td>Etsy</td><td>6 danh mục chiếm 85% doanh số năm 2025 (khoảng 8,9 tỷ USD): nhà cửa và đời sống; trang sức và phụ kiện; quần áo; nguyên liệu thủ công; giấy và đồ tiệc; đồ chơi và trò chơi. Hàng làm theo yêu cầu chiếm khoảng 30% doanh số; 74% doanh số từ người mua ở Mỹ</td><td>Quý 2/2026: quà sinh nhật và đám cưới tăng hai chữ số; đồ chơi tăng mạnh; đồ vintage tăng nhanh nhất từ đầu năm; Mother's Day, Father's Day, tốt nghiệp đều tăng</td><td>Doanh số thật, báo cáo nộp cơ quan chứng khoán Mỹ</td><td>Cá nhân hóa là thế mạnh riêng của Etsy, đúng với hướng của khóa học</td></tr>
+        <tr><td>Amazon</td><td>Tỷ lệ người bán có hàng trong danh mục: nhà và bếp 35%, làm đẹp 26%, quần áo giày và trang sức 20%, đồ chơi 18%, sức khỏe và gia dụng 17%</td><td>—</td><td>Khảo sát người bán của Jungle Scout, không phải doanh số</td><td>Danh mục đông người bán nhất cũng là nơi chật nhất</td></tr>
+        <tr><td>TikTok Shop Mỹ</td><td>Tổng doanh số 15,1 tỷ USD năm 2025, tăng 68%. Lớn nhất: làm đẹp và chăm sóc cá nhân; tiếp theo thời trang nữ và đồ lót; thể thao và ngoài trời</td><td>Thời trang trẻ em, mẹ và bé, thời trang Hồi giáo (từ nền nhỏ). Bán qua video 50%, tab Shop 36%, livestream 14%</td><td>Xếp hạng của Momentum Works và Tabcut, không công bố tỷ trọng</td><td>Danh mục lớn nhất là mỹ phẩm: cần tuân thủ riêng, nằm ngoài phạm vi người mới</td></tr>
+        <tr><td>eBay</td><td>Danh mục trọng tâm: phụ tùng xe, đồ sưu tầm, hàng tân trang, hàng hiệu đã kiểm định</td><td>—</td><td>Chiến lược công bố trong báo cáo năm, không kèm số</td><td>Không hợp hàng POD và cá nhân hóa; dùng eBay để đọc giá bán thật</td></tr>
+        <tr><td>Shopify</td><td>Không công bố số theo danh mục</td><td>—</td><td>—</td><td>Danh sách "sản phẩm Shopify bán chạy" trên mạng phần lớn là blog quảng cáo: không dùng làm bằng chứng</td></tr>
+      </tbody></table></div>
+
+    <h3>Từ danh mục lớn của Etsy xuống khoảnh khắc người mới vào được</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Danh mục</th><th>Khoảnh khắc hợp với người mới</th><th>Ví dụ đi xuống</th><th>Cần biết trước</th></tr></thead>
+      <tbody>
+        <tr><td>Nhà cửa và đời sống</td><td>Nhà mới, kỷ niệm năm cưới, tưởng niệm</td><td>Tranh vẽ ngôi nhà (case của Minh), poster địa chỉ, ornament năm đầu</td><td>Hàng to và nặng: tính cước trước</td></tr>
+        <tr><td>Trang sức và phụ kiện</td><td>Mẹ, bà có thêm cháu; kỷ niệm; tốt nghiệp</td><td>Dây chuyền thêm đá cho mẹ (ví dụ xuyên suốt của sổ tay)</td><td>Ảnh đúng kích thước thật; trang sức trẻ em có giới hạn chì, cadmium</td></tr>
+        <tr><td>Quần áo</td><td>Sự kiện của một nhóm: tiệc độc thân, họp mặt gia đình, đội nhóm; nghề gắn với khoảnh khắc (nghỉ hưu)</td><td>Áo nhóm có tên và ngày sự kiện</td><td>Rủi ro nhãn hiệu cao nhất: câu nói, nhân vật, đội thể thao</td></tr>
+        <tr><td>Giấy và đồ tiệc</td><td>Đám cưới, sinh nhật, tiệc chia tay (đang tăng hai chữ số)</td><td>Bảng chào mừng tiệc cưới, thiệp và đồ tiệc có tên</td><td>Thiệp sinh nhật in nhân vật hoạt hình là vi phạm nhãn hiệu, dù tìm kiếm rất nhiều</td></tr>
+        <tr><td>Nguyên liệu thủ công</td><td>Người làm đồ thủ công tìm nguyên liệu đẹp, ổn định</td><td>Nguyên liệu có nguồn gốc Việt Nam, nếu bạn có nguồn</td><td>Không hợp POD; cạnh tranh bằng giá và nguồn hàng</td></tr>
+        <tr><td>Đồ chơi và trò chơi</td><td>Trò chơi cho người lớn trong tiệc (đố vui đám cưới, tiệc độc thân)</td><td>Bộ trò chơi in có tên cặp đôi</td><td>Đồ cho trẻ 12 tuổi trở xuống cần chứng nhận CPSIA: không hợp Cấp 1</td></tr>
+      </tbody></table></div>
+    <p class="src">Nguồn: <a href="https://www.sec.gov/Archives/edgar/data/1370637/000137063726000019/etsy-20251231.htm">Etsy, báo cáo năm 2025</a>; <a href="https://www.sec.gov/Archives/edgar/data/0001370637/000137063726000079/q226shareholderletter.htm">Etsy, thư cổ đông quý 2/2026</a>; <a href="https://www.junglescout.com/resources/articles/amazon-product-categories/">Jungle Scout, danh mục Amazon</a>; <a href="https://thelowdown.momentum.asia/new-report-tiktok-shop-u-s-gmv-grew-68-to-reach-us15-1b-in-2025/">Momentum Works, TikTok Shop Mỹ 2025</a>; <a href="https://www.sec.gov/Archives/edgar/data/1065088/000106508826000027/ebay-20251231.htm">eBay, báo cáo năm 2025</a>; <a href="https://help.erank.com/blog/top-keywords-on-etsy-june-2026/">eRank, từ khóa Etsy tháng 6/2026</a>. Xem ngày 15/10/2026; cập nhật mỗi khóa.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Bước 1 · đổ đầy phễu · 60 phút</div>
+    <h3>Gom 20 ý tưởng trước khi chấm bất cứ ý tưởng nào</h3>
+    <p class="prose">Người mới thường chấm ý tưởng đầu tiên nghĩ ra rồi dừng. Seller giỏi gom nhiều ý tưởng trước, rồi mới lọc, vì ý tưởng thứ 15 thường tốt hơn ý tưởng thứ nhất. Mỗi ý tưởng ghi một dòng: khách là ai, dịp nào, sản phẩm gì, lấy từ nguồn nào.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Nguồn</th><th>Tìm gì ở đó</th></tr></thead>
+      <tbody>
+        <tr><td><b>Etsy</b></td><td>Nhãn Bestseller và Popular now trong danh mục bạn làm được; gợi ý tìm kiếm; mục quà tặng theo dịp</td></tr>
+        <tr><td><b>Review của đối thủ</b></td><td>Câu "I wish…", "only problem…", "would buy again if…": mỗi câu là một ý tưởng sản phẩm</td></tr>
+        <tr><td><b>Amazon</b></td><td>Best Sellers và Movers &amp; Shakers trong Handmade, Home, Gifts: thứ gì đang tăng nhanh</td></tr>
+        <tr><td><b>Google Trends, Pinterest Trends</b></td><td>Đường xu hướng 5 năm: lặp lại theo mùa, đang lên đều, hay vừa vọt lên rồi tắt</td></tr>
+        <tr><td><b>TikTok Creative Center</b></td><td>Sản phẩm và chủ đề đang được quảng cáo nhiều ở Mỹ (hữu ích nhất cho đường Shopify)</td></tr>
+        <tr><td><b>Năng lực sẵn có của bạn</b></td><td>Xưởng quen, làng nghề, tay nghề: bắt đầu từ thứ bạn làm tốt rồi tìm khách cần nó. Đây là lợi thế thật của seller Việt Nam</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Công thức hạt giống</div>
+    <h3>Một ngách tốt cho người mới thường ghép đủ 4 phần</h3>
+    <div class="formula"><b>Người nhận</b> (mẹ, bà, cô dâu, y tá) × <b>Dịp</b> (Mother's Day, cưới, em bé mới, tưởng niệm) × <b>Loại sản phẩm</b> bạn làm được × <b>Cá nhân hóa</b> (tên, ngày, ảnh, đá tháng sinh)</div>
+    <p class="prose">Càng ghép đủ, khách càng ít so giá với hàng đại trà, vì không ai bán đúng món đó sẵn. Ví dụ trong sổ này: <i>mẹ</i> × <i>gia đình có thêm cháu</i> × <i>dây chuyền</i> × <i>đá tháng sinh của từng người</i>.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Bước 2 · bộ lọc 10 phút · làm cho từng ý tưởng</div>
+    <h3>6 câu hỏi trước khi tốn 6 giờ cho 5 cổng</h3>
+    <ol class="steps">
+      <li><div><b>Gọi được tên người nhận hoặc dịp không?</b> "Quà cho mẹ có cháu mới" qua. "Đồ trang sức đẹp" không qua.</div></li>
+      <li><div><b>Cá nhân hóa hoặc thiết kế riêng được không?</b> Với hàng vật lý: bạn có mẫu riêng, không phải hàng chợ ai cũng nhập được.</div></li>
+      <li><div><b>Giá trên trang 1 có gấp đủ lần giá vốn ước tính không?</b> Bội số tối thiểu ở tab 9 Opportunity Engine: POD 2,0 · handmade 3,0 · dropship 2,5 · hàng tồn kho 4,0. Hàng $30 mà vốn tồn kho $10 là chỉ gấp 3, chưa đạt.</div></li>
+      <li><div><b>Giao kịp dịp được không?</b> Nhẹ, không vỡ, hoặc có cách gửi từ Mỹ. Quà lỡ dịp là review 1 sao.</div></li>
+      <li><div><b>Sạch về IP và quy định không?</b> Không thương hiệu, nhân vật, đội thể thao, câu nói có bản quyền, và không chép thiết kế của shop khác. Không thuộc nhóm phải chứng nhận mà bạn chưa có ngân sách.</div></li>
+      <li><div><b>Có kịp dịp bán chính không?</b> Đếm ngược từ dịp lễ chính của ngách: trừ thời gian giao, thời gian làm, và khoảng 6–8 tuần để listing có lượt xem, review đầu tiên. Ngày bắt đầu đã qua thì ghi ngách vào danh sách cho dịp kế tiếp, đừng ép cho kịp.</div></li>
+    </ol>
+    <div class="live">
+      <div class="live-head"><div class="eyebrow">Ví dụ đếm ngược · học viên bắt đầu ngày 15/10/2026</div></div>
+      <p>Giáng sinh 25/12: gửi từ Mỹ mất khoảng 5 ngày, làm mất 3 ngày, nên hạn đặt cuối khoảng 15/12. Lùi 6–8 tuần để listing nóng lên thì listing phải lên trước cuối tháng 10. Theo lịch khóa học, listing đầu tiên lên cuối tuần 4, tức khoảng giữa tháng 11: Giáng sinh không còn kịp cho một listing mới. Valentine 14/2 và Mother's Day 9/5/2027 là hai dịp vừa sức: listing nên lên trước khoảng 20/12 và 15/3. Valentine trùng Tết (nghỉ 4–10/2/2027): nếu chọn Valentine, chốt với nhà in lịch nghỉ Tết và kéo dài thời gian xử lý từ tháng 1.</p>
+    </div>
+    <p class="verdict">Qua 5/6 câu thì đưa vào bước chấm song song. Trượt câu 5 (IP và quy định) thì loại ngay, không cần xét các câu còn lại.</p>
+  </div>
+
+  <div class="sub" id="khoanh-khac">
+    <div class="tagline">Nghiên cứu thị trường · số liệu Etsy 2026 · cho người chưa biết bắt đầu từ đâu</div>
+    <h3>4 khoảnh khắc khởi đầu: khách đang ở một dấu mốc lớn trong đời, không phải đang mua quà xã giao</h3>
+    <p class="prose">Câu hỏi "ngách nào dễ thắng" trả lời tốt hơn khi hỏi "khách nào dễ mua của người mới". Người mua quà cho một dấu mốc lớn (nghỉ hưu, dọn nhà mới, mất người thân, kết hôn) có ba điểm lợi cho bạn: họ cần cá nhân hóa (tên, ngày, địa chỉ, số năm) nên ít so giá với hàng đại trà; dấu mốc xảy ra quanh năm, không dồn vào một dịp lễ; và họ trả đủ cao để POD qua được cổng R. Etsy cũng đang đi theo hướng này: quý 2/2026, quà sinh nhật và đám cưới tăng trưởng hai chữ số, và tìm kiếm chuyển dần sang hiển thị theo mục đích mua của khách thay vì chỉ theo độ phổ biến.</p>
+    <figure class="vizwrap">
+      <svg class="viz" viewBox="0 0 680 380" role="img" aria-labelledby="vzt vzd"><title id="vzt">Nhu cầu so với cạnh tranh và giá trung vị của 19 cụm từ quà tặng trên Etsy</title><desc id="vzd">Trục ngang: lượt tìm mỗi tháng trên 1.000 listing cạnh tranh (thang log). Trục dọc: giá trung vị USD. Năm cụm ở góc trên bên phải là vùng khởi đầu.</desc><rect x="361.3" y="18" width="298.7" height="209.3" class="zone"/><text x="654" y="34" text-anchor="end" class="zl">Vùng khởi đầu: ≥ 40 lượt tìm / 1.000 listing, giá ≥ $20</text><line x1="56" x2="660" y1="332.0" y2="332.0" class="gl"/><text x="48" y="336.0" text-anchor="end" class="tk">$0</text><line x1="56" x2="660" y1="279.7" y2="279.7" class="gl"/><text x="48" y="283.7" text-anchor="end" class="tk">$10</text><line x1="56" x2="660" y1="227.3" y2="227.3" class="gl"/><text x="48" y="231.3" text-anchor="end" class="tk">$20</text><line x1="56" x2="660" y1="175.0" y2="175.0" class="gl"/><text x="48" y="179.0" text-anchor="end" class="tk">$30</text><line x1="56" x2="660" y1="122.7" y2="122.7" class="gl"/><text x="48" y="126.7" text-anchor="end" class="tk">$40</text><line x1="56" x2="660" y1="70.3" y2="70.3" class="gl"/><text x="48" y="74.3" text-anchor="end" class="tk">$50</text><line x1="56" x2="660" y1="18.0" y2="18.0" class="gl"/><text x="48" y="22.0" text-anchor="end" class="tk">$60</text><line x1="118.5" x2="118.5" y1="18" y2="332" class="gl"/><text x="118.5" y="350" text-anchor="middle" class="tk">10</text><line x1="239.9" x2="239.9" y1="18" y2="332" class="gl"/><text x="239.9" y="350" text-anchor="middle" class="tk">20</text><line x1="361.3" x2="361.3" y1="18" y2="332" class="gl"/><text x="361.3" y="350" text-anchor="middle" class="tk">40</text><line x1="521.9" x2="521.9" y1="18" y2="332" class="gl"/><text x="521.9" y="350" text-anchor="middle" class="tk">100</text><line x1="643.3" x2="643.3" y1="18" y2="332" class="gl"/><text x="643.3" y="350" text-anchor="middle" class="tk">200</text><line x1="361.3" x2="361.3" y1="18" y2="332" class="th"/><line x1="56" x2="660" y1="227.3" y2="227.3" class="th"/><text x="358.0" y="372" text-anchor="middle" class="ax">Lượt tìm mỗi tháng trên 1.000 listing cạnh tranh (thang log)</text><text transform="translate(14,175.0) rotate(-90)" text-anchor="middle" class="ax">Giá trung vị (USD)</text><g class="pt hi"><circle cx="623.1" cy="211.6" r="12" class="hit"/><circle cx="623.1" cy="211.6" r="5.5" class="dot"/><title>retirement gift: 60,500 lượt tìm/tháng, 339,438 listing, 178 lượt tìm/1.000 listing, giá trung vị $23</title></g><text x="614.1" y="215.6" text-anchor="end" class="pl hi">retirement gift</text><g class="pt hi"><circle cx="514.9" cy="162.1" r="12" class="hit"/><circle cx="514.9" cy="162.1" r="5.5" class="dot"/><title>housewarming gift: 246,000 lượt tìm/tháng, 2,559,176 listing, 96 lượt tìm/1.000 listing, giá trung vị $32.47</title></g><text x="505.9" y="166.1" text-anchor="end" class="pl hi">housewarming gift</text><g class="pt hi"><circle cx="466.6" cy="96.5" r="12" class="hit"/><circle cx="466.6" cy="96.5" r="5.5" class="dot"/><title>sympathy gift: 14,800 lượt tìm/tháng, 202,843 listing, 73 lượt tìm/1.000 listing, giá trung vị $45</title></g><text x="475.6" y="100.5" text-anchor="start" class="pl hi">sympathy gift</text><g class="pt hi"><circle cx="413.0" cy="203.8" r="12" class="hit"/><circle cx="413.0" cy="203.8" r="5.5" class="dot"/><title>newlywed gift: 6,600 lượt tìm/tháng, 122,854 listing, 54 lượt tìm/1.000 listing, giá trung vị $24.5</title></g><text x="421.0" y="194.8" text-anchor="start" class="pl hi">newlywed gift</text><g class="pt hi"><circle cx="405.4" cy="206.5" r="12" class="hit"/><circle cx="405.4" cy="206.5" r="5.5" class="dot"/><title>anniversary gift: 246,000 lượt tìm/tháng, 4,781,620 listing, 51 lượt tìm/1.000 listing, giá trung vị $23.99</title></g><text x="413.4" y="223.5" text-anchor="start" class="pl hi">anniversary gift</text><g class="pt"><circle cx="396.8" cy="274.7" r="12" class="hit"/><circle cx="396.8" cy="274.7" r="5.5" class="dot"/><title>bridesmaid proposal: 6,600 lượt tìm/tháng, 134,749 listing, 49 lượt tìm/1.000 listing, giá trung vị $10.94</title></g><g class="pt"><circle cx="367.8" cy="248.3" r="12" class="hit"/><circle cx="367.8" cy="248.3" r="5.5" class="dot"/><title>engagement gift: 90,500 lượt tìm/tháng, 2,180,450 listing, 42 lượt tìm/1.000 listing, giá trung vị $16</title></g><g class="pt"><circle cx="354.6" cy="288.3" r="12" class="hit"/><circle cx="354.6" cy="288.3" r="5.5" class="dot"/><title>coworker gift: 14,800 lượt tìm/tháng, 384,456 listing, 38 lượt tìm/1.000 listing, giá trung vị $8.35</title></g><text x="363.6" y="292.3" text-anchor="start" class="pl">coworker gift</text><g class="pt"><circle cx="327.5" cy="288.3" r="12" class="hit"/><circle cx="327.5" cy="288.3" r="5.5" class="dot"/><title>teacher gift: 60,500 lượt tìm/tháng, 1,835,056 listing, 33 lượt tìm/1.000 listing, giá trung vị $8.35</title></g><text x="318.5" y="292.3" text-anchor="end" class="pl">teacher gift</text><g class="pt"><circle cx="317.2" cy="185.5" r="12" class="hit"/><circle cx="317.2" cy="185.5" r="5.5" class="dot"/><title>custom pet portrait: 8,100 lượt tìm/tháng, 260,504 listing, 31 lượt tìm/1.000 listing, giá trung vị $28</title></g><g class="pt"><circle cx="314.9" cy="232.6" r="12" class="hit"/><circle cx="314.9" cy="232.6" r="5.5" class="dot"/><title>wedding gift: 201,000 lượt tìm/tháng, 6,551,605 listing, 31 lượt tìm/1.000 listing, giá trung vị $18.99</title></g><g class="pt"><circle cx="299.2" cy="180.5" r="12" class="hit"/><circle cx="299.2" cy="180.5" r="5.5" class="dot"/><title>pet memorial: 18,100 lượt tìm/tháng, 645,359 listing, 28 lượt tìm/1.000 listing, giá trung vị $28.95</title></g><g class="pt"><circle cx="237.4" cy="240.2" r="12" class="hit"/><circle cx="237.4" cy="240.2" r="5.5" class="dot"/><title>graduation gift: 22,200 lượt tìm/tháng, 1,125,951 listing, 20 lượt tìm/1.000 listing, giá trung vị $17.55</title></g><g class="pt"><circle cx="214.4" cy="191.0" r="12" class="hit"/><circle cx="214.4" cy="191.0" r="5.5" class="dot"/><title>grandma gift: 12,100 lượt tìm/tháng, 699,764 listing, 17 lượt tìm/1.000 listing, giá trung vị $26.95</title></g><g class="pt"><circle cx="172.7" cy="162.4" r="12" class="hit"/><circle cx="172.7" cy="162.4" r="5.5" class="dot"/><title>memorial gift: 9,900 lượt tìm/tháng, 726,429 listing, 14 lượt tìm/1.000 listing, giá trung vị $32.41</title></g><g class="pt"><circle cx="158.5" cy="52.0" r="12" class="hit"/><circle cx="158.5" cy="52.0" r="5.5" class="dot"/><title>new mom gift: 6,600 lượt tìm/tháng, 525,343 listing, 13 lượt tìm/1.000 listing, giá trung vị $53.51</title></g><text x="167.5" y="56.0" text-anchor="start" class="pl">new mom gift</text><g class="pt"><circle cx="153.4" cy="216.5" r="12" class="hit"/><circle cx="153.4" cy="216.5" r="5.5" class="dot"/><title>funny shirt: 40,500 lượt tìm/tháng, 3,318,338 listing, 12 lượt tìm/1.000 listing, giá trung vị $22.07</title></g><text x="162.4" y="220.5" text-anchor="start" class="pl">funny shirt</text><g class="pt"><circle cx="130.3" cy="295.4" r="12" class="hit"/><circle cx="130.3" cy="295.4" r="5.5" class="dot"/><title>nurse gift: 6,600 lượt tìm/tháng, 617,011 listing, 11 lượt tìm/1.000 listing, giá trung vị $6.99</title></g><text x="139.3" y="299.4" text-anchor="start" class="pl">nurse gift</text><g class="pt"><circle cx="105.2" cy="159.4" r="12" class="hit"/><circle cx="105.2" cy="159.4" r="5.5" class="dot"/><title>best friend gift: 5,400 lượt tìm/tháng, 582,480 listing, 9 lượt tìm/1.000 listing, giá trung vị $32.98</title></g></svg>
+      <figcaption>Mỗi chấm là một cụm khách gõ trên Etsy. Phải hơn là ít listing hơn so với lượt tìm; cao hơn là khách trả nhiều hơn. Chấm đặc: vùng khởi đầu. Di chuột vào chấm để xem số.</figcaption>
+    </figure>
+    <div class="tbl"><table>
+      <thead><tr><th>Cụm khách gõ</th><th>Lượt tìm mỗi tháng</th><th>Listing cạnh tranh</th><th>Lượt tìm / 1.000 listing</th><th>Giá trung vị</th><th>Đọc thế nào</th></tr></thead>
+      <tbody>
+        <tr><td><code>retirement gift</code></td><td class="n">60.500</td><td class="n">339.438</td><td class="n">178</td><td class="n">$23,00</td><td><span class="st ok">Vùng khởi đầu</span></td></tr>
+        <tr><td><code>housewarming gift</code></td><td class="n">246.000</td><td class="n">2.559.176</td><td class="n">96</td><td class="n">$32,47</td><td><span class="st ok">Vùng khởi đầu</span></td></tr>
+        <tr><td><code>sympathy gift</code></td><td class="n">14.800</td><td class="n">202.843</td><td class="n">73</td><td class="n">$45,00</td><td><span class="st ok">Vùng khởi đầu</span></td></tr>
+        <tr><td><code>newlywed gift</code></td><td class="n">6.600</td><td class="n">122.854</td><td class="n">54</td><td class="n">$24,50</td><td><span class="st ok">Vùng khởi đầu</span></td></tr>
+        <tr><td><code>anniversary gift</code></td><td class="n">246.000</td><td class="n">4.781.620</td><td class="n">51</td><td class="n">$23,99</td><td><span class="st ok">Vùng khởi đầu</span></td></tr>
+        <tr><td><code>bridesmaid proposal</code></td><td class="n">6.600</td><td class="n">134.749</td><td class="n">49</td><td class="n">$10,94</td><td>Nhiều khách, giá thấp: POD khó gấp 2 lần giá vốn</td></tr>
+        <tr><td><code>engagement gift</code></td><td class="n">90.500</td><td class="n">2.180.450</td><td class="n">42</td><td class="n">$16,00</td><td>Nhiều khách, giá thấp</td></tr>
+        <tr><td><code>coworker gift</code></td><td class="n">14.800</td><td class="n">384.456</td><td class="n">38</td><td class="n">$8,35</td><td>Quà xã giao, giá rất thấp</td></tr>
+        <tr><td><code>teacher gift</code></td><td class="n">60.500</td><td class="n">1.835.056</td><td class="n">33</td><td class="n">$8,35</td><td>Quà xã giao, giá rất thấp</td></tr>
+        <tr><td><code>custom pet portrait</code></td><td class="n">8.100</td><td class="n">260.504</td><td class="n">31</td><td class="n">$28,00</td><td>Giá được, cạnh tranh trung bình</td></tr>
+        <tr><td><code>wedding gift</code></td><td class="n">201.000</td><td class="n">6.551.605</td><td class="n">31</td><td class="n">$18,99</td><td>Cụm rộng, nên thu hẹp</td></tr>
+        <tr><td><code>pet memorial</code></td><td class="n">18.100</td><td class="n">645.359</td><td class="n">28</td><td class="n">$28,95</td><td>Giá được, cạnh tranh trung bình</td></tr>
+        <tr><td><code>graduation gift</code></td><td class="n">22.200</td><td class="n">1.125.951</td><td class="n">20</td><td class="n">$17,55</td><td>Dồn vào tháng 5</td></tr>
+        <tr><td><code>grandma gift</code></td><td class="n">12.100</td><td class="n">699.764</td><td class="n">17</td><td class="n">$26,95</td><td>Chật, dồn vào tháng 12</td></tr>
+        <tr><td><code>memorial gift</code></td><td class="n">9.900</td><td class="n">726.429</td><td class="n">14</td><td class="n">$32,41</td><td>Chật</td></tr>
+        <tr><td><code>new mom gift</code></td><td class="n">6.600</td><td class="n">525.343</td><td class="n">13</td><td class="n">$53,51</td><td>Giá cao nhưng chật</td></tr>
+        <tr><td><code>funny shirt</code></td><td class="n">40.500</td><td class="n">3.318.338</td><td class="n">12</td><td class="n">$22,07</td><td>Rất chật, rủi ro IP cao</td></tr>
+        <tr><td><code>nurse gift</code></td><td class="n">6.600</td><td class="n">617.011</td><td class="n">11</td><td class="n">$6,99</td><td>Chật, giá rất thấp</td></tr>
+        <tr><td><code>best friend gift</code></td><td class="n">5.400</td><td class="n">582.480</td><td class="n">9</td><td class="n">$32,98</td><td>Chật</td></tr>
+      </tbody></table></div>
+    <p class="src">Số liệu ước tính của RankHero cho từng cụm trên Etsy (toàn cầu), các trang cập nhật từ 02 đến 10/2026, xem ngày 15/10/2026. Số listing gồm cả listing chỉ liên quan lỏng lẻo, nên tỷ lệ chỉ dùng để so các cụm với nhau, không phải để kết luận một ngách đạt. Ngưỡng giá $20 là ngưỡng thận trọng của khóa học cho POD: dưới mức này, sau phí Etsy, rất khó bán gấp 2 lần giá vốn in và gửi.</p>
+
+    <div class="tbl"><table class="niche">
+      <thead><tr><th>Khoảnh khắc</th><th>Ai mua, họ lo gì</th><th>Hạt giống hẹp gõ ở C1</th><th>Sản phẩm POD thường bán từ $25</th><th>Cần biết trước</th></tr></thead>
+      <tbody>
+        <tr><td><b>Nghỉ hưu</b></td><td>Con cái, đồng nghiệp góp tiền chung. Sợ quà chung chung, muốn ghi số năm làm việc và nghề</td><td><code>retirement gift for dad</code> <code>retirement gift coworker</code> <code>retired teacher gift</code></td><td>Tranh in "số năm cống hiến" có tên, chăn in, hộp gỗ khắc</td><td>Đỉnh tháng 5–6. Không dùng logo công ty, trường, bệnh viện</td></tr>
+        <tr><td><b>Dọn nhà mới</b></td><td>Bạn bè, người thân, môi giới tặng khách khi giao nhà. Muốn quà có địa chỉ hoặc hình ngôi nhà</td><td><code>first home gift</code> <code>new home ornament</code> <code>realtor closing gift</code></td><td>Tranh vẽ nhà theo ảnh, poster địa chỉ và tọa độ, ornament "ngôi nhà đầu tiên"</td><td>Ornament dồn vào quý 4. Vẽ theo ảnh khách gửi: hẹn thời gian duyệt bản vẽ</td></tr>
+        <tr><td><b>Chia buồn, tưởng niệm</b></td><td>Bạn bè, đồng nghiệp của người vừa mất người thân hoặc thú cưng. Sợ lời lẽ không đúng mực, sợ giao trễ</td><td><code>loss of mother gift</code> <code>sympathy gift personalized</code> <code>dog memorial gift</code></td><td>Tranh lời tưởng niệm có tên và ngày, ornament tưởng niệm, khung in chân dung thú cưng</td><td>Giao nhanh là một nửa giá trị. Giọng nhẹ nhàng, không dùng "giảm giá chớp nhoáng" hay lời thúc ép</td></tr>
+        <tr><td><b>Kết hôn và kỷ niệm năm cưới</b></td><td>Vợ, chồng, bạn bè của cặp đôi. Muốn quà gắn với ngày cưới, số năm, chất liệu truyền thống của năm</td><td><code>first christmas married ornament</code> <code>1st anniversary paper gift</code> <code>10 year anniversary gift</code></td><td>Poster ngày cưới hoặc lời thề, ornament năm đầu, quà theo chất liệu năm cưới (năm 1 giấy, năm 2 vải cotton)</td><td>Đỉnh tháng 2. Cụm theo năm cưới hẹp và có sẵn lý do cá nhân hóa</td></tr>
+      </tbody></table></div>
+
+    <div class="mentor">
+      <div class="box"><h3>Chưa có ngách sau Buổi 0? Đi đường này</h3>
+        <ol class="steps">
+          <li><div>Chọn một trong 4 khoảnh khắc trên.</div></li>
+          <li><div>Thêm một người cụ thể: bố sắp nghỉ hưu, cặp đôi cưới năm thứ 10, người vừa mất mẹ.</div></li>
+          <li><div>Gõ hạt giống hẹp ở C1, chép gợi ý, đọc review của 2–3 listing bán chạy.</div></li>
+          <li><div>Chọn một sản phẩm nhà in POD làm được và bán được từ $25.</div></li>
+          <li><div>Đi đủ 5 cổng như mọi ngách khác.</div></li>
+        </ol></div>
+      <div class="box"><h3>Bẫy trong số liệu</h3><ul>
+        <li><code>teacher gift</code> có 60.500 lượt tìm mỗi tháng nhưng giá trung vị $8,35: nhiều khách, nhưng là khách mua quà rẻ.</li>
+        <li><code>funny shirt</code> có hơn 3,3 triệu listing: lượt tìm nhiều không bù được độ chật.</li>
+        <li>Nhiều cụm đứng đầu bảng tìm kiếm của Etsy dính nhãn hiệu (nhân vật hoạt hình, World Cup 2026). Đứng đầu không có nghĩa là được bán.</li>
+      </ul></div>
+    </div>
+    <p class="verdict">Vùng khởi đầu chỉ là chỗ bắt đầu dễ hơn, không phải ngách đã thắng. Mọi khoảnh khắc ở đây vẫn phải qua đủ 5 cổng với dữ liệu của ngày bạn làm.</p>
+    <p class="src">Nguồn: <a href="https://www.sec.gov/Archives/edgar/data/0001370637/000137063726000079/q226shareholderletter.htm">Etsy, thư gửi cổ đông quý 2/2026</a>; <a href="https://help.erank.com/blog/top-keywords-on-etsy-june-2026/">eRank, từ khóa Etsy tháng 6/2026</a>; <a href="https://help.erank.com/blog/top-etsy-searches-in-q4-2025/">eRank, tìm kiếm Etsy quý 4/2025</a>; RankHero: <a href="https://www.rankhero.com/keywords/retirement-gift">retirement gift</a>, <a href="https://www.rankhero.com/keywords/housewarming-gift">housewarming gift</a>, <a href="https://www.rankhero.com/keywords/sympathy-gift">sympathy gift</a>, <a href="https://www.rankhero.com/keywords/newlywed-gift">newlywed gift</a>, <a href="https://www.rankhero.com/keywords/anniversary-gift">anniversary gift</a>, <a href="https://www.rankhero.com/keywords/bridesmaid-proposal">bridesmaid proposal</a>, <a href="https://www.rankhero.com/keywords/engagement-gift">engagement gift</a>, <a href="https://www.rankhero.com/keywords/coworker-gift">coworker gift</a>, <a href="https://www.rankhero.com/keywords/teacher-gift">teacher gift</a>, <a href="https://www.rankhero.com/keywords/custom-pet-portrait">custom pet portrait</a>, <a href="https://www.rankhero.com/keywords/wedding-gift">wedding gift</a>, <a href="https://www.rankhero.com/keywords/pet-memorial">pet memorial</a>, <a href="https://www.rankhero.com/keywords/graduation-gift">graduation gift</a>, <a href="https://www.rankhero.com/keywords/grandma-gift">grandma gift</a>, <a href="https://www.rankhero.com/keywords/memorial-gift">memorial gift</a>, <a href="https://www.rankhero.com/keywords/new-mom-gift">new mom gift</a>, <a href="https://www.rankhero.com/keywords/funny-shirt">funny shirt</a>, <a href="https://www.rankhero.com/keywords/nurse-gift">nurse gift</a>, <a href="https://www.rankhero.com/keywords/best-friend-gift">best friend gift</a>.</p>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Bản đồ điểm xuất phát · 10 ngách rộng</div>
+    <h3>Mỗi ngách rộng chứa hàng chục ngách hẹp. Việc của bạn là tìm một ngách hẹp qua đủ 5 cổng</h3>
+    <p class="prose">Cột "Hạt giống" là thứ bạn gõ ở bước C1 để bắt đầu, chưa phải bằng chứng. Mọi ngách dưới đây đều <span class="st new">Chưa qua cổng</span> cho tới khi chính bạn đưa nó qua, với dữ liệu của ngày bạn làm.</p>
+    <div class="tbl"><table class="niche">
+      <thead><tr><th>Ngách rộng</th><th>Hạt giống gõ ở C1</th><th>Mô hình hợp</th><th>Kênh hợp</th><th>Rủi ro cần biết trước</th><th>Trạng thái</th></tr></thead>
+      <tbody>
+        <tr><td>Trang sức cá nhân hóa</td><td><code>mom necklace</code> <code>name bracelet</code></td><td>POD trang sức, làm theo đơn với xưởng bạc</td><td>Etsy</td><td>Kích thước và màu khác ảnh; trang sức cho trẻ em có giới hạn chì, cadmium</td><td><span class="st ok">Ví dụ trong sổ này</span></td></tr>
+        <tr><td>Quà gia đình: mẹ, bà, bố</td><td><code>grandma gift</code> <code>dad gift from kids</code></td><td>POD (cốc, chăn, áo), khắc gỗ</td><td>Etsy</td><td>Doanh số dồn vào vài dịp lễ; phải chuẩn bị trước 6–8 tuần</td><td><span class="st new">Chưa qua cổng</span></td></tr>
+        <tr><td>Cưới và tiệc</td><td><code>bridesmaid proposal</code> <code>wedding welcome sign</code></td><td>POD giấy, khắc, đồ trang trí</td><td>Etsy</td><td>Hạn chót cứng; sai tên, sai ngày là mất đơn và mất review</td><td><span class="st new">Chưa qua cổng</span></td></tr>
+        <tr><td>Thú cưng</td><td><code>pet memorial gift</code> <code>custom pet portrait</code></td><td>POD, thêu</td><td>Etsy; Shopify khi có cộng đồng</td><td>Tránh đồ ăn, đồ chơi, thuốc cho thú cưng: có quy định riêng</td><td><span class="st new">Chưa qua cổng</span></td></tr>
+        <tr><td>Em bé</td><td><code>baby name sign</code> <code>milestone blanket</code></td><td>POD, đồ thêu</td><td>Etsy</td><td>Hàng cho trẻ 12 tuổi trở xuống thuộc CPSIA: cần thử nghiệm tại phòng lab được CPSC công nhận và Children's Product Certificate. Không hợp Cấp 1</td><td><span class="st new">Chưa qua cổng</span></td></tr>
+        <tr><td>Trang trí nhà cá nhân hóa</td><td><code>family name sign</code> <code>custom house portrait</code></td><td>POD canvas, poster; khắc gỗ</td><td>Etsy; Shopify khi có ảnh, video mạnh</td><td>Hàng to, nặng: cước gửi ăn hết lãi nếu không tính trước</td><td><span class="st new">Chưa qua cổng</span></td></tr>
+        <tr><td>Quà theo nghề</td><td><code>nurse gift</code> <code>teacher appreciation gift</code></td><td>POD</td><td>Etsy</td><td>Không dùng logo trường, bệnh viện, hiệp hội nghề nghiệp. Giá trung vị rất thấp ($7–8 với nurse gift, teacher gift): POD khó qua cổng R, trừ khi đi qua khoảnh khắc nghỉ hưu</td><td><span class="st new">Chưa qua cổng</span></td></tr>
+        <tr><td>Áo theo sở thích</td><td><code>fishing shirt</code> <code>book lover sweatshirt</code></td><td>POD</td><td>Etsy; Shopify với nội dung TikTok</td><td>Rủi ro IP cao nhất: câu nói, nhân vật, đội thể thao. Cạnh tranh rất dày</td><td><span class="st new">Chưa qua cổng</span></td></tr>
+        <tr><td>Giấy và planner</td><td><code>wedding planner book</code> <code>custom notebook</code></td><td>POD in, làm theo đơn</td><td>Etsy</td><td>Rủi ro thấp. File tải về (digital) là mô hình khác, không thuộc sổ này</td><td><span class="st new">Chưa qua cổng</span></td></tr>
+        <tr><td>Thủ công Việt: gốm, mây tre, lụa, sơn mài</td><td><code>handmade ceramic mug</code> <code>rattan basket</code> <code>silk scrunchie</code></td><td>Hàng vật lý làm cùng xưởng làng nghề, gửi từ Việt Nam hoặc kho Mỹ</td><td>Etsy (khai báo xưởng là đối tác sản xuất); Shopify khi có câu chuyện thương hiệu và ngân sách quảng cáo</td><td>Dễ vỡ, nặng. Gốm đựng thực phẩm phải đạt giới hạn chì của FDA. Một số đồ gỗ, thực vật phải khai báo theo Lacey Act</td><td><span class="st new">Chưa qua cổng</span></td></tr>
+      </tbody></table></div>
+    <p class="src">Lợi thế của seller Việt Nam nằm rõ nhất ở dòng cuối: nguồn xưởng gần, giá gốc, câu chuyện xuất xứ thật. Đổi lại là bài toán đóng gói và vận chuyển, được tính ở cổng A và R.</p>
+  </div>
+
+  <div class="alt">
+    <div class="eyebrow">Bộ lọc thêm nếu bạn bán hàng vật lý hoặc trên Shopify</div>
+    <div class="two">
+      <div class="box"><h3>Hàng vật lý · 5 câu thêm</h3><ul>
+        <li><b>Cân nặng và kích thước khi đóng gói</b> có làm cước gửi vượt 20% giá bán không? Hàng nhẹ nhưng cồng kềnh vẫn bị tính cước theo thể tích.</li>
+        <li><b>Dễ vỡ không?</b> Nếu có, bạn đã có cách đóng gói thử thả rơi chưa?</li>
+        <li><b>Bao nhiêu biến thể?</b> 3 cỡ × 4 màu là 12 mã hàng phải giữ tồn. Lô đầu nên dưới 5 mã.</li>
+        <li><b>Có hạn dùng, có mùa không?</b> Hàng theo mùa không bán hết là tồn đến năm sau.</li>
+        <li><b>Số lượng đặt tối thiểu (MOQ) của xưởng có nằm trong vốn thử không?</b> Kiểm ở tab 1 Bộ vận hành hàng vật lý.</li></ul></div>
+      <div class="box"><h3>Shopify · 4 câu thêm</h3><ul>
+        <li><b>Nói được điểm khác biệt trong 3 giây video không?</b> Khách lướt qua quảng cáo, không đọc mô tả.</li>
+        <li><b>Giá đủ cao để chịu CAC không?</b> Với giá dưới khoảng $30, lãi sau phí thường không đủ trả cho một đơn mua bằng quảng cáo. Tính CAC tối đa ở tab 2 Bộ vận hành Hàng vật lý &amp; Shopify.</li>
+        <li><b>Amazon có bán hàng gần giống, rẻ hơn, giao 2 ngày không?</b> Có thì khách sẽ rời trang của bạn để so giá.</li>
+        <li><b>Khách có lý do mua lần hai không?</b> Hàng dùng hết, bộ sưu tập, dịp lặp lại. Đơn thứ hai không tốn CAC.</li></ul></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="tagline">Bước 3 · chấm song song · khoảng 3 giờ cho 3 ngách</div>
+    <h3>Đặt 3 ngách tốt nhất cạnh nhau trước khi đào sâu một ngách</h3>
+    <p class="prose">Làm <a href="#nguoi-mua">SOP-K</a> bản nhanh (bước 0, 1, 2, 4, 5), C1 (gợi ý tìm kiếm) và cổng L cho cả 3 ngách, rồi chấm bảng dưới đây. Ngách đứng đầu đi tiếp qua đủ 5 cổng; ngách thứ hai là phương án dự phòng khi ngách đầu trượt. Cách này chặn bẫy "yêu ý tưởng đầu tiên", vì bạn buộc phải so chứ không chỉ chấm.</p>
+    <div class="tbl"><table class="score">
+      <thead><tr><th>Tiêu chí (1 = yếu, 3 = mạnh)</th><th>Đọc ở đâu</th><th class="c">Ngách 1</th><th class="c">Ngách 2</th><th class="c">Ngách 3</th></tr></thead>
+      <tbody>
+        <tr><td>Người mua rõ</td><td>Thẻ người mua SOP-K: người trả tiền và khoảnh khắc có câu nguyên văn</td><td class="c">_</td><td class="c">_</td><td class="c">_</td></tr>
+        <tr><td>Nhu cầu có thật</td><td>Gợi ý tìm kiếm có tín hiệu mua; review mới trong 90 ngày</td><td class="c">_</td><td class="c">_</td><td class="c">_</td></tr>
+        <tr><td>Khoảng trống trên trang 1</td><td>Trang 1 phân tán; có kết quả chưa khớp đúng ý định tìm kiếm</td><td class="c">_</td><td class="c">_</td><td class="c">_</td></tr>
+        <tr><td>Lãi ước tính</td><td>Bội số giá trên trang 1 so với giá vốn ước tính</td><td class="c">_</td><td class="c">_</td><td class="c">_</td></tr>
+        <tr><td>Thời điểm</td><td>Câu 6 của bộ lọc: còn bao nhiêu tuần tới dịp chính</td><td class="c">_</td><td class="c">_</td><td class="c">_</td></tr>
+        <tr><td>Bạn làm tốt hơn được</td><td>Lợi thế thật: nguồn hàng, tay nghề, hiểu khách</td><td class="c">_</td><td class="c">_</td><td class="c">_</td></tr>
+        <tr><td>Rủi ro thấp</td><td>IP, quy định, hàng vỡ, hàng tồn (3 = ít rủi ro)</td><td class="c">_</td><td class="c">_</td><td class="c">_</td></tr>
+      </tbody></table></div>
+    <p class="src">Hai ngách bằng điểm thì chọn ngách có điểm "Bạn làm tốt hơn được" cao hơn: lợi thế khó sao chép quan trọng hơn một khoảng trống mà ai cũng thấy.</p>
+  </div>
+
+  <div class="mentor">
+    <div class="box"><h3>Không chọn khi mới bắt đầu</h3><ul><li>Bất cứ thứ gì dính thương hiệu, nhân vật, đội thể thao, người nổi tiếng</li><li>Thực phẩm, thực phẩm chức năng, mỹ phẩm, thứ bôi lên da</li><li>Hàng có pin, có điện, có lưỡi dao</li><li>Đồ cho trẻ em khi chưa có ngân sách thử nghiệm</li><li>Thứ đang "hot" trên mạng xã hội tuần này mà đường xu hướng 12 tháng chưa có</li></ul></div>
+    <div class="box"><h3>Nộp cho Mentor</h3><ul><li>Danh sách 20 ý tưởng có nguồn</li><li>3–5 ngách đã qua bộ lọc, mỗi ngách ghi điểm 6 câu</li><li>Bảng chấm song song 3 ngách, ngách chọn và ngách dự phòng, một câu vì sao</li></ul></div>
+  </div>
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Sau khi chấm 3 ngách</h3></div>
+    <ol><li>Nếu một người bạn mang bảng chấm này đến hỏi, mình có khuyên họ chọn đúng ngách mình vừa chọn không?</li><li>Ngách mình bỏ đi có điểm nào tốt hơn ngách mình chọn? Mình bỏ nó vì số liệu hay vì cảm giác?</li><li>Trong 20 ý tưởng, ý tưởng nào đến từ khách (review, gợi ý tìm kiếm) và ý tưởng nào đến từ mình? Tỷ lệ đó nói gì về cách mình đang nghĩ?</li></ol>
+    <p class="log"><b>Ghi vào nhật ký quyết định:</b> ngách chọn, ngách dự phòng, và dự đoán: ngách chọn sẽ trượt ở cổng nào nếu nó trượt.</p>
+  </div>
+</section>
+<section id="spy">
+  <div class="sec-head">
+    <div class="eyebrow">Dùng ở tuần 1 · chọn sản phẩm · POD và dropshipping</div>
+    <h2>Spy và nghiên cứu thị trường: công cụ, cách đọc best seller, workflow 90 phút</h2>
+  </div>
+  <p class="prose">Người bán lâu năm dùng công cụ để <b>tìm nhanh</b>, rồi dùng chính sàn để <b>xác nhận</b>. Phần lớn con số doanh thu trong công cụ là số mô hình hóa: EverBee và Alura ghi rõ là ước tính, Kalodata khuyên không dùng số của họ để quyết toán, Jungle Scout hay Helium 10 cũng không có số thật từ Amazon. Thứ sàn hiển thị công khai thì đếm được: ngày của review, số đã bán trên TikTok Shop, nhãn "bought in past month" của Amazon, ngày bắt đầu chạy của một quảng cáo. Mục này cho bạn bộ công cụ theo từng việc, cách đọc một sản phẩm bán chạy trên từng nền tảng, hai workflow 90 phút và hai case study có số thật.</p>
+
+  <div class="mentor">
+    <div class="box"><h3>Luật 1 · công cụ gợi ý, sàn xác nhận</h3><p>Một con số ước tính chỉ để xếp ứng viên cao hay thấp. Kết luận "bán được" cần ít nhất một tín hiệu đếm được trên sàn, có link và ngày (bậc 4 trở lên ở <a href="kiem-chung.html#sop-b">SOP-B</a>).</p></div>
+    <div class="box"><h3>Luật 2 · spy để hiểu, không để chép</h3><p>Spy cho bạn biết khách là ai, mua vì dịp gì, chê điều gì, quảng cáo nói góc nào. Chép thiết kế, ảnh, câu chữ hay thương hiệu là đường ngắn nhất để mất shop và tài khoản quảng cáo.</p></div>
+  </div>
+
+  <div class="sub" id="spy-tools">
+    <div class="tagline">Bộ công cụ theo việc · giá xem tháng 7–10/2026</div>
+    <h3>Mỗi việc một công cụ. Bắt đầu bằng cột miễn phí</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Việc</th><th>Miễn phí, đủ cho người mới</th><th>Trả phí, khi đã có đơn</th><th>Đọc được gì</th><th>Loại số</th></tr></thead>
+      <tbody>
+        <tr><td>Nhu cầu và mùa vụ</td><td>Google Trends; Pinterest Trends (Mỹ, Canada, Anh, so 4 cụm, 12 tháng); gợi ý tìm kiếm của Etsy và Amazon</td><td>Exploding Topics Pro (từ 39 USD/tháng, trả năm)</td><td>Khi nào khách bắt đầu tìm, đỉnh mùa, cụm khách gõ thật</td><td>Tương đối, không phải lượt tìm</td></tr>
+        <tr><td>Từ khóa Etsy</td><td>eRank bản miễn phí (5 lượt tìm/ngày); trang RankHero; EtsyHunt bản miễn phí</td><td>eRank (từ khoảng 6 USD); Sale Samurai (khoảng 10 USD, hợp POD); EverBee (từ khoảng 14 USD); Alura (từ khoảng 20 USD)</td><td>Lượt tìm, số listing cạnh tranh, giá trung vị, thẻ đối thủ dùng</td><td>Ước tính</td></tr>
+        <tr><td>Listing bán chạy trên Etsy</td><td>Chính trang Etsy: nhãn Bestseller (doanh số cao trong 6 tháng), ngày review gần nhất, số sales của shop, tuổi shop</td><td>Extension EverBee hoặc Alura (doanh thu tháng ước tính ngay trên trang tìm kiếm)</td><td>Ai đang bán được, ở giá nào, từ bao giờ</td><td>Trang Etsy: đếm. Extension: ước tính</td></tr>
+        <tr><td>Amazon và Merch</td><td>Best Sellers, Movers &amp; Shakers; nhãn "bought in past month" (hiện từ 50 lượt mua); Keepa bản miễn phí (lịch sử giá); Helium 10 Xray (giới hạn lượt/ngày)</td><td>Keepa Pro (29 EUR/tháng, có đường Sales Rank); Jungle Scout (từ khoảng 49 USD)</td><td>Nhu cầu của cả loại sản phẩm, giá trần, độ ổn định qua 90 ngày</td><td>Nhãn: đếm. Doanh số: ước tính</td></tr>
+        <tr><td>TikTok Shop</td><td>TikTok Creative Center (Top Ads, xu hướng, lọc theo vùng); số đã bán trên trang sản phẩm</td><td>Kalodata (từ 45,99 USD/tháng, thử 7 ngày); FastMoss; EchoTik</td><td>Sản phẩm, video, creator, GMV theo tháng</td><td>Số đã bán: đếm. GMV: mô hình</td></tr>
+        <tr><td>Quảng cáo Meta</td><td>Meta Ad Library: ngày "Started running on", số phiên bản của một ý tưởng, các page cùng bán một món</td><td>BigSpy (miễn phí 5 lượt/ngày; Pro 149 USD); Minea (từ 49 USD); AdSpy (149 USD); Foreplay (59 USD, lưu và sắp xếp mẫu)</td><td>Quảng cáo nào sống lâu, góc nào đang được nhân bản</td><td>Đếm (chỉ quảng cáo đang chạy)</td></tr>
+        <tr><td>Store Shopify của đối thủ</td><td>Thêm <code>/collections/all?sort_by=best-selling</code> vào tên miền store; Koala Inspector (15 lượt/tháng); Similarweb bản miễn phí</td><td>Koala Inspector Premium (22 USD/tháng); TrendTrack; Commerce Inspector</td><td>Sản phẩm bán chạy nhất store, theme, app, lượng truy cập</td><td>Thứ tự bán: gần đúng. Doanh thu, truy cập: ước tính</td></tr>
+        <tr><td>Nguồn hàng dropship</td><td>AliExpress Dropshipping Center; extension tìm theo ảnh trên AliExpress và 1688; CJdropshipping; DSers</td><td>AutoDS (nhập hàng, tự đặt đơn)</td><td>Giá vốn, thời gian giao tới Mỹ, độ tin của nhà cung cấp</td><td>Báo giá thật</td></tr>
+        <tr><td>Giá vốn POD</td><td>Catalog Printify và Printful: giá in, ship, xưởng ở Mỹ, thời gian sản xuất</td><td>Gói trả phí của nhà in (giảm giá in)</td><td>Lãi thật của từng món</td><td>Báo giá thật</td></tr>
+      </tbody></table></div>
+    <p class="verdict">Bộ khởi đầu 0 đồng: Etsy, Amazon, Pinterest Trends, eRank miễn phí, RankHero, Meta Ad Library, TikTok Creative Center, Koala Inspector miễn phí, catalog nhà in. Chỉ trả tiền cho một công cụ khi bạn đã có đơn và nó tiết kiệm ít nhất 2 giờ mỗi tuần. Mỗi việc một công cụ; hai công cụ cùng việc thường cho hai con số khác nhau, và bạn mất thời gian cãi nhau với số.</p>
+  </div>
+
+  <div class="sub" id="spy-doc">
+    <div class="tagline">Tư duy · giải phẫu một sản phẩm bán chạy</div>
+    <h3>Năm lớp, đi từ trên xuống. Dừng ở lớp nào trượt</h3>
+    <ol class="anat">
+      <li class="a1"><div><h4>1 · Nhu cầu</h4><p class="q">Ai trả tiền, cho ai, vào dịp gì?</p></div><div class="els">Gợi ý tìm kiếm, Pinterest Trends, review nói về người nhận và dịp.</div><div class="ex"><b>Trượt khi</b>Không gọi được tên người mua và dịp, chỉ thấy "món đang hot".</div></li>
+      <li class="a2"><div><h4>2 · Bằng chứng bán</h4><p class="q">Có tín hiệu đếm được không?</p></div><div class="els">Review có ngày trong 90 ngày, số đã bán, nhãn "bought in past month", quảng cáo chạy trên 30 ngày.</div><div class="ex"><b>Trượt khi</b>Chỉ có số ước tính của công cụ, hoặc lượt yêu thích không kèm đơn.</div></li>
+      <li class="a3"><div><h4>3 · Đà</h4><p class="q">Đang lên, đứng yên, hay đang xuống?</p></div><div class="els">So 2 lần xem cách nhau 7 ngày: sales của shop, số đã bán, số phiên bản quảng cáo. Keepa cho Amazon, GMV từng tháng cho TikTok.</div><div class="ex"><b>Trượt khi</b>Đỉnh đã qua (mùa hè), hoặc một video viral rồi tắt.</div></li>
+      <li class="a4"><div><h4>4 · Vì sao nó thắng</h4><p class="q">Khách chọn nó vì đâu?</p></div><div class="els">Ảnh đầu, góc nói với ai, giá, ưu đãi, review khen điều gì lặp lại, quảng cáo nói câu gì 3 giây đầu.</div><div class="ex"><b>Trượt khi</b>Nó thắng nhờ thương hiệu, review tích lũy nhiều năm, hay giá xưởng mà bạn không chạm tới.</div></li>
+      <li class="a4"><div><h4>5 · Chỗ của mình</h4><p class="q">Mình làm gì khác, cho ai?</p></div><div class="els">Lời chê lặp lại (review 1–3 sao), người nhận chưa ai phục vụ, cá nhân hóa sâu hơn, kênh chưa ai chạy.</div><div class="ex"><b>Trượt khi</b>Câu trả lời là "rẻ hơn" hoặc "đẹp hơn".</div></li>
+    </ol>
+
+    <h3>Đọc tín hiệu trên từng nền tảng</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Nền tảng</th><th>Tín hiệu mạnh</th><th>Cách đọc đà</th><th>Bẫy hay gặp</th></tr></thead>
+      <tbody>
+        <tr><td>Etsy</td><td>Review có ngày trong 30–90 ngày; nhãn Bestseller; shop dưới 2 năm tuổi mà sales tăng đều</td><td>Ghi số sales của shop hôm nay, xem lại sau 7 ngày. Chênh lệch là số đơn thật của tuần</td><td>Favorite nhiều nhưng review cũ; shop 8 năm tuổi 50.000 sales (chứng minh ngách có tiền, không chứng minh người mới vào được)</td></tr>
+        <tr><td>Amazon</td><td>"bought in past month"; đường Sales Rank ổn định 90 ngày trên Keepa</td><td>Keepa: Sales Rank tốt lên hay xấu đi theo tháng; so cùng kỳ năm trước</td><td>Sales Rank của một ngày; đỉnh mùa vụ nhìn như nhu cầu cả năm</td></tr>
+        <tr><td>TikTok Shop</td><td>Số đã bán; nhiều creator khác nhau cùng bán; nhiều video, không chỉ một</td><td>GMV tháng này so tháng trước; sản phẩm có mặt nhiều tháng liền trong top</td><td>Một video viral rồi tắt; hoa hồng affiliate cao đẩy giá; hàng thương hiệu không được bán lại</td></tr>
+        <tr><td>Meta Ads</td><td>Quảng cáo chạy trên 30 ngày; một ý tưởng có nhiều phiên bản; nhiều page bán cùng món</td><td>Chụp lại mỗi tuần: quảng cáo biến mất giữa hai lần xem thường là đã thua</td><td>Thư viện chỉ hiện quảng cáo đang chạy, không có chi tiêu hay doanh số với quảng cáo thương mại</td></tr>
+        <tr><td>Shopify</td><td>Thứ tự bán chạy của store; sản phẩm mới thêm gần đây; store có truy cập tăng</td><td>Xem lại thứ tự bán chạy sau 7–14 ngày</td><td>Store chặn link sắp xếp; thứ tự bị chỉnh vì hàng tồn hay hàng lãi cao; doanh thu là ước tính</td></tr>
+        <tr><td>AliExpress</td><td>Đơn và review có ảnh trong 30 ngày gần nhất; nhà cung cấp có điểm cao</td><td>So số đơn hai lần xem</td><td>Số đơn tích lũy nhiều năm; ảnh sản phẩm đẹp hơn hàng thật</td></tr>
+      </tbody></table></div>
+    <div class="ht-self"><h4>5 câu hỏi trước khi kết luận "đây là best seller"</h4><ol>
+      <li><span><b>Mình đang thấy số đếm hay số ước tính?</b> Ghi rõ cạnh từng con số.</span></li>
+      <li><span><b>Số này của Mỹ hay của toàn cầu?</b> Etsy có lượng khách Đức, Anh rất lớn; xem đúng thị trường mình giao hàng.</span></li>
+      <li><span><b>Đà đang lên hay xuống?</b> Hai lần xem cách 7 ngày nói nhiều hơn một con số tổng.</span></li>
+      <li><span><b>Nó thắng nhờ thứ mình làm lại được trong 30 ngày không?</b> Thương hiệu và review tích lũy thì không.</span></li>
+      <li><span><b>Ai đang kiếm tiền khi mình tin con số này?</b> Danh sách "sản phẩm thắng" của các công cụ và nhà cung cấp là nội dung bán hàng của họ.</span></li></ol></div>
+  </div>
+
+  <div class="sub" id="spy-flow">
+    <div class="tagline">Workflow · làm trong ngày thứ 2 và thứ 3 của tuần 1</div>
+    <h3>Hai quy trình 90 phút, ghi vào Opportunity Engine tab 4c</h3>
+    <div class="mentor">
+      <div class="box"><h3>A · POD trên Etsy, sau đó Shopify</h3><ol class="flowl">
+        <li><b>15' · Nhu cầu.</b> Chọn người nhận × dịp từ <a href="#cs-ma-tran">ma trận ý tưởng</a> và <a href="#cs-lich">lịch dịp</a>. Gõ vào Etsy (ship to US) và Pinterest Trends, chép 10 gợi ý tìm kiếm, xem đỉnh mùa.</li>
+        <li><b>15' · Từ khóa.</b> Tra 5–8 cụm trên eRank hoặc RankHero: lượt tìm, số listing, giá trung vị. Tính lượt tìm trên 1.000 listing, <b>tính riêng cho Mỹ</b> nếu có.</li>
+        <li><b>25' · Trang 1 và best seller.</b> Với 2 cụm tốt nhất: chép 10 listing tự nhiên đầu, đánh dấu listing có review trong 90 ngày, nhãn Bestseller, tuổi shop. Ghi sales của 3 shop để xem lại sau 7 ngày.</li>
+        <li><b>10' · Đối chiếu.</b> Amazon cùng dịp (nhãn "bought in past month"); Meta Ad Library: có shop POD nào chạy quảng cáo cho dịp này trên 30 ngày không.</li>
+        <li><b>10' · Lãi.</b> Giá in và ship ở Printify hoặc Printful (xưởng ở Mỹ); lãi sau phí Etsy từ 30% giá bán.</li>
+        <li><b>5' · Nhãn hiệu.</b> Tra USPTO từng cụm chữ chính; đối chiếu danh sách đỏ ở mục <a href="#cs-ip">Chọn ngách, sản phẩm</a>.</li>
+        <li><b>10' · Quyết định.</b> Qua bộ lọc 5 câu ở thẻ tuần 1; viết góc của mình dựa trên lời chê lặp lại và cách đọc concept ở mục <a href="#cs-concept">giải phẫu concept</a>.</li></ol></div>
+      <div class="box"><h3>B · Dropship trên Shopify với Meta Ads (bản rút gọn; bản đầy đủ ở mục <a href="hang-vat-ly.html#vat-ly">Hàng vật lý</a>)</h3><ol class="flowl">
+        <li><b>15' · Tín hiệu.</b> TikTok Creative Center (Top Ads) và Meta Ad Library: tìm món có quảng cáo chạy trên 30 ngày, nhiều phiên bản, nhiều page.</li>
+        <li><b>15' · Đà.</b> TikTok Shop: số đã bán, số creator; nếu có Kalodata hoặc FastMoss, so GMV 2–3 tháng gần nhất. Còn lên hay đã qua đỉnh mùa?</li>
+        <li><b>20' · Nguồn hàng.</b> Tìm theo ảnh trên AliExpress hoặc CJ: giá vốn, thời gian giao tới Mỹ, review có ảnh 30 ngày gần nhất, điểm nhà cung cấp.</li>
+        <li><b>10' · Giá trần.</b> Amazon và Walmart bán món giống hệt giá bao nhiêu? Khách sẽ so.</li>
+        <li><b>15' · Bộ lọc dropship 7 câu</b> (bên dưới).</li>
+        <li><b>15' · Quyết định.</b> Giá bán, lãi trước quảng cáo, CAC tối đa, góc quảng cáo 3 giây đầu.</li></ol></div>
+    </div>
+    <div class="ht-flag"><h4>Bộ lọc dropship 7 câu · trượt một câu là loại với người mới</h4><ul>
+      <li>Không thương hiệu, không chép thiết kế đã đăng ký; không phải món chỉ hãng mới được bán.</li>
+      <li>Không pin lithium rời, chất lỏng, mỹ phẩm, thực phẩm chức năng, đồ cho trẻ dưới 12 tuổi: cần giấy tờ, dễ bị chặn quảng cáo và vận chuyển.</li>
+      <li>Nhẹ và không dễ vỡ: cước và hoàn hàng không ăn hết lãi.</li>
+      <li>Lãi trước quảng cáo từ khoảng 35% giá bán, và giá vẫn thấp hơn hoặc ngang giá Amazon cho món tương đương.</li>
+      <li>Giao tới Mỹ trong khoảng 10 ngày, hoặc có kho Mỹ.</li>
+      <li>Nhìn 3 giây video là hiểu món làm được gì.</li>
+      <li>Còn mùa: đỉnh không nằm ngay trước tháng bạn lên quảng cáo.</li></ul>
+      <p class="src">Lưu ý: Etsy không cho bán hàng mua sẵn về bán lại. Dropship chỉ chạy trên Shopify; Etsy dành cho POD và hàng bạn tự làm hoặc tự thiết kế.</p></div>
+  </div>
+
+  <div class="sub" id="spy-case1">
+    <div class="tagline">Case study 1 · POD · số liệu RankHero xem tháng 10/2026</div>
+    <h3>Quà nghỉ hưu: con số toàn cầu kéo bạn đi sai hướng, con số của Mỹ chỉ đường</h3>
+    <p class="prose">Lan muốn bán quà nghỉ hưu cho giáo viên, vì "teacher gift" rất đông người tìm. Thay vì đoán, Lan chạy workflow A. Bước 2 cho ra bảng dưới đây.</p>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Cụm từ</th><th>Lượt tìm/tháng</th><th>Listing cạnh tranh</th><th>Lượt tìm trên 1.000 listing</th><th>Giá trung vị</th></tr></thead>
+      <tbody>
+        <tr><td>retirement gift (toàn cầu)</td><td>60.500</td><td>339.438</td><td>178</td><td>23 USD</td></tr>
+        <tr><td>retirement gifts (chỉ Mỹ)</td><td>27.100</td><td>217.216</td><td>125</td><td>19,62 USD</td></tr>
+        <tr><td>retired gift (chỉ Mỹ)</td><td>27.100</td><td>63.316</td><td><b>428</b></td><td>21,99 USD</td></tr>
+        <tr><td>retired teacher (chỉ Mỹ)</td><td>1.000</td><td>17.713</td><td>56</td><td>21,95 USD</td></tr>
+      </tbody></table></div>
+    <ol class="steps">
+      <li><div><b>Bẫy toàn cầu.</b> Thẻ đứng đầu của "retirement gift" có rất nhiều chữ tiếng Đức (ruhestand geschenk, geldgeschenk rente): một phần lớn nhu cầu là khách Đức. Chỉ khoảng 45% lượt tìm đến từ Mỹ, nhưng khoảng 75% listing là của shop bán vào Mỹ. Đọc số toàn cầu, Lan sẽ tưởng thị trường rộng hơn thực tế.</div></li>
+      <li><div><b>Bẫy thu hẹp sai cách.</b> "retired teacher" nghe như ngách tốt, nhưng ở Mỹ chỉ khoảng 1.000 lượt tìm mỗi tháng cho gần 17.700 listing: 56 lượt trên 1.000 listing, kém hơn cụm rộng. Thu hẹp theo nghề làm nhu cầu giảm nhanh hơn cạnh tranh.</div></li>
+      <li><div><b>Cách gõ khác, cạnh tranh khác.</b> "retired gift" có cùng lượng tìm ở Mỹ với "retirement gifts" nhưng chỉ khoảng một phần ba số listing: 428 so với 125. Đây là cụm để Lan đặt vào 40 ký tự đầu tiêu đề, còn "retirement gift" vào thẻ.</div></li>
+      <li><div><b>Mùa.</b> Lượt tìm thấp nhất vào tháng 10 và tháng 2, cao nhất tháng 5–6 (mùa nghỉ hưu cuối năm học), tháng 12 đứng giữa. Quà nghỉ hưu bán quanh năm, không phụ thuộc Giáng sinh: hợp với một shop lên bán đầu tháng 11.</div></li>
+      <li><div><b>Giá.</b> Giá trung vị khoảng 22 USD, nhưng khoảng một phần tư mẫu nằm ở 25–50 USD và một phần tư ở 50–100 USD. Lan nhắm cụm 25–40 USD bằng cá nhân hóa sâu (tên, năm công tác, lời nhắn của đồng nghiệp), không đánh nhau ở cụm dưới 10 USD.</div></li>
+      <li><div><b>Việc Lan làm tiếp trên sàn</b> (bước 3–6): chép 10 listing đầu của "retired gift" (ship to US), đánh dấu review trong 90 ngày, ghi sales 3 shop để xem lại sau 7 ngày, đọc lời chê; tra Meta Ad Library chữ "retirement gift". Các số này Lan tự đo và ghi link, ngày vào tab 4c. Số ở bảng trên là ước tính của RankHero, chỉ dùng để chọn cụm.</div></li>
+    </ol>
+    <p class="verdict">Bài học: đọc số của đúng thị trường bạn giao hàng, so tỷ lệ lượt tìm trên listing giữa các cách gõ khác nhau, và đừng mặc định rằng thu hẹp ngách là tốt hơn.</p>
+  </div>
+
+  <div class="sub" id="spy-case2">
+    <div class="tagline">Case study 2 · Dropship · số liệu FastMoss quý 2/2026</div>
+    <h3>Máy rửa áp lực không dây: đứng top TikTok Shop, vẫn bị loại</h3>
+    <p class="prose">Huy thấy máy rửa áp lực không dây trong danh sách bán chạy quý 2/2026 của TikTok Shop Mỹ: doanh thu quý khoảng 7,15 triệu USD, giá 55–79 USD, tháng 6 khoảng 5,2 triệu USD so với 1,95 triệu tháng 5. Đà quá đẹp. Huy chạy workflow B.</p>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Câu hỏi</th><th>Kết quả</th><th>Đạt</th></tr></thead>
+      <tbody>
+        <tr><td>Thương hiệu</td><td>Sản phẩm đứng top là hàng có thương hiệu (SEESE); hàng không thương hiệu cùng loại phải cạnh tranh với tên đã có review</td><td>Rủi ro</td></tr>
+        <tr><td>Pin và vận chuyển</td><td>Máy chạy pin lithium: hạn chế vận chuyển, dễ bị giữ hàng, bảo hành phức tạp</td><td>Trượt</td></tr>
+        <tr><td>Cân nặng, hoàn hàng</td><td>Máy cồng kềnh; một lần hoàn hàng ăn hết lãi nhiều đơn</td><td>Trượt</td></tr>
+        <tr><td>Mùa</td><td>Đỉnh nằm ở tháng 5–6 (mùa rửa xe, sân vườn). Huy lên quảng cáo cuối tháng 11: đúng lúc nhu cầu xuống</td><td>Trượt</td></tr>
+        <tr><td>Hoa hồng affiliate</td><td>Khoảng 6%, thấp: cho thấy biên lãi của chính người bán lớn cũng không dày</td><td>Tín hiệu xấu</td></tr>
+      </tbody></table></div>
+    <p class="verdict">Kết luận: loại. Một sản phẩm đứng top cho biết <b>nhu cầu tồn tại</b>, không cho biết <b>chỗ của bạn</b>. Huy giữ lại bài học: dùng danh sách top để thấy loại nhu cầu (dọn dẹp ngoài trời), rồi tìm món nhẹ, không pin, đúng mùa đông của Mỹ, và chạy lại workflow B.</p>
+  </div>
+
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Trước khi nộp 3 ứng viên ngày thứ 4</h3></div>
+    <ol><li>Mỗi ứng viên có ít nhất một tín hiệu đếm được, có link và ngày?</li><li>Mình đã tính lượt tìm trên 1.000 listing cho đúng thị trường Mỹ chưa?</li><li>Mình đã xem lại sales của 3 shop sau vài ngày để biết đà chưa?</li><li>Nếu bỏ hết công cụ trả phí, kết luận của mình có còn đứng được không?</li></ol>
+  </div>
+  <p class="src">Nguồn, xem tháng 10/2026: <a href="https://profittree.io/blog/best-etsy-seller-seo-tools-2026">ProfitTree, công cụ Etsy 2026</a> (bài của một bên bán công cụ); <a href="https://revenuegeeks.com/software/keepa">RevenueGeeks về Keepa</a>; <a href="https://www.sellersprite.com/en/blog/Best-Chrome-Extensions-for-Amazon-Sellers">SellerSprite, extension Amazon</a> (bên bán công cụ); <a href="https://koala-apps.io/blog/kalodata-everything-you-need-to-know/">Koala về Kalodata</a>; <a href="https://koala-apps.io/koala-inspector-for-shopify/">Koala Inspector</a>; <a href="https://www.admapix.com/blog/best-practices/best-ad-spy-tools-2026">AdMapix, công cụ spy quảng cáo 2026</a> (bên bán công cụ); <a href="https://affmaven.com/minea-pricing/">giá Minea</a>; <a href="https://billo.app/blog/meta-ad-library/">cách đọc Meta Ad Library</a>; <a href="https://www.logicinbound.com/1-trick-spy-top-shopify-stores-stop-spies-store">thứ tự bán chạy của store Shopify</a>; <a href="https://explodingtopics.com/blog/exploding-topics-pro-vs-free">Exploding Topics</a>; <a href="https://craftprofessional.com/pinterest-trends-tool.html">Pinterest Trends</a>; <a href="https://www.listadum.com/blog/does-the-bestseller-badge-on-etsy-actually-mean-anything">nhãn Bestseller của Etsy</a>; RankHero: <a href="https://www.rankhero.com/keywords/retirement-gift">retirement gift</a>, <a href="https://www.rankhero.com/keywords/retirement-gifts">retirement gifts</a>, <a href="https://www.rankhero.com/keywords/retired-gift">retired gift</a>, <a href="https://www.rankhero.com/keywords/retired-teacher">retired teacher</a>; <a href="https://www.fastmoss.com/blog/best-selling-tiktok-shop-products-us-q2-2026/">FastMoss, TikTok Shop Mỹ quý 2/2026</a> (bên bán công cụ, số mô hình). Giá công cụ đổi thường xuyên: kiểm lại trên trang của từng hãng trước khi mua.</p>
+</section>
+<div class="pn"><a href="tu-duy.html"><small>← Phần trước</small>Tư duy</a><a class="nx" href="kiem-chung.html"><small>Phần sau →</small>Kiểm chứng 5 cổng</a></div>
+</main>
+</div>
+<footer>
+  <div>C.L.E.A.R. Path™ · Bản học viên · Quy định sàn, phí và thuế nhập khẩu thay đổi thường xuyên: kiểm lại trước khi tính tiền thật. · Dữ liệu ví dụ thu thập trên Etsy ngày 14/10/2026, xem với ship to US, giá quy đổi từ VND theo khoảng 26.300 VND/USD.</div>
+  <div>Thang kết quả dựa trên "The Elements of Value" (Almquist, Senior, Bloch, Harvard Business Review, 2016). Bảng 4 hành động dựa trên công cụ ERRC của Blue Ocean Strategy (Kim, Mauborgne). Ngưỡng là của khóa học, Mentor có thể chỉnh.</div>
+</footer>
+</div>
+<script>
+(function(){
+  var KEY='clear-k1-sprint';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){state={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+  var root=document.getElementById('sprint'); if(!root) return;
+  var boxes=root.querySelectorAll('input[type=checkbox][data-k]');
+  function refresh(){
+    var all=0,done=0;
+    root.querySelectorAll('.ht-card').forEach(function(card){
+      var bs=card.querySelectorAll('input[type=checkbox]'),n=0;
+      bs.forEach(function(b){if(b.checked)n++;});
+      var p=card.querySelector('.prog'); if(p){p.textContent=n+'/'+bs.length+' đã tích';p.classList.toggle('done',n===bs.length&&bs.length>0);}
+      all+=bs.length; done+=n;
+    });
+    var t=document.getElementById('ht-total'); if(t) t.textContent='Đã tích '+done+'/'+all+' ô';
+  }
+  boxes.forEach(function(b){
+    b.checked=!!state[b.dataset.k];
+    b.addEventListener('change',function(){ if(b.checked) state[b.dataset.k]=1; else delete state[b.dataset.k]; save(); refresh(); });
+  });
+  root.querySelectorAll('[data-ht]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var a=btn.dataset.ht, cards=root.querySelectorAll('.ht-card');
+      if(a==='open') cards.forEach(function(c){c.open=true;});
+      if(a==='close') cards.forEach(function(c){c.open=false;});
+      if(a==='reset'){ state={}; save(); boxes.forEach(function(b){b.checked=false;}); refresh(); }
+    });
+  });
+  // mở thẻ của tuần hiện tại
+  var map=[['w1','2026-10-19'],['w2','2026-10-26'],['w3','2026-11-02'],['w4','2026-11-09'],['w5','2026-11-16'],['w6','2026-11-23'],['w7','2026-11-30'],['w8','2026-12-07']];
+  var now=new Date(), cur='w1';
+  map.forEach(function(m){ if(now>=new Date(m[1]+'T00:00:00+07:00')) cur=m[0]; });
+  if(location.hash.indexOf('#ht-')!==0){ var el=document.getElementById('ht-'+cur); if(el) el.open=true; }
+  else { var h=document.getElementById(location.hash.slice(1)); if(h&&h.tagName==='DETAILS') h.open=true; }
+  refresh();
+})();
+</script>
+</body></html>
