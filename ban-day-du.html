@@ -339,7 +339,7 @@ ol.anat .q{font-size:13px;color:var(--muted)} ol.anat .els,ol.anat .ex{font-size
 ol.anat .ex b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);margin-bottom:2px}
 table.spyt{min-width:760px}
 table.spyt td:first-child{font-weight:600;white-space:nowrap}
-table.spyt.case{min-width:0}table.spyt.case td:first-child{width:9.5em}
+table.spyt.case{min-width:0}table.spyt.slim{min-width:0}table.spyt.slim td:first-child{white-space:normal}table.spyt.case td:first-child{width:9.5em}
 @media(max-width:640px){table.spyt.case,table.spyt.case tbody,table.spyt.case tr,table.spyt.case td{display:block;width:auto}table.spyt.case thead{display:none}table.spyt.case td:first-child{width:auto;padding-bottom:0;border-bottom:0}table.spyt.case tr{padding:4px 0}}
 ol.flowl{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
 pre.tpl{margin:0;padding:14px 16px;background:var(--paper);border:1px dashed var(--line);border-radius:10px;font-family:var(--f-data);font-size:12.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow-x:auto}
@@ -367,6 +367,11 @@ pre.tpl{margin:0;padding:14px 16px;background:var(--paper);border:1px dashed var
   <a href="#chon-sp"><span class="l">◎</span><span>Chọn ngách, sản phẩm</span></a>
   <a href="#spy"><span class="l">⌕</span><span>Spy &amp; research</span></a>
   <a href="#vat-ly"><span class="l">▣</span><span>Hàng vật lý</span></a>
+  <a href="#van-hanh"><span class="l">⚙</span><span>Vận hành</span></a>
+  <a href="#ads"><span class="l">◉</span><span>Meta Ads</span></a>
+  <a href="#tien"><span class="l">$</span><span>Tiền mặt</span></a>
+  <a href="#thi-nghiem"><span class="l">≈</span><span>Thí nghiệm</span></a>
+  <a href="#nhip"><span class="l">↻</span><span>Nhịp tuần</span></a>
   <a href="#mau"><span class="l">✎</span><span>Mẫu bài đạt</span></a>
   <a href="#danh-ba"><span class="l">▣</span><span>Danh bạ công cụ</span></a>
   <a href="#lo-trinh"><span class="l">→</span><span>Lộ trình gốc</span></a>
@@ -481,7 +486,7 @@ pre.tpl{margin:0;padding:14px 16px;background:var(--paper);border:1px dashed var
       <div class="ht-col" style="grid-column:span 2"><h4>Việc của bạn trong tuần</h4><ul class="ck"><li><label><input type="checkbox" data-k="w3-t0"><span><b>Đọc số:</b> Etsy Stats và Search Analytics: lượt hiển thị, lượt bấm, lượt truy cập, favorite, đơn của từng listing</span></label></li><li><label><input type="checkbox" data-k="w3-t1"><span><b>Không có lượt hiển thị:</b> sửa tiêu đề, thẻ, danh mục, thuộc tính</span></label></li><li><label><input type="checkbox" data-k="w3-t2"><span><b>Có hiển thị, không ai bấm:</b> sửa ảnh đầu, rồi đến giá hiển thị và phí ship</span></label></li><li><label><input type="checkbox" data-k="w3-t3"><span><b>Có bấm, không favorite hay đơn:</b> để tuần 4 (chuyển đổi)</span></label></li><li><label><input type="checkbox" data-k="w3-t4"><span><b>Biến thể:</b> listing có favorite thì làm thêm biến thể cùng khách (màu, câu chữ, dịp gần)</span></label></li></ul></div>
     </div>
     
-    <div class="due"><span class="k">Nộp · Vòng tối ưu 1 · hạn CN 8/11, 20:00</span><span>Bảng: listing, chỗ tắc, thứ đã đổi, ngày đổi; link các listing mới</span></div>
+    <div class="due"><span class="k">Nộp · Vòng tối ưu 1 · hạn CN 8/11, 20:00</span><span>Bảng: listing, chỗ tắc, thứ đã đổi, ngày đổi; link các listing mới · <a href="#thi-nghiem">Đọc: Khung thí nghiệm</a></span></div>
     <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="w3-q0"><span><b>Bạn biết chỗ tắc của từng listing là thấy, bấm hay mua chưa?</b><em><b>Đạt khi:</b> mỗi listing có một chữ: thấy, bấm hoặc mua.</em></span></label></li><li><label><input type="checkbox" data-k="w3-q1"><span><b>Mỗi listing tuần này chỉ đổi một thứ?</b><em><b>Đạt khi:</b> đúng một thứ, có ngày. Đổi nhiều thứ thì không biết cái nào có tác dụng.</em></span></label></li><li><label><input type="checkbox" data-k="w3-q2"><span><b>Biến thể mới có phục vụ cùng khách không?</b><em><b>Đạt khi:</b> cùng khách, khác góc hoặc dịp.</em></span></label></li><li><label><input type="checkbox" data-k="w3-q3"><span><b>Tin nhắn khách có được trả lời trong 24 giờ không?</b><em><b>Đạt khi:</b> không tin nào chờ quá 24 giờ.</em></span></label></li></ol></div>
     <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Xóa listing rồi đăng lại vì sốt ruột</li><li>Đổi giá liên tục khi chưa có lượt bấm</li><li>Đọc số từng giờ thay vì một lần mỗi ngày</li></ul></div>
   </div>
@@ -494,7 +499,7 @@ pre.tpl{margin:0;padding:14px 16px;background:var(--paper);border:1px dashed var
       <div class="ht-col" style="grid-column:span 2"><h4>Việc của bạn trong tuần</h4><ul class="ck"><li><label><input type="checkbox" data-k="w4-t0"><span><b>Chuyển đổi:</b> giá cộng ship so với đối thủ; ảnh 2–5; mô tả trả lời 3 câu khách hay hỏi; hạn đặt hàng kịp Giáng sinh ghi rõ trên ảnh hoặc mô tả</span></label></li><li><label><input type="checkbox" data-k="w4-t1"><span><b>Etsy Ads:</b> khi shop mở đủ 15 ngày, bật 1–5 USD mỗi ngày, chỉ cho listing đã có favorite hoặc đơn; tắt listing không có lượt bấm</span></label></li><li><label><input type="checkbox" data-k="w4-t2"><span><b>Đơn đầu:</b> xác nhận cá nhân hóa trong 24 giờ, kiểm file in trước khi gửi nhà in, nhắn khi hàng gửi đi</span></label></li><li><label><input type="checkbox" data-k="w4-t3"><span><b>Chọn cho Shopify:</b> 1–3 sản phẩm nhiều đơn hoặc nhiều favorite nhất; chưa có đơn thì chọn listing có tỷ lệ bấm cao nhất</span></label></li><li><label><input type="checkbox" data-k="w4-t4"><span><b>Chuẩn bị:</b> đăng ký Meta Business, tạo tài khoản quảng cáo, thêm phương thức thanh toán; mua tên miền</span></label></li></ul></div>
     </div>
     
-    <div class="due"><span class="k">Nộp · Vòng tối ưu 2 · hạn CN 15/11, 20:00</span><span>Bảng chuyển đổi từng listing, ảnh cài đặt Etsy Ads, 1–3 sản phẩm chọn cho Shopify và lý do bằng số</span></div>
+    <div class="due"><span class="k">Nộp · Vòng tối ưu 2 · hạn CN 15/11, 20:00</span><span>Bảng chuyển đổi từng listing, ảnh cài đặt Etsy Ads, 1–3 sản phẩm chọn cho Shopify và lý do bằng số · <a href="#ads-tk">Đọc: thiết lập Meta</a> · <a href="#van-don">Từ đơn đến đánh giá</a></span></div>
     <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="w4-q0"><span><b>Một khách lạ có đủ thông tin để đặt mà không cần nhắn tin hỏi không?</b><em><b>Đạt khi:</b> 3 câu hỏi hay gặp đã được trả lời sẵn trong ảnh hoặc mô tả.</em></span></label></li><li><label><input type="checkbox" data-k="w4-q1"><span><b>Etsy Ads chỉ chạy cho listing đã có tín hiệu?</b><em><b>Đạt khi:</b> listing không có lượt bấm nào thì không chạy quảng cáo.</em></span></label></li><li><label><input type="checkbox" data-k="w4-q2"><span><b>Lãi mỗi đơn sau Offsite Ads 15% còn dương không?</b><em><b>Đạt khi:</b> còn dương. Không thì tăng giá hoặc đổi gói trước khi khách đến nhiều.</em></span></label></li><li><label><input type="checkbox" data-k="w4-q3"><span><b>Bạn chọn sản phẩm cho Shopify bằng số hay bằng cảm giác?</b><em><b>Đạt khi:</b> có số: đơn, favorite hoặc tỷ lệ bấm.</em></span></label></li></ol></div>
     <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Bật quảng cáo để cứu listing chưa từng có lượt bấm</li><li>Giảm giá sâu mùa Black Friday đến mức lỗ</li><li>Bỏ quên shop Etsy khi bắt đầu Shopify</li></ul></div>
   </div>
@@ -507,7 +512,7 @@ pre.tpl{margin:0;padding:14px 16px;background:var(--paper);border:1px dashed var
       <div class="ht-col" style="grid-column:span 2"><h4>Việc của bạn trong tuần</h4><ul class="ck"><li><label><input type="checkbox" data-k="w5-t0"><span><b>Gói và nền:</b> gói Basic (39 USD/tháng, rẻ hơn nếu trả theo năm; xem ưu đãi dùng thử lúc đăng ký), theme miễn phí, tên miền riêng</span></label></li><li><label><input type="checkbox" data-k="w5-t1"><span><b>Thanh toán:</b> Shopify Payments và Stripe chưa hỗ trợ người bán ở Việt Nam. Cổng chính là PayPal Business: mở và xác minh <b>từ tuần 1–2</b>, không đợi tuần 5, rồi chạy một giao dịch thật nhỏ để chắc tài khoản nhận được tiền. PayPal có thể giữ tiền hoặc giới hạn tài khoản mới, nên hỏi Mentor phương án dự phòng (cổng thẻ bên thứ ba có giấy phép, thường cần hộ kinh doanh hoặc doanh nghiệp). Gói Basic thu thêm khoảng 2% mỗi giao dịch qua cổng bên thứ ba, tính vào giá</span></label></li><li><label><input type="checkbox" data-k="w5-t2"><span><b>Sản phẩm:</b> nối cùng nhà in POD đang dùng cho Etsy; trang sản phẩm có ảnh thật, ô cá nhân hóa, hạn giao Giáng sinh, câu trả lời cho 3 lo lắng của khách</span></label></li><li><label><input type="checkbox" data-k="w5-t3"><span><b>Trang bắt buộc:</b> giao hàng, đổi trả, liên hệ, giới thiệu, quyền riêng tư, điều khoản</span></label></li><li><label><input type="checkbox" data-k="w5-t4"><span><b>Đo lường:</b> app Facebook &amp; Instagram nối pixel và Conversions API; xác minh tên miền; kiểm 4 sự kiện ViewContent, AddToCart, InitiateCheckout, Purchase bằng một đơn thật rồi hoàn tiền</span></label></li><li><label><input type="checkbox" data-k="w5-t5"><span><b>Con số:</b> CAC tối đa = lãi mỗi đơn trước quảng cáo trên Shopify. Ghi lên đầu nhật ký quảng cáo</span></label></li></ul></div>
     </div>
     
-    <div class="due"><span class="k">Nộp · Store live · hạn CN 22/11, 20:00</span><span>Link store, ảnh đơn thử, ảnh Events Manager báo đủ 4 sự kiện, con số CAC tối đa · <a href="#mau-shopify">Xem mẫu đạt</a></span></div>
+    <div class="due"><span class="k">Nộp · Store live · hạn CN 22/11, 20:00</span><span>Link store, ảnh đơn thử, ảnh Events Manager báo đủ 4 sự kiện, con số CAC tối đa · <a href="#mau-shopify">Xem mẫu đạt</a> · <a href="#van-shopify">Đọc: 12 điểm kiểm Shopify</a></span></div>
     <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="w5-q0"><span><b>Bạn đã tự mua một đơn thật từ đầu đến cuối chưa?</b><em><b>Đạt khi:</b> đơn về tới nhà in và bạn đã hoàn tiền.</em></span></label></li><li><label><input type="checkbox" data-k="w5-q1"><span><b>Pixel có báo đủ 4 sự kiện, mỗi sự kiện một lần, không trùng?</b><em><b>Đạt khi:</b> Events Manager hiện đúng, kể cả Purchase.</em></span></label></li><li><label><input type="checkbox" data-k="w5-q2"><span><b>Trang sản phẩm trên điện thoại có thấy giá, ô cá nhân hóa và nút mua mà không cần cuộn nhiều không?</b><em><b>Đạt khi:</b> thử trên điện thoại thật.</em></span></label></li><li><label><input type="checkbox" data-k="w5-q3"><span><b>CAC tối đa của bạn là bao nhiêu đô một đơn?</b><em><b>Đạt khi:</b> có con số, tính trên giá Shopify, sau phí cổng thanh toán và ship.</em></span></label></li><li><label><input type="checkbox" data-k="w5-q4"><span><b>Store có lý do để khách Mỹ tin một shop mới không?</b><em><b>Đạt khi:</b> có chính sách rõ, email liên hệ thật, ảnh sản phẩm thật, hạn giao rõ.</em></span></label></li></ol></div>
     <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Mua theme hay app trả phí trước khi có đơn</li><li>Chép review Etsy sang Shopify</li><li>Chạy quảng cáo khi pixel chưa báo Purchase</li></ul></div>
   </div>
@@ -520,7 +525,7 @@ pre.tpl{margin:0;padding:14px 16px;background:var(--paper);border:1px dashed var
       <div class="ht-col" style="grid-column:span 2"><h4>Việc của bạn trong tuần</h4><ul class="ck"><li><label><input type="checkbox" data-k="w6-t0"><span><b>Mẫu quảng cáo:</b> 3–5 mẫu khác nhau về góc (người nhận, dịp, cảm xúc khi mở quà), không chỉ khác màu. Ít nhất 1 video dọc 9:16 quay tay cầm sản phẩm thật và cảnh cá nhân hóa</span></label></li><li><label><input type="checkbox" data-k="w6-t1"><span><b>Chữ trên mẫu:</b> nói món gì, cho ai, và hạn đặt kịp Giáng sinh</span></label></li><li><label><input type="checkbox" data-k="w6-t2"><span><b>Cấu trúc:</b> 1 chiến dịch Sales, tối ưu cho Purchase, nhắm Mỹ, để rộng; công cụ Creative Testing của Meta (2–5 mẫu) dùng được nếu ngân sách đủ</span></label></li><li><label><input type="checkbox" data-k="w6-t3"><span><b>Ngân sách:</b> mỗi ngày con số bạn chịu được trong 14 ngày; tổng tuần ít nhất 3 lần CAC tối đa để có cơ hội ra đơn</span></label></li><li><label><input type="checkbox" data-k="w6-t4"><span><b>Điểm tắt:</b> mẫu tiêu bằng một lần CAC tối đa mà chưa có đơn, và tỷ lệ thêm giỏ thấp, thì tắt. Không sửa gì trong 72 giờ đầu trừ khi chạm điểm tắt</span></label></li><li><label><input type="checkbox" data-k="w6-t5"><span><b>Black Friday 27/11, Cyber Monday 30/11:</b> ưu đãi chỉ chạy nếu lãi sau quảng cáo vẫn dương</span></label></li></ul></div>
     </div>
     
-    <div class="due"><span class="k">Nộp · Ads chạy · hạn Thứ 3 24/11</span><span>Ảnh cấu trúc chiến dịch, 3–5 mẫu, ngân sách mỗi ngày, điểm tắt viết sẵn · <a href="#mau-ads">Xem mẫu đạt</a></span></div>
+    <div class="due"><span class="k">Nộp · Ads chạy · hạn Thứ 3 24/11</span><span>Ảnh cấu trúc chiến dịch, 3–5 mẫu, ngân sách mỗi ngày, điểm tắt viết sẵn · <a href="#mau-ads">Xem mẫu đạt</a> · <a href="#ads">Đọc: Meta Ads cho ngân sách nhỏ</a></span></div>
     <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="w6-q0"><span><b>3–5 mẫu có khác nhau ở góc, hay chỉ khác màu nền?</b><em><b>Đạt khi:</b> mỗi mẫu nói với một người nhận hoặc một cảm xúc khác.</em></span></label></li><li><label><input type="checkbox" data-k="w6-q1"><span><b>3 giây đầu của video có cho thấy sản phẩm và chuyện cá nhân hóa không?</b><em><b>Đạt khi:</b> tắt tiếng vẫn hiểu.</em></span></label></li><li><label><input type="checkbox" data-k="w6-q2"><span><b>Điểm tắt có viết bằng số trước khi chạy không?</b><em><b>Đạt khi:</b> có câu dạng "tiêu X USD, 0 đơn, thêm giỏ dưới Y thì tắt".</em></span></label></li><li><label><input type="checkbox" data-k="w6-q3"><span><b>Bạn có đủ tiền chạy hết kế hoạch 14 ngày mà không ảnh hưởng cuộc sống không?</b><em><b>Đạt khi:</b> ngân sách nằm trong vốn thử ở Đánh giá đầu vào.</em></span></label></li></ol></div>
     <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Đổi ngân sách và nhắm chọn mỗi ngày</li><li>Đánh giá mẫu sau 12 giờ</li><li>Tăng giảm giá theo cảm xúc giữa Black Friday</li></ul></div>
   </div>
@@ -533,7 +538,7 @@ pre.tpl{margin:0;padding:14px 16px;background:var(--paper);border:1px dashed var
       <div class="ht-col" style="grid-column:span 2"><h4>Việc của bạn trong tuần</h4><ul class="ck"><li><label><input type="checkbox" data-k="w7-t0"><span><b>Bảng từng mẫu:</b> chi, CTR (link), CPC, thêm giỏ, thanh toán, đơn, CPA so với CAC tối đa</span></label></li><li><label><input type="checkbox" data-k="w7-t1"><span><b>Chỗ tắc:</b> CTR thấp là mẫu quảng cáo; bấm nhiều mà ít thêm giỏ là trang sản phẩm hoặc giá; thêm giỏ mà không mua là phí ship, thanh toán, lòng tin</span></label></li><li><label><input type="checkbox" data-k="w7-t2"><span><b>Mẫu thắng</b> (CPA dưới CAC tối đa): tăng ngân sách 20–30% mỗi lần, cách nhau vài ngày</span></label></li><li><label><input type="checkbox" data-k="w7-t3"><span><b>Mẫu thua:</b> tắt; làm 3 mẫu mới cùng góc với mẫu thắng</span></label></li><li><label><input type="checkbox" data-k="w7-t4"><span><b>Hạn Giáng sinh:</b> ghi hạn đặt hàng của nhà in lên quảng cáo và trang sản phẩm; gần hạn thì giảm ngân sách, không đẩy thêm</span></label></li></ul></div>
     </div>
     
-    <div class="due"><span class="k">Nộp · Quyết định ads · hạn CN 6/12, 20:00</span><span>Bảng số từng mẫu và quyết định giữ, tắt hay tăng cho từng mẫu</span></div>
+    <div class="due"><span class="k">Nộp · Quyết định ads · hạn CN 6/12, 20:00</span><span>Bảng số từng mẫu và quyết định giữ, tắt hay tăng cho từng mẫu · <a href="#ads-doc-so">Đọc: cây quyết định</a> · <a href="#tien">Tiền mặt tuần</a></span></div>
     <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="w7-q0"><span><b>Mỗi quyết định có dựa trên một con số so với CAC tối đa không?</b><em><b>Đạt khi:</b> đọc lý do không cần hỏi lại.</em></span></label></li><li><label><input type="checkbox" data-k="w7-q1"><span><b>Chỗ tắc nằm ở mẫu quảng cáo, trang sản phẩm hay bước thanh toán?</b><em><b>Đạt khi:</b> bạn chỉ ra được một chỗ.</em></span></label></li><li><label><input type="checkbox" data-k="w7-q2"><span><b>Lãi thật sau quảng cáo của tuần là bao nhiêu?</b><em><b>Đạt khi:</b> có con số, dù âm. Số âm có lý do thì vẫn là bài học có giá.</em></span></label></li><li><label><input type="checkbox" data-k="w7-q3"><span><b>Đơn nhận sau hạn Giáng sinh của nhà in, khách có được báo trước không?</b><em><b>Đạt khi:</b> hạn ghi rõ trên trang và quảng cáo.</em></span></label></li></ol></div>
     <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Nhân đôi ngân sách trong một đêm</li><li>Giữ mẫu thua vì "thấy đẹp"</li><li>Tiếp tục đẩy quảng cáo quà Giáng sinh sau hạn giao</li></ul></div>
   </div>
@@ -546,7 +551,7 @@ pre.tpl{margin:0;padding:14px 16px;background:var(--paper);border:1px dashed var
       <div class="ht-col" style="grid-column:span 2"><h4>Việc của bạn trong tuần</h4><ul class="ck"><li><label><input type="checkbox" data-k="w8-t0"><span><b>Một trang:</b> sản phẩm, khách, số Etsy, số Shopify, chi quảng cáo, lãi thật, 3 bài học</span></label></li><li><label><input type="checkbox" data-k="w8-t1"><span><b>Quyết định kênh:</b> kênh nào có lãi sau quảng cáo thì dồn sức; kênh lỗ thì giữ ở mức nhỏ hoặc tạm dừng</span></label></li><li><label><input type="checkbox" data-k="w8-t2"><span><b>Valentine 14/2:</b> listing và mẫu quảng cáo Valentine lên trước 20/12</span></label></li><li><label><input type="checkbox" data-k="w8-t3"><span><b>Tết 4–10/2/2027:</b> lịch nghỉ của nhà in, thời gian xử lý, ai trả lời tin nhắn khách</span></label></li></ul></div>
     </div>
     
-    <div class="due"><span class="k">Nộp · Tổng kết · hạn CN 13/12, 20:00</span><span>Một trang và kế hoạch 30 ngày trên Classroom · <a href="#mau-mot-trang">Xem mẫu đạt</a></span></div>
+    <div class="due"><span class="k">Nộp · Tổng kết · hạn CN 13/12, 20:00</span><span>Một trang và kế hoạch 30 ngày trên Classroom · <a href="#mau-mot-trang">Xem mẫu đạt</a> · <a href="#nhip">Đọc: Nhịp tuần và 30 ngày tiếp theo</a></span></div>
     <div class="ht-self"><h4>Câu hỏi tự kiểm của người bán thực chiến</h4><ol><li><label><input type="checkbox" data-k="w8-q0"><span><b>Bạn có lãi thật sau mọi phí và quảng cáo chưa?</b><em><b>Đạt khi:</b> trả lời được bằng số, có hay chưa.</em></span></label></li><li><label><input type="checkbox" data-k="w8-q1"><span><b>Nếu làm lại 8 tuần, bạn sẽ đổi điều gì đầu tiên?</b><em><b>Đạt khi:</b> chỉ ra một việc cụ thể và ở tuần nào.</em></span></label></li><li><label><input type="checkbox" data-k="w8-q2"><span><b>Kế hoạch 30 ngày có đúng một trọng tâm không?</b><em><b>Đạt khi:</b> chỉ một: một kênh, một sản phẩm, hoặc một mùa.</em></span></label></li></ol></div>
     <div class="ht-flag"><h4>Dấu hiệu bạn đang đi sai</h4><ul><li>Mở ngách mới khi sản phẩm hiện tại đang có đơn</li><li>Bỏ shop trong tuần Tết mà không báo khách</li></ul></div>
   </div>
@@ -1255,6 +1260,365 @@ pre.tpl{margin:0;padding:14px 16px;background:var(--paper);border:1px dashed var
   <p class="src">Nguồn, xem tháng 10/2026: <a href="https://dutylane.com/tariff/policy/de-minimis">DutyLane, tình trạng de minimis</a>; <a href="https://www.whitehouse.gov/presidential-actions/2026/02/continuing-the-suspension-of-duty-free-de-minimis-treatment-for-all-countries/">Nhà Trắng, tiếp tục đình chỉ de minimis (2/2026)</a>; <a href="https://www.federalregister.gov/documents/2026/06/24/2026-12670/indefinite-suspension-of-the-de-minimis-exemption-for-merchandise-arriving-through-all-modes-other">Federal Register, 24/6/2026</a>; <a href="https://www.tariffstool.com/guides/importing-from-vietnam-to-us">TariffsTool, thuế hàng Việt Nam và Trung Quốc</a> (trang phân tích, không phải văn bản chính thức); <a href="https://hts.usitc.gov/">Biểu thuế HTS của Mỹ</a>; <a href="https://www.newbuyingagent.com/resources/1688-vs-sourcing-agent-can-foreign-buyers-use-1688-directly-in-2026">NewBuyingAgent, 1688 và agent</a> (bên bán dịch vụ agent); <a href="https://dodropshipping.com/dropshipping-suppliers-in-vietnam/">DoDropshipping, nhà cung cấp và fulfillment ở Việt Nam</a>; <a href="https://www.salehoo.com/blog/coping-with-paypal-payment-holds">SaleHoo, PayPal giữ tiền</a>; <a href="https://syncee.com/blog/drop-shipping/de-minimis-exemption-is-over/">Syncee, dropship sau de minimis</a> (bên bán nền tảng); <a href="https://www.ecfr.gov/current/title-19/chapter-I/part-134">19 CFR Part 134, ghi nước xuất xứ</a>; <a href="https://www.cpsc.gov/Business--Manufacturing">CPSC, hướng dẫn cho doanh nghiệp</a>; <a href="https://www.p65warnings.ca.gov/">California Prop 65</a>. Thuế và quy định đổi thường xuyên: kiểm lại trước khi chốt giá.</p>
 </section>
 
+
+<section id="van-hanh">
+  <div class="sec-head">
+    <div class="eyebrow">Vận hành · cả hai nhánh · nhánh B từ tuần 2, nhánh A từ tuần 4–5</div>
+    <h2>Vận hành: tài khoản an toàn, mở Shopify đúng cách, và đi trọn một đơn từ lúc khách trả tiền tới lúc để lại đánh giá</h2>
+  </div>
+  <p class="prose">Sản phẩm tốt chỉ thành doanh nghiệp khi ba thứ không gãy: <b>tài khoản</b> (bị khóa là mất hết), <b>đường tiền</b> (khách trả được, bạn nhận được), và <b>lời hứa với khách</b> (giao đúng, trả lời nhanh, xử lý sự cố công bằng). Phần này là các quy trình để ba thứ đó chạy đều, kể cả khi bạn bận.</p>
+
+  <div class="sub" id="van-tk">
+    <div class="tagline">1 · Tài khoản an toàn · làm trong tuần 1 · 45 phút</div>
+    <h3>Một danh tính, một thiết bị chính, bảo mật hai lớp ở mọi nơi</h3>
+    <p class="prose">Sàn và nền tảng quảng cáo khóa tài khoản chủ yếu vì ba lý do: thông tin không khớp nhau, hành vi bất thường (đăng nhập lạ, chi tiêu tăng vọt), và vi phạm chính sách. Hai lý do đầu bạn tránh được hoàn toàn bằng thói quen.</p>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Tài khoản</th><th>Làm ngay</th><th>Không bao giờ</th></tr></thead>
+      <tbody>
+        <tr><td>Email gốc</td><td>Một Gmail riêng cho kinh doanh, bảo mật hai lớp bằng ứng dụng xác thực, lưu mã dự phòng ở nơi an toàn ngoài máy tính</td><td>Dùng email cá nhân cũ đã từng bị lộ mật khẩu; chia sẻ email cho người khác đăng nhập</td></tr>
+        <tr><td>Etsy</td><td>Tên, địa chỉ, giấy tờ, tài khoản ngân hàng nhận tiền cùng một người; bật bảo mật hai lớp</td><td>Mở shop thứ hai sau khi shop đầu bị khóa; dùng VPN hay máy của người khác để đăng nhập</td></tr>
+        <tr><td>PayPal Business</td><td>Thông tin trùng với Etsy, Shopify và ngân hàng; xác minh xong trước khi mở bán; chạy một giao dịch thật nhỏ</td><td>Nhận tiền hộ người khác; để số dư trống khi tranh chấp đang mở</td></tr>
+        <tr><td>Meta (Facebook cá nhân, Business, tài khoản quảng cáo)</td><td>Dùng Facebook cá nhân thật đã lâu năm; xác minh doanh nghiệp khi Meta yêu cầu; một thẻ thanh toán đứng tên bạn; chi tiêu tăng dần</td><td>Mua tài khoản quảng cáo, thuê tài khoản "trust"; đổi thẻ liên tục; tăng ngân sách gấp nhiều lần trong một ngày</td></tr>
+        <tr><td>Shopify</td><td>Email chủ cửa hàng là email kinh doanh; bảo mật hai lớp; chỉ cài app cần thiết</td><td>Cấp quyền nhân viên cho người lạ; cài app lậu hay theme bẻ khóa</td></tr>
+      </tbody></table></div>
+    <div class="mentor">
+      <div class="box"><h3>Bộ an toàn tối thiểu</h3><ol class="flowl">
+        <li><b>Trình quản lý mật khẩu</b> (bản miễn phí là đủ), mỗi tài khoản một mật khẩu khác nhau.</li>
+        <li><b>Ứng dụng xác thực</b> (Google Authenticator hoặc tương đương) thay vì chỉ dùng tin nhắn SMS.</li>
+        <li><b>Một trình duyệt hoặc một hồ sơ trình duyệt riêng</b> cho việc kinh doanh, trên máy bạn dùng hằng ngày.</li>
+        <li><b>Tờ khôi phục</b>: danh sách tài khoản, email gắn với nó, nơi để mã dự phòng. Không lưu mật khẩu trong tờ này.</li></ol></div>
+      <div class="box"><h3>Khi tài khoản bị hạn chế</h3><ol class="flowl">
+        <li>Đọc đúng lý do trong trang chất lượng tài khoản (Meta) hoặc email của sàn.</li>
+        <li>Sửa gốc rễ trước: gỡ quảng cáo vi phạm, sửa trang, cập nhật thông tin thanh toán.</li>
+        <li>Kháng nghị một lần, trung thực, nói rõ đã sửa gì; nộp giấy tờ nếu được yêu cầu.</li>
+        <li>Không tạo tài khoản mới để lách. Báo Mentor ngay trong ngày.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="sub" id="van-shopify">
+    <div class="tagline">2 · Mở Shopify đúng cách · nhánh B tuần 2–3 · nhánh A tuần 5</div>
+    <h3>Store chỉ được nhận quảng cáo khi đi qua 12 điểm kiểm này</h3>
+    <p class="prose">Mục tiêu tuần dựng store không phải là store đẹp. Mục tiêu là <b>một khách lạ ở Mỹ trả được tiền, bạn nhận được tiền, và Meta đếm được đơn đó</b>. Nội dung trang làm theo <a href="#mau-shopify">Mẫu 3</a>.</p>
+    <h3>Cổng thanh toán từ Việt Nam</h3>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Tình huống</th><th>Làm gì</th><th>Lưu ý</th></tr></thead>
+      <tbody>
+        <tr><td>Mặc định</td><td>PayPal Business đã xác minh, bật trên Shopify, chạy thử một giao dịch thật rồi hoàn tiền</td><td>Shopify Payments và Stripe chưa hỗ trợ người bán ở Việt Nam. Gói Basic thu thêm khoảng 2% mỗi giao dịch qua cổng bên thứ ba</td></tr>
+        <tr><td>Khách trả bằng thẻ qua PayPal mà không có tài khoản PayPal</td><td>Vẫn nhận được, nhưng cần biết rủi ro</td><td>Theo hướng dẫn tranh chấp PayPal, khoản trả bằng thẻ dạng khách (guest checkout) có thể không được Bảo vệ người bán; giữ đủ bằng chứng giao hàng</td></tr>
+        <tr><td>PayPal giữ tiền hoặc giới hạn tài khoản</td><td>Gửi giấy tờ PayPal yêu cầu, tải mã vận đơn lên từng giao dịch, giảm ngân sách quảng cáo cho tới khi tiền về</td><td>Tính trước vào <a href="#tien">kế hoạch tiền mặt</a>: tiền bán hàng có thể bị giữ tới khoảng 21 ngày</td></tr>
+        <tr><td>Cần cổng thẻ dự phòng</td><td>Hỏi Mentor trước khi đăng ký. Cổng có giấy phép thường yêu cầu hộ kinh doanh hoặc doanh nghiệp</td><td>Không dùng tài khoản thanh toán đứng tên người khác</td></tr>
+      </tbody></table></div>
+    <h3>12 điểm kiểm trước khi bật quảng cáo</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>#</th><th>Điểm kiểm</th><th>Đạt khi</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Tên miền riêng, email theo tên miền</td><td>Khách thấy contact@tenmien, không thấy đuôi myshopify</td></tr>
+        <tr><td>2</td><td>Bảo mật hai lớp trên Shopify, PayPal, Meta</td><td>Đã bật, có mã dự phòng</td></tr>
+        <tr><td>3</td><td>Thanh toán</td><td>Một đơn thật đi trọn đường, tiền vào PayPal, đã hoàn tiền</td></tr>
+        <tr><td>4</td><td>Giao hàng</td><td>Phí ship và thời gian giao trên trang đúng với nhà in hoặc nhà cung cấp; có hạn đặt Giáng sinh</td></tr>
+        <tr><td>5</td><td>6 trang bắt buộc</td><td>Shipping, Returns, Contact, About, Privacy, Terms đều có ở chân trang</td></tr>
+        <tr><td>6</td><td>Trang sản phẩm</td><td>Đạt Mẫu 3 trên điện thoại thật</td></tr>
+        <tr><td>7</td><td>Pixel và Conversions API</td><td>App Facebook &amp; Instagram đã nối; Events Manager nhận đủ ViewContent, AddToCart, InitiateCheckout, Purchase từ đơn thử</td></tr>
+        <tr><td>8</td><td>Xác minh tên miền trên Meta</td><td>Business Settings báo tên miền đã xác minh</td></tr>
+        <tr><td>9</td><td>Thu email</td><td>Ô đăng ký ở chân trang hoặc cửa sổ nhỏ, hứa đúng thứ bạn sẽ gửi</td></tr>
+        <tr><td>10</td><td>Email giỏ hàng bỏ dở</td><td>Đã bật tự động trong Shopify; đã tự thử một lần</td></tr>
+        <tr><td>11</td><td>App đánh giá</td><td>Đã cài, chưa có đánh giá thì để trống; không nhập đánh giá từ nơi khác</td></tr>
+        <tr><td>12</td><td>Tốc độ và sự sạch sẽ</td><td>Theme miễn phí, dưới 5 app; mở trang sản phẩm trên 4G dưới khoảng 3 giây</td></tr>
+      </tbody></table></div>
+    <div class="mentor">
+      <div class="box"><h3>App tối thiểu (bắt đầu bằng bản miễn phí)</h3><ol class="flowl">
+        <li><b>Facebook &amp; Instagram</b> (của Meta): pixel, Conversions API, danh mục sản phẩm.</li>
+        <li><b>Shopify Email</b>: bản tin và email giỏ hàng bỏ dở. Theo trang so sánh của một bên bán ứng dụng, mỗi tháng miễn phí khoảng 10.000 email, sau đó khoảng 1 USD cho 1.000 email; kiểm lại trong Shopify.</li>
+        <li><b>App đánh giá</b>, ví dụ Judge.me: bản miễn phí hiển thị đánh giá có ảnh; gửi email nhắc đánh giá tự động có thể nằm ở bản trả phí.</li>
+        <li>Nhánh A: app nhà in POD. Nhánh B: app nhà cung cấp hoặc DSers, CJ.</li></ol></div>
+      <div class="box"><h3>Không cần ở 8 tuần đầu</h3><ol class="flowl">
+        <li>Theme trả phí, app đếm ngược, app "người vừa mua" giả, app upsell nhiều tầng.</li>
+        <li>Trang blog, nhiều bộ sưu tập, nhiều ngôn ngữ, nhiều tiền tệ.</li>
+        <li>Chatbot. Một email trả lời trong 24 giờ là đủ.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="sub" id="van-don">
+    <div class="tagline">3 · Từ đơn đến đánh giá · từ đơn đầu tiên · mỗi ngày 15 phút</div>
+    <h3>Mỗi đơn đi qua 6 mốc; lỡ một mốc là mở cửa cho tranh chấp</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Mốc</th><th>Việc</th><th>Vì sao</th></tr></thead>
+      <tbody>
+        <tr><td>0–24 giờ</td><td>Hàng cá nhân hóa: gửi tin xác nhận tên, chữ (Mẫu 5, tin 1). Kiểm file in hoặc thông tin đơn trước khi đẩy sang nhà in, nhà cung cấp</td><td>Sai tên là lỗi tốn tiền nhất; sửa trước khi in thì miễn phí</td></tr>
+        <tr><td>Trong thời gian xử lý đã hứa</td><td>Đơn đã sang nhà in hoặc nhà cung cấp; ghi vào Nhật ký đơn</td><td>Giao trễ bắt đầu từ việc đặt trễ</td></tr>
+        <tr><td>Khi có mã vận đơn</td><td>Đánh dấu đã gửi kèm mã trên Etsy hoặc Shopify; với Shopify, mã phải lên được giao dịch PayPal. Gửi tin "đã gửi" (Mẫu 5, tin 2)</td><td>Bảo vệ người bán của PayPal và Purchase Protection của Etsy dựa vào mã theo dõi được, đúng địa chỉ</td></tr>
+        <tr><td>Mỗi ngày</td><td>Mở danh sách đơn đang đi: đơn nào đứng yên quá 3 ngày, đơn nào sắp quá ngày giao dự kiến</td><td>Báo trễ trước khi khách hỏi (Mẫu 5, tin 3) giữ được lòng tin</td></tr>
+        <tr><td>Giao xong + 3 đến 7 ngày</td><td>Shopify: một email cảm ơn kèm hướng dẫn chăm sóc sản phẩm và lời mời đánh giá. Etsy: Etsy tự gửi lời mời; bạn chỉ cảm ơn</td><td>Đánh giá đến từ trải nghiệm tốt, không đến từ lời xin</td></tr>
+        <tr><td>Giao xong + 14 ngày</td><td>Khách đã đồng ý nhận email: gợi ý dịp tiếp theo hoặc món đi kèm</td><td>Khách cũ là nguồn đơn rẻ nhất; đây là tài sản riêng của bạn</td></tr>
+      </tbody></table></div>
+    <h3>Luật chơi khi có sự cố (xem tháng 10/2026)</h3>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Kênh</th><th>Mốc thời gian</th><th>Bạn cần có</th></tr></thead>
+      <tbody>
+        <tr><td>Etsy</td><td>Từ 7/5/2026: khách mở case trong khoảng 30 ngày; trả lời tin "Help with Order" trong 48 giờ; đơn coi là trễ khi tới sau ngày giao dự kiến từ 7 ngày</td><td>Mã vận đơn hợp lệ, gửi đúng hạn, biên lai gửi hàng. Purchase Protection chi trả tới 250 USD mỗi case với đơn đủ điều kiện</td></tr>
+        <tr><td>PayPal (Shopify)</td><td>Khách mở tranh chấp tới 180 ngày sau khi trả tiền; bạn trả lời trong 10 ngày, không trả lời là thua</td><td>Mã theo dõi kiểm được trên mạng, trạng thái đã giao, địa chỉ trùng địa chỉ trên giao dịch, gửi trong khoảng 7 ngày. Tranh chấp leo thang tại Mỹ có thể mất phí khoảng 15 USD</td></tr>
+      </tbody></table></div>
+<pre class="tpl">TRẢ LỜI TRANH CHẤP / CASE · khuôn
+
+Hi [tên], I'm sorry your order hasn't been what you expected.
+Here is what I can see: [đã gửi ngày …, mã …, trạng thái hiện tại].
+I can [gửi lại miễn phí / hoàn tiền toàn bộ / hoàn một phần X USD] today.
+Which would you prefer? I'll take care of it within 24 hours of your reply.
+
+Gửi kèm trên PayPal hoặc Etsy: mã vận đơn, ảnh trang theo dõi, ảnh sản phẩm trước khi gửi,
+tin nhắn xác nhận cá nhân hóa khách đã đồng ý.</pre>
+    <div class="mentor">
+      <div class="box"><h3>Quyết định hoàn tiền nhanh</h3><ol class="flowl">
+        <li><b>Lỗi do shop</b> (sai tên, in hỏng, gửi trễ do mình): làm lại hoặc hoàn tiền ngay, không tranh cãi.</li>
+        <li><b>Thất lạc khi giao</b> có mã theo dõi: đề nghị gửi lại; chi phí ghi vào dự phòng 3%.</li>
+        <li><b>Khách đổi ý</b> với hàng cá nhân hóa: theo chính sách đã ghi; vẫn lịch sự.</li>
+        <li>Giải quyết trực tiếp trước khi khách leo thang: rẻ hơn, giữ chỉ số tài khoản.</li></ol></div>
+      <div class="box"><h3>Thu email đúng luật</h3><ol class="flowl">
+        <li>Chỉ gửi bản tin cho người đã đồng ý nhận (ô đăng ký, hoặc ô đồng ý lúc thanh toán Shopify).</li>
+        <li>Không lấy email khách Etsy để gửi quảng cáo: Etsy không cho phép.</li>
+        <li>Không tặng quà hay giảm giá để đổi lấy đánh giá.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Trước khi bật quảng cáo</h3></div>
+    <ol><li>Nếu tài khoản Meta bị hạn chế ngày mai, mình biết bấm vào đâu và báo ai?</li><li>Tiền của đơn đầu tiên về tài khoản nào, sau bao nhiêu ngày?</li><li>Đơn nào đang đi mà mình chưa biết trạng thái?</li><li>Nếu khách mở tranh chấp, mình có đủ bằng chứng trong 10 phút không?</li></ol>
+  </div>
+  <p class="src">Nguồn, xem tháng 10/2026: <a href="https://www.etsy.com/seller-handbook/article/1085799204521">Etsy Seller Handbook, thay đổi Purchase Protection 4/2026</a>; <a href="https://www.chargeflow.io/blog/how-to-win-an-item-not-received-paypal-dispute">Chargeflow, tranh chấp PayPal và điều kiện Bảo vệ người bán</a> (bên bán dịch vụ); <a href="https://www.paypal.com/gl/webapps/mpp/seller-protection">PayPal, Seller Protection</a>; <a href="https://pushowl.com/blog/free-email-marketing-shopify-complete-guide">PushOwl, gói miễn phí Shopify Email</a> (bên bán ứng dụng); <a href="https://apps.shopify.com/judgeme">Judge.me trên Shopify App Store</a>; <a href="https://www.stackmatix.com/blog/facebook-ad-account-disabled">Stackmatix, lý do tài khoản quảng cáo bị khóa</a>; <a href="https://www.airwallex.com/vn/blog/cong-thanh-toan-shopify">Airwallex, cổng thanh toán Shopify cho người bán Việt Nam</a>. Chính sách thay đổi thường xuyên: đọc trang gốc trước khi xử lý một case thật.</p>
+</section>
+
+<section id="ads">
+  <div class="sec-head">
+    <div class="eyebrow">Meta Ads · nhánh B từ tuần 4 · nhánh A từ tuần 5 · xem tháng 10/2026</div>
+    <h2>Meta Ads cho ngân sách nhỏ: thiết lập an toàn, làm mẫu mỗi tuần, đọc số bằng một cây quyết định</h2>
+  </div>
+  <p class="prose">Với 10–30 USD mỗi ngày, bạn không đấu được bằng ngân sách. Bạn thắng bằng ba thứ: <b>mẫu quảng cáo đúng người</b>, <b>trang bán giữ được khách</b>, và <b>kỷ luật đọc số</b>. Phần này đi theo đúng thứ tự đó, và nối với thẻ tuần 6–7, <a href="#mau-ads">Mẫu 4</a> và bộ câu lệnh AI Quảng cáo Meta.</p>
+
+  <div class="sub" id="ads-thuc-te">
+    <div class="tagline">0 · Sự thật trước khi tiêu đồng đầu tiên</div>
+    <h3>Chi phí một đơn của thị trường thường cao hơn CAC tối đa của người mới</h3>
+    <div class="tbl"><table class="spyt slim">
+      <thead><tr><th>Chỉ số (trung vị)</th><th>Toàn bộ thương mại điện tử</th><th>Nhà cửa và vườn</th><th>Thời trang, phụ kiện</th></tr></thead>
+      <tbody>
+        <tr><td>CPM (giá 1.000 lượt hiển thị)</td><td>15,06 USD</td><td></td><td></td></tr>
+        <tr><td>CTR</td><td>2,39%</td><td>2,38%</td><td>2,44%</td></tr>
+        <tr><td>Tỷ lệ chuyển đổi</td><td>1,53%</td><td>1,24%</td><td>1,47%</td></tr>
+        <tr><td>Chi phí một đơn (CPA)</td><td>38,99 USD</td><td>47,93 USD</td><td>36,98 USD</td></tr>
+      </tbody></table></div>
+    <p class="src">Số của Triple Whale, các thương hiệu dùng nền tảng này, 8/2025–7/2026. Phần lớn là thương hiệu đã có tên tuổi và khách cũ, nên chỉ để định hướng.</p>
+    <p class="verdict">Bài học: nếu CAC tối đa của bạn là 12–15 USD mà thị trường thường trả 37–48 USD cho một đơn, quảng cáo khó có lãi ngay. Trước khi tăng tiền, <b>nâng giá trị đơn</b> (bộ quà, mua 2, khắc tên, hộp quà) để CAC tối đa rộng ra, như case bát dừa từ 29 lên 44 USD. Và coi 8 tuần đầu là <b>mua dữ liệu</b>: tìm ra góc quảng cáo và trang bán tốt nhất, chưa phải lúc kiếm lãi lớn từ quảng cáo.</p>
+  </div>
+
+  <div class="sub" id="ads-tk">
+    <div class="tagline">1 · Thiết lập · nhánh B tuần 3–4 · nhánh A tuần 4</div>
+    <h3>Tài khoản quảng cáo mới cần được "làm ấm", không cần được "đẩy mạnh"</h3>
+    <ol class="steps">
+      <li><div><b>Facebook cá nhân thật</b> làm quản trị viên; bảo mật hai lớp (xem <a href="#van-tk">Tài khoản an toàn</a>).</div></li>
+      <li><div><b>Business portfolio</b> (Business Manager) mang tên shop; thêm Fanpage và tài khoản Instagram của shop.</div></li>
+      <li><div><b>Tài khoản quảng cáo</b>: tiền tệ USD (cùng đơn vị với giá bán), múi giờ chọn một lần rồi giữ nguyên; một thẻ thanh toán đứng tên bạn.</div></li>
+      <li><div><b>Xác minh tên miền</b> và nối <b>pixel cùng Conversions API</b> qua app Facebook &amp; Instagram trên Shopify; kiểm đủ 4 sự kiện bằng đơn thử.</div></li>
+      <li><div><b>Làm ấm</b>: Fanpage có ảnh đại diện, ảnh bìa, vài bài đăng thật; ngày đầu chi nhỏ; tăng ngân sách từng bước, mỗi lần không quá 20–30%.</div></li>
+      <li><div><b>Kiểm trang chất lượng tài khoản</b> mỗi tuần. Quảng cáo bị từ chối thì đọc lý do, sửa, rồi mới chạy tiếp.</div></li>
+    </ol>
+    <div class="mentor">
+      <div class="box"><h3>Chính sách hay làm người mới bị chặn</h3><ol class="flowl">
+        <li>Lời hứa không có trên trang bán (giảm giá, ngày giao, "handmade" khi hàng làm máy).</li>
+        <li>Nhắm vào đặc điểm cá nhân: "Bạn đang béo?", "Bạn bị mất ngủ?".</li>
+        <li>Trước/sau về sức khỏe, cơ thể; sản phẩm thuộc nhóm hạn chế.</li>
+        <li>Trang đích khác với quảng cáo, hoặc trang chậm, lỗi.</li></ol></div>
+      <div class="box"><h3>Không làm</h3><ol class="flowl">
+        <li>Mua hay thuê tài khoản quảng cáo, Business có sẵn.</li>
+        <li>Chạy nhiều tài khoản để lách khi một tài khoản bị hạn chế.</li>
+        <li>Nhân ngân sách lên nhiều lần trong một ngày vì thấy một đơn.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="sub" id="ads-mau-tuan">
+    <div class="tagline">2 · Nhịp làm mẫu quảng cáo · mỗi tuần 3–5 mẫu mới · khoảng 4 giờ</div>
+    <h3>Mẫu quảng cáo là sản phẩm tiêu hao: mỗi tuần làm mới một ít, theo góc đang thắng</h3>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Ngày</th><th>Việc</th><th>Công cụ</th></tr></thead>
+      <tbody>
+        <tr><td>Thứ 2 · 45 phút</td><td>Chọn 3 góc: một góc đang thắng (làm biến thể), hai góc mới lấy từ lời chê của đối thủ và câu khách nguyên văn ở cổng C. Viết 10 câu mở đầu, giữ 3</td><td>Bảng mẫu tuần trước; bộ câu lệnh AI Quảng cáo Meta để gợi ý câu mở; AI chỉ gợi ý, bạn chọn và sửa</td></tr>
+        <tr><td>Thứ 3 · 60 phút</td><td>Quay bằng điện thoại: dọc 9:16, ánh sáng cửa sổ, tay cầm sản phẩm thật, cảnh cá nhân hóa, cận chất liệu, mở hộp. Mỗi góc quay 3 cách mở đầu</td><td>Điện thoại, giá đỡ, mẫu thật. Nhánh B dùng thêm video tự quay ở xưởng</td></tr>
+        <tr><td>Thứ 4 · 90 phút</td><td>Dựng 3–5 mẫu 10–15 giây, phụ đề lớn (đa số xem tắt tiếng), chữ trên màn hình ≤ 7 từ; 1 ảnh tĩnh để so định dạng. Viết primary text và headline theo Mẫu 4</td><td>CapCut hoặc Canva. Nhánh A: app phân tích thiết kế POD để làm biến thể ảnh tĩnh, theo lằn ranh ở <a href="#db-cong-cu-khoa">Hai công cụ của khóa</a></td></tr>
+        <tr><td>Thứ 5 · 1:1</td><td>Mentor duyệt theo "Bộ mẫu bị trả lại khi" ở Mẫu 4; sửa ngay trong buổi</td><td>Màn hình học viên</td></tr>
+        <tr><td>Thứ 6 · 15 phút</td><td>Thêm mẫu mới vào chiến dịch đang chạy; tắt mẫu đã chạm điểm tắt</td><td>Ads Manager</td></tr>
+      </tbody></table></div>
+    <div class="mentor">
+      <div class="box"><h3>3 giây đầu: 5 kiểu mở đã được nhiều shop dùng</h3><ol class="flowl">
+        <li><b>Khoảnh khắc nhận quà</b>: tay mở hộp, phản ứng thật.</li>
+        <li><b>Vấn đề hiện ngay</b>: góc phòng bừa, dây chuyền không thêm được đá.</li>
+        <li><b>Cá nhân hóa đang diễn ra</b>: khắc tên, in tên.</li>
+        <li><b>Câu của khách</b>: chữ trên màn hình là một câu review thật của đối thủ, viết lại thành câu hỏi.</li>
+        <li><b>Hạn dịp</b>: "Order by [ngày] for Christmas".</li></ol></div>
+      <div class="box"><h3>Không bao giờ</h3><ol class="flowl">
+        <li>Người thật giả bằng AI nói "tôi đã mua", hay đánh giá bịa.</li>
+        <li>Video của nhà cung cấp mà hàng trăm shop đang chạy.</li>
+        <li>Nhạc có bản quyền không nằm trong thư viện của Meta hoặc CapCut.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="sub" id="ads-cau-truc">
+    <div class="tagline">3 · Cấu trúc chiến dịch và ngân sách</div>
+    <h3>Một chiến dịch, một nhóm quảng cáo, 3–5 mẫu, để Meta tìm người</h3>
+    <div class="tbl"><table class="spyt case">
+      <thead><tr><th>Phần</th><th>Thiết lập</th><th>Vì sao</th></tr></thead>
+      <tbody>
+        <tr><td>Mục tiêu</td><td>Sales, tối ưu cho Purchase</td><td>Tối ưu cho click hay lượt xem sẽ mang về người thích bấm, không phải người mua</td></tr>
+        <tr><td>Đối tượng</td><td>Mỹ, để rộng (Advantage+ audience); chỉ giới hạn tuổi hoặc giới tính khi sản phẩm thật sự chỉ dành cho nhóm đó</td><td>Ngân sách nhỏ chia nhỏ thêm thì mỗi nhóm càng ít dữ liệu</td></tr>
+        <tr><td>Vị trí</td><td>Advantage+ placements</td><td>Meta tự đưa ngân sách về chỗ rẻ hơn; mẫu dọc 9:16 dùng được ở Reels và Stories</td></tr>
+        <tr><td>Mẫu</td><td>3–5 mẫu khác góc trong cùng nhóm; hoặc dùng công cụ thử mẫu (Creative testing) của Meta khi có</td><td>So các góc với nhau trong cùng điều kiện</td></tr>
+        <tr><td>Ngân sách</td><td>Mỗi ngày: con số bạn chịu được trong 14 ngày, nằm trong vốn thử. Mỗi tuần: ít nhất 3 lần CAC tối đa</td><td>Dưới mức này, gần như không có đơn để đọc</td></tr>
+        <tr><td>Đổi gì, khi nào</td><td>Không sửa trong 72 giờ đầu trừ khi chạm điểm tắt; tăng hoặc giảm mỗi lần tối đa 20–30%</td><td>Thay đổi lớn đưa nhóm quảng cáo về lại giai đoạn học</td></tr>
+      </tbody></table></div>
+    <p class="prose">Meta cần nhiều đơn mỗi tuần để thoát giai đoạn học: con số quen thuộc là khoảng 50 sự kiện tối ưu mỗi tuần cho một nhóm quảng cáo, một số nguồn nói Meta đã hạ ngưỡng cho chiến dịch Sales trong năm 2026. Với ngân sách nhỏ, nhóm quảng cáo của bạn gần như chắc chắn ở trạng thái "Learning limited". <b>Đó là bình thường.</b> Vì vậy bạn đọc các chỉ số đi trước (CTR, CPC, tỷ lệ thêm giỏ) để chọn mẫu, và đọc chi phí một đơn theo cửa sổ 7–14 ngày.</p>
+  </div>
+
+  <div class="sub" id="ads-doc-so">
+    <div class="tagline">4 · Đọc số · mỗi ngày 10 phút · quyết định 2 lần mỗi tuần</div>
+    <h3>Cây quyết định: tiêu bao nhiêu thì được kết luận, và kết luận gì</h3>
+    <div class="tbl"><table class="spyt">
+      <thead><tr><th>Tình huống</th><th>Chỗ tắc</th><th>Làm gì</th></tr></thead>
+      <tbody>
+        <tr><td>Mẫu đã tiêu dưới 1 lần CAC tối đa</td><td>Chưa đủ dữ liệu</td><td>Không kết luận, không sửa</td></tr>
+        <tr><td>Mẫu tiêu ≥ 1 lần CAC tối đa, 0 thêm giỏ, CTR thấp nhất nhóm</td><td>Mẫu quảng cáo</td><td>Tắt mẫu. Mẫu mới đổi câu mở đầu hoặc đổi góc</td></tr>
+        <tr><td>CTR tốt, nhiều lượt bấm, ít thêm giỏ</td><td>Trang sản phẩm hoặc giá</td><td>Giữ quảng cáo, sửa trang theo Mẫu 3 (ảnh đầu khớp quảng cáo, giá, ngày nhận)</td></tr>
+        <tr><td>Có thêm giỏ, ít hoặc không mua</td><td>Phí ship, thanh toán, lòng tin</td><td>Tự đi thử bước thanh toán trên điện thoại; kiểm phí ship bất ngờ, PayPal, trang chính sách</td></tr>
+        <tr><td>Cả chiến dịch tiêu ≥ 2 lần CAC tối đa, 0 đơn</td><td>Ưu đãi hoặc sản phẩm</td><td>Dừng. Mang số vào 1:1: nâng giá trị đơn hay đổi sản phẩm</td></tr>
+        <tr><td>Có từ 3 đơn, CPA ≤ CAC tối đa</td><td>Đang thắng</td><td>Tăng 20–30% mỗi 3–4 ngày; làm 3 mẫu mới cùng góc</td></tr>
+        <tr><td>CPA trong khoảng 1–1,3 lần CAC tối đa</td><td>Gần hòa vốn</td><td>Giữ ngân sách; nâng giá trị đơn; làm mẫu mới cùng góc</td></tr>
+        <tr><td>CPA trên 1,3 lần CAC tối đa sau 7 ngày</td><td>Lỗ</td><td>Giảm hoặc tắt; quay lại chỗ tắc gần nhất ở các dòng trên</td></tr>
+      </tbody></table></div>
+    <div class="mentor">
+      <div class="box"><h3>Tuần Black Friday và Cyber Monday (27–30/11)</h3><ol class="flowl">
+        <li>Giá quảng cáo thường tăng mạnh vì các thương hiệu lớn đổ ngân sách: giữ ngân sách phẳng, đừng thử điều mới đúng 4 ngày này.</li>
+        <li>Không đánh giá mẫu chỉ bằng số của 4 ngày này; đọc lại cả tuần.</li>
+        <li>Ưu đãi chỉ chạy nếu lãi sau quảng cáo vẫn dương. Ưu đãi tốt cho shop nhỏ là quà kèm hoặc gói quà, không phải giảm sâu.</li>
+        <li>Gần hạn giao Giáng sinh của nhà in hoặc nhà cung cấp: giảm ngân sách, đổi chữ "kịp Giáng sinh" thành quà năm mới hoặc Valentine.</li></ol></div>
+      <div class="box"><h3>Bảng ghi mỗi ngày (Bộ vận hành, tab quảng cáo)</h3><ol class="flowl">
+        <li>Ngày, mẫu, góc, chi, lượt hiển thị, CTR (link), CPC, thêm giỏ, thanh toán, đơn, CPA.</li>
+        <li>Cột "quyết định" và "vì sao" bằng một con số.</li>
+        <li>Mỗi thay đổi ghi vào tab <a href="#thi-nghiem">Thí nghiệm &amp; quyết định</a> của Checklist.</li></ol></div>
+    </div>
+  </div>
+
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Trước khi bấm chạy</h3></div>
+    <ol><li>CAC tối đa của mình là bao nhiêu, và nó có gần với chi phí một đơn của thị trường không? Nếu chưa, mình nâng giá trị đơn bằng gì?</li><li>3 mẫu của mình khác nhau ở góc nào?</li><li>Điểm tắt đã viết bằng số chưa?</li><li>Ngân sách 14 ngày có nằm trong vốn thử và bảng tiền mặt tuần không?</li></ol>
+  </div>
+  <p class="src">Nguồn, xem tháng 10/2026: <a href="https://www.triplewhale.com/blog/facebook-ads-benchmarks">Triple Whale, chỉ số Meta Ads 8/2025–7/2026</a> (dữ liệu khách hàng của họ); <a href="https://www.1clickreport.com/blog/meta-advantage-plus-campaign-setup-2026">1ClickReport, thiết lập Advantage+ 2026</a> và <a href="https://www.1clickreport.com/blog/advantage-plus-shopping-25-conversions-2026-guide">ngưỡng chuyển đổi 2026</a> (blog bên thứ ba, chưa thấy thông báo chính thức của Meta); <a href="https://www.stackmatix.com/blog/facebook-ad-account-disabled">Stackmatix, phòng tránh tài khoản bị khóa</a>. Giao diện và tên gọi trong Ads Manager thay đổi thường xuyên; làm theo tên mới nhất bạn thấy.</p>
+</section>
+
+<section id="tien">
+  <div class="sec-head">
+    <div class="eyebrow">Tiền mặt · cả hai nhánh · mỗi chủ nhật 15 phút, cùng lúc nộp số</div>
+    <h2>Tiền mặt hằng tuần theo tinh thần Profit First: có lãi trên giấy vẫn có thể hết tiền</h2>
+  </div>
+  <p class="prose">Người bán một mình hiếm khi chết vì lỗ. Họ chết vì <b>hết tiền mặt</b> trong lúc đang có lãi: quảng cáo trừ thẻ mỗi ngày, mẫu và lô hàng trả trước, còn tiền bán hàng thì PayPal có thể giữ tới khoảng 21 ngày và Etsy trả theo lịch. Bảng tiền mặt tuần trả lời ba câu: <b>còn bao nhiêu tiền dùng được</b>, <b>trụ được mấy tuần</b>, <b>tuần tới được chi tối đa bao nhiêu cho quảng cáo</b>. Làm trên tab <b>Tiền mặt tuần</b> của Checklist.</p>
+
+  <div class="sub" id="tien-luat">
+    <div class="tagline">5 luật tiền của khóa</div>
+    <h3>Luật đơn giản, giữ mỗi tuần</h3>
+    <ol class="steps">
+      <li><div><b>Vốn thử là trần.</b> Con số ở Đánh giá đầu vào là tổng tiền được mất trong 8 tuần cho mẫu, phí và quảng cáo. Hết vốn thử là dừng và ngồi lại với Mentor, không vay thêm.</div></li>
+      <li><div><b>Tiền đang bị giữ không phải tiền của bạn.</b> Chỉ tính ngân sách trên tiền đã về tài khoản.</div></li>
+      <li><div><b>Trần quảng cáo tuần tới = 25% tiền mặt cuối tuần.</b> Ngưỡng của khóa để không dồn hết tiền vào một tuần quảng cáo; Mentor có thể chỉnh theo vốn thử.</div></li>
+      <li><div><b>Dưới 4 tuần trụ thì giảm quảng cáo về mức tối thiểu</b> và báo Mentor ở buổi 1:1 gần nhất.</div></li>
+      <li><div><b>Tách tiền ngay khi tiền về:</b> 5% vào tài khoản Lãi, 15% vào tài khoản Thuế và dự phòng. Phần còn lại là tiền vận hành.</div></li>
+    </ol>
+  </div>
+
+  <div class="sub" id="tien-pf">
+    <div class="tagline">Profit First · bản rút gọn cho người bán mới</div>
+    <h3>Hai giai đoạn: đang thử, và đã có lãi đều</h3>
+    <div class="tbl"><table class="spyt slim">
+      <thead><tr><th>Tài khoản</th><th>Giai đoạn thử (8 tuần đầu)</th><th>Khi lãi sau quảng cáo dương 4 tuần liền</th></tr></thead>
+      <tbody>
+        <tr><td>Lãi</td><td>5% tiền về</td><td>5% doanh thu thật</td></tr>
+        <tr><td>Thuế và dự phòng</td><td>15% tiền về</td><td>15% doanh thu thật</td></tr>
+        <tr><td>Lương chủ</td><td>Chưa rút</td><td>50% doanh thu thật</td></tr>
+        <tr><td>Vận hành (quảng cáo, app, mẫu)</td><td>Phần còn lại</td><td>30% doanh thu thật</td></tr>
+        <tr><td>Giá vốn hàng (nhà in, nhà cung cấp, cước)</td><td>Trả theo đơn</td><td>Tách riêng trước khi chia; nhánh B giữ thêm quỹ nhập lô</td></tr>
+      </tbody></table></div>
+    <p class="src">"Doanh thu thật" là doanh thu trừ giá vốn hàng. Tỷ lệ của cột phải là mức mục tiêu Profit First gợi ý cho doanh nghiệp doanh thu dưới 250.000 USD/năm (theo Relay); cột giữa là bản rút gọn của khóa cho giai đoạn thử. Thuế, kế toán ở Việt Nam: hỏi kế toán của bạn. Tối thiểu nên có hai tài khoản ngân hàng: Vận hành, và Lãi cùng Thuế.</p>
+  </div>
+
+  <div class="mentor">
+    <div class="box"><h3>Bảng tiền mặt tuần gồm</h3><ol class="flowl">
+      <li>Tiền mặt đầu tuần (tuần 1 là vốn thử).</li>
+      <li>Tiền đã về trong tuần; tiền đang bị giữ (ghi riêng, không cộng).</li>
+      <li>Chi quảng cáo; chi mẫu, hàng, nhà in; phí, app, khác.</li>
+      <li>Tự tính: tiền mặt cuối tuần, chi trung bình tuần, số tuần trụ, trần quảng cáo tuần tới, phần tách Lãi 5% và Thuế 15%.</li></ol></div>
+    <div class="box"><h3>Dấu hiệu sắp kẹt tiền</h3><ol class="flowl">
+      <li>Tiền đang bị giữ lớn hơn tiền mặt dùng được.</li>
+      <li>Định nhập lô khi chưa bán đều 3–5 đơn mỗi ngày.</li>
+      <li>Trả quảng cáo bằng thẻ tín dụng mà không biết tháng sau lấy gì trả.</li></ol></div>
+  </div>
+</section>
+
+<section id="thi-nghiem">
+  <div class="sec-head">
+    <div class="eyebrow">Khung thí nghiệm · cả hai nhánh · từ tuần 3</div>
+    <h2>Khung thí nghiệm: đổi một thứ, đợi đủ dữ liệu, rồi mới kết luận</h2>
+  </div>
+  <p class="prose">Hai đơn hay 50 USD quảng cáo chưa chứng minh được gì. Người bán giỏi không đoán nhanh hơn, họ <b>thử có kỷ luật hơn</b>: mỗi lần một thay đổi, viết trước mình mong điều gì, và chỉ đọc kết quả khi đã qua ngưỡng. Ghi mọi thí nghiệm vào tab <b>Thí nghiệm &amp; quyết định</b> của Checklist.</p>
+  <div class="tbl"><table class="spyt">
+    <thead><tr><th>Bạn thử</th><th>Đổi một thứ</th><th>Đọc kết quả khi (ngưỡng của khóa)</th><th>Chỉ số chính</th></tr></thead>
+    <tbody>
+      <tr><td>Listing Etsy</td><td>Tiêu đề và thẻ, hoặc ảnh đầu, hoặc giá</td><td>Khoảng 300 lượt xem sau lần đổi, hoặc 14 ngày, tùy cái nào tới trước</td><td>Lượt hiển thị và lượt bấm (Search Analytics), favorite, đơn</td></tr>
+      <tr><td>Mẫu quảng cáo Meta</td><td>Câu mở đầu, hoặc góc, hoặc định dạng</td><td>Mẫu đã tiêu ít nhất 1 lần CAC tối đa</td><td>CTR (link), CPC, thêm giỏ, CPA</td></tr>
+      <tr><td>Trang sản phẩm Shopify</td><td>Ảnh đầu, hoặc giá và ưu đãi, hoặc khối ngày nhận</td><td>Khoảng 100 phiên từ quảng cáo sau lần đổi</td><td>Tỷ lệ thêm giỏ, tỷ lệ mua</td></tr>
+      <tr><td>Nhà cung cấp, nhà in</td><td>Một nguồn mới cho cùng món</td><td>Mẫu đã về và một đơn thật đã giao</td><td>Chất lượng, ngày giao, giá vốn tới tay</td></tr>
+    </tbody></table></div>
+<pre class="tpl">THÍ NGHIỆM · khuôn một dòng
+Ngày: [ ]   Kênh: [Etsy / Shopify / Meta / Nhà cung cấp]   Đổi: [một thứ]
+Giả thuyết: Nếu [đổi gì] thì [chỉ số nào] sẽ [tăng/giảm khoảng bao nhiêu] vì [lý do từ bằng chứng].
+Ngưỡng đọc: [số lượt xem / tiền chi / số phiên]   Ngày đọc dự kiến: [ ]
+Kết quả: [số trước → số sau]   Quyết định: Giữ / Đổi lại / Mở rộng / Dừng   Bài học: [một câu]</pre>
+  <div class="mentor">
+    <div class="box"><h3>Ví dụ đạt</h3><ol class="flowl">
+      <li>Đổi: ảnh đầu listing dây chuyền sang cảnh tay gắn charm.</li>
+      <li>Giả thuyết: lượt bấm trên lượt hiển thị tăng từ khoảng 1% lên 1,5% vì ảnh cho thấy góc thắng ngay.</li>
+      <li>Ngưỡng: 300 lượt xem. Kết quả: 0,9% lên 1,6%. Quyết định: giữ; áp cùng kiểu ảnh cho 4 listing còn lại.</li></ol></div>
+    <div class="box"><h3>Bẫy hay gặp</h3><ol class="flowl">
+      <li>Đổi tiêu đề, ảnh và giá cùng lúc rồi không biết cái gì tác dụng.</li>
+      <li>Kết luận sau một ngày vì "hôm nay có đơn".</li>
+      <li>Chỉ ghi thí nghiệm thắng; thí nghiệm thua mới là thứ giúp tiết kiệm tiền lần sau.</li></ol></div>
+  </div>
+</section>
+
+<section id="nhip">
+  <div class="sec-head">
+    <div class="eyebrow">Nhịp tuần · dùng trong khóa và sau khóa</div>
+    <h2>Nhịp tuần 30 phút cho người làm một mình, và 30 ngày tiếp theo sau khóa</h2>
+  </div>
+  <p class="prose">Trong 8 tuần, Mentor giữ nhịp cho bạn bằng hai buổi 1:1. Sau tuần 8, bạn phải tự giữ. Nhịp tuần dưới đây là bản thu nhỏ của cuộc họp tuần trong các hệ điều hành doanh nghiệp như EOS, rút còn 30 phút cho một người.</p>
+  <div class="tbl"><table class="spyt">
+    <thead><tr><th>Phút</th><th>Việc</th><th>Ở đâu</th></tr></thead>
+    <tbody>
+      <tr><td>0–5</td><td>Đọc 6 con số: lượt xem hoặc phiên, đơn, doanh thu, chi quảng cáo, lãi sau quảng cáo, số tuần trụ</td><td>Tab Sprint 8 tuần (sau khóa: tab 30 ngày tiếp theo) và tab Tiền mặt tuần</td></tr>
+      <tr><td>5–10</td><td>3 việc tuần trước: xong hay không, vì sao</td><td>Cùng tab</td></tr>
+      <tr><td>10–20</td><td>Chọn đúng <b>một chỗ nghẽn</b>: thấy, bấm, mua, giao hay tiền. Nói ra nguyên nhân gốc, chọn cách gỡ</td><td>Cây quyết định ở <a href="#ads-doc-so">Meta Ads</a> hoặc thẻ tuần 3–4</td></tr>
+      <tr><td>20–25</td><td>Chọn 3 việc tuần này, mỗi việc có ngày và kết quả đo được</td><td>Cột "Tuần tới sẽ đổi"</td></tr>
+      <tr><td>25–30</td><td>Ghi quyết định và thí nghiệm mới</td><td>Tab Thí nghiệm &amp; quyết định</td></tr>
+    </tbody></table></div>
+  <div class="mentor">
+    <div class="box"><h3>Một ngày làm việc 2 giờ</h3><ol class="flowl">
+      <li><b>15 phút đơn và tin nhắn</b>: trả lời trong 24 giờ, đơn đứng yên, mã vận đơn.</li>
+      <li><b>15 phút số</b>: quảng cáo, listing, tiền; chỉ đọc, quyết định để dành cho ngày đã hẹn.</li>
+      <li><b>90 phút việc tạo giá trị</b>: mẫu quảng cáo, biến thể, ảnh, nguồn hàng. Đây là phần dễ bị bỏ nhất.</li></ol></div>
+    <div class="box"><h3>30 ngày tiếp theo (14/12/2026–10/1/2027)</h3><ol class="flowl">
+      <li>Một trọng tâm duy nhất, viết bằng số (ví dụ: 20 đơn có lãi trên Etsy trước 10/1).</li>
+      <li>Tuần 9: Valentine lên trước 20/12. Tuần 10: giữ đơn mùa lễ, trả lời khách. Tuần 11: đọc lại số tháng 12. Tuần 12: chuẩn bị Tết (lịch nghỉ nhà in, xưởng, ai trả lời khách).</li>
+      <li>Mỗi tuần vẫn chạy nhịp 30 phút và ghi vào tab <b>30 ngày tiếp theo</b>.</li></ol></div>
+  </div>
+  <div class="reflect">
+    <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Cuối mỗi tuần</h3></div>
+    <ol><li>Chỗ nghẽn lớn nhất tuần này là gì, và mình có bằng chứng bằng số không?</li><li>Mình còn trụ được mấy tuần nếu không có đơn mới?</li><li>Thí nghiệm nào đã đủ ngưỡng để đọc?</li><li>Việc nào tạo giá trị mà mình đang né?</li></ol>
+  </div>
+  <p class="src">Nguồn: <a href="https://www.relayfi.com/blog/profit-first-for-ecommerce">Relay, Profit First cho thương mại điện tử</a> (tỷ lệ mục tiêu theo phương pháp của Mike Michalowicz); nhịp họp tuần dựa trên Level 10 Meeting của EOS (Gino Wickman), rút gọn cho người làm một mình. Ngưỡng thí nghiệm và luật tiền là của khóa, Mentor có thể chỉnh.</p>
+</section>
 
 <section id="mau">
   <div class="sec-head">
