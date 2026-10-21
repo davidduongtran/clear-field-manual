@@ -299,6 +299,26 @@ ul.ck{list-style:none;padding:0}
 .ck input:checked+span,.ht-self input:checked+span{color:var(--muted)}
 .due{border:1px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px;display:grid;gap:4px;background:var(--paper)}
 .due .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-lv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px}
+.ht-lv .box{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--paper);font-size:14px}
+.ht-lv .box .k{font-family:var(--f-data);font-size:12px;color:var(--accent);display:block;margin-bottom:4px;letter-spacing:.04em;text-transform:uppercase}
+.ht-lv .box.adv .k{color:var(--muted)}
+.ht-lv .box p{margin:0}
+.ht-path{border:1px dashed var(--accent);border-radius:10px;padding:12px 16px;display:grid;gap:8px;background:var(--paper)}
+.ht-path h4{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.ht-path ul{margin:0;padding-left:0;display:grid;gap:5px;font-size:14.5px}
+.ht-gate{border:2px solid var(--accent);border-radius:12px;padding:14px 18px;display:grid;gap:8px;background:var(--accent-soft)}
+.ht-gate h4{margin:0;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.ht-gate p,.ht-gate ol{margin:0}
+details.tk{border:1px solid var(--line);border-radius:10px;background:var(--paper);margin-top:12px}
+details.tk>summary{cursor:pointer;padding:10px 14px;font-weight:700;color:var(--accent)}
+details.tk>ol{margin:0;padding:0 18px 12px 36px;display:grid;gap:8px}
+details.tk em{display:block;color:var(--muted);font-style:normal;font-size:13.5px}
+.curve{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:12px}
+.curve svg{width:100%;height:auto;display:block}
+.curve text{font-family:var(--f-data);font-size:12px;fill:var(--muted)}
+@media(max-width:640px){.curve text{font-size:20px}.curve text.sm{display:none}}
+.curve .lb{fill:var(--ink);font-size:12.5px}
 .ht-self{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;display:grid;gap:10px}
 .ht-self ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
 .ht-self em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
@@ -394,10 +414,10 @@ table.wk a{white-space:normal}
 <a class="cur" href="tra-cuu.html"><span class="i">⌕</span>Tra cứu</a>
 </nav>
   <div class="eyebrow">Tra cứu · mở khi cần</div>
-  <h1>Tra cứu: công cụ, nhà in, fulfillment, AI và sàn khác</h1>
-  <p class="lede">Không cần đọc theo thứ tự. Mở khi bạn cần chọn công cụ, chọn nhà in hay đơn vị fulfillment, dùng AI có kiểm tra, hoặc xem lộ trình gốc dài hơn sau khóa.</p>
-  <div class="meta"><span><b>Dùng khi:</b> Khi cần</span><span><b>Đọc hết:</b> khoảng 30 phút, nhưng chỉ đọc phần được giao</span></div>
-  <div class="inpage"><b>Trong trang:</b> <a href="#danh-ba">Danh bạ công cụ</a> · <a href="#ai">AI theo cổng</a> · <a href="#nen-tang">Sàn khác</a> · <a href="#lo-trinh">Lộ trình gốc</a></div>
+  <h1>Tra cứu: công cụ, nhà in, fulfillment, thuật ngữ, AI và sàn khác</h1>
+  <p class="lede">Không cần đọc theo thứ tự. Mở khi bạn cần chọn công cụ, chọn nhà in hay đơn vị fulfillment, tra một thuật ngữ, dùng AI có kiểm tra, hoặc xem lộ trình gốc dài hơn sau khóa.</p>
+  <div class="meta"><span><b>Dùng khi:</b> Khi cần</span><span><b>Đọc hết:</b> khoảng 35 phút, nhưng chỉ đọc phần được giao</span></div>
+  <div class="inpage"><b>Trong trang:</b> <a href="#danh-ba">Danh bạ công cụ</a> · <a href="#thuat-ngu">Thuật ngữ</a> · <a href="#ai">AI theo cổng</a> · <a href="#nen-tang">Sàn khác</a> · <a href="#lo-trinh">Lộ trình gốc</a></div>
 </header>
 <div class="layout">
 <main>
@@ -516,6 +536,14 @@ table.wk a{white-space:normal}
   </div>
   <p class="src">Nguồn, xem tháng 10/2026: <a href="https://usadrop.com/best-dropshipping-apps-for-shopify/">USAdrop, so sánh ứng dụng dropship 2026</a> (bên bán ứng dụng); <a href="https://trueprofit.io/blog/dropshipping-spy-tools">TrueProfit, công cụ spy</a>; <a href="https://www.teeinblue.com/pages/integrations">Teeinblue, danh sách nhà in tích hợp</a>; <a href="https://www.printondemandbusiness.com/blog/customily-vs-teeinblue/">Customily và Teeinblue</a>; <a href="https://www.fulfill.com/3pl/profile/merchize">Fulfill.com, hồ sơ Merchize</a>; <a href="https://www.brandsvietnam.com/congdong/topic/top-5-platform-tu-dong-hoa-fulfillment-pod-xuyen-bien-gioi">Brands Vietnam, nền tảng POD</a>; <a href="https://stripe.com/customers/dreamship-bill-bricker">Stripe, Dreamship và người bán Việt</a>; <a href="https://dodropshipping.com/dropshipping-suppliers-in-vietnam/">DoDropshipping, fulfillment ở Việt Nam</a>; <a href="https://www.shipcalm.com/blog/best-3pls-for-small-businesses/">ShipCalm, kho thuê cho doanh nghiệp nhỏ</a> (bên bán dịch vụ); <a href="https://www.stationeryhq.com/pages/the-best-print-on-demand-companies-in-2026-complete-comparison-guide">StationeryHQ, so sánh nhà in POD</a>. Nhiều nguồn là trang của chính bên bán dịch vụ: dùng để biết lựa chọn, không dùng làm bằng chứng chất lượng.</p>
 </section>
+<section id="thuat-ngu">
+  <div class="sec-head">
+    <div class="eyebrow">Tra cứu · cả hai nhánh</div>
+    <h2>Thuật ngữ: mỗi từ một câu và một ví dụ bằng số</h2>
+  </div>
+  <p class="prose">Các từ dưới đây xuất hiện nhiều trong sổ tay, Checklist và buổi 1:1. Hiểu bằng ví dụ số trước, định nghĩa sau.</p>
+  <div class="tbl"><table class="spyt case"><thead><tr><th>Từ</th><th>Nghĩa</th><th>Ví dụ</th></tr></thead><tbody><tr><td><b>Bộ lọc Ngách · 6 câu</b></td><td>Lọc nhanh một ngách trước khi chấm kỹ 5 cổng C.L.E.A.R.</td><td>Dùng khi chọn ngách mới, sau khóa hoặc khi đổi hướng.</td></tr><tr><td><b>Bộ lọc Ứng viên · 5 câu</b></td><td>Lọc từng sản phẩm POD ở tuần 1 nhánh A; trượt một câu là loại.</td><td>10 ứng viên vào, giữ 3.</td></tr><tr><td><b>Bộ lọc Hàng vật lý · 10 câu</b></td><td>Lọc sản phẩm nhánh B: nhu cầu, khác biệt, giá vốn tới tay, giấy tờ, cước.</td><td>Dùng ở tuần 1 nhánh B.</td></tr><tr><td><b>CAC</b></td><td>Chi phí để có một khách mua: tiền quảng cáo chia số đơn.</td><td>Tiêu 60 USD, có 4 đơn: CAC = 15 USD.</td></tr><tr><td><b>CAC tối đa</b></td><td>Lãi một đơn trước quảng cáo; tiêu quá số này cho một đơn là lỗ.</td><td>Bán 30 USD, giá vốn và phí 17 USD: CAC tối đa 13 USD.</td></tr><tr><td><b>CPA</b></td><td>Chi phí cho một hành động, trong khóa này là một đơn mua. Cùng ý với CAC khi đọc số Meta.</td><td>CPA 18 USD so với CAC tối đa 13 USD: mẫu đang lỗ.</td></tr><tr><td><b>CPM</b></td><td>Giá cho 1.000 lượt hiển thị quảng cáo.</td><td>CPM 15 USD: 10 USD mua được khoảng 670 lượt hiển thị.</td></tr><tr><td><b>CTR</b></td><td>Tỷ lệ bấm: lượt bấm chia lượt hiển thị.</td><td>20 lượt bấm trên 1.000 lượt hiển thị: CTR 2%.</td></tr><tr><td><b>CPC</b></td><td>Giá một lượt bấm.</td><td>Tiêu 10 USD, 25 lượt bấm: CPC 0,40 USD.</td></tr><tr><td><b>CVR (tỷ lệ chuyển đổi)</b></td><td>Số đơn chia số lượt vào trang.</td><td>3 đơn trên 200 lượt vào: CVR 1,5%.</td></tr><tr><td><b>AOV</b></td><td>Giá trị trung bình một đơn.</td><td>Doanh thu 300 USD, 10 đơn: AOV 30 USD.</td></tr><tr><td><b>ROAS</b></td><td>Doanh thu chia tiền quảng cáo. Không nói lãi hay lỗ nếu không biết biên lãi.</td><td>Tiêu 50 USD, doanh thu 100 USD: ROAS 2.</td></tr><tr><td><b>Lãi thật</b></td><td>Doanh thu trừ mọi chi phí: giá vốn, ship, phí sàn, phí cổng, quảng cáo, mẫu, app.</td><td>Doanh thu 400, mọi chi phí 370: lãi thật 30 USD.</td></tr><tr><td><b>Số tuần trụ</b></td><td>Tiền mặt còn lại chia mức chi trung bình mỗi tuần. Dưới 4 tuần là vùng đỏ.</td><td>Còn 390 USD, chi 110 USD/tuần: 3,5 tuần trụ.</td></tr><tr><td><b>Lượt hiển thị (impressions)</b></td><td>Số lần listing hoặc quảng cáo xuất hiện trước mắt khách.</td><td>2.000 lượt hiển thị, 0 lượt bấm: chỗ tắc ở ảnh đầu hoặc giá.</td></tr><tr><td><b>Favorite</b></td><td>Lượt khách lưu listing trên Etsy. Tín hiệu quan tâm trước khi mua.</td><td>15 favorite trên một listing là một điều kiện mở cổng quảng cáo.</td></tr><tr><td><b>Search Analytics</b></td><td>Báo cáo của Etsy cho biết khách gõ gì để thấy listing của bạn.</td><td>Cụm "dog mom gift" có 300 lượt hiển thị: đưa vào 40 ký tự đầu tiêu đề.</td></tr><tr><td><b>Etsy Ads / Offsite Ads</b></td><td>Etsy Ads: quảng cáo trong Etsy bạn tự bật. Offsite Ads: Etsy quảng cáo ngoài sàn và thu phí trên đơn có được.</td><td>Đơn 30 USD từ Offsite Ads: phí 4,5 USD (15%).</td></tr><tr><td><b>Pixel</b></td><td>Đoạn mã của Meta trên store, báo lại khách đã làm gì.</td><td>Không báo Purchase thì Meta không biết mẫu nào ra đơn.</td></tr><tr><td><b>Conversions API (CAPI)</b></td><td>Đường báo sự kiện từ máy chủ Shopify sang Meta, bù cho pixel bị trình duyệt chặn.</td><td>Bật qua app Facebook &amp; Instagram trên Shopify.</td></tr><tr><td><b>Sự kiện (event)</b></td><td>Hành động được đo: ViewContent, AddToCart, InitiateCheckout, Purchase.</td><td>100 AddToCart, 2 Purchase: tắc ở bước thanh toán.</td></tr><tr><td><b>Điểm tắt</b></td><td>Câu viết trước khi chạy: tiêu bao nhiêu mà chưa có đơn thì tắt.</td><td>"Tiêu 13 USD, 0 đơn, thêm giỏ dưới 3 thì tắt."</td></tr><tr><td><b>POD</b></td><td>In theo đơn: nhà in chỉ in khi có khách đặt, không ôm hàng.</td><td>Printify, Printful in và giao thay bạn.</td></tr><tr><td><b>Fulfillment</b></td><td>Khâu nhận đơn, đóng gói, giao hàng; thường thuê đơn vị làm.</td><td>Kho ở Mỹ giao 2–5 ngày.</td></tr><tr><td><b>HTS</b></td><td>Mã phân loại hàng của Mỹ, quyết định thuế nhập khẩu.</td><td>Cùng một món, mã HTS khác thì thuế khác.</td></tr><tr><td><b>DDP</b></td><td>Giao hàng đã trả thuế: người bán trả thuế nhập khẩu, khách không phải trả thêm.</td><td>Báo giá DDP 6 USD/món đã gồm thuế.</td></tr><tr><td><b>De minimis</b></td><td>Quy định miễn thuế cho kiện giá trị nhỏ vào Mỹ, hiện đang bị đình chỉ.</td><td>Kiện 20 USD giờ vẫn có thể bị tính thuế.</td></tr><tr><td><b>RFQ / MOQ</b></td><td>RFQ: thư xin báo giá. MOQ: số lượng đặt tối thiểu.</td><td>MOQ 300 cái là quá lớn cho đơn thử.</td></tr><tr><td><b>Tranh chấp / chargeback</b></td><td>Khách khiếu nại qua sàn, PayPal hay ngân hàng để đòi lại tiền.</td><td>Có mã vận đơn và ảnh giao hàng thì thường thắng.</td></tr><tr><td><b>USPTO</b></td><td>Cơ quan nhãn hiệu của Mỹ; tra để tránh dùng chữ, câu đã đăng ký.</td><td>Tra từng chữ trên thiết kế trước khi đặt mẫu.</td></tr><tr><td><b>DMCA / counter notice</b></td><td>Luật bản quyền số của Mỹ. Counter notice: thư phản đối khi bị gỡ do báo cáo bản quyền sai.</td><td>Gửi counter notice, sau 10 ngày làm việc được đăng lại nếu bên kia không kiện.</td></tr><tr><td><b>UGC</b></td><td>Nội dung do khách hoặc người dùng thật làm: ảnh, video dùng sản phẩm.</td><td>Video người được tặng mẫu quay, có phép dùng làm quảng cáo.</td></tr></tbody></table></div>
+</section>
 <section id="ai">
   <div class="sec-head">
     <div class="eyebrow">Dùng ở mọi cổng</div>
@@ -541,7 +569,7 @@ table.wk a{white-space:normal}
     <div class="tbl"><table>
       <thead><tr><th>Cổng</th><th>Giao cho AI</th><th>Bạn tự kiểm</th><th>Không giao</th></tr></thead>
       <tbody>
-        <tr><td><a href="chon-san-pham.html#ngach">Bản đồ ngách</a></td><td>Gợi ý thêm ý tưởng theo công thức khách × dịp × sản phẩm × cá nhân hóa, từ danh sách bạn đã có</td><td>Mỗi ý tưởng qua bộ lọc 6 câu bằng nguồn thật</td><td>Chấm điểm ngách; "ngách nào đang hot"</td></tr>
+        <tr><td><a href="chon-san-pham.html#ngach">Bản đồ ngách</a></td><td>Gợi ý thêm ý tưởng theo công thức khách × dịp × sản phẩm × cá nhân hóa, từ danh sách bạn đã có</td><td>Mỗi ý tưởng qua Bộ lọc Ngách 6 câu bằng nguồn thật</td><td>Chấm điểm ngách; "ngách nào đang hot"</td></tr>
         <tr><td><a href="kiem-chung.html#C">C · Khách hàng</a></td><td>Gắn 6 nhãn cho review bạn đã dán vào (câu lệnh 1); tóm tắt chân dung từ các nhãn</td><td>20 review đầu; số đếm lấy bằng công thức ở tab 3</td><td>Lấy review hộ; viết thẻ chân dung khi chưa có review</td></tr>
         <tr><td><a href="kiem-chung.html#L">L · Trang 1</a></td><td>Làm sạch bảng 24 listing bạn đã chép: tách tên shop, chuẩn hóa giá</td><td>So 5 dòng bất kỳ với ảnh chụp màn hình trang 1</td><td>Mô tả trang 1 của một cụm từ: kết quả khác theo người và theo ngày</td></tr>
         <tr><td><a href="kiem-chung.html#E">E · Bằng chứng</a></td><td>Tóm tắt điểm chung của 3 shop chứng minh từ dữ liệu bạn đã ghi</td><td>Mỗi shop mở được link, có ngày thu thập</td><td>Tìm shop chứng minh; ước doanh số</td></tr>
@@ -570,7 +598,7 @@ Chỉ tạo nhóm từ lời chê có trong danh sách. Sắp theo số lần gi
 
 [dán cột lời chê]</pre>
       <p>Đếm lại bằng bộ lọc trong tab 3 trước khi ghi vào tab 5. Nhóm nào AI đếm lệch thì tin số bạn đếm.</p></div></details>
-    <details><summary>Câu lệnh 3 · Module 2 · 5 tiêu đề nháp</summary>
+    <details><summary>Câu lệnh 3 · Lên bán · 5 tiêu đề nháp</summary>
       <div class="a"><pre class="prompt">Sản phẩm: [chất liệu, kích thước, cách cá nhân hóa, đúng như mẫu thật].
 Khách: [2 câu từ thẻ chân dung cổng C].
 Cụm từ chính khách gõ: [cụm từ đã chọn ở cổng C].
@@ -579,7 +607,7 @@ Viết 5 tiêu đề Etsy bằng tiếng Anh. Mỗi tiêu đề dưới 15 từ,
 Sau mỗi tiêu đề, ghi số từ và chép lại 55 ký tự đầu.</pre>
       <p>Đếm lại số từ, đọc 55 ký tự đầu như khách lướt trang kết quả, rồi chấm bằng phiếu 12 điểm ở <a href="len-ban.html#len-ban">Module 2</a>. Chọn một, sửa bằng tay, không dùng nguyên văn.</p></div></details>
     <details><summary>Câu lệnh 4 · Thử bán · đọc phễu tuần</summary>
-      <div class="a"><pre class="prompt">Đây là số [số tuần] tuần của shop tôi, chép từ Kế hoạch 90 ngày tab 5: lượt xem, favorite và thêm giỏ, đơn, doanh thu, quảng cáo.
+      <div class="a"><pre class="prompt">Đây là số [số tuần] tuần của shop tôi, chép từ Checklist tab Sprint 8 tuần: lượt xem, favorite và thêm giỏ, đơn, doanh thu, quảng cáo.
 Ngưỡng của khóa học: chưa kết luận về sản phẩm khi tổng lượt xem dưới 300.
 1. Tính tỷ lệ favorite/lượt xem và đơn/lượt xem từng tuần, ghi rõ phép tính.
 2. Chỉ ra một chỗ tắc của phễu theo quy tắc: ít lượt xem thì xem tiêu đề, từ khóa, ảnh đầu; xem nhiều mà ít favorite hoặc thêm giỏ thì xem ảnh, giá, góc; thêm giỏ mà không mua thì xem phí ship, thời gian giao, lòng tin.
@@ -643,7 +671,7 @@ Ngưỡng của khóa học: chưa kết luận về sản phẩm khi tổng lư
     <li class="gate">
       <span class="wk">Cuối tuần 3 · tuần 4</span>
       <h3>Thẻ giả thuyết và lên bán</h3>
-      <p>Cuối tuần 3 viết thẻ giả thuyết ở tab 8: bán gì, cho ai, giá nào, và con số nào chứng minh bạn sai. Mentor duyệt thẻ trước khi bạn tiêu vốn thử. Tuần 4 làm ảnh từ mẫu thật và đăng bán theo <a href="len-ban.html#len-ban">Module 2 · Lên bán</a>.</p>
+      <p>Cuối tuần 3 viết thẻ giả thuyết ở tab 8: bán gì, cho ai, giá nào, và con số nào chứng minh bạn sai. Mentor duyệt thẻ trước khi bạn tiêu vốn thử. Tuần 4 làm ảnh từ mẫu thật và đăng bán theo <a href="len-ban.html#len-ban">phần Lên bán</a>.</p>
       <div class="out"><b>Đầu ra:</b> 3–5 listing hoặc 1 trang sản phẩm đã lên trước cuối tuần 4. Ngày đó là ngày T0</div>
     </li>
     <li>

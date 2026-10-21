@@ -299,6 +299,26 @@ ul.ck{list-style:none;padding:0}
 .ck input:checked+span,.ht-self input:checked+span{color:var(--muted)}
 .due{border:1px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px;display:grid;gap:4px;background:var(--paper)}
 .due .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-lv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px}
+.ht-lv .box{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--paper);font-size:14px}
+.ht-lv .box .k{font-family:var(--f-data);font-size:12px;color:var(--accent);display:block;margin-bottom:4px;letter-spacing:.04em;text-transform:uppercase}
+.ht-lv .box.adv .k{color:var(--muted)}
+.ht-lv .box p{margin:0}
+.ht-path{border:1px dashed var(--accent);border-radius:10px;padding:12px 16px;display:grid;gap:8px;background:var(--paper)}
+.ht-path h4{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.ht-path ul{margin:0;padding-left:0;display:grid;gap:5px;font-size:14.5px}
+.ht-gate{border:2px solid var(--accent);border-radius:12px;padding:14px 18px;display:grid;gap:8px;background:var(--accent-soft)}
+.ht-gate h4{margin:0;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.ht-gate p,.ht-gate ol{margin:0}
+details.tk{border:1px solid var(--line);border-radius:10px;background:var(--paper);margin-top:12px}
+details.tk>summary{cursor:pointer;padding:10px 14px;font-weight:700;color:var(--accent)}
+details.tk>ol{margin:0;padding:0 18px 12px 36px;display:grid;gap:8px}
+details.tk em{display:block;color:var(--muted);font-style:normal;font-size:13.5px}
+.curve{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:12px}
+.curve svg{width:100%;height:auto;display:block}
+.curve text{font-family:var(--f-data);font-size:12px;fill:var(--muted)}
+@media(max-width:640px){.curve text{font-size:20px}.curve text.sm{display:none}}
+.curve .lb{fill:var(--ink);font-size:12.5px}
 .ht-self{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;display:grid;gap:10px}
 .ht-self ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
 .ht-self em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
@@ -405,9 +425,9 @@ table.wk a{white-space:normal}
   <div class="gate-head">
     <div class="letter">M2</div>
     <div>
-      <div class="eyebrow">Module 2 · Tuần 4 · trước T0</div>
+      <div class="eyebrow">Nhánh A · Tuần 2 · trước khi mở bán</div>
       <h2>Listing bán được: viết lại thẻ giả thuyết cho khách đọc</h2>
-      <div class="gate-meta"><span><b>Trả lời:</b> Khách thấy, hiểu, tin và mua</span><span><b>Thời gian:</b> Cấp 1 khoảng 7 giờ, Cấp 2–3 khoảng 9 giờ</span><span><b>Làm trên:</b> Etsy hoặc Shopify, Bộ vận hành, Checklist chặng S8</span></div>
+      <div class="gate-meta"><span><b>Trả lời:</b> Khách thấy, hiểu, tin và mua</span><span><b>Thời gian:</b> khoảng 7–9 giờ</span><span><b>Làm trên:</b> Etsy, Bộ vận hành Etsy POD, Checklist tab Sprint 8 tuần</span></div>
     </div>
   </div>
   <p class="prose">Năm cổng đã cho bạn mọi nguyên liệu. Tuần này không nghiên cứu thêm. Mỗi phần của listing chỉ là một câu trả lời đã có, viết lại bằng lời của khách. Nếu thấy mình đang phải nghĩ ra điều gì mới để viết, thường là một cổng phía trước còn làm dở.</p>
@@ -547,20 +567,20 @@ table.wk a{white-space:normal}
   </div>
 
   <div class="sub">
-    <div class="tagline">Phần 7 · đăng và ghi T0</div>
-    <h3>3 listing cho Cấp 1, 5 listing cho Cấp 2–3, cùng một khách</h3>
-    <p class="prose">Các listing nhắm cùng một khách, khác nhau ở góc hoặc biến thể, ví dụ dây 2 đá, dây 4 đá, gói hộp quà. Đừng đăng 20 listing na ná nhau: chúng tranh lượt xem của nhau, và đến ngày 30 bạn không biết cái gì có tác dụng. Ngày listing đầu tiên lên là ngày T0: ghi vào Checklist tab 0. Ba cổng 30, 60, 90 tính từ ngày này.</p>
+    <div class="tagline">Phần 7 · đăng và ghi ngày lên bán</div>
+    <h3>5 listing cùng một khách (mức đạt tuần 2)</h3>
+    <p class="prose">Các listing nhắm cùng một khách, khác nhau ở góc hoặc biến thể, ví dụ dây 2 đá, dây 4 đá, gói hộp quà. Đừng đăng 20 listing na ná nhau: chúng tranh lượt xem của nhau, và đến ngày 30 bạn không biết cái gì có tác dụng. Ngày listing đầu tiên lên là ngày bắt đầu đo: ghi vào Checklist tab 0. Ngưỡng của <a href="tien-va-nhip.html#thi-nghiem">Khung thí nghiệm</a> tính từ ngày này.</p>
     <div class="tbl"><table>
-      <thead><tr><th>Ngày trong tuần 4</th><th>Việc</th><th class="n">Giờ</th></tr></thead>
+      <thead><tr><th>Ngày trong tuần 2</th><th>Việc</th><th class="n">Giờ</th></tr></thead>
       <tbody>
         <tr><td>Thứ 2</td><td>Kiểm tuân thủ từng SKU, khai báo đối tác sản xuất</td><td class="n">1</td></tr>
         <tr><td>Thứ 3–4</td><td>Chụp 10 ảnh từ mẫu thật theo danh sách trên</td><td class="n">1,5</td></tr>
-        <tr><td>Thứ 5, 20:00</td><td>Buổi 4: viết listing cùng lớp, Mentor sửa trực tiếp 2–3 listing</td><td class="n">2</td></tr>
-        <tr><td>Thứ 6 – chủ nhật</td><td>Viết và đăng 3 listing theo phiếu chấm bên dưới</td><td class="n">3</td></tr>
-        <tr><td>Chủ nhật</td><td>Nhập SKU vào Bộ vận hành, ghi T0, gửi Mentor 3 link</td><td class="n">0,5</td></tr>
-        <tr><td>Cấp 2–3</td><td>Đăng thêm 2 listing khác góc hoặc biến thể</td><td class="n">+2</td></tr>
+        <tr><td>Thứ 5</td><td>1:1 lượt B: Mentor chấm listing bằng phiếu 12 điểm, sửa ngay trong buổi</td><td class="n">2</td></tr>
+        <tr><td>Thứ 6 – chủ nhật</td><td>Viết và đăng đủ 5 listing theo phiếu chấm bên dưới</td><td class="n">3</td></tr>
+        <tr><td>Chủ nhật</td><td>Nhập SKU vào Bộ vận hành, ghi ngày lên bán, nộp 5 link trên Classroom</td><td class="n">0,5</td></tr>
+        <tr><td>Nâng cao</td><td>Đăng thêm 3–5 listing khác góc hoặc biến thể, cùng khách</td><td class="n">+2</td></tr>
       </tbody></table></div>
-    <p class="src">Kế hoạch 90 ngày tab 4 tính 7 giờ tự làm cho Cấp 1: 6 giờ ở bảng này (không gồm Buổi 4) và 1 giờ cho phần vận hành bên dưới nếu bạn bán hàng vật lý hoặc Shopify; bán POD thì đó là giờ đệm.</p>
+    <p class="src">Tuần 2 tính khoảng 7 giờ tự làm: 6 giờ ở bảng này (không gồm hai buổi 1:1) và 1 giờ cho phần vận hành bên dưới nếu bạn bán hàng vật lý hoặc Shopify; bán POD thì đó là giờ đệm.</p>
   </div>
 
   <div class="sub">
@@ -580,7 +600,7 @@ table.wk a{white-space:normal}
         <tr><td>9</td><td>Giá bằng giá trong bảng lãi cổng R, phí ship không bị tính hai lần</td><td><span class="st gd">Bắt buộc</span></td></tr>
         <tr><td>10</td><td>Thời gian xử lý và giao đúng thực tế, có hạn đặt cho dịp gần nhất</td><td></td></tr>
         <tr><td>11</td><td>Ô cá nhân hóa có hướng dẫn và ví dụ (nếu bán hàng cá nhân hóa)</td><td></td></tr>
-        <tr><td>12</td><td>SKU đã có trong Bộ vận hành, ngày T0 đã ghi ở Checklist tab 0</td><td></td></tr>
+        <tr><td>12</td><td>SKU đã có trong Bộ vận hành, ngày lên bán đã ghi ở Checklist tab 0</td><td></td></tr>
       </tbody></table></div>
     <p class="verdict">Đăng được khi đạt từ 10/12 và đạt cả 3 mục bắt buộc. Thiếu mục bắt buộc thì sửa trước, dù các mục khác đều đạt.</p>
   </div>
@@ -591,27 +611,27 @@ table.wk a{white-space:normal}
       <div class="box"><h3>Hàng vật lý gửi tới khách Mỹ</h3>
         <ul><li>Từ 9/7/2026, Etsy yêu cầu đơn gửi từ ngoài Mỹ tới khách Mỹ phải đi theo hình thức người bán trả trước thuế và phí nhập khẩu (DDP) thì mới được Bảo vệ mua hàng của Etsy. Mỹ không còn miễn thuế cho bưu kiện giá trị thấp.</li><li>Dùng công cụ ước tính thuế Mỹ trong form listing của Etsy, đặt giá riêng cho Mỹ đã gồm thuế, rồi chạy lại bảng lãi cổng R với con số đó. Công cụ chỉ là ước tính; hỏi đơn vị vận chuyển và ghi ngày hỏi.</li><li>Gửi qua kho Mỹ thì thuế trả lúc nhập lô; đơn lẻ đi nội địa.</li><li>Ảnh có vật quen để so kích thước; ghi kích thước thật trong mô tả. Thử đóng gói và kiểm hàng trước khi bán.</li></ul></div>
       <div class="box"><h3>Shopify · trang sản phẩm</h3>
-        <ul><li>Tiêu đề trang theo cách khách gõ trên Google: loại sản phẩm cùng các chi tiết họ lọc. Tên thương hiệu để sau.</li><li>Ảnh đầu dùng lại góc thắng; 2–3 mẫu quảng cáo, mỗi mẫu một góc từ cổng A.</li><li>Phần trả lời 3 lời chê đặt ngay dưới nút mua; chính sách giao hàng, đổi trả và liên hệ có link ở chân trang.</li><li>Trước T0, chạy một đơn thử thật để kiểm thanh toán, email xác nhận và sự kiện pixel.</li></ul></div>
+        <ul><li>Tiêu đề trang theo cách khách gõ trên Google: loại sản phẩm cùng các chi tiết họ lọc. Tên thương hiệu để sau.</li><li>Ảnh đầu dùng lại góc thắng; 2–3 mẫu quảng cáo, mỗi mẫu một góc từ cổng A.</li><li>Phần trả lời 3 lời chê đặt ngay dưới nút mua; chính sách giao hàng, đổi trả và liên hệ có link ở chân trang.</li><li>Trước khi mở bán, chạy một đơn thử thật để kiểm thanh toán, email xác nhận và sự kiện pixel.</li></ul></div>
     </div>
   </div>
 
   <div class="ask">
     <details><summary>Đăng nhiều listing hơn thì có đơn nhanh hơn không?</summary>
-      <div class="a"><p>Không chắc. 3–5 listing cùng một khách là đủ để đo. Nhiều listing na ná nhau chia nhau lượt xem, và khi có đơn bạn không biết góc nào hiệu quả. Thêm listing sau khi đã có tín hiệu, theo nhịp ở Kế hoạch 90 ngày.</p></div></details>
-    <details><summary>Có nên bật Etsy Ads ngay từ T0 không?</summary>
-      <div class="a"><p>Không. Hai tuần đầu dùng để xem listing tự kéo được bao nhiêu lượt xem. Nếu tới ngày 30 lượt xem cộng dồn vẫn dưới 300, SOP thử bán cho phép bật quảng cáo nhỏ. Bật để mở rộng thì chờ tới tuần 11, khi lãi mỗi đơn thật đã đúng với bảng cổng R.</p></div></details>
+      <div class="a"><p>Không chắc. 3–5 listing cùng một khách là đủ để đo. Nhiều listing na ná nhau chia nhau lượt xem, và khi có đơn bạn không biết góc nào hiệu quả. Thêm listing sau khi đã có tín hiệu, theo nhịp ở thẻ tuần 3–4.</p></div></details>
+    <details><summary>Có nên bật Etsy Ads ngay khi listing lên không?</summary>
+      <div class="a"><p>Không. Hai tuần đầu dùng để xem listing tự kéo được bao nhiêu lượt xem. Trong K1, Etsy Ads bật nhỏ ở tuần 4 (shop đủ 15 ngày) và chỉ cho listing đã có favorite hoặc đơn. Bật để mở rộng thì chờ tới khi lãi mỗi đơn thật đã đúng với bảng cổng R.</p></div></details>
     <details><summary>Dùng mockup cho ảnh đầu có bị Etsy cấm không?</summary>
       <div class="a"><p>Etsy không cấm mockup cho hàng POD. Khóa học yêu cầu ảnh đầu và ảnh kích thước chụp từ mẫu thật vì hai lý do: ảnh thật khác hẳn nghìn shop dùng chung mockup, và khách nhận hàng đúng như ảnh nên ít review xấu và ít hoàn hàng.</p></div></details>
   </div>
 
   <div class="mentor">
-    <div class="box"><h3>Nộp cho Mentor</h3><ul><li>3–5 link listing và ngày T0</li><li>Phiếu chấm 12 điểm tự chấm cho từng listing</li><li>Ghi chú kiểm nhãn hiệu có ngày</li></ul></div>
+    <div class="box"><h3>Nộp cho Mentor</h3><ul><li>5 link listing và ngày lên bán</li><li>Phiếu chấm 12 điểm tự chấm cho từng listing</li><li>Ghi chú kiểm nhãn hiệu có ngày</li></ul></div>
     <div class="box"><h3>Mentor sẽ hỏi</h3><ul><li>"Che tiêu đề đi, nhìn ảnh đầu thì khách biết em khác ai ở đâu?"</li><li>"Lời chê số 1 ở cổng A, listing trả lời ở chỗ nào?"</li></ul></div>
   </div>
   <div class="reflect">
     <div class="rh"><span class="rk">Tự hỏi mình</span><h3>Trước khi bấm đăng</h3></div>
     <ol><li>Nếu chỉ thấy ảnh đầu ở cỡ ngón tay cái, khách có biết listing này khác 23 listing kia ở đâu không?</li><li>Lời chê nào của khách ở cổng A mà listing của mình chưa trả lời?</li><li>Nếu tuần trước lễ có 50 đơn, mình và xưởng có làm kịp, đúng tên, đúng hạn không?</li></ol>
-    <p class="log"><b>Ghi vào nhật ký (Kế hoạch 90 ngày, tab 6):</b> ngày T0, link các listing, dự đoán lượt xem và số đơn sau 14 ngày, và mức tự tin của bạn.</p>
+    <p class="log"><b>Ghi vào nhật ký (Checklist tab Thí nghiệm &amp; quyết định):</b> ngày lên bán, link các listing, dự đoán lượt xem và số đơn sau 14 ngày, và mức tự tin của bạn.</p>
   </div>
 </section>
 <section id="thu-ban">
@@ -619,6 +639,7 @@ table.wk a{white-space:normal}
     <div class="eyebrow">Sau thẻ giả thuyết</div>
     <h2>SOP thử bán 30 ngày</h2>
   </div>
+  <p class="verdict"><b>Trong khóa K1:</b> 30 ngày thử bán trùng với tuần 2–6 của Lộ trình 8 tuần. Ngày 1 là ngày listing đầu lên (tuần 2); lịch, hạn nộp và nơi ghi số theo thẻ tuần, số ghi ở Checklist tab Sprint 8 tuần. Phần này dùng để tra cách đọc số và ngưỡng ra quyết định.</p>
   <p class="prose">5 cổng chỉ cho bạn một giả thuyết tốt. Người mua thật mới cho câu trả lời. SOP này giữ 30 ngày thử bán ở mức <b>khoảng 1 giờ đọc số mỗi tuần</b>, còn lại là làm sản phẩm và trả lời khách. Mọi con số ghi vào nhật ký, không ghi trong đầu.</p>
 
   <div class="sub">
@@ -628,7 +649,7 @@ table.wk a{white-space:normal}
       <div class="box"><h3>Etsy · POD</h3><ul>
         <li>Đặt 1 mẫu cho mỗi biến thể chính, tự kiểm chất lượng, chụp ảnh từ mẫu</li>
         <li>Khai báo nhà in POD là đối tác sản xuất trong listing</li>
-        <li>3–5 listing cùng một khách, khác nhau ở góc hoặc biến thể</li>
+        <li>5 listing cùng một khách, khác nhau ở góc hoặc biến thể</li>
         <li>Thời gian xử lý và giao ghi đúng thực tế của nhà in</li>
         <li>Dùng file Bộ vận hành Etsy POD cho lịch tuần, nhật ký và mẫu tin nhắn</li></ul></div>
       <div class="box"><h3>Etsy · hàng vật lý</h3><ul>
@@ -639,19 +660,19 @@ table.wk a{white-space:normal}
         <li>Khai báo xưởng là đối tác sản xuất; ghi kích thước thật trong ảnh và mô tả</li></ul></div>
       <div class="box"><h3>Shopify</h3><ul>
         <li>Cửa hàng tối thiểu: 1 trang sản phẩm, trang chính sách giao hàng, đổi trả, liên hệ</li>
-        <li>Cổng thanh toán nhận được tiền với seller Việt Nam, theo điều kiện ở tab 9</li>
+        <li>Cổng thanh toán nhận được tiền với seller Việt Nam, theo mục <a href="van-hanh.html#van-shopify">Mở Shopify đúng cách</a></li>
         <li>Ghi CAC tối đa từ cổng R lên đầu nhật ký</li>
         <li>Ngân sách quảng cáo thử chia sẵn theo tuần, nằm trong vốn thử</li>
         <li>2–3 mẫu quảng cáo, mỗi mẫu nói một góc khác nhau từ cổng A</li></ul></div>
     </div>
-    <p class="src">Cách viết từng phần của listing và phiếu chấm 12 điểm ở <a href="#len-ban">Module 2 · Lên bán</a>.</p>
+    <p class="src">Cách viết từng phần của listing và phiếu chấm 12 điểm ở <a href="#len-ban">phần Lên bán</a>.</p>
   </div>
 
   <div class="sub">
     <div class="tagline">Tuần 1–4 · nhịp mỗi tuần, cùng một ngày</div>
     <h3>Đọc số, đổi một thứ, ghi lại</h3>
     <ol class="steps">
-      <li><div><b>Thứ 2 trước 20:00, chép số tuần vào tab 5 file Kế hoạch 90 ngày</b> (nơi duy nhất ghi số, tiền bằng USD; Checklist tab 3 tự lấy số để Mentor xem). Etsy: lượt xem, favorites, đơn, nguồn khách (Etsy Stats). Shopify: lượt nhấp quảng cáo, thêm giỏ, bắt đầu thanh toán, đơn, chi phí mỗi đơn.</div></li>
+      <li><div><b>Chủ nhật trước 20:00, ghi số tuần vào Checklist tab Sprint 8 tuần</b> (tiền bằng USD; Mentor xem ở cùng tab). Etsy: lượt xem, favorites, đơn, nguồn khách (Etsy Stats). Shopify: lượt nhấp quảng cáo, thêm giỏ, bắt đầu thanh toán, đơn, chi phí mỗi đơn.</div></li>
       <li><div><b>Tìm chỗ tắc trong phễu.</b> Ít lượt xem: tiêu đề, từ khóa, ảnh đầu. Xem nhiều mà không ai thêm giỏ hoặc favorite: ảnh, giá, góc. Thêm giỏ mà không mua: phí ship, thời gian giao, lòng tin.</div></li>
       <li><div><b>Chỉ đổi một thứ ở đúng chỗ tắc,</b> ghi ngày đổi vào nhật ký thử nghiệm. Đổi nhiều thứ một lúc thì không biết thứ gì có tác dụng.</div></li>
       <li><div><b>Có đơn thì làm SOP đơn hàng:</b> xác nhận cá nhân hóa trong 24 giờ, giao đúng hẹn, hỏi review sau khi khách nhận hàng. Mỗi đơn ghi lãi thật vào nhật ký đơn.</div></li>
@@ -673,7 +694,7 @@ table.wk a{white-space:normal}
     <p class="src">Hàng vật lý: hàng tồn của lô đầu không phải lý do để kéo dài thử nghiệm. Nếu trượt, bán xả ở giá hòa vốn và giữ lại bài học. Ngưỡng 300 lượt xem là ngưỡng khởi điểm của khóa học cho 3–5 listing cộng lại; Mentor có thể chỉnh theo mức giá và ngành hàng.</p>
   </div>
   <div class="mentor">
-    <div class="box"><h3>Nộp cho Mentor mỗi tuần</h3><ul><li>Số tuần đã có ở Kế hoạch 90 ngày tab 5</li><li>Chỗ tắc của phễu, một thứ bạn đã đổi và bài học về khách, viết ở Checklist tab 3</li></ul></div>
+    <div class="box"><h3>Nộp cho Mentor mỗi tuần</h3><ul><li>Số tuần đã có ở Checklist tab Sprint 8 tuần</li><li>Chỗ tắc của phễu, một thứ bạn đã đổi và bài học về khách, viết ở Checklist tab Thí nghiệm &amp; quyết định</li></ul></div>
     <div class="box"><h3>Mentor sẽ hỏi</h3><ul><li>"Tuần này em đổi mấy thứ? Thứ nào?"</li><li>"Lãi thật của đơn vừa rồi so với bảng cổng R chênh bao nhiêu?"</li></ul></div>
   </div>
   <div class="reflect">

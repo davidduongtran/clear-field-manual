@@ -299,6 +299,26 @@ ul.ck{list-style:none;padding:0}
 .ck input:checked+span,.ht-self input:checked+span{color:var(--muted)}
 .due{border:1px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px;display:grid;gap:4px;background:var(--paper)}
 .due .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-lv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px}
+.ht-lv .box{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--paper);font-size:14px}
+.ht-lv .box .k{font-family:var(--f-data);font-size:12px;color:var(--accent);display:block;margin-bottom:4px;letter-spacing:.04em;text-transform:uppercase}
+.ht-lv .box.adv .k{color:var(--muted)}
+.ht-lv .box p{margin:0}
+.ht-path{border:1px dashed var(--accent);border-radius:10px;padding:12px 16px;display:grid;gap:8px;background:var(--paper)}
+.ht-path h4{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.ht-path ul{margin:0;padding-left:0;display:grid;gap:5px;font-size:14.5px}
+.ht-gate{border:2px solid var(--accent);border-radius:12px;padding:14px 18px;display:grid;gap:8px;background:var(--accent-soft)}
+.ht-gate h4{margin:0;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.ht-gate p,.ht-gate ol{margin:0}
+details.tk{border:1px solid var(--line);border-radius:10px;background:var(--paper);margin-top:12px}
+details.tk>summary{cursor:pointer;padding:10px 14px;font-weight:700;color:var(--accent)}
+details.tk>ol{margin:0;padding:0 18px 12px 36px;display:grid;gap:8px}
+details.tk em{display:block;color:var(--muted);font-style:normal;font-size:13.5px}
+.curve{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:12px}
+.curve svg{width:100%;height:auto;display:block}
+.curve text{font-family:var(--f-data);font-size:12px;fill:var(--muted)}
+@media(max-width:640px){.curve text{font-size:20px}.curve text.sm{display:none}}
+.curve .lb{fill:var(--ink);font-size:12.5px}
 .ht-self{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;display:grid;gap:10px}
 .ht-self ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
 .ht-self em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
@@ -395,15 +415,15 @@ table.wk a{white-space:normal}
 </nav>
   <div class="eyebrow">Phần 5 · Vận hành · nhánh B từ tuần 2, nhánh A từ tuần 4</div>
   
-  <p class="lede">Tài khoản an toàn, mở Shopify đúng cách với 12 điểm kiểm, và đi trọn một đơn từ lúc khách trả tiền tới lúc để lại đánh giá, kể cả khi có tranh chấp.</p>
-  <div class="meta"><span><b>Dùng khi:</b> Nhánh B tuần 2–8, nhánh A tuần 4–8</span><span><b>Đọc hết:</b> khoảng 15 phút, nhưng chỉ đọc phần được giao</span></div>
-  <div class="inpage"><b>Trong trang:</b> <a href="#van-tk">Tài khoản an toàn</a> · <a href="#van-shopify">Mở Shopify đúng cách</a> · <a href="#van-don">Từ đơn đến đánh giá</a></div>
+  <p class="lede">Tài khoản an toàn, mở Shopify đúng cách với 12 điểm kiểm, đi trọn một đơn từ lúc khách trả tiền tới lúc để lại đánh giá, và bảo vệ thiết kế khi bị chép hoặc bị report sai.</p>
+  <div class="meta"><span><b>Dùng khi:</b> Nhánh B tuần 2–8, nhánh A tuần 4–8</span><span><b>Đọc hết:</b> khoảng 20 phút, nhưng chỉ đọc phần được giao</span></div>
+  <div class="inpage"><b>Trong trang:</b> <a href="#van-tk">Tài khoản an toàn</a> · <a href="#van-shopify">Mở Shopify đúng cách</a> · <a href="#van-don">Từ đơn đến đánh giá</a> · <a href="#van-ip">Bảo vệ thiết kế</a></div>
 </header>
 <div class="layout">
 <main>
 <section id="van-hanh">
   <div class="sec-head">
-    <div class="eyebrow">Vận hành · cả hai nhánh · nhánh B từ tuần 2, nhánh A từ tuần 4–5</div>
+    <div class="eyebrow">Vận hành · cả hai nhánh · nhánh B từ tuần 2, nhánh A từ tuần 4–5; bảo vệ thiết kế từ tuần 1</div>
     <h2>Vận hành: tài khoản an toàn, mở Shopify đúng cách, và đi trọn một đơn từ lúc khách trả tiền tới lúc để lại đánh giá</h2>
   </div>
   <p class="prose">Sản phẩm tốt chỉ thành doanh nghiệp khi ba thứ không gãy: <b>tài khoản</b> (bị khóa là mất hết), <b>đường tiền</b> (khách trả được, bạn nhận được), và <b>lời hứa với khách</b> (giao đúng, trả lời nhanh, xử lý sự cố công bằng). Phần này là các quy trình để ba thứ đó chạy đều, kể cả khi bạn bận.</p>
@@ -525,6 +545,46 @@ tin nhắn xác nhận cá nhân hóa khách đã đồng ý.</pre>
     <ol><li>Nếu tài khoản Meta bị hạn chế ngày mai, mình biết bấm vào đâu và báo ai?</li><li>Tiền của đơn đầu tiên về tài khoản nào, sau bao nhiêu ngày?</li><li>Đơn nào đang đi mà mình chưa biết trạng thái?</li><li>Nếu khách mở tranh chấp, mình có đủ bằng chứng trong 10 phút không?</li></ol>
   </div>
   <p class="src">Nguồn, xem tháng 10/2026: <a href="https://www.etsy.com/seller-handbook/article/1085799204521">Etsy Seller Handbook, thay đổi Purchase Protection 4/2026</a>; <a href="https://www.chargeflow.io/blog/how-to-win-an-item-not-received-paypal-dispute">Chargeflow, tranh chấp PayPal và điều kiện Bảo vệ người bán</a> (bên bán dịch vụ); <a href="https://www.paypal.com/gl/webapps/mpp/seller-protection">PayPal, Seller Protection</a>; <a href="https://pushowl.com/blog/free-email-marketing-shopify-complete-guide">PushOwl, gói miễn phí Shopify Email</a> (bên bán ứng dụng); <a href="https://apps.shopify.com/judgeme">Judge.me trên Shopify App Store</a>; <a href="https://www.stackmatix.com/blog/facebook-ad-account-disabled">Stackmatix, lý do tài khoản quảng cáo bị khóa</a>; <a href="https://www.airwallex.com/vn/blog/cong-thanh-toan-shopify">Airwallex, cổng thanh toán Shopify cho người bán Việt Nam</a>. Chính sách thay đổi thường xuyên: đọc trang gốc trước khi xử lý một case thật.</p>
+
+  <div class="sub" id="van-ip">
+    <div class="tagline">4 · Bảo vệ thiết kế · nhánh A · lưu bằng chứng từ tuần 1, dựng đủ ở tuần 5</div>
+    <h3>Bị chép rồi bị report ngược: bằng chứng có ngày thắng lời kể</h3>
+    <p class="prose">Kịch bản hay gặp với thiết kế bán chạy: đối thủ chép thiết kế của bạn, rồi gửi báo cáo vi phạm bản quyền lên Etsy, nói thiết kế là của họ. Etsy gỡ listing trước, xét sau; shop bị gỡ nhiều lần có thể bị hạn chế hoặc khóa. Bạn không ngăn được người khác gửi báo cáo, nhưng chuẩn bị được bằng chứng để phản đối nhanh, và có store của riêng mình để vẫn bán được trong lúc chờ. Đây là lý do thứ hai mọi học viên nhánh A dựng store Shopify.</p>
+    <div class="tbl"><table class="spyt case"><thead><tr><th>Lớp bảo vệ</th><th>Làm thế nào</th><th>Khi nào</th></tr></thead><tbody>
+      <tr><td>1 · Bằng chứng sáng tạo</td><td>Mỗi thiết kế một thư mục Drive đặt tên theo ngày: file gốc có lớp (PSD, AI hoặc bản Canva có lịch sử phiên bản), phác thảo, ảnh tham khảo, câu lệnh và các bước bạn chỉnh tay. Drive tự giữ lịch sử phiên bản có ngày giờ.</td><td>Từ thiết kế đầu tiên, tuần 1</td></tr>
+      <tr><td>2 · Công bố sớm ở nơi của bạn</td><td>Đăng thiết kế lên store Shopify ngay khi lên Etsy. Lưu bản chụp trang sản phẩm bằng Wayback Machine (web.archive.org, mục Save Page Now): một mốc ngày công khai, bên thứ ba giữ, không ai sửa được.</td><td>Tuần 5, rồi mỗi thiết kế mới</td></tr>
+      <tr><td>3 · Trang Sở hữu trí tuệ trên store</td><td>Một trang nói rõ thiết kế là của bạn, email nhận báo cáo vi phạm, và cách bạn xử lý báo cáo. Huy hiệu của các dịch vụ như DMCA.com chỉ là lớp răn đe cộng dịch vụ gỡ trả phí; quyền của bạn có từ lúc bạn tạo ra thiết kế, không phụ thuộc huy hiệu.</td><td>Tuần 5</td></tr>
+      <tr><td>4 · Phản đối khi bị report sai trên Etsy</td><td><b>Báo cáo bản quyền:</b> gửi counter notice theo hướng dẫn trong email Etsy gửi bạn: thông tin liên hệ, lời cam kết dưới hình phạt khai man (penalty of perjury) rằng listing bị gỡ do nhầm lẫn, kèm bằng chứng lớp 1–2. Etsy chuyển cho bên báo cáo; sau 10 ngày làm việc kể từ khi Etsy xử lý, bạn được đăng lại, trừ khi bên kia báo đang xin lệnh của tòa. <b>Báo cáo nhãn hiệu:</b> Etsy không nhận counter notice; liên hệ bên báo cáo xin rút, kèm bằng chứng.</td><td>Trong 1–2 ngày sau khi nhận email</td></tr>
+      <tr><td>5 · Đánh ngược khi bị chép</td><td>Gửi báo cáo vi phạm tới Etsy, Shopify hoặc sàn nơi bản chép đang bán, kèm link và bằng chứng có ngày. Chỉ báo cáo bản chép thật, không báo cáo người làm cùng ý tưởng nhưng thiết kế khác.</td><td>Khi thấy bản chép</td></tr>
+      <tr><td>6 · Đăng ký bản quyền Mỹ cho thiết kế chủ lực</td><td>Trên copyright.gov: Single Application 45 USD (một tác giả, một tác phẩm), Standard 65 USD, nhóm tới 10 tác phẩm chưa công bố 85 USD. Đăng ký trước khi bị vi phạm, hoặc trong 3 tháng sau lần công bố đầu, mới đòi được bồi thường theo luật định và phí luật sư. Chỉ làm cho thiết kế đang bán tốt.</td><td>Khi một thiết kế có đơn đều</td></tr>
+    </tbody></table></div>
+    <p class="prose"><b>Khung trang Sở hữu trí tuệ</b> (Shopify, Online Store, Pages; đặt link ở chân trang). Sửa phần trong ngoặc vuông, đọc lại cho đúng sự thật về shop của bạn:</p>
+    <pre class="tpl">Intellectual Property
+
+All designs sold at [tên store] are original works created by [tên bạn / tên doanh nghiệp].
+Each design is documented with dated source files and was first published on this site
+on the date shown in our records.
+
+Copying, reproducing or selling our designs without written permission is not allowed.
+
+Think something here uses your work? Email [email] with:
+1. a link to the item, 2. a description of your original work and where it was first
+published, 3. your contact details. We reply within 2 business days.
+
+If you find a copy of our designs elsewhere, please let us know at [email].</pre>
+    <div class="mentor">
+      <div class="box"><h3>Lằn ranh với thiết kế có dùng AI</h3><ol class="flowl">
+        <li>Cục Bản quyền Mỹ không bảo hộ phần do AI tạo ra hoàn toàn; phần bạn tự vẽ, chỉnh, sắp xếp thì có thể được bảo hộ. Giữ file chỉnh tay và ghi các bước: đó vừa là bằng chứng, vừa là phần thuộc về bạn.</li>
+        <li>Câu lệnh tái tạo từ App phân tích thiết kế không làm một bản chép thành của bạn. Làm đúng <a href="tra-cuu.html#db-cong-cu-khoa">lằn ranh</a>: rút điểm chung từ ít nhất 3 thiết kế, rồi làm khác.</li>
+        <li>Counter notice là lời cam kết trước pháp luật. Chỉ gửi khi thiết kế thật sự do bạn làm.</li></ol></div>
+      <div class="box"><h3>Khi nhận email bị gỡ listing</h3><ol class="flowl">
+        <li>Đọc kỹ đó là báo cáo bản quyền hay nhãn hiệu.</li>
+        <li>Mở thư mục bằng chứng của thiết kế đó; báo Mentor trong ngày.</li>
+        <li>Bản quyền: gửi counter notice. Nhãn hiệu: nhắn bên báo cáo. Trong lúc chờ, bán thiết kế đó trên store của bạn.</li>
+        <li>Câu hỏi pháp lý cụ thể: hỏi luật sư sở hữu trí tuệ. Phần này là hướng dẫn vận hành, không phải tư vấn pháp lý.</li></ol></div>
+    </div>
+    <p class="src">Nguồn, xem tháng 10/2026: <a href="https://help.etsy.com/hc/en-gb/articles/360040496854-How-to-File-a-DMCA-Counter-Notice">Etsy, cách gửi DMCA counter notice</a> (chỉ cho báo cáo bản quyền; đăng lại sau 10 ngày làm việc); <a href="https://www.etsy.com/legal/ip">Etsy, chính sách sở hữu trí tuệ</a>; <a href="https://copyright.gov/about/fees.html">Cục Bản quyền Mỹ, biểu phí</a> (Cục đang xem xét tăng phí, kiểm lại trước khi nộp); <a href="https://www.law.cornell.edu/uscode/text/17/412">17 U.S.C. §412</a> (điều kiện đòi bồi thường luật định); <a href="https://www.copyright.gov/ai/">Cục Bản quyền Mỹ, bản quyền và AI</a>; <a href="https://web.archive.org/">Wayback Machine</a>.</p>
+  </div>
 </section>
 <div class="pn"><a href="hang-vat-ly.html"><small>← Phần trước</small>Hàng vật lý (B)</a><a class="nx" href="meta-ads.html"><small>Phần sau →</small>Meta Ads</a></div>
 </main>

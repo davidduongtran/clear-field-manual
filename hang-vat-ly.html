@@ -299,6 +299,26 @@ ul.ck{list-style:none;padding:0}
 .ck input:checked+span,.ht-self input:checked+span{color:var(--muted)}
 .due{border:1px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px;display:grid;gap:4px;background:var(--paper)}
 .due .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-lv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px}
+.ht-lv .box{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--paper);font-size:14px}
+.ht-lv .box .k{font-family:var(--f-data);font-size:12px;color:var(--accent);display:block;margin-bottom:4px;letter-spacing:.04em;text-transform:uppercase}
+.ht-lv .box.adv .k{color:var(--muted)}
+.ht-lv .box p{margin:0}
+.ht-path{border:1px dashed var(--accent);border-radius:10px;padding:12px 16px;display:grid;gap:8px;background:var(--paper)}
+.ht-path h4{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.ht-path ul{margin:0;padding-left:0;display:grid;gap:5px;font-size:14.5px}
+.ht-gate{border:2px solid var(--accent);border-radius:12px;padding:14px 18px;display:grid;gap:8px;background:var(--accent-soft)}
+.ht-gate h4{margin:0;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.ht-gate p,.ht-gate ol{margin:0}
+details.tk{border:1px solid var(--line);border-radius:10px;background:var(--paper);margin-top:12px}
+details.tk>summary{cursor:pointer;padding:10px 14px;font-weight:700;color:var(--accent)}
+details.tk>ol{margin:0;padding:0 18px 12px 36px;display:grid;gap:8px}
+details.tk em{display:block;color:var(--muted);font-style:normal;font-size:13.5px}
+.curve{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:12px}
+.curve svg{width:100%;height:auto;display:block}
+.curve text{font-family:var(--f-data);font-size:12px;fill:var(--muted)}
+@media(max-width:640px){.curve text{font-size:20px}.curve text.sm{display:none}}
+.curve .lb{fill:var(--ink);font-size:12.5px}
 .ht-self{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;display:grid;gap:10px}
 .ht-self ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
 .ht-self em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
@@ -396,8 +416,8 @@ table.wk a{white-space:normal}
   <div class="eyebrow">Nhánh B · Tuần 1–8</div>
   
   <p class="lede">Toàn bộ nhánh B trên một trang: chọn nhánh, tư duy và cách tìm món độc đáo, tìm và chấm nhà cung cấp, công cụ nguồn hàng, giao hàng vào Mỹ, giá vốn, tuân thủ, case và lộ trình 8 tuần.</p>
-  <div class="meta"><span><b>Dùng khi:</b> Nhánh B, tuần 1–8</span><span><b>Đọc hết:</b> khoảng 40 phút, nhưng chỉ đọc phần được giao</span></div>
-  <div class="inpage"><b>Trong trang:</b> <a href="#vl-chon">Chọn nhánh A hay B</a> · <a href="#vl-tu-duy">Tư duy</a> · <a href="#vl-tim">Tìm sản phẩm</a> · <a href="#vl-nguon">Nguồn hàng theo nước</a> · <a href="#vl-cong-cu">Công cụ nguồn hàng</a> · <a href="#vl-giao">Thuế và giao hàng vào Mỹ</a> · <a href="#vl-lai">Lãi tới tay khách</a> · <a href="#vl-tuan-thu">Tuân thủ của Mỹ</a> · <a href="#vl-tien">Dòng tiền</a> · <a href="#vl-flow">Workflow</a> · <a href="#vl-case3">Case study 3</a> · <a href="#vl-case4">Case study 4</a> · <a href="#vl-lo-trinh">Lộ trình 8 tuần nhánh B</a></div>
+  <div class="meta"><span><b>Dùng khi:</b> Nhánh B, tuần 1–8</span><span><b>Đọc hết:</b> khoảng 45 phút, nhưng chỉ đọc phần được giao</span></div>
+  <div class="inpage"><b>Trong trang:</b> <a href="#vl-chon">Chọn nhánh A hay B</a> · <a href="#vl-tu-duy">Tư duy</a> · <a href="#vl-tim">Tìm sản phẩm</a> · <a href="#vl-nguon">Nguồn hàng theo nước</a> · <a href="#vl-cong-cu">Công cụ nguồn hàng</a> · <a href="#vl-giao">Thuế và giao hàng vào Mỹ</a> · <a href="#vl-lai">Lãi tới tay khách</a> · <a href="#vl-tuan-thu">Tuân thủ của Mỹ</a> · <a href="#vl-tien">Dòng tiền</a> · <a href="#vl-flow">Workflow</a> · <a href="#vl-case3">Case study 3</a> · <a href="#vl-case4">Case study 4</a> · <a href="#vl-don-som">Đường đơn sớm</a> · <a href="#vl-lo-trinh">Lộ trình 8 tuần nhánh B</a></div>
 </header>
 <div class="layout">
 <main>
@@ -466,7 +486,7 @@ table.wk a{white-space:normal}
       <li class="a2"><div><h4>2 · Bằng chứng bán</h4><p class="q">Có ít nhất một tín hiệu đếm được?</p></div><div class="els">"bought in past month", số đã bán TikTok, quảng cáo chạy trên 30 ngày, dự án gọi vốn thành công. Ghi link và ngày.</div><div class="ex"><b>Trượt khi</b>Chỉ có số doanh thu ước tính của công cụ spy.</div></li>
       <li class="a3"><div><h4>3 · Khác biệt</h4><p class="q">Khác ở đâu trong 6 cách ở trên?</p></div><div class="els">Viết một câu: "Khác món đang bán ở ___, nhìn thấy trong ảnh đầu tiên vì ___".</div><div class="ex"><b>Trượt khi</b>Câu trả lời là "rẻ hơn" hoặc "ảnh đẹp hơn".</div></li>
       <li class="a4"><div><h4>4 · Lãi tới tay khách</h4><p class="q">Còn lãi sau thuế, cước, phí, hoàn hàng?</p></div><div class="els">CAC tối đa từ khoảng 35% giá bán; giá trị đơn từ khoảng 35–40 USD để Meta Ads có chỗ thở. Tính ở tab 4d.</div><div class="ex"><b>Trượt khi</b>CAC tối đa dưới khoảng 12–15 USD: quảng cáo gần như không thể có lãi.</div></li>
-      <li class="a4"><div><h4>5 · Vận hành và tuân thủ</h4><p class="q">Giao được, hợp pháp, có nhà cung cấp dự phòng?</p></div><div class="els">Qua bộ lọc 10 câu bên dưới; có ít nhất 2 nhà cung cấp báo giá cho cùng món.</div><div class="ex"><b>Trượt khi</b>Rơi vào nhóm hàng cần chứng nhận, hoặc chỉ có một nguồn duy nhất.</div></li>
+      <li class="a4"><div><h4>5 · Vận hành và tuân thủ</h4><p class="q">Giao được, hợp pháp, có nhà cung cấp dự phòng?</p></div><div class="els">Qua Bộ lọc Hàng vật lý 10 câu bên dưới; có ít nhất 2 nhà cung cấp báo giá cho cùng món.</div><div class="ex"><b>Trượt khi</b>Rơi vào nhóm hàng cần chứng nhận, hoặc chỉ có một nguồn duy nhất.</div></li>
     </ol>
 
     <div class="ht-flag"><h4>Bộ lọc hàng vật lý 10 câu · trượt một câu là loại với người mới</h4><ul>
@@ -624,7 +644,7 @@ table.wk a{white-space:normal}
         <li><b>20' · Lời chê.</b> Với 3 món tốt nhất, đọc 30 review 1–3 sao; ghi 3 lời chê lặp lại nhiều nhất.</li>
         <li><b>15' · Khác biệt.</b> Mỗi món viết một câu khác biệt theo 1 trong 6 cách. Món nào không viết được thì bỏ.</li>
         <li><b>10' · Lãi nhanh.</b> Giá AliExpress, CJ hoặc báo giá Việt Nam × khoảng 1,6 để ước giá vốn tới tay khách; giá bán trừ số đó và khoảng 10% phí phải còn từ khoảng 35% giá bán.</li>
-        <li><b>10' · Lọc.</b> Cho qua bộ lọc 10 câu, giữ 3 ứng viên, ghi vào tab 4c.</li></ol></div>
+        <li><b>10' · Lọc.</b> Cho qua Bộ lọc Hàng vật lý 10 câu, giữ 3 ứng viên, ghi vào tab 4c.</li></ol></div>
       <div class="box"><h3>D · Tìm và chấm nhà cung cấp · 2 giờ</h3><ol class="flowl">
         <li><b>30' · Tìm.</b> Mỗi ứng viên: 3 nhà cung cấp từ ít nhất 2 nguồn (Việt Nam, Trung Quốc, kho Mỹ, nước khác). Tìm ảnh ngược trên AliExpress, 1688, Alibaba.</li>
         <li><b>20' · Lọc.</b> Xưởng hay người bán lại; năm hoạt động; có DDP sang Mỹ không.</li>
@@ -675,19 +695,38 @@ table.wk a{white-space:normal}
     <p class="verdict">Bài học: với hàng chạm vào đồ ăn, <b>giấy kiểm nghiệm</b> là điều kiện chọn nhà cung cấp, không phải chi tiết. Khi CAC tối đa quá hẹp, sửa <b>giá trị đơn</b> trước, đừng ép giá xưởng.</p>
   </div>
 
+
+  <div class="sub" id="vl-don-som">
+    <div class="tagline">Đường đơn sớm · nhánh B · chọn một ở 1:1 thứ 2 tuần 3</div>
+    <h3>Có đơn đầu trước khi bỏ tiền quảng cáo</h3>
+    <p class="prose">Nhánh B bán trên Shopify, nên mặc định khách đến từ quảng cáo. Nhưng tiền quảng cáo đắt nhất năm rơi đúng Black Friday, và đơn đầu là thứ cho bạn biết sản phẩm, trang bán và đường giao hàng có chạy không. Từ tuần 3, chọn <b>một</b> trong ba đường dưới đây và làm song song với việc chuẩn bị quảng cáo.</p>
+    <div class="tbl"><table class="spyt case"><thead><tr><th>Đường</th><th>Làm thế nào</th><th>Đạt khi</th></tr></thead><tbody>
+      <tr><td>1 · Nội dung tự nhiên</td><td>5 video dọc từ mẫu thật (đã có trong việc tuần 4) đăng Reels, TikTok và Pinterest, link về trang sản phẩm. Mỗi video một góc: vấn đề, trước và sau, cách dùng.</td><td>Có lượt vào store từ nội dung, và biết video nào giữ người xem lâu nhất để làm mẫu quảng cáo.</td></tr>
+      <tr><td>2 · Tặng mẫu cho tài khoản nhỏ</td><td>Tìm 10 tài khoản ở Mỹ 2.000–20.000 người theo dõi, đúng nhóm khách. Nhắn 10, tặng 3–5 người đồng ý. Xin phép dùng ảnh và video của họ làm quảng cáo. Họ phải ghi rõ là được tặng (quy định của FTC).</td><td>Có ít nhất 2 bài đăng thật và quyền dùng nội dung đó.</td></tr>
+      <tr><td>3 · Bán trước cho người quen ở Mỹ</td><td>Người quen đặt qua store thật, trả giá thật, nhận hàng qua đường giao thật. Không nhờ viết đánh giá nếu họ chưa dùng thật.</td><td>Một đơn đi trọn từ thanh toán tới tay khách, có mã vận đơn và thời gian giao thật.</td></tr>
+    </tbody></table></div>
+    <pre class="tpl">Hi [tên], I love how you show [chủ đề của họ] for [nhóm khách].
+I make [sản phẩm] for [nhóm khách] who [việc cần làm].
+Could I send you one, free, no strings attached?
+If you like it and post about it, please tag it as a gift (#gifted).
+And if you're open to it, I'd love to ask about using your photo in our ads later.
+[Tên bạn] · [link store]</pre>
+    <p class="src">Etsy chỉ dùng được cho nhánh B khi sản phẩm do chính bạn thiết kế và xưởng được khai là đối tác sản xuất; hàng mua về bán lại không đúng chính sách hàng thủ công của Etsy. Quy định ghi rõ quà tặng: <a href="https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers">FTC, Disclosures 101 cho người có ảnh hưởng</a>.</p>
+  </div>
+
   <div class="sub" id="vl-lo-trinh">
     <div class="tagline">Lộ trình 8 tuần · nhánh B · cùng nhịp 1:1 thứ 2 và thứ 5</div>
     <h3>Từ chọn món tới quảng cáo: mẫu và store đi song song</h3>
     <div class="tbl"><table class="ht-map"><thead><tr><th>Tuần</th><th>Ngày</th><th>Chặng</th><th>Kết quả phải có</th><th>Hạn</th></tr></thead><tbody>
-      <tr class="gate"><td>1</td><td>19–25/10</td><td>Sản phẩm và nguồn</td><td>3 ứng viên qua bộ lọc 10 câu (T4 21/10). Chốt 1 món, gửi RFQ cho 5–8 nhà cung cấp, đặt mẫu từ 2–3 nhà cung cấp</td><td>CN 25/10</td></tr>
+      <tr class="gate"><td>1</td><td>19–25/10</td><td>Sản phẩm và nguồn</td><td>3 ứng viên qua Bộ lọc Hàng vật lý 10 câu (T4 21/10). Chốt 1 món, gửi RFQ cho 5–8 nhà cung cấp, đặt mẫu từ 2–3 nhà cung cấp</td><td>CN 25/10</td></tr>
       <tr><td>2</td><td>26/10–1/11</td><td>Nhà cung cấp, tuân thủ, nền store</td><td>Tab 4d: điểm nhà cung cấp, giá vốn tới tay từ báo giá thật, dòng HTS. Shopify: gói, tên miền, PayPal Business, 6 trang bắt buộc</td><td>CN 1/11</td></tr>
-      <tr><td>3</td><td>2–8/11</td><td>Mẫu và trang bán</td><td>Chấm mẫu, chọn nhà cung cấp chính và dự phòng. Ảnh, video từ mẫu thật. Trang sản phẩm có bộ hoặc ưu đãi nâng giá trị đơn. Pixel và Conversions API đủ 4 sự kiện</td><td>CN 8/11</td></tr>
-      <tr class="gate"><td>4</td><td>9–15/11</td><td>Đơn thử và mẫu quảng cáo</td><td>Một đơn thật đi trọn đường tới địa chỉ ở Mỹ, mã vận đơn về PayPal. 5–8 video, ảnh quảng cáo; 5 video đăng thử tự nhiên. CAC tối đa và điểm tắt viết sẵn</td><td>CN 15/11</td></tr>
+      <tr><td>3</td><td>2–8/11</td><td>Mẫu và trang bán</td><td>Chấm mẫu, chọn nhà cung cấp chính và dự phòng. Chọn một <a href="#vl-don-som">đường đơn sớm</a>. Ảnh, video từ mẫu thật. Trang sản phẩm có bộ hoặc ưu đãi nâng giá trị đơn. Pixel và Conversions API đủ 4 sự kiện</td><td>CN 8/11</td></tr>
+      <tr class="gate"><td>4</td><td>9–15/11</td><td>Đơn thử và mẫu quảng cáo</td><td>Một đơn thật đi trọn đường tới địa chỉ ở Mỹ (đơn từ đường đơn sớm càng tốt), mã vận đơn về PayPal. 5–8 video, ảnh quảng cáo; 5 video đăng thử tự nhiên. CAC tối đa và điểm tắt viết sẵn</td><td>CN 15/11</td></tr>
       <tr class="gate"><td>5</td><td>16–22/11</td><td>Mở quảng cáo</td><td>Chiến dịch Sales chạy từ T3 17/11, 3–5 mẫu, ngân sách nhỏ, trước khi giá quảng cáo tăng mùa Black Friday</td><td>T3 17/11</td></tr>
       <tr><td>6–7</td><td>23/11–6/12</td><td>Meta Ads và vận hành đơn</td><td>Bảng từng mẫu, quyết định giữ, tắt, tăng. Mọi đơn có mã vận đơn trong 48 giờ. Hạn giao Giáng sinh ghi trên trang</td><td>CN 6/12</td></tr>
       <tr><td>8</td><td>7–13/12</td><td>Tổng kết</td><td>Lãi thật sau mọi phí. Quyết định: nhập lô vào kho Mỹ, đổi nhà cung cấp, hay dừng món này</td><td>CN 13/12</td></tr>
     </tbody></table></div>
-    <p class="src">Từ tuần 5, nhánh B dùng chung Module 5 (Meta Ads) và Module 6 (Tổng kết) với nhánh A; chỉ khác là quảng cáo mở sớm một tuần. Ghi số mỗi chủ nhật vào Checklist tab Sprint: để trống các cột Etsy.</p>
+    <p class="src">Từ tuần 5, nhánh B dùng chung thẻ tuần 6–8 (Meta Ads, đọc số, tổng kết) với nhánh A; chỉ khác là quảng cáo mở sớm một tuần. Cổng quảng cáo của nhánh B: trang bán và pixel đủ 4 sự kiện, đơn thử đã đi trọn, và tab Tiền mặt tuần còn từ 4 tuần trụ. Ghi số mỗi chủ nhật vào Checklist tab Sprint: để trống các cột Etsy.</p>
   </div>
 
   <div class="reflect">

@@ -299,6 +299,26 @@ ul.ck{list-style:none;padding:0}
 .ck input:checked+span,.ht-self input:checked+span{color:var(--muted)}
 .due{border:1px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px;display:grid;gap:4px;background:var(--paper)}
 .due .k{font-family:var(--f-data);font-size:12px;color:var(--accent)}
+.ht-lv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px}
+.ht-lv .box{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--paper);font-size:14px}
+.ht-lv .box .k{font-family:var(--f-data);font-size:12px;color:var(--accent);display:block;margin-bottom:4px;letter-spacing:.04em;text-transform:uppercase}
+.ht-lv .box.adv .k{color:var(--muted)}
+.ht-lv .box p{margin:0}
+.ht-path{border:1px dashed var(--accent);border-radius:10px;padding:12px 16px;display:grid;gap:8px;background:var(--paper)}
+.ht-path h4{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.ht-path ul{margin:0;padding-left:0;display:grid;gap:5px;font-size:14.5px}
+.ht-gate{border:2px solid var(--accent);border-radius:12px;padding:14px 18px;display:grid;gap:8px;background:var(--accent-soft)}
+.ht-gate h4{margin:0;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.ht-gate p,.ht-gate ol{margin:0}
+details.tk{border:1px solid var(--line);border-radius:10px;background:var(--paper);margin-top:12px}
+details.tk>summary{cursor:pointer;padding:10px 14px;font-weight:700;color:var(--accent)}
+details.tk>ol{margin:0;padding:0 18px 12px 36px;display:grid;gap:8px}
+details.tk em{display:block;color:var(--muted);font-style:normal;font-size:13.5px}
+.curve{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:12px}
+.curve svg{width:100%;height:auto;display:block}
+.curve text{font-family:var(--f-data);font-size:12px;fill:var(--muted)}
+@media(max-width:640px){.curve text{font-size:20px}.curve text.sm{display:none}}
+.curve .lb{fill:var(--ink);font-size:12.5px}
 .ht-self{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;display:grid;gap:10px}
 .ht-self ol{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
 .ht-self em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:2px}
@@ -452,6 +472,7 @@ table.wk a{white-space:normal}
         <li>Ô khác biệt là "rẻ hơn".</li>
         <li>Ô tiền để trống hoặc chỉ có giá xưởng.</li></ol></div>
     </div>
+    <details class="tk"><summary>Tự kiểm trước khi nộp · 4 câu</summary><ol><li><b>Ô tín hiệu có link sàn và ngày review gần nhất?</b><em><b>Đạt khi:</b> có 3 link thật, review trong 90 ngày.</em></li><li><b>Ô khác biệt có nói vì sao khách chọn bạn?</b><em><b>Đạt khi:</b> không phải "rẻ hơn"; là người nhận, câu chữ, cách cá nhân hóa hay chất liệu.</em></li><li><b>Ô tiền có lãi sau phí và CAC tối đa?</b><em><b>Đạt khi:</b> có hai con số, tính từ giá thật của nhà in hoặc báo giá thật.</em></li><li><b>Có ghi rủi ro lớn nhất và cách thử nó bằng ít tiền?</b><em><b>Đạt khi:</b> một câu rủi ro, một việc thử dưới 20 USD.</em></li></ol></details>
   </div>
 
   <div class="sub" id="mau-listing">
@@ -500,6 +521,7 @@ OUR PROMISE  If we misspell a name, we remake it free.</pre>
         <li><b>Banner và logo</b> đơn giản, cùng một khách với listing. Không cần thuê thiết kế ở tuần 2.</li>
         <li><b>Không</b> dán review từ nơi khác, không viết "best seller" khi chưa có.</li></ol></div>
     </div>
+    <details class="tk"><summary>Tự kiểm trước khi nộp · 5 câu</summary><ol><li><b>Che chữ, ảnh đầu có cho biết người nhận và dịp?</b><em><b>Đạt khi:</b> người lạ đoán đúng trong 2 giây.</em></li><li><b>40 ký tự đầu tiêu đề có cụm khách gõ?</b><em><b>Đạt khi:</b> đọc 40 ký tự là biết món gì, cho ai.</em></li><li><b>13 thẻ đều là cụm nhiều từ, không lặp nguyên tiêu đề?</b><em><b>Đạt khi:</b> không thẻ nào là từ đơn.</em></li><li><b>Mô tả trả lời 3 câu khách hay hỏi và hạn giao?</b><em><b>Đạt khi:</b> khách đặt được mà không phải nhắn tin hỏi.</em></li><li><b>Nhà in đã khai là đối tác sản xuất trên listing?</b><em><b>Đạt khi:</b> mục Production partner có tên nhà in.</em></li></ol></details>
   </div>
 
   <div class="sub" id="mau-shopify">
@@ -532,6 +554,7 @@ OUR PROMISE  If we misspell a name, we remake it free.</pre>
         <li>Ngày giao ghi theo số đẹp nhất thay vì số thật.</li>
         <li>Pixel chưa báo Purchase bằng một đơn thật.</li></ol></div>
     </div>
+    <details class="tk"><summary>Tự kiểm trước khi nộp · 4 câu</summary><ol><li><b>Trên điện thoại, thấy giá, ô cá nhân hóa và nút mua mà không cuộn nhiều?</b><em><b>Đạt khi:</b> thử trên điện thoại thật.</em></li><li><b>Đủ 6 trang chính sách và trang Sở hữu trí tuệ?</b><em><b>Đạt khi:</b> mỗi trang có link ở chân trang.</em></li><li><b>Đơn thử đã đi trọn tới nhà in và đã hoàn tiền?</b><em><b>Đạt khi:</b> có ảnh đơn và ảnh Events Manager.</em></li><li><b>Không có review chép, đếm ngược giả, "người vừa mua" giả?</b><em><b>Đạt khi:</b> mọi thứ trên trang là thật.</em></li></ol></details>
   </div>
 
   <div class="sub" id="mau-ads">
@@ -562,6 +585,7 @@ Headline:    [món + lợi ích, ≤ 40 ký tự]
         <li>Dùng ảnh hoặc video của nhà cung cấp mà shop khác cũng dùng.</li>
         <li>Chữ hứa điều trang sản phẩm không có (giảm giá, ngày giao).</li></ol></div>
     </div>
+    <details class="tk"><summary>Tự kiểm trước khi nộp · 4 câu</summary><ol><li><b>3–5 mẫu khác nhau ở góc, không chỉ ở màu?</b><em><b>Đạt khi:</b> mỗi mẫu nói với một người nhận hoặc một cảm xúc.</em></li><li><b>3 giây đầu, tắt tiếng vẫn hiểu món gì cho ai?</b><em><b>Đạt khi:</b> thử với một người chưa xem sản phẩm.</em></li><li><b>Điểm tắt viết bằng số trước khi chạy?</b><em><b>Đạt khi:</b> câu dạng "tiêu X, 0 đơn, thêm giỏ dưới Y thì tắt".</em></li><li><b>Đã qua cổng quảng cáo?</b><em><b>Đạt khi:</b> tín hiệu, tiền, kỹ thuật đều đạt.</em></li></ol></details>
   </div>
 
   <div class="sub" id="mau-tin-nhan">
@@ -583,6 +607,7 @@ New expected date: [ngày]. If that's too late for your gift, reply and we'll [h
         <li><b>Báo trễ trước khi khách hỏi</b> và đưa lựa chọn: khách mất ngày nhận nhưng không mất lòng tin.</li>
         <li>Ngắn, có tên khách, có ngày cụ thể. Không xin đánh giá kèm quà hay giảm giá: Etsy không cho phép.</li></ol></div>
     </div>
+    <details class="tk"><summary>Tự kiểm trước khi nộp · 3 câu</summary><ol><li><b>Trả lời trong 24 giờ, gọi đúng tên, nói rõ bước tiếp theo?</b><em><b>Đạt khi:</b> khách đọc xong biết phải làm gì.</em></li><li><b>Không hứa điều nhà in không làm được?</b><em><b>Đạt khi:</b> hạn giao và cách sửa khớp với nhà in.</em></li><li><b>Với tranh chấp, có bằng chứng và giọng bình tĩnh?</b><em><b>Đạt khi:</b> đính kèm mã vận đơn, ảnh, lịch sử tin nhắn.</em></li></ol></details>
   </div>
 
   <div class="sub" id="mau-mot-trang">
@@ -604,6 +629,7 @@ Lịch:                Valentine lên trước 20/12 · Tết [ngày nghỉ nhà
         <li><b>Một trọng tâm</b> cho 30 ngày tới, không phải năm. Doanh nghiệp nhỏ thắng bằng tập trung.</li>
         <li>Mỗi bài học gắn với một con số, không phải cảm nhận.</li></ol></div>
     </div>
+    <details class="tk"><summary>Tự kiểm trước khi nộp · 3 câu</summary><ol><li><b>Lãi thật đã trừ mẫu, quảng cáo và app?</b><em><b>Đạt khi:</b> có một con số, dù âm.</em></li><li><b>Mỗi bài học gắn một con số?</b><em><b>Đạt khi:</b> không có bài học nào chỉ là cảm nhận.</em></li><li><b>Kế hoạch 30 ngày có đúng một trọng tâm?</b><em><b>Đạt khi:</b> một kênh, một sản phẩm, hoặc một mùa.</em></li></ol></details>
   </div>
 </section>
 <div class="pn"><a href="tien-va-nhip.html"><small>← Phần trước</small>Tiền, thí nghiệm, nhịp tuần</a><a class="nx" href="tra-cuu.html"><small>Phần sau →</small>Tra cứu</a></div>
